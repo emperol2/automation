@@ -1,0 +1,196 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en" lang="en">
+<head profile="http://selenium-ide.openqa.org/profiles/test-case">
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+<link rel="selenium.base" href="http://change-this-to-the-site-you-are-testing/" />
+<title>CreateCoupons</title>
+</head>
+<body>
+<table cellpadding="1" cellspacing="1" border="1">
+<thead>
+<tr><td rowspan="1" colspan="3">CreateCoupons</td></tr>
+</thead><tbody>
+<tr>
+	<td>storeHtmlSource</td>
+	<td>iframeid</td>
+	<td></td>
+</tr>
+<tr>
+	<td>storeEval</td>
+	<td>storedVars['iframeid'].replace(/frameborder=&quot;0&quot; /g,&quot;&quot;);</td>
+	<td>iframeid</td>
+</tr>
+<tr>
+	<td>storeEval</td>
+	<td>storedVars['iframeid'].match(/iframe id=&quot;[a-z]+[0-9]+&quot;/g);</td>
+	<td>iframeid</td>
+</tr>
+<tr>
+	<td>storeEval</td>
+	<td>storedVars['iframeid'][0].match(/[a-z]+[0-9]+/g);</td>
+	<td>iframeid</td>
+</tr>
+<tr>
+	<td>echo</td>
+	<td>${iframeid}</td>
+	<td></td>
+</tr>
+<tr>
+	<td>selectFrame</td>
+	<td>id=${iframeid}</td>
+	<td></td>
+</tr>
+<tr>
+	<td>mouseDown</td>
+	<td>xpath=//*[@title=&quot;Members for CPBI&quot;]</td>
+	<td></td>
+</tr>
+<tr>
+	<td>mouseDown</td>
+	<td>xpath=//*[local-name()='treenode'][5]/node()[position()=1]/node()[last()]</td>
+	<td></td>
+</tr>
+<tr>
+	<td>keyDown</td>
+	<td>xpath=//*[local-name()='treenode'][5]/node()[position()=1]/node()[last()]</td>
+	<td>\40</td>
+</tr>
+<tr>
+	<td>keyDown</td>
+	<td>xpath=//*[local-name()='treenode'][5]/node()[position()=1]/node()[last()]</td>
+	<td>\40</td>
+</tr>
+<tr>
+	<td>keyDown</td>
+	<td>xpath=//*[local-name()='treenode'][5]/node()[position()=1]/node()[last()]</td>
+	<td>\40</td>
+</tr>
+<tr>
+	<td>keyDown</td>
+	<td>xpath=//*[local-name()='treenode'][5]/node()[position()=1]/node()[last()]</td>
+	<td>\40</td>
+</tr>
+<tr>
+	<td>keyDown</td>
+	<td>xpath=//*[local-name()='treenode'][5]/node()[position()=1]/node()[last()]</td>
+	<td>\40</td>
+</tr>
+<tr>
+	<td>keyDown</td>
+	<td>xpath=//*[local-name()='treenode'][5]/node()[position()=1]/node()[last()]</td>
+	<td>\40</td>
+</tr>
+<tr>
+	<td>keyDown</td>
+	<td>xpath=//*[local-name()='treenode'][5]/node()[position()=1]/node()[last()]</td>
+	<td>\40</td>
+</tr>
+<tr>
+	<td>keyDown</td>
+	<td>xpath=//*[local-name()='treenode'][5]/node()[position()=1]/node()[last()]</td>
+	<td>\40</td>
+</tr>
+<tr>
+	<td>mouseDown</td>
+	<td>xpath=//*[@label=&quot;Manage Coupons&quot;]</td>
+	<td></td>
+</tr>
+<tr>
+	<td>mouseUp</td>
+	<td>xpath=//*[@label=&quot;Manage Coupons&quot;]</td>
+	<td></td>
+</tr>
+<tr>
+	<td>pause</td>
+	<td>7000</td>
+	<td>7000</td>
+</tr>
+<tr>
+	<td>clickAndWait</td>
+	<td>id=ctl00_MPFooter_btnCreateNew</td>
+	<td></td>
+</tr>
+<tr>
+	<td>storeEval</td>
+	<td>javascript{Math.round (Math.random() * 20000)}</td>
+	<td>couponName</td>
+</tr>
+<tr>
+	<td>echo</td>
+	<td>${couponName}</td>
+	<td></td>
+</tr>
+<tr>
+	<td>type</td>
+	<td>id=ctl00_MPContent_ctlCouponEditor_txtCouponName</td>
+	<td>Test ${couponName}</td>
+</tr>
+<tr>
+	<td>storeEval</td>
+	<td>javascript{Math.round (Math.random() * 20000)}</td>
+	<td>couponCode</td>
+</tr>
+<tr>
+	<td>echo</td>
+	<td>${couponCode}</td>
+	<td></td>
+</tr>
+<tr>
+	<td>type</td>
+	<td>id=ctl00_MPContent_ctlCouponEditor_txtCouponCode</td>
+	<td>test_${couponCode}</td>
+</tr>
+<tr>
+	<td>click</td>
+	<td>id=ctl00_MPContent_ctlCouponEditor_ChkIsActive</td>
+	<td></td>
+</tr>
+<tr>
+	<td>select</td>
+	<td>id=ctl00_MPContent_ctlCouponEditor_ddlDiscountType_ddlLookupData</td>
+	<td>Job Posting</td>
+</tr>
+<tr>
+	<td>type</td>
+	<td>id=ctl00_MPContent_ctlCouponEditor_txtDiscount</td>
+	<td>50</td>
+</tr>
+<tr>
+	<td>click</td>
+	<td>id=ctl00_MPContent_ctlCouponEditor_chkNoStartDate</td>
+	<td></td>
+</tr>
+<tr>
+	<td>click</td>
+	<td>id=ctl00_MPContent_ctlCouponEditor_chkNoExpireDate</td>
+	<td></td>
+</tr>
+<tr>
+	<td>select</td>
+	<td>id=ctl00_MPContent_ctlCouponEditor_ddlDiscountLimitation_ddlLookupData</td>
+	<td>N times only</td>
+</tr>
+<tr>
+	<td>assertElementPresent</td>
+	<td>id=ctl00_MPContent_ctlCouponEditor_txtNtimes</td>
+	<td></td>
+</tr>
+<tr>
+	<td>type</td>
+	<td>id=ctl00_MPContent_ctlCouponEditor_txtNtimes</td>
+	<td>5</td>
+</tr>
+<tr>
+	<td>select</td>
+	<td>id=ctl00_MPContent_ctlCouponEditor_ddlDiscountLimitation_ddlLookupData</td>
+	<td>Unlimited</td>
+</tr>
+<tr>
+	<td>clickAndWait</td>
+	<td>id=ctl00_MPContent_ctlCouponEditor_btnSave</td>
+	<td></td>
+</tr>
+</tbody></table>
+</body>
+</html>

@@ -1,0 +1,152 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en" lang="en">
+<head profile="http://selenium-ide.openqa.org/profiles/test-case">
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+<link rel="selenium.base" href="http://www.stylexchange.com/" />
+<title>checkLogin</title>
+</head>
+<body>
+<table cellpadding="1" cellspacing="1" border="1">
+<thead>
+<tr><td rowspan="1" colspan="3">checkLogin</td></tr>
+</thead><tbody>
+<tr>
+	<td>open</td>
+	<td>${domain}/fr/</td>
+	<td></td>
+</tr>
+<tr>
+	<td>clickAndWait</td>
+	<td>link=Stylexchange</td>
+	<td></td>
+</tr>
+<tr>
+	<td>storeText</td>
+	<td>css=li.popup-holder a</td>
+	<td>checklogin</td>
+</tr>
+<tr>
+	<td>gotoIf</td>
+	<td>storedVars['checklogin'] == &quot;DECONNEXION&quot;</td>
+	<td>logout</td>
+</tr>
+<tr>
+	<td>echo</td>
+	<td>DO NOT THING, YOU CAN SIGN IN</td>
+	<td></td>
+</tr>
+<tr>
+	<td>gotoLabel</td>
+	<td>end</td>
+	<td></td>
+</tr>
+<tr>
+	<td>label</td>
+	<td>logout</td>
+	<td></td>
+</tr>
+<tr>
+	<td>waitForElementPresent</td>
+	<td>css=div.controls-box ul.cart-box</td>
+	<td></td>
+</tr>
+<tr>
+	<td>clickAndWait</td>
+	<td>link=PANIER D’ACHAT</td>
+	<td></td>
+</tr>
+<tr>
+	<td>pause</td>
+	<td>3000</td>
+	<td>3000</td>
+</tr>
+<!-->>>>> Add quantity-->
+<tr>
+	<td>getEval</td>
+	<td>y=0;</td>
+	<td></td>
+</tr>
+<tr>
+	<td>storeEval</td>
+	<td>y</td>
+	<td>y</td>
+</tr>
+<tr>
+	<td>storeXpathCount</td>
+	<td>xpath=/html/body/div/div[2]/div/div/form/fieldset/table/tbody[2]/tr/td[5]/input</td>
+	<td>qty</td>
+</tr>
+<tr>
+	<td>while</td>
+	<td>storedVars['y'] &lt; storedVars['qty']</td>
+	<td></td>
+</tr>
+<tr>
+	<td>storeEval</td>
+	<td>y+1</td>
+	<td>y</td>
+</tr>
+<tr>
+	<td>storeEval</td>
+	<td>0</td>
+	<td>input</td>
+</tr>
+<tr>
+	<td>echo</td>
+	<td>${input}</td>
+	<td></td>
+</tr>
+<tr>
+	<td>type</td>
+	<td>//table[@id='shopping-cart-table']/tbody[2]/tr[${y}]/td[5]/input</td>
+	<td>${input}</td>
+</tr>
+<tr>
+	<td>pause</td>
+	<td>4000</td>
+	<td>4000</td>
+</tr>
+<tr>
+	<td>getEval</td>
+	<td>y++;</td>
+	<td></td>
+</tr>
+<tr>
+	<td>endWhile</td>
+	<td></td>
+	<td></td>
+</tr>
+<tr>
+	<td>focus</td>
+	<td>//table[@id='shopping-cart-table']/tbody[2]/tr/td[5]/input</td>
+	<td></td>
+</tr>
+<tr>
+	<td>keyDown</td>
+	<td>//table[@id='shopping-cart-table']/tbody[2]/tr/td[5]/input</td>
+	<td>\13</td>
+</tr>
+<tr>
+	<td>pause</td>
+	<td>5000</td>
+	<td>5000</td>
+</tr>
+<tr>
+	<td>clickAndWait</td>
+	<td>link=DECONNEXION</td>
+	<td></td>
+</tr>
+<tr>
+	<td>pause</td>
+	<td>5500</td>
+	<td>5500</td>
+</tr>
+<tr>
+	<td>label</td>
+	<td>end</td>
+	<td></td>
+</tr>
+</tbody></table>
+</body>
+</html>

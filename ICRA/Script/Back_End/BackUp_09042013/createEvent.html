@@ -1,0 +1,191 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en" lang="en">
+<head profile="http://selenium-ide.openqa.org/profiles/test-case">
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+<link rel="selenium.base" href="http://change-this-to-the-site-you-are-testing/" />
+<title>createEvent</title>
+</head>
+<body>
+<table cellpadding="1" cellspacing="1" border="1">
+<thead>
+<tr><td rowspan="1" colspan="3">createEvent</td></tr>
+</thead><tbody>
+<tr>
+	<td>storeHtmlSource</td>
+	<td>iframeid</td>
+	<td></td>
+</tr>
+<tr>
+	<td>storeEval</td>
+	<td>storedVars['iframeid'].replace(/frameborder=&quot;0&quot; /g,&quot;&quot;);</td>
+	<td>iframeid</td>
+</tr>
+<tr>
+	<td>storeEval</td>
+	<td>storedVars['iframeid'].match(/iframe id=&quot;[a-z]+[0-9]+&quot;/g);</td>
+	<td>iframeid</td>
+</tr>
+<tr>
+	<td>storeEval</td>
+	<td>storedVars['iframeid'][0].match(/[a-z]+[0-9]+/g);</td>
+	<td>iframeid</td>
+</tr>
+<tr>
+	<td>echo</td>
+	<td>${iframeid}</td>
+	<td></td>
+</tr>
+<tr>
+	<td>selectFrame</td>
+	<td>id=${iframeid}</td>
+	<td></td>
+</tr>
+<tr>
+	<td>mouseDown</td>
+	<td>xpath=//*[@label=&quot;Manage Events&quot;]</td>
+	<td></td>
+</tr>
+<tr>
+	<td>mouseUp</td>
+	<td>xpath=//*[@label=&quot;Manage Events&quot;]</td>
+	<td></td>
+</tr>
+<tr>
+	<td>pause</td>
+	<td>7000</td>
+	<td></td>
+</tr>
+<tr>
+	<td>clickAndWait</td>
+	<td>xpath=//*[@id=&quot;ctl00_MPFooter_btnCreateNew&quot;]</td>
+	<td></td>
+</tr>
+<tr>
+	<td>click</td>
+	<td>id=ctl00_MPContent_ctlEventDetailsEditor_ddlStatus_rblLookupData_1</td>
+	<td></td>
+</tr>
+<tr>
+	<td>click</td>
+	<td>id=ctl00_MPContent_ctlEventDetailsEditor_dtpPostingDate_txtDatePicker</td>
+	<td></td>
+</tr>
+<tr>
+	<td>keyDown</td>
+	<td>id=ctl00_MPContent_ctlEventDetailsEditor_dtpPostingDate_txtDatePicker</td>
+	<td>\13</td>
+</tr>
+<tr>
+	<td>type</td>
+	<td>xpath=//*[@id=&quot;ctl00_MPContent_ctlEventDetailsEditor_txtTitleEn&quot;]</td>
+	<td>Automation XY</td>
+</tr>
+<tr>
+	<td>type</td>
+	<td>xpath=//*[@id=&quot;ctl00_MPContent_ctlEventDetailsEditor_txtTitleFr&quot;]</td>
+	<td>Automation XY</td>
+</tr>
+<tr>
+	<td>select</td>
+	<td>id=ctl00_MPContent_ctlEventDetailsEditor_ddlEventType_ddlLookupData</td>
+	<td>Basic Course</td>
+</tr>
+<tr>
+	<td>select</td>
+	<td>id=ctl00_MPContent_ctlEventDetailsEditor_ddlAreaOfInterest_ddlLookupData</td>
+	<td>Pensions</td>
+</tr>
+<tr>
+	<td>select</td>
+	<td>id=ctl00_MPContent_ctlEventDetailsEditor_ddlRegionalOffice_ddlLookupData</td>
+	<td>Quebec</td>
+</tr>
+<tr>
+	<td>type</td>
+	<td>id=ctl00_MPContent_ctlEventDetailsEditor_txtVenueNameEn</td>
+	<td>AUT</td>
+</tr>
+<tr>
+	<td>type</td>
+	<td>id=ctl00_MPContent_ctlEventDetailsEditor_txtVenueNameFr</td>
+	<td>AUT</td>
+</tr>
+<tr>
+	<td>check</td>
+	<td>id=ctl00_MPContent_ctlEventDetailsEditor_chkIsOnlineEvent</td>
+	<td></td>
+</tr>
+<tr>
+	<td>click</td>
+	<td>link=Can't find your location?</td>
+	<td></td>
+</tr>
+<tr>
+	<td>pause</td>
+	<td>3000</td>
+	<td></td>
+</tr>
+<tr>
+	<td>type</td>
+	<td>xpath=//*[@id=&quot;ctl00_MPContent_txtAddress1&quot;]</td>
+	<td>gggggggg</td>
+</tr>
+<tr>
+	<td>select</td>
+	<td>id=ctl00_MPContent_ddlProvince</td>
+	<td>Alberta</td>
+</tr>
+<tr>
+	<td>keyDown</td>
+	<td>id=ctl00_MPContent_ddlProvince</td>
+	<td>\13</td>
+</tr>
+<tr>
+	<td>check</td>
+	<td>id=ctl00_MPContent_ctlEventDetailsEditor_chkIsDateTBD</td>
+	<td></td>
+</tr>
+<tr>
+	<td>click</td>
+	<td>id=ctl00_MPContent_ctlEventDetailsEditor_dtpStartDate_txtDatePicker</td>
+	<td></td>
+</tr>
+<tr>
+	<td>click</td>
+	<td>css=button.ui-datepicker-current</td>
+	<td></td>
+</tr>
+<tr>
+	<td>click</td>
+	<td>css=button.ui-datepicker-close</td>
+	<td></td>
+</tr>
+<tr>
+	<td>click</td>
+	<td>id=ctl00_MPContent_ctlEventDetailsEditor_dtpEndDate_txtDatePicker</td>
+	<td></td>
+</tr>
+<tr>
+	<td>click</td>
+	<td>link=31</td>
+	<td></td>
+</tr>
+<tr>
+	<td>click</td>
+	<td>css=button.ui-datepicker-close</td>
+	<td></td>
+</tr>
+<tr>
+	<td>type</td>
+	<td>id=ctl00_MPContent_ctlEventDetailsEditor_txtOrganizerEmailAddress</td>
+	<td>testXY@automation.com</td>
+</tr>
+<tr>
+	<td>click</td>
+	<td>id=ctl00_MPContent_ctlEventDetailsEditor_btnSave</td>
+	<td></td>
+</tr>
+</tbody></table>
+</body>
+</html>

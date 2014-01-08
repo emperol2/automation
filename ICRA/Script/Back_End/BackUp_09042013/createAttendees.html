@@ -1,0 +1,185 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en" lang="en">
+<head profile="http://selenium-ide.openqa.org/profiles/test-case">
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+<link rel="selenium.base" href="http://change-this-to-the-site-you-are-testing/" />
+<title>createAttendees</title>
+</head>
+<body>
+<table cellpadding="1" cellspacing="1" border="1">
+<thead>
+<tr><td rowspan="1" colspan="3">createAttendees</td></tr>
+</thead><tbody>
+<tr>
+	<td>clickAndWait</td>
+	<td>link=6. Attendees</td>
+	<td></td>
+</tr>
+<!--Search -->
+<tr>
+	<td>type</td>
+	<td>xpath=//*[@id=&quot;ctl00_MPContent_ctlSearchFilter_txtRegistrantUserID&quot;]</td>
+	<td>28</td>
+</tr>
+<tr>
+	<td>type</td>
+	<td>xpath=//*[@id=&quot;ctl00_MPContent_ctlSearchFilter_txtEmail&quot;]</td>
+	<td>su.chavengpoj@gmail.com</td>
+</tr>
+<tr>
+	<td>clickAndWait</td>
+	<td>id=ctl00_MPContent_ctlSearchFilter_btnSearch</td>
+	<td></td>
+</tr>
+<!--Create new registration-->
+<tr>
+	<td>clickAndWait</td>
+	<td>id=ctl00_MPFooter_btnCreateNew</td>
+	<td></td>
+</tr>
+<tr>
+	<td>type</td>
+	<td>xpath=//*[@id=&quot;ctl00_MPContent_ctlRegistrationMainRegistrantEditor_txtSearchUserID&quot;]</td>
+	<td>28</td>
+</tr>
+<tr>
+	<td>clickAndWait</td>
+	<td>id=ctl00_MPContent_ctlRegistrationMainRegistrantEditor_btnSearchUser</td>
+	<td></td>
+</tr>
+<tr>
+	<td>clickAndWait</td>
+	<td>id=ctl00_MPContent_ctlRegistrationMainRegistrantEditor_ctlUserSelectorList_grdData_ctl02_btnSelect</td>
+	<td></td>
+</tr>
+<tr>
+	<td>clickAndWait</td>
+	<td>id=ctl00_MPContent_ctlRegistrationMainRegistrantEditor_btnSaveAndNext</td>
+	<td></td>
+</tr>
+<!--Add attendees-->
+<tr>
+	<td>type</td>
+	<td>xpath=//*[@id=&quot;ctl00_MPContent_ctlRegistrationAdditionalAttendeesEditor_txtUserID&quot;]</td>
+	<td>42</td>
+</tr>
+<tr>
+	<td>clickAndWait</td>
+	<td>id=ctl00_MPContent_ctlRegistrationAdditionalAttendeesEditor_btnAddAttendee</td>
+	<td></td>
+</tr>
+<tr>
+	<td>type</td>
+	<td>xpath=//*[@id=&quot;ctl00_MPContent_ctlRegistrationAdditionalAttendeesEditor_txtUserID&quot;]</td>
+	<td>33</td>
+</tr>
+<tr>
+	<td>clickAndWait</td>
+	<td>id=ctl00_MPContent_ctlRegistrationAdditionalAttendeesEditor_btnAddAttendee</td>
+	<td></td>
+</tr>
+<tr>
+	<td>clickAndWait</td>
+	<td>id=ctl00_MPContent_ctlRegistrationAdditionalAttendeesEditor_btnSaveAndNext</td>
+	<td></td>
+</tr>
+<tr>
+	<td>pause</td>
+	<td>4000</td>
+	<td>4000</td>
+</tr>
+<tr>
+	<td>clickAndWait</td>
+	<td>id=ctl00_MPContent_ctlRegistrationOptionalActivitiesEditor_btnSaveAndNext</td>
+	<td></td>
+</tr>
+<!--Record a payment-->
+<tr>
+	<td>clickAndWait</td>
+	<td>id=ctl00_MPContent_ctlRegistrationInvoiceEditor_btnRecordPayment</td>
+	<td></td>
+</tr>
+<tr>
+	<td>type</td>
+	<td>xpath=//*[@id=&quot;ctl00_MPContent_ctlPaymentPanel_txtCreditCardHolder&quot;]</td>
+	<td>auto</td>
+</tr>
+<tr>
+	<td>type</td>
+	<td>xpath=//*[@id=&quot;ctl00_MPContent_ctlPaymentPanel_txtCreditCardNumber&quot;]</td>
+	<td>4111111111111111</td>
+</tr>
+<tr>
+	<td>select</td>
+	<td>id=ctl00_MPContent_ctlPaymentPanel_ddlCCExpiryMonth</td>
+	<td>9</td>
+</tr>
+<tr>
+	<td>select</td>
+	<td>id=ctl00_MPContent_ctlPaymentPanel_ddlCCExpiryYear</td>
+	<td>2021</td>
+</tr>
+<tr>
+	<td>click</td>
+	<td>id=ctl00_MPContent_ctlPaymentPanel_rdoOtherAddress</td>
+	<td></td>
+</tr>
+<tr>
+	<td>type</td>
+	<td>xpath=//*[@id=&quot;ctl00_MPContent_ctlPaymentPanel_txtAddress1&quot;]</td>
+	<td>Test</td>
+</tr>
+<tr>
+	<td>type</td>
+	<td>xpath=//*[@id=&quot;ctl00_MPContent_ctlPaymentPanel_txtPostalCode&quot;]</td>
+	<td>11111</td>
+</tr>
+<tr>
+	<td>type</td>
+	<td>xpath=//*[@id=&quot;ctl00_MPContent_ctlPaymentPanel_txtCity&quot;]</td>
+	<td>Test</td>
+</tr>
+<tr>
+	<td>select</td>
+	<td>id=ctl00_MPContent_ctlPaymentPanel_ddlProvince</td>
+	<td>Quebec</td>
+</tr>
+<tr>
+	<td>type</td>
+	<td>xpath=//*[@id=&quot;ctl00_MPContent_ctlPaymentPanel_txtPhonePart1&quot;]</td>
+	<td>111</td>
+</tr>
+<tr>
+	<td>type</td>
+	<td>xpath=//*[@id=&quot;ctl00_MPContent_ctlPaymentPanel_txtPhonePart2&quot;]</td>
+	<td>111</td>
+</tr>
+<tr>
+	<td>type</td>
+	<td>xpath=//*[@id=&quot;ctl00_MPContent_ctlPaymentPanel_txtPhonePart3&quot;]</td>
+	<td>1111</td>
+</tr>
+<tr>
+	<td>type</td>
+	<td>xpath=//*[@id=&quot;ctl00_MPContent_ctlPaymentPanel_txtPhoneExt&quot;]</td>
+	<td>1111</td>
+</tr>
+<tr>
+	<td>type</td>
+	<td>xpath=//*[@id=&quot;ctl00_MPContent_ctlPaymentPanel_txtAdminNote&quot;]</td>
+	<td>Administrative Notes</td>
+</tr>
+<tr>
+	<td>check</td>
+	<td>id=ctl00_MPContent_ctlPaymentPanel_chkOpenPDF</td>
+	<td></td>
+</tr>
+<tr>
+	<td>clickAndWait</td>
+	<td>id=ctl00_MPContent_btnSubmit</td>
+	<td></td>
+</tr>
+</tbody></table>
+</body>
+</html>

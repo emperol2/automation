@@ -1,0 +1,303 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en" lang="en">
+<head profile="http://selenium-ide.openqa.org/profiles/test-case">
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+<link rel="selenium.base" href="http://bktesting.openface.com/" />
+<title>New Test</title>
+</head>
+<body>
+<table cellpadding="1" cellspacing="1" border="1">
+<thead>
+<tr><td rowspan="1" colspan="3">New Test</td></tr>
+</thead><tbody>
+<tr>
+	<td>store</td>
+	<td>1</td>
+	<td>passwordTimes</td>
+</tr>
+<tr>
+	<td>while</td>
+	<td>storedVars.passwordTimes &lt;= 4 </td>
+	<td></td>
+</tr>
+<tr>
+	<td>open</td>
+	<td>http://bktesting.openface.com/Users/PasswordProcess.aspx?lang=no-NO&amp;surveyUrl=/Survey.aspx?s=5eb2dce3d3a84bcdb9b68cd06c66cd12</td>
+	<td></td>
+</tr>
+<!--Enter code to change password-->
+<tr>
+	<td>type</td>
+	<td>id=ctl00_pageContentPlace__guid</td>
+	<td>41fa8f24-264a-4521-aecf-e590ca64f0b9</td>
+</tr>
+<tr>
+	<td>clickAndWait</td>
+	<td>id=ctl00_pageContentPlace__codeContinueBtn</td>
+	<td></td>
+</tr>
+<tr>
+	<td>gotoIf</td>
+	<td>storedVars.passwordTimes == 1 </td>
+	<td>PassedCase</td>
+</tr>
+<tr>
+	<td>gotoIf</td>
+	<td>storedVars.passwordTimes == 2</td>
+	<td>ChoosePW</td>
+</tr>
+<tr>
+	<td>gotoIf</td>
+	<td>storedVars.passwordTimes == 3</td>
+	<td>NotMatch</td>
+</tr>
+<tr>
+	<td>gotoIf</td>
+	<td>storedVars.passwordTimes == 4</td>
+	<td>WrongFormat</td>
+</tr>
+<!--Change password: Passed case-->
+<!--Change password: Passed case-->
+<tr>
+	<td>label</td>
+	<td>PassedCase</td>
+	<td></td>
+</tr>
+<tr>
+	<td>type</td>
+	<td>id=ctl00_pageContentPlace__newPassword</td>
+	<td>test123</td>
+</tr>
+<tr>
+	<td>type</td>
+	<td>id=ctl00_pageContentPlace__confirmPassword</td>
+	<td>test123</td>
+</tr>
+<tr>
+	<td>clickAndWait</td>
+	<td>id=ctl00_pageContentPlace__passwordContinueBtn</td>
+	<td></td>
+</tr>
+<tr>
+	<td>storeText</td>
+	<td>css=span#ctl00__messageLbl</td>
+	<td>successfully</td>
+</tr>
+<tr>
+	<td>storeText</td>
+	<td>css=div#ctl00_pageContentPlace__completePanel</td>
+	<td>complete</td>
+</tr>
+<tr>
+	<td>storeHtmlSource</td>
+	<td>htmlsource</td>
+	<td></td>
+</tr>
+<tr>
+	<td>storeEval</td>
+	<td>new Array ('Password successfully updated.','Click here to login','Please choose a password','The Password and Confirmed Password do not match.','Choose a password that is at least 6 characters long; including a number or special character')</td>
+	<td>arraySV</td>
+</tr>
+<tr>
+	<td>gotoLabel</td>
+	<td>change</td>
+	<td></td>
+</tr>
+<!--Change password: Choose password-->
+<tr>
+	<td>label</td>
+	<td>ChoosePW</td>
+	<td></td>
+</tr>
+<tr>
+	<td>type</td>
+	<td>id=ctl00_pageContentPlace__newPassword</td>
+	<td></td>
+</tr>
+<tr>
+	<td>type</td>
+	<td>id=ctl00_pageContentPlace__confirmPassword</td>
+	<td></td>
+</tr>
+<tr>
+	<td>clickAndWait</td>
+	<td>id=ctl00_pageContentPlace__passwordContinueBtn</td>
+	<td></td>
+</tr>
+<tr>
+	<td>storeText</td>
+	<td>css=span[style*=&quot;color:red&quot;]</td>
+	<td>choosepw</td>
+</tr>
+<tr>
+	<td>gotoLabel</td>
+	<td>change</td>
+	<td></td>
+</tr>
+<!--Change password: Not match password-->
+<tr>
+	<td>label</td>
+	<td>NotMatch</td>
+	<td></td>
+</tr>
+<tr>
+	<td>type</td>
+	<td>id=ctl00_pageContentPlace__newPassword</td>
+	<td>test12</td>
+</tr>
+<tr>
+	<td>type</td>
+	<td>id=ctl00_pageContentPlace__confirmPassword</td>
+	<td>test21</td>
+</tr>
+<tr>
+	<td>clickAndWait</td>
+	<td>id=ctl00_pageContentPlace__passwordContinueBtn</td>
+	<td></td>
+</tr>
+<tr>
+	<td>storeText</td>
+	<td>css=span[style*=&quot;color:red&quot;]</td>
+	<td>atleast</td>
+</tr>
+<tr>
+	<td>storeEval</td>
+	<td>storedVars.atleast <br /></td>
+	<td>atleast</td>
+</tr>
+<tr>
+	<td>gotoLabel</td>
+	<td>change</td>
+	<td></td>
+</tr>
+<!--Change password: Wrong format-->
+<tr>
+	<td>label</td>
+	<td>WrongFormat</td>
+	<td></td>
+</tr>
+<tr>
+	<td>type</td>
+	<td>id=ctl00_pageContentPlace__newPassword</td>
+	<td>testing</td>
+</tr>
+<tr>
+	<td>type</td>
+	<td>id=ctl00_pageContentPlace__confirmPassword</td>
+	<td>testing</td>
+</tr>
+<tr>
+	<td>clickAndWait</td>
+	<td>id=ctl00_pageContentPlace__passwordContinueBtn</td>
+	<td></td>
+</tr>
+<tr>
+	<td>storeText</td>
+	<td>css=span[style*=&quot;color:red&quot;]</td>
+	<td>wrong</td>
+</tr>
+<tr>
+	<td>storeEval</td>
+	<td>storedVars.successfully +&quot; &quot;+ storedVars.atleast +&quot; &quot;+ storedVars.complete +&quot; &quot;+ storedVars.choosepw +&quot; &quot;+ storedVars.wrong</td>
+	<td>wordslist</td>
+</tr>
+<tr>
+	<td>label</td>
+	<td>change</td>
+	<td></td>
+</tr>
+<tr>
+	<td>storeEval</td>
+	<td>storedVars.passwordTimes++</td>
+	<td></td>
+</tr>
+<tr>
+	<td>endWhile</td>
+	<td></td>
+	<td></td>
+</tr>
+<!--Checking-->
+<tr>
+	<td>label</td>
+	<td>Checking</td>
+	<td></td>
+</tr>
+<tr>
+	<td>storeEval</td>
+	<td>storedVars.arraySV.length</td>
+	<td>svSize</td>
+</tr>
+<tr>
+	<td>store</td>
+	<td>0</td>
+	<td>lang</td>
+</tr>
+<tr>
+	<td>while</td>
+	<td>storedVars.lang &lt;= storedVars.svSize - 1</td>
+	<td></td>
+</tr>
+<tr>
+	<td>storeEval</td>
+	<td>storedVars.wordslist.indexOf(storedVars.arraySV[storedVars.lang])</td>
+	<td>result</td>
+</tr>
+<tr>
+	<td>gotoIf</td>
+	<td>storedVars.result &gt; -1</td>
+	<td>has</td>
+</tr>
+<tr>
+	<td>storeEval</td>
+	<td>&quot;has not&quot;</td>
+	<td>resulttext</td>
+</tr>
+<tr>
+	<td>gotoLabel</td>
+	<td>quit</td>
+	<td></td>
+</tr>
+<tr>
+	<td>label</td>
+	<td>has</td>
+	<td></td>
+</tr>
+<tr>
+	<td>storeEval</td>
+	<td>&quot;has&quot;</td>
+	<td>resulttext</td>
+</tr>
+<tr>
+	<td>label</td>
+	<td>quit</td>
+	<td></td>
+</tr>
+<tr>
+	<td>storeEval</td>
+	<td>storedVars.arraySV[storedVars.lang]</td>
+	<td>word</td>
+</tr>
+<tr>
+	<td>echo</td>
+	<td>${word}</td>
+	<td></td>
+</tr>
+<tr>
+	<td>echo</td>
+	<td>translation: ${word} and result: ${resulttext}</td>
+	<td></td>
+</tr>
+<tr>
+	<td>storeEval</td>
+	<td>storedVars.lang++;</td>
+	<td></td>
+</tr>
+<tr>
+	<td>endWhile</td>
+	<td></td>
+	<td></td>
+</tr>
+</tbody></table>
+</body>
+</html>

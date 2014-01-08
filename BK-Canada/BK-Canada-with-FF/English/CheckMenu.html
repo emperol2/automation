@@ -1,0 +1,221 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en" lang="en">
+<head profile="http://selenium-ide.openqa.org/profiles/test-case">
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+<link rel="selenium.base" href="http://www.burgerking.ca/" />
+<title>CheckMenu</title>
+</head>
+<body>
+<table cellpadding="1" cellspacing="1" border="1">
+<thead>
+<tr><td rowspan="1" colspan="3">CheckMenu</td></tr>
+</thead><tbody>
+<tr>
+	<td>open</td>
+	<td>${baseurl}/en/ca/index.html</td>
+	<td></td>
+</tr>
+<tr>
+	<td>clickAndWait</td>
+	<td>css=#bk-logo &gt; a &gt; img</td>
+	<td></td>
+</tr>
+<tr>
+	<td>clickAndWait</td>
+	<td>link=MENU</td>
+	<td></td>
+</tr>
+<!--check show all menu-->
+<tr>
+	<td>verifyElementPresent</td>
+	<td>css=html div.content.full_width</td>
+	<td></td>
+</tr>
+<tr>
+	<td>clickAndWait</td>
+	<td>link=Breakfast Menu</td>
+	<td></td>
+</tr>
+<!--check after click at breakfast-->
+<tr>
+	<td>assertTextPresent</td>
+	<td>Breakfast Menu</td>
+	<td></td>
+</tr>
+<!--show all lists of breakfast menu-->
+<tr>
+	<td>verifyElementPresent</td>
+	<td>css=html div#list_items</td>
+	<td></td>
+</tr>
+<tr>
+	<td>click</td>
+	<td>css=#li-subcat-209 &gt; a &gt; div &gt; div.text.text-201</td>
+	<td></td>
+</tr>
+<tr>
+	<td>pause</td>
+	<td>5000</td>
+	<td>5000</td>
+</tr>
+<tr>
+	<td>assertElementPresent</td>
+	<td>//div[@id='list_menus']/ul/li[8]/a/img</td>
+	<td></td>
+</tr>
+<tr>
+	<td>clickAndWait</td>
+	<td>//div[@id='list_menus']/ul/li[8]/a/img</td>
+	<td></td>
+</tr>
+<tr>
+	<td>assertTextPresent</td>
+	<td>Seattle's Best Coffee®</td>
+	<td></td>
+</tr>
+<!--check if the main image is best coffee-->
+<tr>
+	<td>assertAttribute</td>
+	<td>css=html div#menu-header-group@style</td>
+	<td>*234-0000093D544A823C-seatles-best-coffee-main.png*</td>
+</tr>
+<tr>
+	<td>click</td>
+	<td>link=NUTRITION</td>
+	<td></td>
+</tr>
+<tr>
+	<td>verifyElementPresent</td>
+	<td>css=html div.tabscontent</td>
+	<td></td>
+</tr>
+<!--check if more drink & coffee is presented-->
+<tr>
+	<td>verifyElementPresent</td>
+	<td>css=html div#menu-more-carousel </td>
+	<td></td>
+</tr>
+<tr>
+	<td>clickAndWait</td>
+	<td>css=#bk-logo &gt; a &gt; img</td>
+	<td></td>
+</tr>
+<tr>
+	<td>pause</td>
+	<td>3000</td>
+	<td>3000</td>
+</tr>
+<tr>
+	<td>click</td>
+	<td>link=MENU</td>
+	<td></td>
+</tr>
+<tr>
+	<td>clickAndWait</td>
+	<td>link=Fire-Grilled Burgers</td>
+	<td></td>
+</tr>
+<tr>
+	<td>pause</td>
+	<td>3000</td>
+	<td>3000</td>
+</tr>
+<tr>
+	<td>clickAndWait</td>
+	<td>//div[@id='list_menus']/ul/li[2]/a/img</td>
+	<td></td>
+</tr>
+<tr>
+	<td>pause</td>
+	<td>3000</td>
+	<td>3000</td>
+</tr>
+<tr>
+	<td>clickAndWait</td>
+	<td>//ul[@id='mycarousel']/li[4]/a/img</td>
+	<td></td>
+</tr>
+<tr>
+	<td>pause</td>
+	<td>3000</td>
+	<td></td>
+</tr>
+<tr>
+	<td>click</td>
+	<td>id=btn-add-to-meal</td>
+	<td></td>
+</tr>
+<tr>
+	<td>storeText</td>
+	<td>css=html span#mymeal-numitems</td>
+	<td>items</td>
+</tr>
+<tr>
+	<td>echo</td>
+	<td>${items}</td>
+	<td></td>
+</tr>
+<tr>
+	<td>verifyText</td>
+	<td>css=html span#mymeal-numitems</td>
+	<td>${items}</td>
+</tr>
+<tr>
+	<td>click</td>
+	<td>id=inline</td>
+	<td></td>
+</tr>
+<tr>
+	<td>verifyElementPresent</td>
+	<td>css=html div#menu-my-meal-fancybox</td>
+	<td></td>
+</tr>
+<tr>
+	<td>storeEval</td>
+	<td>[&quot;#mymeal-table tbody tr&quot;].length;</td>
+	<td>xx</td>
+</tr>
+<tr>
+	<td>echo</td>
+	<td>${xx}</td>
+	<td></td>
+</tr>
+<tr>
+	<td>click</td>
+	<td>id=fancybox-close</td>
+	<td></td>
+</tr>
+<tr>
+	<td>clickAndWait</td>
+	<td>link=Snacks</td>
+	<td></td>
+</tr>
+<tr>
+	<td>pause</td>
+	<td>3000</td>
+	<td>3000</td>
+</tr>
+<tr>
+	<td>click</td>
+	<td>css=#li-subcat-229 &gt; a &gt; div &gt; div.text.text-203</td>
+	<td></td>
+</tr>
+<tr>
+	<td>clickAndWait</td>
+	<td>css=li.cat-menu-item &gt; a &gt; img</td>
+	<td></td>
+</tr>
+<tr>
+	<td>pause</td>
+	<td>3000</td>
+	<td></td>
+</tr>
+<tr>
+	<td>clickAndWait</td>
+	<td>css=#bk-logo &gt; a &gt; img</td>
+	<td></td>
+</tr>
+</tbody></table>
+</body>
+</html>

@@ -1,0 +1,445 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en" lang="en">
+<head profile="http://selenium-ide.openqa.org/profiles/test-case">
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+<link rel="selenium.base" href="http://icra-dev/" />
+<title>EventRegistration</title>
+</head>
+<body>
+<table cellpadding="1" cellspacing="1" border="1">
+<thead>
+<tr><td rowspan="1" colspan="3">EventRegistration</td></tr>
+</thead><tbody>
+<tr>
+	<td>open</td>
+	<td>${icra}</td>
+	<td></td>
+</tr>
+<tr>
+	<td>pause</td>
+	<td>4000</td>
+	<td>4000</td>
+</tr>
+<!--Login-->
+<tr>
+	<td>type</td>
+	<td>id=UserName</td>
+	<td>${regUserID}</td>
+</tr>
+<tr>
+	<td>type</td>
+	<td>id=Password</td>
+	<td>${regPassword}</td>
+</tr>
+<tr>
+	<td>clickAndWait</td>
+	<td>id=btnLogin</td>
+	<td></td>
+</tr>
+<tr>
+	<td>click</td>
+	<td>link=Events</td>
+	<td></td>
+</tr>
+<tr>
+	<td>click</td>
+	<td>css=div.highlight-pane div.landing-menu a</td>
+	<td></td>
+</tr>
+<tr>
+	<td>pause</td>
+	<td>5000</td>
+	<td>5000</td>
+</tr>
+<tr>
+	<td>assertTitle</td>
+	<td>Events</td>
+	<td></td>
+</tr>
+<tr>
+	<td>clickAndWait</td>
+	<td>link=Pension Summit</td>
+	<td></td>
+</tr>
+<tr>
+	<td>assertElementPresent</td>
+	<td>css=div.event-detail h1</td>
+	<td>Pension Summit</td>
+</tr>
+<tr>
+	<td>clickAndWait</td>
+	<td>link=Register Now</td>
+	<td></td>
+</tr>
+<!--Edit user profile-->
+<tr>
+	<td>focus</td>
+	<td>id=ctl00_ctl00_phContent_ctl13_rblRegistrationType_1</td>
+	<td></td>
+</tr>
+<tr>
+	<td>click</td>
+	<td>id=ctl00_ctl00_phContent_ctl13_rblRegistrationType_1</td>
+	<td></td>
+</tr>
+<tr>
+	<td>pause</td>
+	<td>3000</td>
+	<td>3000</td>
+</tr>
+<tr>
+	<td>click</td>
+	<td>id=ctl00_ctl00_phContent_ctl13_ctlRegistrationMainRegistrant_lnkToEdit</td>
+	<td></td>
+</tr>
+<tr>
+	<td>pause</td>
+	<td>3000</td>
+	<td>3000</td>
+</tr>
+<tr>
+	<td>type</td>
+	<td>id=ctl00_ctl00_phContent_ctl13_ctlRegistrationMainRegistrant_ctlAddressEditor_txtPhone</td>
+	<td>(999) 9996-9995</td>
+</tr>
+<tr>
+	<td>click</td>
+	<td>id=ctl00_ctl00_phContent_ctl13_ctlRegistrationMainRegistrant_btnSave</td>
+	<td></td>
+</tr>
+<!--Event Registration-->
+<tr>
+	<td>check</td>
+	<td>id=ctl00_ctl00_phContent_ctl13_rblRegistrationType_1</td>
+	<td></td>
+</tr>
+<tr>
+	<td>pause</td>
+	<td>4000</td>
+	<td>4000</td>
+</tr>
+<!--Group/table-->
+<tr>
+	<td>click</td>
+	<td>css=h3.section-title</td>
+	<td></td>
+</tr>
+<tr>
+	<td>pause</td>
+	<td>4000</td>
+	<td>4000</td>
+</tr>
+<tr>
+	<td>select</td>
+	<td>id=ctl00_ctl00_phContent_ctl13_ctlRegistrationGroupTable_grdGroupOptions_ctl02_ddlQuantity</td>
+	<td>1</td>
+</tr>
+<tr>
+	<td>pause</td>
+	<td>3000</td>
+	<td>3000</td>
+</tr>
+<tr>
+	<td>assertElementPresent</td>
+	<td>css=div.persons-group</td>
+	<td></td>
+</tr>
+<!--Group/Table: Attendee#2-->
+<tr>
+	<td>type</td>
+	<td>id=ctl00_ctl00_phContent_ctl13_ctlRegistrationGroupTable_rptPersonsGroups_ctl00_rptPersons_ctl01_txtFirstName</td>
+	<td>Attendee2</td>
+</tr>
+<tr>
+	<td>type</td>
+	<td>id=ctl00_ctl00_phContent_ctl13_ctlRegistrationGroupTable_rptPersonsGroups_ctl00_rptPersons_ctl01_txtLastName</td>
+	<td>Test</td>
+</tr>
+<!--Group/Table: Attendee#3-->
+<tr>
+	<td>type</td>
+	<td>id=ctl00_ctl00_phContent_ctl13_ctlRegistrationGroupTable_rptPersonsGroups_ctl00_rptPersons_ctl02_txtFirstName</td>
+	<td>Attendee3</td>
+</tr>
+<tr>
+	<td>type</td>
+	<td>id=ctl00_ctl00_phContent_ctl13_ctlRegistrationGroupTable_rptPersonsGroups_ctl00_rptPersons_ctl02_txtLastName</td>
+	<td>Test</td>
+</tr>
+<!--Group/Table: Attendee#4-->
+<tr>
+	<td>type</td>
+	<td>id=ctl00_ctl00_phContent_ctl13_ctlRegistrationGroupTable_rptPersonsGroups_ctl00_rptPersons_ctl03_txtFirstName</td>
+	<td>Attendee4</td>
+</tr>
+<tr>
+	<td>type</td>
+	<td>id=ctl00_ctl00_phContent_ctl13_ctlRegistrationGroupTable_rptPersonsGroups_ctl00_rptPersons_ctl03_txtLastName</td>
+	<td>Test</td>
+</tr>
+<!--Group/Table: Attendee#5-->
+<tr>
+	<td>type</td>
+	<td>id=ctl00_ctl00_phContent_ctl13_ctlRegistrationGroupTable_rptPersonsGroups_ctl00_rptPersons_ctl04_txtFirstName</td>
+	<td>Attendee5</td>
+</tr>
+<tr>
+	<td>type</td>
+	<td>id=ctl00_ctl00_phContent_ctl13_ctlRegistrationGroupTable_rptPersonsGroups_ctl00_rptPersons_ctl04_txtLastName</td>
+	<td>Test</td>
+</tr>
+<tr>
+	<td>click</td>
+	<td>id=ctl00_ctl00_phContent_ctl13_ctlRegistrationGroupTable_btnSave</td>
+	<td></td>
+</tr>
+<tr>
+	<td>pause</td>
+	<td>5000</td>
+	<td>5000</td>
+</tr>
+<!--Individual additional attendees-->
+<tr>
+	<td>click</td>
+	<td>css=div.content-panel div.section a#ctl00_ctl00_phContent_ctl13_ctlRegistrationAdditionalAttendees_lnkToggleContent.section-header-link div.section-header</td>
+	<td></td>
+</tr>
+<tr>
+	<td>pause</td>
+	<td>3000</td>
+	<td>3000</td>
+</tr>
+<tr>
+	<td>assertElementPresent</td>
+	<td>id=ctl00_ctl00_phContent_ctl13_ctlRegistrationAdditionalAttendees_grdAttendeeOptions</td>
+	<td></td>
+</tr>
+<tr>
+	<td>select</td>
+	<td>id=ctl00_ctl00_phContent_ctl13_ctlRegistrationAdditionalAttendees_grdAttendeeOptions_ctl03_ddlQuantity</td>
+	<td>1</td>
+</tr>
+<tr>
+	<td>pause</td>
+	<td>3000</td>
+	<td>3000</td>
+</tr>
+<tr>
+	<td>select</td>
+	<td>id=ctl00_ctl00_phContent_ctl13_ctlRegistrationAdditionalAttendees_grdAttendeeOptions_ctl04_ddlQuantity</td>
+	<td>1</td>
+</tr>
+<tr>
+	<td>pause</td>
+	<td>3000</td>
+	<td>3000</td>
+</tr>
+<tr>
+	<td>type</td>
+	<td>id=ctl00_ctl00_phContent_ctl13_ctlRegistrationAdditionalAttendees_rptAttendees_ctl00_txtUsername</td>
+	<td>${assoUserID}</td>
+</tr>
+<tr>
+	<td>click</td>
+	<td>id=ctl00_ctl00_phContent_ctl13_ctlRegistrationAdditionalAttendees_rptAttendees_ctl00_btnValidateMemberID</td>
+	<td></td>
+</tr>
+<tr>
+	<td>pause</td>
+	<td>3000</td>
+	<td>3000</td>
+</tr>
+<tr>
+	<td>type</td>
+	<td>id=ctl00_ctl00_phContent_ctl13_ctlRegistrationAdditionalAttendees_rptAttendees_ctl01_txtUsername</td>
+	<td>${nonUserID}</td>
+</tr>
+<tr>
+	<td>click</td>
+	<td>id=ctl00_ctl00_phContent_ctl13_ctlRegistrationAdditionalAttendees_rptAttendees_ctl01_btnValidateMemberID</td>
+	<td></td>
+</tr>
+<tr>
+	<td>pause</td>
+	<td>3000</td>
+	<td>3000</td>
+</tr>
+<tr>
+	<td>click</td>
+	<td>id=ctl00_ctl00_phContent_ctl13_ctlRegistrationAdditionalAttendees_btnSave</td>
+	<td></td>
+</tr>
+<tr>
+	<td>pause</td>
+	<td>4000</td>
+	<td>4000</td>
+</tr>
+<!--Atteedees schedule #1-->
+<!--tr>
+	<td>click</td>
+	<td>css=div.content-panel div.section a#ctl00_ctl00_phContent_ctl13_ctlRegistrationOptionalActivities_lnkToggleContent.section-header-link div.section-header</td>
+	<td></td>
+</tr>
+<tr>
+	<td>pause</td>
+	<td>3000</td>
+	<td>3000</td>
+</tr>
+<tr>
+	<td>click</td>
+	<td>css=div.attendee-panel h3.attendee-title</td>
+	<td></td>
+</tr>
+<tr>
+	<td>click</td>
+	<td>name=ctl00_ctl00_phContent_ctl13_ctlRegistrationOptionalActivities_rptAttendees_ctl00_ctlAttendeeOptionalActivitiesEditor_rptActivityDates_ctl02_rptActivities_ctl03_chkIsParticipated</td>
+	<td></td>
+</tr>
+<tr>
+	<td>pause</td>
+	<td>4000</td>
+	<td>4000</td>
+</tr>
+<tr>
+	<td>type</td>
+	<td>id=ctl00_ctl00_phContent_ctl13_ctlRegistrationOptionalActivities_rptAttendees_ctl00_ctlAttendeeOptionalActivitiesEditor_rptActivityDates_ctl02_rptActivities_ctl03_rptGolfRegistration_ctl00_ctlGolfRegistrationEditor_rptGolfPlayer_ctl00_ctlGolfPlayerEditor_ctlGolfActivityQuestionResponse_rptQuestion_ctl00_ControlGenerator_Text_TextControl</td>
+	<td>test1</td>
+</tr>
+<tr>
+	<td>check</td>
+	<td>id=ctl00_ctl00_phContent_ctl13_ctlRegistrationOptionalActivities_rptAttendees_ctl00_ctlAttendeeOptionalActivitiesEditor_rptActivityDates_ctl02_rptActivities_ctl03_rptGolfRegistration_ctl00_ctlGolfRegistrationEditor_rptGolfPlayer_ctl00_ctlGolfPlayerEditor_ctlGolfActivityQuestionResponse_rptQuestion_ctl01_ControlGenerator_Checkbox_CheckboxControl_0</td>
+	<td></td>
+</tr>
+<tr>
+	<td>click</td>
+	<td>id=ctl00_ctl00_phContent_ctl13_ctlRegistrationOptionalActivities_rptAttendees_ctl00_ctlAttendeeOptionalActivitiesEditor_rptActivityDates_ctl02_rptActivities_ctl03_rptGolfRegistration_ctl00_ctlGolfRegistrationEditor_rptGolfPlayer_ctl00_ctlGolfPlayerEditor_ctlGolfActivityQuestionResponse_rptQuestion_ctl02_ControlGenerator_Radio_RadioControl_1</td>
+	<td></td>
+</tr>
+<tr>
+	<td>click</td>
+	<td>id=ctl00_ctl00_phContent_ctl13_ctlRegistrationOptionalActivities_rptAttendees_ctl00_ctlAttendeeOptionalActivitiesEditor_rptActivityDates_ctl02_rptActivities_ctl03_rptGolfRegistration_ctl00_ctlGolfRegistrationEditor_rptGolfPlayer_ctl00_ctlGolfPlayerEditor_ctlGolfActivityQuestionResponse_rptQuestion_ctl03_ControlGenerator_Date_DateSelectorControl_txtDatePicker</td>
+	<td></td>
+</tr>
+<tr>
+	<td>click</td>
+	<td>link=23</td>
+	<td></td>
+</tr>
+<tr>
+	<td>select</td>
+	<td>id=ctl00_ctl00_phContent_ctl13_ctlRegistrationOptionalActivities_rptAttendees_ctl00_ctlAttendeeOptionalActivitiesEditor_rptActivityDates_ctl02_rptActivities_ctl03_rptGolfRegistration_ctl00_ctlGolfRegistrationEditor_rptGolfPlayer_ctl00_ctlGolfPlayerEditor_ctlGolfActivityQuestionResponse_rptQuestion_ctl04_ControlGenerator_Dropdown_DropdownControl</td>
+	<td>2</td>
+</tr-->
+<!--Atteedees schedule #2-->
+<!--tr>
+	<td>click</td>
+	<td>//div[@id='multiOpenAccordion']/div[2]/h3</td>
+	<td></td>
+</tr>
+<tr>
+	<td>click</td>
+	<td>css=div.attendee-activities table.activities-table tbody tr#trRow.row1 td input</td>
+	<td></td>
+</tr-->
+<!--Attendees schedule #3-->
+<!--tr>
+	<td>click</td>
+	<td>//div[@id='multiOpenAccordion']/div[3]/h3</td>
+	<td></td>
+</tr>
+<tr>
+	<td>click</td>
+	<td>xpath=(//input[@name='ctl00_ctl00_phContent_ctl13_ctlRegistrationOptionalActivities_rptAttendees_ctl02_ctlAttendeeOptionalActivitiesEditor_rptActivityDates_ctl00_rptActivities_ctl00_chkIsParticipated'])[2]</td>
+	<td></td>
+</tr>
+<tr>
+	<td>click</td>
+	<td>id=ctl00_ctl00_phContent_ctl13_ctlRegistrationOptionalActivities_btnSave</td>
+	<td></td>
+</tr>
+<tr-->
+<tr>
+	<td>select</td>
+	<td>id=ctl00_ctl00_phContent_ctl13_ddlReferralSource_ddlLookupData</td>
+	<td>Ads in industry magazines</td>
+</tr>
+<tr>
+	<td>click</td>
+	<td>id=btnStep1Next</td>
+	<td>&lt;/td&gt;<br />&lt;/tr--&gt;<br />&lt;!--Verify Details--&gt;<br />&lt;tr&gt;<br />	&lt;td&gt;pause&lt;/td&gt;<br />	&lt;td&gt;3000&lt;/td&gt;<br />	&lt;td&gt;3000</td>
+</tr>
+<tr>
+	<td>pause</td>
+	<td>4000</td>
+	<td>4000</td>
+</tr>
+<tr>
+	<td>assertText</td>
+	<td>css=div#ctl00_ctl00_phContent_ctl13_ajpAllContent div.content-panel h2.step-title</td>
+	<td>Verify Details</td>
+</tr>
+<tr>
+	<td>click</td>
+	<td>id=btnStep2Next</td>
+	<td></td>
+</tr>
+<!--Payment-->
+<tr>
+	<td>pause</td>
+	<td>3000</td>
+	<td>3000</td>
+</tr>
+<tr>
+	<td>check</td>
+	<td>id=chkAgreeToPolicy</td>
+	<td></td>
+</tr>
+<tr>
+	<td>type</td>
+	<td>id=ctl00_ctl00_phContent_ctl13_ctlRegistrationPayment_ctlPaymentPanel_txtCreditCardHolder</td>
+	<td>test</td>
+</tr>
+<tr>
+	<td>select</td>
+	<td>id=ctl00_ctl00_phContent_ctl13_ctlRegistrationPayment_ctlPaymentPanel_ddlCreditCardType_ddlLookupData</td>
+	<td>MasterCard</td>
+</tr>
+<tr>
+	<td>type</td>
+	<td>id=ctl00_ctl00_phContent_ctl13_ctlRegistrationPayment_ctlPaymentPanel_txtCreditCardNumber</td>
+	<td>5105105105105100</td>
+</tr>
+<tr>
+	<td>select</td>
+	<td>id=ctl00_ctl00_phContent_ctl13_ctlRegistrationPayment_ctlPaymentPanel_ddlCCExpiryMonth</td>
+	<td>4</td>
+</tr>
+<tr>
+	<td>select</td>
+	<td>id=ctl00_ctl00_phContent_ctl13_ctlRegistrationPayment_ctlPaymentPanel_ddlCCExpiryYear</td>
+	<td>2020</td>
+</tr>
+<tr>
+	<td>check</td>
+	<td>id=ctl00_ctl00_phContent_ctl13_ctlRegistrationPayment_ctlPaymentPanel_chkSendCopyToAnotherEmail</td>
+	<td></td>
+</tr>
+<tr>
+	<td>type</td>
+	<td>id=ctl00_ctl00_phContent_ctl13_ctlRegistrationPayment_ctlPaymentPanel_txtSendCopyToAnotherEmail</td>
+	<td>su.chavengpoj@gmail.com</td>
+</tr>
+<!--tr>
+	<td>clickAndWait</td>
+	<td>id=btnSubmit</td>
+	<td></td>
+</tr-->
+<tr>
+	<td>clickAndWait</td>
+	<td>link=Logout</td>
+	<td></td>
+</tr>
+</tbody></table>
+</body>
+</html>

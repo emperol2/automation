@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en" lang="en">
+<head>
+  <meta content="text/html; charset=UTF-8" http-equiv="content-type" />
+  <title>Test Suite</title>
+</head>
+<body>
+<table id="suiteTable" cellpadding="1" cellspacing="1" border="1" class="selenium"><tbody>
+<tr><td><b>Test Suite</b></td></tr>
+<tr><td><a href="BaseURL.html">BaseURL</a></td></tr>
+<tr><td><a href="CheckHome_fr.html">CheckHome_fr</a></td></tr>
+<tr><td><a href="CheckElementHome_fr.html">CheckElementHome_fr</a></td></tr>
+<tr><td><a href="CheckFooter_fr.html">CheckFooter_fr</a></td></tr>
+<tr><td><a href="CheckMenu_fr.html">CheckMenu_fr</a></td></tr>
+<tr><td><a href="CheckMenu2_fr.html">CheckMenu2_fr</a></td></tr>
+<tr><td><a href="CheckLocations_fr.html">CheckLocations_fr</a></td></tr>
+<tr><td><a href="CheckFreshOffers_fr.html">CheckFreshOffers_fr</a></td></tr>
+<tr><td><a href="CheckFranchisePage_fr.html">CheckFranchisePage_fr</a></td></tr>
+</tbody></table>
+</body>
+</html>

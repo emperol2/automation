@@ -1,0 +1,340 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en" lang="en">
+<head profile="http://selenium-ide.openqa.org/profiles/test-case">
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+<link rel="selenium.base" href="http://www.stylexchange.com/" />
+<title>test_loop</title>
+</head>
+<body>
+<table cellpadding="1" cellspacing="1" border="1">
+<thead>
+<tr><td rowspan="1" colspan="3">test_loop</td></tr>
+</thead><tbody>
+<tr>
+	<td>open</td>
+	<td>${domain}/en/</td>
+	<td></td>
+</tr>
+<tr>
+	<td>clickAndWait</td>
+	<td>link=Stylexchange</td>
+	<td></td>
+</tr>
+<!--Start-->
+<tr>
+	<td>store</td>
+	<td>0</td>
+	<td>counter</td>
+</tr>
+<tr>
+	<td>storeEval</td>
+	<td>new Array('Women', 'Men', 'Sale')</td>
+	<td>categories</td>
+</tr>
+<!--First loop-->
+<tr>
+	<td>while</td>
+	<td>storedVars['counter'] &lt; 3</td>
+	<td></td>
+</tr>
+<tr>
+	<td>storeEval</td>
+	<td>storedVars['categories'][storedVars['counter']]</td>
+	<td>clickCate</td>
+</tr>
+<tr>
+	<td>clickAndWait</td>
+	<td>link=${clickCate}</td>
+	<td></td>
+</tr>
+<tr>
+	<td>pause</td>
+	<td>4000</td>
+	<td>4000</td>
+</tr>
+<tr>
+	<td>storeHtmlSource</td>
+	<td>htmlsource</td>
+	<td></td>
+</tr>
+<tr>
+	<td>echo</td>
+	<td>${htmlsource}</td>
+	<td></td>
+</tr>
+<tr>
+	<td>storeEval</td>
+	<td>storedVars['htmlsource'].match(/&quot;img_[0-9]+&quot;/g);</td>
+	<td>IdImg</td>
+</tr>
+<tr>
+	<td>storeEval</td>
+	<td>storedVars['IdImg'].length;</td>
+	<td>ImgLength</td>
+</tr>
+<tr>
+	<td>storeEval</td>
+	<td>Math.floor(Math.random() * (${ImgLength}));</td>
+	<td>randID</td>
+</tr>
+<tr>
+	<td>storeEval</td>
+	<td>storedVars['IdImg'][storedVars['randID']];</td>
+	<td>getIdImg</td>
+</tr>
+<tr>
+	<td>storeEval</td>
+	<td>storedVars['getIdImg'].substr(1,9);</td>
+	<td>pureid</td>
+</tr>
+<tr>
+	<td>clickAndWait</td>
+	<td>id=${pureid}</td>
+	<td></td>
+</tr>
+<tr>
+	<td>pause</td>
+	<td>5000</td>
+	<td>5000</td>
+</tr>
+<!-->>>>> Select size-->
+<tr>
+	<td>storeSelectOptions</td>
+	<td>id=attribute164</td>
+	<td>allOptions</td>
+</tr>
+<tr>
+	<td>echo</td>
+	<td>${allOptions}</td>
+	<td></td>
+</tr>
+<tr>
+	<td>getEval</td>
+	<td>index = 1;</td>
+	<td></td>
+</tr>
+<tr>
+	<td>storeEval</td>
+	<td>storedVars['allOptions'].length;</td>
+	<td>length</td>
+</tr>
+<tr>
+	<td>echo</td>
+	<td>${length}</td>
+	<td></td>
+</tr>
+<tr>
+	<td>storeEval</td>
+	<td>index</td>
+	<td>index</td>
+</tr>
+<!--Second loop-->
+<tr>
+	<td>while</td>
+	<td>index &lt; storedVars['allOptions'].length;</td>
+	<td></td>
+</tr>
+<tr>
+	<td>storeEval</td>
+	<td>index</td>
+	<td>index</td>
+</tr>
+<tr>
+	<td>store</td>
+	<td>* Sold Out</td>
+	<td>soldout</td>
+</tr>
+<tr>
+	<td>echo</td>
+	<td>javascript{storedVars['allOptions'][storedVars['index']]}</td>
+	<td></td>
+</tr>
+<tr>
+	<td>storeEval</td>
+	<td>storedVars['allOptions'][storedVars['index']];</td>
+	<td>size</td>
+</tr>
+<tr>
+	<td>echo</td>
+	<td>${size}</td>
+	<td></td>
+</tr>
+<tr>
+	<td>storeEval</td>
+	<td>storedVars['size'].substring(3,13);</td>
+	<td>hasSoldout</td>
+</tr>
+<tr>
+	<td>echo</td>
+	<td>${hasSoldout}</td>
+	<td></td>
+</tr>
+<tr>
+	<td>gotoIf</td>
+	<td>storedVars['hasSoldout'] == storedVars['soldout'];</td>
+	<td>storeSoldout</td>
+</tr>
+<tr>
+	<td>select</td>
+	<td>id=attribute164</td>
+	<td>${size}</td>
+</tr>
+<tr>
+	<td>echo</td>
+	<td>${size}</td>
+	<td></td>
+</tr>
+<tr>
+	<td>gotoLabel</td>
+	<td>home</td>
+	<td></td>
+</tr>
+<tr>
+	<td>pause</td>
+	<td>5000</td>
+	<td>5000</td>
+</tr>
+<tr>
+	<td>label</td>
+	<td>storeSoldout</td>
+	<td></td>
+</tr>
+<tr>
+	<td>getEval</td>
+	<td>index++;</td>
+	<td></td>
+</tr>
+<tr>
+	<td>endWhile</td>
+	<td></td>
+	<td></td>
+</tr>
+<!--End second loop-->
+<!-->>>>> Stylechange-->
+<tr>
+	<td>label</td>
+	<td>home</td>
+	<td></td>
+</tr>
+<tr>
+	<td>click</td>
+	<td>css=html body.catalog-product-view div#wrapper div#main div.main-container div.product-view div.product-essential form#product_addtocart_form div.product-shop div.pview-button-block div.pview-btn-addtobag</td>
+	<td></td>
+</tr>
+<tr>
+	<td>waitForElementNotPresent</td>
+	<td>css= div.drop-check</td>
+	<td></td>
+</tr>
+<tr>
+	<td>pause</td>
+	<td>5000</td>
+	<td>5000</td>
+</tr>
+<tr>
+	<td>clickAndWait</td>
+	<td>link=Stylexchange</td>
+	<td></td>
+</tr>
+<!-->>>>>-->
+<tr>
+	<td>pause</td>
+	<td>5000</td>
+	<td>5000</td>
+</tr>
+<tr>
+	<td>store</td>
+	<td>javascript{storedVars.counter++}</td>
+	<td></td>
+</tr>
+<tr>
+	<td>endWhile</td>
+	<td></td>
+	<td></td>
+</tr>
+<!--End first loop-->
+<tr>
+	<td>click</td>
+	<td>link=SHOPPING BAG</td>
+	<td></td>
+</tr>
+<tr>
+	<td>pause</td>
+	<td>4000</td>
+	<td>4000</td>
+</tr>
+<!-->>>>> Add quantity-->
+<tr>
+	<td>getEval</td>
+	<td>y=0;</td>
+	<td></td>
+</tr>
+<tr>
+	<td>storeEval</td>
+	<td>y</td>
+	<td>y</td>
+</tr>
+<tr>
+	<td>storeXpathCount</td>
+	<td>xpath=/html/body/div/div[2]/div/div/form/fieldset/table/tbody[2]/tr/td[5]/input</td>
+	<td>qty</td>
+</tr>
+<tr>
+	<td>while</td>
+	<td>storedVars['y'] &lt; storedVars['qty']</td>
+	<td></td>
+</tr>
+<tr>
+	<td>storeEval</td>
+	<td>y+1</td>
+	<td>y</td>
+</tr>
+<tr>
+	<td>storeEval</td>
+	<td>storedVars['qty'][storedVars['input']]</td>
+	<td></td>
+</tr>
+<tr>
+	<td>storeEval</td>
+	<td>javascript{Math.round((Math.random() * 1)+1);}</td>
+	<td>input</td>
+</tr>
+<tr>
+	<td>echo</td>
+	<td>${input}</td>
+	<td></td>
+</tr>
+<tr>
+	<td>type</td>
+	<td>//table[@id='shopping-cart-table']/tbody[2]/tr[${y}]/td[5]/input</td>
+	<td>${input}</td>
+</tr>
+<tr>
+	<td>pause</td>
+	<td>4000</td>
+	<td>4000</td>
+</tr>
+<tr>
+	<td>getEval</td>
+	<td>y++;</td>
+	<td></td>
+</tr>
+<tr>
+	<td>endWhile</td>
+	<td></td>
+	<td></td>
+</tr>
+<tr>
+	<td>focus</td>
+	<td>//table[@id='shopping-cart-table']/tbody[2]/tr/td[5]/input</td>
+	<td></td>
+</tr>
+<tr>
+	<td>keyDown</td>
+	<td>//table[@id='shopping-cart-table']/tbody[2]/tr/td[5]/input</td>
+	<td>\13</td>
+</tr>
+</tbody></table>
+</body>
+</html>

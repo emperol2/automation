@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en" lang="en">
+<head>
+  <meta content="text/html; charset=UTF-8" http-equiv="content-type" />
+  <title>Test Suite</title>
+</head>
+<body>
+<table id="suiteTable" cellpadding="1" cellspacing="1" border="1" class="selenium"><tbody>
+<tr><td><b>Test Suite</b></td></tr>
+<tr><td><a href="changeDomain.html">changeDomain</a></td></tr>
+<tr><td><a href="checkWWW.html">checkWWW</a></td></tr>
+<tr><td><a href="checkPopup.html">checkPopup</a></td></tr>
+<tr><td><a href="signin_out.html">Sign_In_Out</a></td></tr>
+<tr><td><a href="manage_address.html">Manage_Address</a></td></tr>
+<tr><td><a href="browse.html">Browse</a></td></tr>
+<tr><td><a href="keywords_search.html">Keywords_Search</a></td></tr>
+<tr><td><a href="checkSoldOut.html">checkSoldOut</a></td></tr>
+<tr><td><a href="checkViewMore.html">checkViewMore</a></td></tr>
+<tr><td><a href="checkBackButton_Func.html">checkBackButton_Func</a></td></tr>
+<tr><td><a href="checkSubtotal.html">checkSubtotal</a></td></tr>
+<tr><td><a href="Check_Size_Add.html">checkSize-Add</a></td></tr>
+<tr><td><a href="viewall.html">ViewAll</a></td></tr>
+<tr><td><a href="clearall.html">ClearAll</a></td></tr>
+<tr><td><a href="CheckTax.html">CheckTax</a></td></tr>
+<tr><td><a href="staticpage.html">Static_pages</a></td></tr>
+<tr><td><a href="guest_checkout.html">Guest_Checkout</a></td></tr>
+<tr><td><a href="member_checkout.html">Member_Checkout</a></td></tr>
+<tr><td><a href="checkLogin.html">checkLogin</a></td></tr>
+<tr><td><a href="deleteFunc.html">deleteFunc</a></td></tr>
+</tbody></table>
+</body>
+</html>

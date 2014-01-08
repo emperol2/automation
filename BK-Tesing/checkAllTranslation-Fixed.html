@@ -1,0 +1,835 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en" lang="en">
+<head profile="http://selenium-ide.openqa.org/profiles/test-case">
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+<link rel="selenium.base" href="http://change-this-to-the-site-you-are-testing/" />
+<title>New Test</title>
+</head>
+<body>
+<table cellpadding="1" cellspacing="1" border="1">
+<thead>
+<tr><td rowspan="1" colspan="3">New Test</td></tr>
+</thead><tbody>
+<tr>
+	<td>open</td>
+	<td>http://bktesting.openface.com/Login.aspx</td>
+	<td></td>
+</tr>
+<tr>
+	<td>storeSelectOptions</td>
+	<td>id=ctl00_pageContentPlace__languageSelect</td>
+	<td>languages</td>
+</tr>
+<tr>
+	<td>echo</td>
+	<td>${languages}</td>
+	<td></td>
+</tr>
+<tr>
+	<td>storeEval</td>
+	<td>storedVars.languages.length</td>
+	<td>langsize</td>
+</tr>
+<tr>
+	<td>echo</td>
+	<td>${langsize}</td>
+	<td></td>
+</tr>
+<tr>
+	<td>storeEval</td>
+	<td>0</td>
+	<td>x</td>
+</tr>
+<tr>
+	<td>storeEval</td>
+	<td>20</td>
+	<td>indexlimit</td>
+</tr>
+<!--for 20 languages-->
+<tr>
+	<td>while</td>
+	<td>storedVars.x &lt;= storedVars.langsize</td>
+	<td></td>
+</tr>
+<tr>
+	<td>open</td>
+	<td>http://bktesting.openface.com/Login.aspx</td>
+	<td></td>
+</tr>
+<tr>
+	<td>gotoIf</td>
+	<td>storedVars.x == storedVars.indexlimit</td>
+	<td>exitapp</td>
+</tr>
+<tr>
+	<td>select</td>
+	<td>id=ctl00_pageContentPlace__languageSelect</td>
+	<td>index=${x}</td>
+</tr>
+<!--click at register link-->
+<tr>
+	<td>pause</td>
+	<td>3000</td>
+	<td></td>
+</tr>
+<tr>
+	<td>clickAndWait</td>
+	<td>id=ctl00_pageContentPlace__newUserLnk</td>
+	<td></td>
+</tr>
+<!--click at submit button to show all alert-->
+<tr>
+	<td>pause</td>
+	<td>3000</td>
+	<td></td>
+</tr>
+<tr>
+	<td>clickAndWait</td>
+	<td>id=ctl00_pageContentPlace__submitBtn</td>
+	<td></td>
+</tr>
+<!----------------------------------------------------------------------------------------------->
+<!--start taking page source-->
+<tr>
+	<td>gotoIf</td>
+	<td>storedVars.languages[storedVars.x] == &quot;Čeština&quot;</td>
+	<td>Czech</td>
+</tr>
+<tr>
+	<td>gotoIf</td>
+	<td>storedVars.languages[storedVars.x] == &quot;Dansk&quot;</td>
+	<td>Danish</td>
+</tr>
+<tr>
+	<td>gotoIf</td>
+	<td>storedVars.languages[storedVars.x] == &quot;Deutsch&quot;</td>
+	<td>German</td>
+</tr>
+<tr>
+	<td>gotoIf</td>
+	<td>storedVars.languages[storedVars.x] == &quot;English&quot;</td>
+	<td>English</td>
+</tr>
+<tr>
+	<td>gotoIf</td>
+	<td>storedVars.languages[storedVars.x] == &quot;Español&quot;</td>
+	<td>Spanish</td>
+</tr>
+<tr>
+	<td>gotoIf</td>
+	<td>storedVars.languages[storedVars.x] == &quot;Français&quot;</td>
+	<td>French</td>
+</tr>
+<tr>
+	<td>gotoIf</td>
+	<td>storedVars.languages[storedVars.x] == &quot;Italiano&quot;</td>
+	<td>Italian</td>
+</tr>
+<tr>
+	<td>gotoIf</td>
+	<td>storedVars.languages[storedVars.x] == &quot;Magyar&quot;</td>
+	<td>Hungarian</td>
+</tr>
+<tr>
+	<td>gotoIf</td>
+	<td>storedVars.languages[storedVars.x] == &quot;Nederlands&quot;</td>
+	<td>Dutch</td>
+</tr>
+<tr>
+	<td>gotoIf</td>
+	<td>storedVars.languages[storedVars.x] == &quot;Norsk bokmål&quot;</td>
+	<td>Norwegian</td>
+</tr>
+<tr>
+	<td>gotoIf</td>
+	<td>storedVars.languages[storedVars.x] == &quot;Polski&quot;</td>
+	<td>Polish</td>
+</tr>
+<tr>
+	<td>gotoIf</td>
+	<td>storedVars.languages[storedVars.x] == &quot;Română&quot;</td>
+	<td>Romanian</td>
+</tr>
+<tr>
+	<td>gotoIf</td>
+	<td>storedVars.languages[storedVars.x] == &quot;Slovenščina&quot;</td>
+	<td>Slovenian</td>
+</tr>
+<tr>
+	<td>gotoIf</td>
+	<td>storedVars.languages[storedVars.x] == &quot;Suomi&quot;</td>
+	<td>Finland</td>
+</tr>
+<tr>
+	<td>gotoIf</td>
+	<td>storedVars.languages[storedVars.x] == &quot;Svenska&quot;</td>
+	<td>Swedish</td>
+</tr>
+<tr>
+	<td>gotoIf</td>
+	<td>storedVars.languages[storedVars.x] == &quot;Türkçe&quot;</td>
+	<td>Turkish</td>
+</tr>
+<tr>
+	<td>gotoIf</td>
+	<td>storedVars.languages[storedVars.x] == &quot;Български&quot;</td>
+	<td>Bulgarian</td>
+</tr>
+<tr>
+	<td>gotoIf</td>
+	<td>storedVars.languages[storedVars.x] == &quot;Македонски&quot;</td>
+	<td>Macedonian</td>
+</tr>
+<tr>
+	<td>gotoIf</td>
+	<td>storedVars.languages[storedVars.x] == &quot;Русский&quot;</td>
+	<td>Russian</td>
+</tr>
+<tr>
+	<td>gotoIf</td>
+	<td>storedVars.languages[storedVars.x] == &quot;ქართული&quot;</td>
+	<td>Georgian</td>
+</tr>
+<!--Czech-->
+<tr>
+	<td>label</td>
+	<td>Czech</td>
+	<td></td>
+</tr>
+<tr>
+	<td>echo</td>
+	<td>Czech</td>
+	<td></td>
+</tr>
+<tr>
+	<td>storeHtmlSource</td>
+	<td>htmlsource</td>
+	<td></td>
+</tr>
+<tr>
+	<td>storeEval</td>
+	<td>new Array ('Nová registrace uživatele', 'Vítejte u online zkoušky nazvané', 'Vyplňte níže uvedená pole a absolvujte zkoušku 0 týdnů po dokončení vaší registrace.', 'Ujistěte se, že jsou informace o novém pracovníkovi zadány správně – jakákoli nesprávně zapsaná jména či nesprávné údaje povedou ke vzniku chyb na certifikátu Základy.', 'Do níže uvedených polí zadejte informace. Povinná pole jsou označena', 'Požadované uživatelské jméno', 'E-mailová adresa', 'Heslo', 'Potvrďte heslo', 'Zvolte takové heslo, které má alespoň 6 znaků a obsahuje číslice nebo speciální znaky.', 'Křestní jméno', 'Příjmení', 'Křestní jméno vašeho školitele', 'Příjmení vašeho školitele', 'Číslo restaurace, v&amp;nbsp;níž se školíte', 'Číslo restaurace, v&amp;nbsp;níž budete pracovat', 'Pozice školitele', 'Datum zahájení školení', 'Registrovat se', 'Zrušit','Zvolte uživatelské jméno.', 'Zadejte platnou e-mailovou adresu.', 'Zvolte heslo.', 'Potvrďte heslo.', 'Ujistěte se, že jsou všechna pole vyplněna.')</td>
+	<td>arraySV</td>
+</tr>
+<tr>
+	<td>gotoLabel</td>
+	<td>Checking</td>
+	<td></td>
+</tr>
+<!--Danish-->
+<tr>
+	<td>label</td>
+	<td>Danish</td>
+	<td></td>
+</tr>
+<tr>
+	<td>echo</td>
+	<td>Danish</td>
+	<td></td>
+</tr>
+<tr>
+	<td>storeHtmlSource</td>
+	<td>htmlsource</td>
+	<td></td>
+</tr>
+<tr>
+	<td>storeEval</td>
+	<td>new Array ('Ny brugerregistrering', 'Velkommen til online ', 'Udfyld venligst nedenstående felter og tag eksamen 0 uger efter din ', 'Sørg for, at Trainees oplysninger er korrekt indtastet - enhver stavefejl i for- og efternavn eller forkerte data vil resultere i fejl på kursusbeviset.', 'Indtast dine oplysninger i felterne nedenfor. Obligatoriske felter er markeret med et', 'Ønsket brugernavn', 'E-mail-adresse', 'Adgangskode', 'Bekræft adgangskode', 'Vælg en adgangskode, der indeholder mindst 6 tegn, herunder et tal eller specialtegn', 'Fornavn', 'Efternavn', 'Din træners fornavn', 'Din træners efternavn', 'BKW restaurantnummeret på det sted, hvor du er i træning', 'BKW restaurantnummeret på det sted, hvor du arbejder', 'Trænerens titel', 'Startdato for træning', 'Registrer', 'Annuller','Ny brugerregistrering', 'Velkommen til online ', 'Udfyld venligst nedenstående felter og tag eksamen 0 uger efter din ', 'Sørg for, at Trainees oplysninger er korrekt indtastet - enhver stavefejl i for- og efternavn eller forkerte data vil resultere i fejl på kursusbeviset.', 'Indtast dine oplysninger i felterne nedenfor. Obligatoriske felter er markeret med et', 'Ønsket brugernavn', 'E-mail-adresse', 'Adgangskode', 'Bekræft adgangskode', 'Vælg en adgangskode, der indeholder mindst 6 tegn, herunder et tal eller specialtegn', 'Fornavn', 'Efternavn', 'Din træners fornavn', 'Din træners efternavn', 'BKW restaurantnummeret på det sted, hvor du er i træning', 'BKW restaurantnummeret på det sted, hvor du arbejder', 'Trænerens titel', 'Startdato for træning', 'Registrer', 'Annuller')</td>
+	<td>arraySV</td>
+</tr>
+<tr>
+	<td>gotoLabel</td>
+	<td>Checking</td>
+	<td></td>
+</tr>
+<!--German-->
+<tr>
+	<td>label</td>
+	<td>German</td>
+	<td></td>
+</tr>
+<tr>
+	<td>echo</td>
+	<td>German</td>
+	<td></td>
+</tr>
+<tr>
+	<td>storeHtmlSource</td>
+	<td>htmlsource</td>
+	<td></td>
+</tr>
+<tr>
+	<td>storeEval</td>
+	<td>new Array ('Registrierung für neue Benutzer', 'Willkommen zur Online-Prüfung', 'Füllen Sie unten die Felder aus und&nbsp;&nbsp;0 Wochen nach Ihrer Registrierung können Sie die Foundation Prüfung ablegen.', 'Bitte achten Sie darauf, dass die Informationen des Trainees&nbsp;&nbsp;korrekt angegeben werden – jeder Schreibfehler im Vor- oder Nachnamen und jede falsche Datenangabe führen zu Fehlern im Foundation Zertifikat.', 'Bitte geben Sie in den nachfolgenden Feldern die entsprechenden Informationen ein. Erforderliche Felder sind gekennzeichnet mit einem ', 'Gewünschter Benutzername', 'E-Mail-Adresse', 'Passwort', 'Passwort bestätigen', 'Ihr Passwort muss mindestens aus 6 Zeichen bestehen, einschließlich einer Zahl oder einem Sonderzeichen.', 'Vorname', 'Nachname', 'Vorname Ihres Trainers', 'Nachname Ihres Trainers', 'Restaurantnummer des Restaurants, in dem Sie trainiert werden', 'Restaurantnummer des Restaurants, in dem Sie später&nbsp;&nbsp;arbeiten werden', 'Position Ihres Trainers', 'Startdatum des Trainings', 'Registrieren', 'Abbrechen','Geben Sie einen Benutzernamen ein.', 'Geben Sie eine gültige E-Mail-Adresse ein.', 'Geben Sie ein Passwort ein.', 'Bestätigen Sie Ihr Passwort.', 'Stellen Sie sicher, dass alle Felder ausgefüllt sind.')</td>
+	<td>arraySV</td>
+</tr>
+<tr>
+	<td>gotoLabel</td>
+	<td>Checking</td>
+	<td></td>
+</tr>
+<!--English-->
+<tr>
+	<td>label</td>
+	<td>English</td>
+	<td></td>
+</tr>
+<tr>
+	<td>echo</td>
+	<td>English</td>
+	<td></td>
+</tr>
+<tr>
+	<td>storeHtmlSource</td>
+	<td>htmlsource</td>
+	<td></td>
+</tr>
+<tr>
+	<td>storeEval</td>
+	<td>new Array (&quot;New User Registration&quot;, &quot;Welcome to the online&quot;, &quot;Please fill out fields below and take the exam 0 week(s) after your registration has been completed.&quot;, &quot;Ensure the Trainee's information is entered correctly - any first name or last name spelling mistakes or incorrect data will result in errors on the Foundation Certificate.&quot;, &quot;Enter your information in the fields below. Required fields are marked with a&quot;, &quot;Desired Username&quot;, &quot;Email Address&quot;, &quot;Password&quot;, &quot;Confirm Password&quot;, &quot;Choose a password that is at least 6 characters long; including a number or special character&quot;, &quot;First Name&quot;, &quot;Last Name&quot;, &quot;Your Trainer's First Name&quot;, &quot;Your Trainer's Last Name&quot;, &quot;Restaurant Number You Are Training At&quot;, &quot;Restaurant Number You Will Be Working At&quot;, &quot;Trainer's Title&quot;, &quot;Training Start Date&quot;, &quot;Register&quot;, &quot;Cancel&quot;,'Please choose a username.', 'Please enter a valid email address.', 'Please choose a password.', 'Please confirm your password.', 'Please make sure all fields are completed.')</td>
+	<td>arraySV</td>
+</tr>
+<tr>
+	<td>gotoLabel</td>
+	<td>Checking</td>
+	<td></td>
+</tr>
+<!--Spanish-->
+<tr>
+	<td>label</td>
+	<td>Spanish</td>
+	<td></td>
+</tr>
+<tr>
+	<td>echo</td>
+	<td>Spanish</td>
+	<td></td>
+</tr>
+<tr>
+	<td>storeHtmlSource</td>
+	<td>htmlsource</td>
+	<td></td>
+</tr>
+<tr>
+	<td>storeEval</td>
+	<td>new Array ('Registro de nuevo usuario', 'Le damos la bienvenida al examen ', 'Complete los siguientes campos y realice el examen 0 semanas después de haber realizado el registro.', 'Asegúrese de que los datos del entrenado se han introducido correctamente: cualquier error ortográfico en el nombre o los apellidos o dato incorrecto causará errores en el certificado de Foundation.', 'Introduzca sus datos en los siguientes campos. Los campos obligatorios están marcados con un', 'Nombre de usuario deseado', 'Dirección de correo electrónico', 'Contraseña', 'Confirmar contraseña', 'Elija una contraseña que contenga al menos 6 caracteres; incluyendo un número o carácter especial', 'Nombre', 'Apellidos', 'Nombre de su entrenador', 'Apellidos de su entrenador', 'Número del restaurante en el que se está entrenando', 'Número del restaurante en el que trabajará', 'Cargo del entrenador', 'Fecha de inicio del entrenamiento', 'Registrar', 'Cancelar','Seleccione un nombre de usuario.', 'Introduzca una dirección de correo electrónico válida.', 'Seleccione una contraseña.', 'Confirme la contraseña.', 'Asegúrese de completar todos los campos.')</td>
+	<td>arraySV</td>
+</tr>
+<tr>
+	<td>gotoLabel</td>
+	<td>Checking</td>
+	<td></td>
+</tr>
+<!--French-->
+<tr>
+	<td>label</td>
+	<td>French</td>
+	<td></td>
+</tr>
+<tr>
+	<td>echo</td>
+	<td>French</td>
+	<td></td>
+</tr>
+<tr>
+	<td>storeHtmlSource</td>
+	<td>htmlsource</td>
+	<td></td>
+</tr>
+<tr>
+	<td>storeEval</td>
+	<td>new Array ('Nouvel utilisateur', &quot;Bienvenue dans l'examen en ligne &quot;, &quot;Veuillez compléter les champs ci-dessous et passer l'examen 0 semaines après votre inscription.&quot;, 'Veillez à ce que les informations sur le stagiaire soient correctement saisies. Tout prénom ou nom mal orthographié ou toute donnée incorrecte génèrera des erreurs sur le certificat Principes de base.', 'Veuillez saisir vos informations dans les champs ci-dessous. Les champs obligatoires comportent une', &quot;Nom d'utilisateur souhaité&quot;, 'Adresse e-mail', 'Mot de passe', 'Confirmation du mot de passe', 'Votre mot de passe doit comporter au moins 6&amp;nbsp;caractères et contenir au moins un chiffre ou un caractère spécial', 'Prénom', 'Nom', 'Prénom de votre formateur', 'Nom de votre formateur', 'Numéro du restaurant dans lequel vous effectuez votre formation', 'Numéro du restaurant dans lequel vous travaillerez', 'Poste du formateur', 'Date de début de la formation', &quot;S'inscrire&quot;, 'Annuler',&quot;Veuillez choisir un nom d'utilisateur.&quot;, 'Veuillez saisir une adresse e-mail valide.', 'Veuillez choisir un mot de passe.', 'Veuillez confirmer votre mot de passe.', 'Veuillez vous assurer que tous les champs ont été renseignés')</td>
+	<td>arraySV</td>
+</tr>
+<tr>
+	<td>gotoLabel</td>
+	<td>Checking</td>
+	<td></td>
+</tr>
+<!--Italian-->
+<tr>
+	<td>label</td>
+	<td>Italian</td>
+	<td></td>
+</tr>
+<tr>
+	<td>echo</td>
+	<td>Italian</td>
+	<td></td>
+</tr>
+<tr>
+	<td>storeHtmlSource</td>
+	<td>htmlsource</td>
+	<td></td>
+</tr>
+<tr>
+	<td>storeEval</td>
+	<td>new Array ('Registrazione nuovo utente', &quot;Benvenuti all'esame online &quot;, &quot;Compilare i campi seguenti e sostenere l'esame 0 settimane dopo l'avvenuta registrazione.&quot;, 'Assicurarsi chele informazioni del trainee siano state inserite correttamente; altrimenti, qualsiasi errore ortografico nel nome o cognome o i dati incorretti verranno riportati sul certificato Foundation.', 'Immettere le informazioni nei campi seguenti. I campi obbligatori sono contrassegnati con un', 'Nome utente desiderato', 'Indirizzo e-mail', 'Password', 'Conferma Password', 'Scegliere una password di almeno 6 caratteri, comprendenti numeri o caratteri speciali.', 'Nome', 'Cognome', 'Nome del trainer', 'Cognome del trainer', 'Numero del ristorante in cui si sta svolgendo la formazione', 'Numero del ristorante in cui si verrà impiegati', 'Titolo del trainer', 'Data di inizio della formazione', 'Registrazione', 'Annulla','Scegliere un nome utente.', 'Inserire un indirizzo e-mail valido.', 'Scegliere una password.', 'Confermare la password.', 'Registrazione')</td>
+	<td>arraySV</td>
+</tr>
+<tr>
+	<td>gotoLabel</td>
+	<td>Checking</td>
+	<td></td>
+</tr>
+<!--Hungarian-->
+<tr>
+	<td>label</td>
+	<td>Hungarian</td>
+	<td></td>
+</tr>
+<tr>
+	<td>echo</td>
+	<td>Hungarian</td>
+	<td></td>
+</tr>
+<tr>
+	<td>storeHtmlSource</td>
+	<td>htmlsource</td>
+	<td></td>
+</tr>
+<tr>
+	<td>storeEval</td>
+	<td>new Array ('Új felhasználói regisztráció', 'Üdvözöljük az online', 'Kérjük, töltse ki az alábbi mezőket, és vegyen részt a vizsgán 0 héttel a sikeres regisztrációt követően.', 'Ellenőrizze, hogypontosan adta-e meg aTanuló adatait - a hibás vezetéknév vagy keresztnév, illetve a nem megfelelő adatok miatt hibás lesz az Alapfokú képesítés.', 'Adja meg adatait az alábbi mezőkben. A kötelezően kitöltendő mezőket az alábbi szimbólum jelöli:', 'Választott felhasználónév', 'E-mail cím', 'Jelszó', 'Jelszó megerősítése', 'Aválasztott jelszónak legalább 6 karakter hosszúnak kell lennie, valamint tartalmaznia kell egy számot vagy speciális karaktert', 'Keresztnév', 'Vezetéknév', 'Oktató keresztneve', 'Oktató vezetékneve', 'Étteremszáma, ahol az oktatásban részt vesz', 'Étteremszáma, ahol dolgozni fog', 'Oktató beosztása', 'Oktatás kezdődátuma', 'Regisztráció', 'Mégse','Válasszon felhasználónevet.', 'Adjon meg egy érvényes e-mail címet.', 'Válasszon jelszót.', 'Erősítse meg a jelszót.', 'Ellenőrizze, hogy minden mezőt kitöltött-e.')</td>
+	<td>arraySV</td>
+</tr>
+<tr>
+	<td>gotoLabel</td>
+	<td>Checking</td>
+	<td></td>
+</tr>
+<!--Dutch-->
+<tr>
+	<td>label</td>
+	<td>Dutch</td>
+	<td></td>
+</tr>
+<tr>
+	<td>echo</td>
+	<td>Dutch</td>
+	<td></td>
+</tr>
+<tr>
+	<td>storeHtmlSource</td>
+	<td>htmlsource</td>
+	<td></td>
+</tr>
+<tr>
+	<td>storeEval</td>
+	<td>new Array ('Registratie van nieuwe gebruiker', 'Welkom bij', 'Vul de onderstaande velden in en voltooi het examen binnen 0 weken nadat uw registratie is voltooid.', 'Zorg dat de informatie van de trainee correct is ingevoerd. Spelfouten in de voornaam of achternaamen of andere onjuiste gegevens zullen leiden tot fouten op het Foundation-certificaat.', 'Voer uw informatie in de onderstaande velden in. Vereiste velden zijn gemarkeerd met een', 'Gewenste gebruikersnaam', 'E-mailadres', 'Wachtwoord', 'Bevestig wachtwoord', 'Kies een wachtwoord dat uit minimaal 6 tekens bestaat en een cijfer of een speciaal teken bevat', 'Voornaam', 'Achternaam', 'De voornaam van uw trainer', 'De achternaam van uw trainer', 'Restaurantnummer waar u de training volgt', 'Restaurantnummer waar u gaat werken', 'Titel van trainer', 'Begindatum training', 'Registreren', 'Annuleren','Selecteer een gebruikersnaam.', 'Geef een geldig e-mailadres op.', 'Selecteer een wachtwoord.', 'Bevestig uw wachtwoord.', 'Zorg dat alle velden zijn ingevuld.')</td>
+	<td>arraySV</td>
+</tr>
+<tr>
+	<td>gotoLabel</td>
+	<td>Checking</td>
+	<td></td>
+</tr>
+<!--Norwegian-->
+<tr>
+	<td>label</td>
+	<td>Norwegian</td>
+	<td></td>
+</tr>
+<tr>
+	<td>echo</td>
+	<td>Norwegian</td>
+	<td></td>
+</tr>
+<tr>
+	<td>storeHtmlSource</td>
+	<td>htmlsource</td>
+	<td></td>
+</tr>
+<tr>
+	<td>storeEval</td>
+	<td>new Array ('Registrere ny bruker', 'Velkommen til denne', 'Vennligst fyll ut feltene nedenfor og ta prøven 0 uker etter registreringen din er fullført.', 'Kontroller at all informasjon om trainee er riktig fylt ut – stavefeil i fornavn eller etternavn og uriktige data vil føre til feil på ditt endelige kursbevis.', 'Fyll ut din informasjon i feltene nedenfor. Nødvendige felter er markert med en', 'Ønsket brukernavn', 'E-postadresse', 'Passord', 'Bekreft passord', 'Benytt et passord på minst 6 tegn, og som inneholder et tall og et spesialtegn', 'Fornavn', 'Etternavn', 'Trenerens fornavn', 'Trenerens etternavn', 'BKW restaurantnummeret på restauranten der du læres opp', 'BKW restaurantnummeret på restauranten der du skal jobbe', 'Trenerens tittel', 'Startdato for opplæring', 'Registrer deg', 'Avbryt','Velg et brukernavn.', 'Angi en gyldig e-postadresse.', 'Velg et passord.', 'Bekreft passordet.', 'Kontroller at alle feltene er utfylt.')</td>
+	<td>arraySV</td>
+</tr>
+<tr>
+	<td>gotoLabel</td>
+	<td>Checking</td>
+	<td></td>
+</tr>
+<!--Polish-->
+<tr>
+	<td>label</td>
+	<td>Polish</td>
+	<td></td>
+</tr>
+<tr>
+	<td>echo</td>
+	<td>Polish</td>
+	<td></td>
+</tr>
+<tr>
+	<td>storeHtmlSource</td>
+	<td>htmlsource</td>
+	<td></td>
+</tr>
+<tr>
+	<td>storeEval</td>
+	<td>new Array ('Rejestracja nowego użytkownika', 'Zapraszamy do egzaminu on-line', 'Prosimy wypełnić poniższe pola i przystąpić do egzaminu w ciągu 0 tygodni od dokonania rejestracji.', 'Upewnij się, że dane uczestnika szkolenia są poprawne - wszelkie błędy w zapisie imienia lub nazwiska lub nieprawidłowe dane zostaną zawarte w Certyfikacie Foundations', 'Wprowadź informacje w polach poniżej. Wymagane pola są oznaczone symbolem ', 'Wybrana nazwa użytkownika', 'Adres e-mail', 'Hasło', 'Potwierdź hasło', 'Hasło powinno składać się z co najmniej 6 znaków, w tym cyfr lub znaków specjalnych', 'Imię', 'Nazwisko', 'Imię trenera', 'Nazwisko trenera', 'Numer restauracji, w której odbywa się szkolenie', 'Numer restauracji, w której będziesz pracować', 'Tytuł instruktora', 'Data rozpoczęcia szkolenia', 'Zarejestruj', 'Anuluj','Wybierz nazwę użytkownika.', 'Wprowadź poprawny adres e-mail.', 'Wybierz hasło.', 'Potwierdź hasło.', 'Upewnij się, że wszystkie pola są wypełnione.')</td>
+	<td>arraySV</td>
+</tr>
+<tr>
+	<td>gotoLabel</td>
+	<td>Checking</td>
+	<td></td>
+</tr>
+<!--Romanian-->
+<tr>
+	<td>label</td>
+	<td>Romanian</td>
+	<td></td>
+</tr>
+<tr>
+	<td>echo</td>
+	<td>Romanian</td>
+	<td></td>
+</tr>
+<tr>
+	<td>storeHtmlSource</td>
+	<td>htmlsource</td>
+	<td></td>
+</tr>
+<tr>
+	<td>storeEval</td>
+	<td>new Array ('Înregistrare utilizator nou', 'Bun venit la examenul online', 'Vă rugăm să completaţi câmpurile de mai jos şi să participaţi la examen la 0 săptămâni după finalizarea procesului de înregistrare.', 'Asiguraţi-vă că datele&nbsp;&nbsp;stagiarului sunt introduse corect - orice eroare de scriere a prenumelui sau a numelui de familie sau orice informaţie incorectă va avea drept rezultat erori pe certificatul Fundamente.', 'Introduceţi-vă datele în câmpurile de mai jos. Câmpurile obligatorii sunt marcate cu un', 'Nume de utilizator dorit', 'Adresă de e-mail', 'Parolă', 'Confirmare parolă', 'Alegeţi o parolă care să aibă cel puţin 6 caractere; inclusiv nu număr de caractere speciale', 'Prenume', 'Nume de familie', 'Prenumele instructorului dvs.', 'Numele de familie al instructorului dvs', 'Numărul restaurantului în care sunteţi instruit', 'Numărul restaurantului în care veţi lucra', 'Funcţia instructorului', 'Data de început a instruirii', 'Înregistrare', 'Anula','Vă rugăm să alegeţi un nume de utilizator.', 'Vă rugăm să introduceţi o adresă de e-mail validă.', 'Vă rugăm să alegeţi o parolă.', 'Vă rugăm să vă confirmaţi parola.', 'Vă rugăm să vă asiguraţi că toate câmpurile sunt completate.')</td>
+	<td>arraySV</td>
+</tr>
+<tr>
+	<td>gotoLabel</td>
+	<td>Checking</td>
+	<td></td>
+</tr>
+<!--Slovenian-->
+<tr>
+	<td>label</td>
+	<td>Slovenian</td>
+	<td></td>
+</tr>
+<tr>
+	<td>echo</td>
+	<td>Slovenian</td>
+	<td></td>
+</tr>
+<tr>
+	<td>storeHtmlSource</td>
+	<td>htmlsource</td>
+	<td></td>
+</tr>
+<tr>
+	<td>storeEval</td>
+	<td>new Array ('Registracija novega uporabnika', 'Dobrodošli v spletnem izpitu', '0 tednov po dokončanju registracije izpolnite spodnja polja in opravite izpit.', 'Zagotovite, da so podatki o pripravniku pravilno vneseni - morebitne napake v črkovanju imena ali priimka ali nepravilni podatki bodo povzročili napake na potrdilu za Osnove.', 'V spodnja polja vnesite svoje podatke. Obvezna polja so označena s simbolom', 'Želeno uporabniško ime', 'E-poštni naslov', 'Geslo', 'Potrditev gesla', 'Izberite geslo iz vsaj 6 znakov, vključno s številko ali posebnim znakom', 'Ime', 'Priimek', 'Ime vašega učitelja', 'Priimek vašega učitelja', 'Številka restavracije, v kateri se usposabljate', 'Številka restavracije, v kateri boste delali', 'Naziv učitelja', 'Datum začetka usposabljanja', 'Registracija', 'Prekliči','Izberite uporabniško ime.', 'Vnesite veljaven e-poštni naslov.', 'Izberite geslo.', 'Potrdite geslo.', 'Prepričajte se, da so izpolnjena vsa polja.')</td>
+	<td>arraySV</td>
+</tr>
+<tr>
+	<td>gotoLabel</td>
+	<td>Checking</td>
+	<td></td>
+</tr>
+<!--Finland-->
+<tr>
+	<td>label</td>
+	<td>Finland</td>
+	<td></td>
+</tr>
+<tr>
+	<td>echo</td>
+	<td>Finland</td>
+	<td></td>
+</tr>
+<tr>
+	<td>storeHtmlSource</td>
+	<td>htmlsource</td>
+	<td></td>
+</tr>
+<tr>
+	<td>storeEval</td>
+	<td>new Array ('Uuden käyttäjän rekisteröinti', 'Tervetuloa. Tämä on', 'Täytä alla olevat kentät ja tee koe 0 viikon kuluttua rekisteröitymisestäsi.', 'Varmista, että harjoittelijan tiedot on kirjoitettu oikein – väärin kirjoitetut etu- tai sukunimet tai väärät tiedot johtavat virheisiin Perusteet-koulutuksen todistuksessa.', 'Kirjoita tietosi alla oleviin kenttiin. Vaaditut kentät on merkitty asteriskilla', 'Haluttu käyttäjänimi', 'Sähköpostiosoite', 'Salasana', 'Vahvista salasana', 'Valitse salasana, jossa on vähintään kuusi merkkiä, joista vähintään yksi on numero tai erikoismerkki', 'Etunimi', 'Sukunimi', 'Kouluttajasi etunimi', 'Kouluttajasi sukunimi', 'Sen ravintolan numero, jossa sinua koulutetaan', 'Sen ravintolan numero, johon menet työskentelemään', 'Kouluttajan titteli', 'Koulutuksen aloituspäivämäärä', 'Rekisteröidy', 'Peruuta','Valitse käyttäjänimi.', 'Kirjoita kelvollinen sähköpostiosoite.', 'Valitse salasana.', 'Vahvista salasana.', 'Varmista, että olet täyttänyt kaikki kentät.')</td>
+	<td>arraySV</td>
+</tr>
+<tr>
+	<td>gotoLabel</td>
+	<td>Checking</td>
+	<td></td>
+</tr>
+<!--Swedish-->
+<tr>
+	<td>label</td>
+	<td>Swedish</td>
+	<td></td>
+</tr>
+<tr>
+	<td>echo</td>
+	<td>Swedish</td>
+	<td></td>
+</tr>
+<tr>
+	<td>storeHtmlSource</td>
+	<td>htmlsource</td>
+	<td></td>
+</tr>
+<tr>
+	<td>storeEval</td>
+	<td>new Array ('Registrering ny användare', 'Välkommen till online', 'Fyll i fälten nedan och ta examen inom 0 veckor efter att din registrering är avklarad.', 'Se till att elevinformationen fylls i korrekt - varje felstavning av förnamn eller efternamn eller felaktiga data kommer att resultera i felaktig information på certifikatet.', 'Mata in din information i fälten nedan. Obligatoriska fält är märkta med en', 'Önskat användarnamn', 'E-postadress', 'Lösenord', 'Bekräfta lösenord', 'Välj ett lösenord som är minst 6 tecken långt; och som innehåller en siffra eller ett specialtecken', 'Förnamn', 'Efternamn', 'Din lärares förnamn', 'Din lärares efternamn', 'BKW restaurant nummer till restaurangen du utbildas på', 'BKW restaurant nummer till restaurangen som du kommer att arbeta vid', 'Lärarens titel', 'Utbildningens startdatum', 'Registrera', 'Avbryt','Registrering ny användare', 'Välkommen till online', 'Fyll i fälten nedan och ta examen inom 0 veckor efter att din registrering är avklarad.', 'Se till att elevinformationen fylls i korrekt - varje felstavning av förnamn eller efternamn eller felaktiga data kommer att resultera i felaktig information på certifikatet.', 'Mata in din information i fälten nedan. Obligatoriska fält är märkta med en', 'Önskat användarnamn', 'E-postadress', 'Lösenord', 'Bekräfta lösenord', 'Välj ett lösenord som är minst 6 tecken långt; och som innehåller en siffra eller ett specialtecken', 'Förnamn', 'Efternamn', 'Din lärares förnamn', 'Din lärares efternamn', 'BKW restaurant nummer till restaurangen du utbildas på', 'BKW restaurant nummer till restaurangen som du kommer att arbeta vid', 'Lärarens titel', 'Utbildningens startdatum', 'Registrera', 'Avbryt')</td>
+	<td>arraySV</td>
+</tr>
+<tr>
+	<td>gotoLabel</td>
+	<td>Checking</td>
+	<td></td>
+</tr>
+<!--Turkish-->
+<tr>
+	<td>label</td>
+	<td>Turkish</td>
+	<td></td>
+</tr>
+<tr>
+	<td>echo</td>
+	<td>Turkish</td>
+	<td></td>
+</tr>
+<tr>
+	<td>storeHtmlSource</td>
+	<td>htmlsource</td>
+	<td></td>
+</tr>
+<tr>
+	<td>storeEval</td>
+	<td>new Array ('Yeni Kullanıcı Kaydı', 'sınavına hoş geldiniz', 'Lütfen aşağıdaki alanları doldurun ve kaydınız tamamlandıktan 0 hafta sonra sınava girin.', &quot;Öğrenci bilgilerinin doğru girildiğinden emin olun. Ad ve soyad yazım hataları ile yanlış bilgiler Kuruluş Sertifikası'nda hatalara neden olur.&quot;, 'Bilgilerinizi aşağıdaki alanlara girin. Zorunlu alanların yanında&nbsp;&nbsp;işareti bulunur', 'İstenen Kullanıcı Adı', 'E-posta Adresi', 'Şifre', 'Şifre Onayı', 'Bir rakam ve özel karakter de dahil olmak üzere en az 6 karakter uzunluğunda bir şifre seçin', 'Ad', 'Soyad', 'Eğitimcinizin Adı', 'Eğitimcinizin Soyadı', 'Eğitim Aldığınız Restoranın Numarası', 'Çalışacağınız Restoranın Numarası', 'Eğitimcinizin Unvanı', 'Eğitim Başlangıç Tarihi', 'Kaydol', 'Iptal','Lütfen bir kullanıcı adı seçin.', 'Lütfen geçerli bir e-posta adresi seçin.', 'Lütfen bir şifre seçin.', 'Lütfen şifrenizi onaylayın.', 'Lütfen tüm alanların doldurulduğundan emin olun.')</td>
+	<td>arraySV</td>
+</tr>
+<tr>
+	<td>gotoLabel</td>
+	<td>Checking</td>
+	<td></td>
+</tr>
+<!--Bulgarian-->
+<tr>
+	<td>label</td>
+	<td>Bulgarian</td>
+	<td></td>
+</tr>
+<tr>
+	<td>echo</td>
+	<td>Bulgarian</td>
+	<td></td>
+</tr>
+<tr>
+	<td>storeHtmlSource</td>
+	<td>htmlsource</td>
+	<td></td>
+</tr>
+<tr>
+	<td>storeEval</td>
+	<td>new Array ('Нова регистрация на потребителя', 'Добре дошли в онлайн', 'Моля, попълнете полетата по-долу и направете изпита 0 седмици след като сте попълнили регистрацията.', 'Проверете дали данните на стажанта са въведение правилно - всякакви правописни грешки при име и фамилия или погрешни данни ще бъдат отбелязани като грешки ', 'Въведете вашите данни в полетата по-долу. Задължителните полета са отбелязани с', 'Потребителско име по Ваш избор', 'Имейл адрес', 'Парола', 'Потвърдете паролата', 'Изберете парола с дължина поне 6 знака; включваща цифра или специален знак', 'Име', 'Фамилия', 'Име на Вашия обучител', 'Фамилия на Вашия обучител', 'Номер на ресторанта, в който се обучавате', 'Номер на ресторанта, в който ще работите', 'Длъжност на обучителя', 'Начална дата на обучението', 'Регистрирайте се', 'Откажи','Моля, изберете потребителско име.', 'Моля, въведете валиден имейл адрес.', 'Моля, изберете парола.', 'Моля, потвърдете паролата.', 'Моля, проверете, дали всички полета са попълнени.')</td>
+	<td>arraySV</td>
+</tr>
+<tr>
+	<td>gotoLabel</td>
+	<td>Checking</td>
+	<td></td>
+</tr>
+<!--Macedonian-->
+<tr>
+	<td>label</td>
+	<td>Macedonian</td>
+	<td></td>
+</tr>
+<tr>
+	<td>echo</td>
+	<td>Macedonian</td>
+	<td></td>
+</tr>
+<tr>
+	<td>storeHtmlSource</td>
+	<td>htmlsource</td>
+	<td></td>
+</tr>
+<tr>
+	<td>storeEval</td>
+	<td>new Array ('Регистрација на нов корисник', 'Добредојдовте на', 'Пополнете ги полињата подолу и полагајте го испитот 0 седмици откако ќе ја завршите регистрацијата.', 'Проверете дали&nbsp;&nbsp;информациите за посетителот на обуката се внесени правилно - сите правописни грешки во името или презимето или неточни податоци ќе резултираат со грешки во Сертификатот за Foundations (Основи).', 'Внесете ги вашите информации во полињата подолу. Задолжителните полиња се означени со', 'Сакано корисничко име', 'Адреса на е-пошта', 'Лозинка', 'Потврдете ја лозинката', 'Изберете&nbsp;&nbsp;лозинка што има најмалку 6 знаци; вклучува број или специјален знак', 'Име', 'Презиме', 'Име на вашиот инструктор', 'Презиме на вашиот инструктор', 'Број на ресторанот во којшто се обучувате', 'Број на ресторанот во којшто ќе работите', 'Титула на инструкторот', 'Датум на почеток на обуката', 'Регистрирајте се', 'откажете','Изберете корисничко име.', 'Внесете важечка адреса на е-пошта.', 'Изберете лозинка.', 'Потврдете ја лозинката.', 'Проверете дали сте ги пополниле сите полиња.')</td>
+	<td>arraySV</td>
+</tr>
+<tr>
+	<td>gotoLabel</td>
+	<td>Checking</td>
+	<td></td>
+</tr>
+<!--Russian-->
+<tr>
+	<td>label</td>
+	<td>Russian</td>
+	<td></td>
+</tr>
+<tr>
+	<td>echo</td>
+	<td>Russian</td>
+	<td></td>
+</tr>
+<tr>
+	<td>storeHtmlSource</td>
+	<td>htmlsource</td>
+	<td></td>
+</tr>
+<tr>
+	<td>storeEval</td>
+	<td>new Array ('Регистрация нового пользователя', 'Добро пожаловать в модуль экзамена', 'Вам требуется заполнить поля ниже и пройти тестирование в течение 0 недель после завершения регистрацииd.', 'Убедитесь, что информация&nbsp;&nbsp;о Стажере указана корректно - любые орфографические ошибки в написании имени или фамилии или указание неверной информации приведет к ошибкам в Сертификате аттестации.', 'Укажите информацию в полях ниже. Обязательные поля отмечены символом', 'Имя пользователя', 'Адрес электронной почты', 'Пароль', 'Подтверждение пароля', 'Выберите пароль, который содержит не менее 6 символов и содержит цифру или специальный символ', 'Имя', 'Фамилия', 'Имя инструктора', 'Фамилия инструктора', 'Номер ресторана, в котором вы проходите стажировку', 'Номер ресторана, в котором вы будете работать', 'Должность инструктора', 'Дата начала стажировки', 'Регистрация', 'отменить','Выберите имя пользователя.', 'Укажите действительный адрес электронной почты.', 'Выберите пароль.', 'Подтвердите пароль.', 'Убедитесь, что все поля заполнены.')</td>
+	<td>arraySV</td>
+</tr>
+<tr>
+	<td>gotoLabel</td>
+	<td>Checking</td>
+	<td></td>
+</tr>
+<!--Georgian-->
+<tr>
+	<td>label</td>
+	<td>Georgian</td>
+	<td></td>
+</tr>
+<tr>
+	<td>echo</td>
+	<td>Georgian</td>
+	<td></td>
+</tr>
+<tr>
+	<td>storeHtmlSource</td>
+	<td>htmlsource</td>
+	<td></td>
+</tr>
+<tr>
+	<td>storeEval</td>
+	<td>new Array ('ახალი მომხმარებლის რეგისტრაცია', 'კეთილი იყოს თქვენი მობრძანება', 'გთხოვთ, შეავსოთ ქვემოთ მოცემული ველები და ჩააბაროთ გამოცდა 0 კვირაში რეგისტრაციის დასრულებიდან ', 'დარწმუნდით, რომ სტაჟიორის ინფორმაცია შეყვანილია სწორად -&nbsp;&nbsp;სახელში ან გვარში ნებისმიერი ორთოგრაფიული შეცდომის ან არასწორი მონაცემების შედეგად გექნებათ შეცდომები საბაზისო სერტიფიკატში.', 'შეიყვანეთ თქვენი ინფორმაცია ქვემოთ მოცემულ ველებში. სავალდებულო ველები მონიშნულია', 'სასურველი მომხმარებლის სახელი', 'ელფოსტის მისამართი', 'პაროლი', 'პაროლის დადასტურება', 'აირჩიეთ პაროლი, რომელიც შეიცავს სულ მცირე&nbsp;&nbsp;6 სიმბოლოს; მათ შორის, ციფრს და სპეციალურ სიმბოლოს', 'სახელი', 'გვარი', 'თქვენი ინსტრუქტორის სახელი', 'თქვენი ინსტრუქტორის გვარი', 'რესტორნის ნომერი, რომელშიც გადიხართ ტრენინგს', 'რესტორნის ნომერი, რომელშიც იმუშავებთ', 'ინსტრუქტორის წოდება', 'ტრენინგის დაწყების დღე', 'რეგისტრაცია', 'უარი','გთხოვთ, აირჩიოთ მომხმარებლის სახელი.', 'გთხოვთ, შეიყვანოთ სწორი ელფოსტის მისამართი.', 'გთხოვთ, აირჩიოთ პაროლი.', 'გთხოვთ, დაადასტუროთ პაროლი.', 'გთხოვთ, დარწმუნდეთ, რომ ყველა ველი შევსებულია.')</td>
+	<td>arraySV</td>
+</tr>
+<tr>
+	<td>gotoLabel</td>
+	<td>Checking</td>
+	<td></td>
+</tr>
+<!--Checking-->
+<tr>
+	<td>label</td>
+	<td>Checking</td>
+	<td></td>
+</tr>
+<tr>
+	<td>storeEval</td>
+	<td>storedVars.arraySV.length</td>
+	<td>svSize</td>
+</tr>
+<tr>
+	<td>store</td>
+	<td>0</td>
+	<td>lang</td>
+</tr>
+<tr>
+	<td>while</td>
+	<td>storedVars.lang &lt;= storedVars.svSize - 1</td>
+	<td></td>
+</tr>
+<tr>
+	<td>storeEval</td>
+	<td>storedVars.htmlsource.indexOf(storedVars.arraySV[storedVars.lang])</td>
+	<td>result</td>
+</tr>
+<tr>
+	<td>gotoIf</td>
+	<td>storedVars.result &gt; -1</td>
+	<td>has</td>
+</tr>
+<tr>
+	<td>storeEval</td>
+	<td>&quot;has not&quot;</td>
+	<td>resulttext</td>
+</tr>
+<!--tr>
+	<td>echo</td>
+	<td>javascript{alert('has not')}</td>
+	<td></td>
+</tr>
+<tr-->
+<tr>
+	<td>gotoLabel</td>
+	<td>quit</td>
+	<td></td>
+</tr>
+<tr>
+	<td>label</td>
+	<td>has</td>
+	<td></td>
+</tr>
+<tr>
+	<td>storeEval</td>
+	<td>&quot;has&quot;</td>
+	<td>resulttext</td>
+</tr>
+<!--tr>
+	<td>echo</td>
+	<td>javascript{alert('has')}</td>
+	<td></td>
+</tr>
+<tr-->
+<tr>
+	<td>label</td>
+	<td>quit</td>
+	<td></td>
+</tr>
+<tr>
+	<td>storeEval</td>
+	<td>storedVars.arraySV[storedVars.lang]</td>
+	<td>word</td>
+</tr>
+<tr>
+	<td>echo</td>
+	<td>${word}</td>
+	<td></td>
+</tr>
+<tr>
+	<td>echo</td>
+	<td>translation: ${word} and result: ${resulttext}</td>
+	<td></td>
+</tr>
+<tr>
+	<td>storeEval</td>
+	<td>storedVars.lang++;</td>
+	<td></td>
+</tr>
+<tr>
+	<td>endWhile</td>
+	<td></td>
+	<td></td>
+</tr>
+<tr>
+	<td>gotoLabel</td>
+	<td>SelectLanguages</td>
+	<td></td>
+</tr>
+<!--Select the Languages-->
+<tr>
+	<td>label</td>
+	<td>SelectLanguages</td>
+	<td></td>
+</tr>
+<tr>
+	<td>storeEval</td>
+	<td>storedVars.x++</td>
+	<td></td>
+</tr>
+<tr>
+	<td>endWhile</td>
+	<td></td>
+	<td></td>
+</tr>
+<tr>
+	<td>label</td>
+	<td>exitapp</td>
+	<td></td>
+</tr>
+</tbody></table>
+</body>
+</html>

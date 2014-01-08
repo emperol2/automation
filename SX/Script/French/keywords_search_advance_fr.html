@@ -1,0 +1,242 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en" lang="en">
+<head profile="http://selenium-ide.openqa.org/profiles/test-case">
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+<link rel="selenium.base" href="http://www.stylexchange.com/" />
+<title>search</title>
+</head>
+<body>
+<table cellpadding="1" cellspacing="1" border="1">
+<thead>
+<tr><td rowspan="1" colspan="3">search</td></tr>
+</thead><tbody>
+<tr>
+	<td>open</td>
+	<td>${domain}/fr/</td>
+	<td></td>
+</tr>
+<tr>
+	<td>clickAndWait</td>
+	<td>link=Stylexchange</td>
+	<td></td>
+</tr>
+<tr>
+	<td>click</td>
+	<td>${newSearch}</td>
+	<td></td>
+</tr>
+<!--If Search box is empty-->
+<!--
+<tr>
+	<td>assertTextPresent</td>
+	<td></td>
+	<td>Svp entrer une valeur...</td>
+</tr>
+-->
+<!--Search BY SKU and NAME-->
+<tr>
+	<td>clickAndWait</td>
+	<td>link=Stylexchange</td>
+	<td></td>
+</tr>
+<tr>
+	<td>type</td>
+	<td>id=search</td>
+	<td>pajar</td>
+</tr>
+<tr>
+	<td>clickAndWait</td>
+	<td>${newSearch}</td>
+	<td></td>
+</tr>
+<tr>
+	<td>click</td>
+	<td>id=search</td>
+	<td></td>
+</tr>
+<tr>
+	<td>type</td>
+	<td>id=search</td>
+	<td>mackage</td>
+</tr>
+<tr>
+	<td>clickAndWait</td>
+	<td>${newSearch}</td>
+	<td></td>
+</tr>
+<!--If there is no DIEGO BLACK JACKET-->
+<tr>
+	<td>storeTextPresent</td>
+	<td>*MANTEAU DIEGO NOIR*</td>
+	<td>hasDiego</td>
+</tr>
+<tr>
+	<td>echo</td>
+	<td>${hasDiego}</td>
+	<td></td>
+</tr>
+<tr>
+	<td>gotoIf</td>
+	<td>${hasDiego} == false</td>
+	<td>skipDiego</td>
+</tr>
+<tr>
+	<td>clickAndWait</td>
+	<td>css=html body.catalogsearch-result-index div#wrapper div#main div.main-container div.col-main div.m-block div.search-result-block div.category-products ul.products-grid li.item div a#link_39140.product-image</td>
+	<td></td>
+</tr>
+<tr>
+	<td>verifyText</td>
+	<td>css=html body.catalog-product-view div#wrapper div#main div.main-container div.product-view div.product-essential form#product_addtocart_form div.product-shop h3.add</td>
+	<td>MANTEAU DIEGO NOIR</td>
+</tr>
+<tr>
+	<td>click</td>
+	<td>css=strong.info</td>
+	<td></td>
+</tr>
+<tr>
+	<td>gotoLabel</td>
+	<td>finish</td>
+	<td></td>
+</tr>
+<tr>
+	<td>label</td>
+	<td>skipDiego</td>
+	<td></td>
+</tr>
+<tr>
+	<td>runScript</td>
+	<td></td>
+	<td>javascript{alert('There is no DIEGO Black Jacket (Product Search)');}</td>
+</tr>
+<tr>
+	<td>clickAndWait</td>
+	<td>css=html body.catalogsearch-result-index div#wrapper div#main div.main-container div.col-main div.m-block div.search-result-block div.category-products ul.products-grid li.item div a.product-image</td>
+	<td></td>
+</tr>
+<tr>
+	<td>storeTitle</td>
+	<td>titlepage</td>
+	<td></td>
+</tr>
+<tr>
+	<td>assertTitle</td>
+	<td>${titlepage}</td>
+	<td></td>
+</tr>
+<tr>
+	<td>click</td>
+	<td>css=strong.info</td>
+	<td></td>
+</tr>
+<tr>
+	<td>label</td>
+	<td>finish</td>
+	<td></td>
+</tr>
+<tr>
+	<td>type</td>
+	<td>id=search</td>
+	<td>DIEGO-B-BLK-1</td>
+</tr>
+<tr>
+	<td>clickAndWait</td>
+	<td>${newSearch}</td>
+	<td></td>
+</tr>
+<!--Seach by SKU-->
+<tr>
+	<td>storeTextPresent</td>
+	<td>Your search returns no results. </td>
+	<td>hasNoResult</td>
+</tr>
+<tr>
+	<td>echo</td>
+	<td>${hasNoResult}</td>
+	<td></td>
+</tr>
+<tr>
+	<td>assertText</td>
+	<td>css=html body.catalogsearch-result-index div#wrapper div#main div.main-container div.col-main div.m-block div.search-result-block div.page-title h1</td>
+	<td>RÉSULTATS DE LA RECHERCH 'DIEGO-B-BLK-1'</td>
+</tr>
+<tr>
+	<td>storeElementPresent</td>
+	<td>css=html body.catalogsearch-result-index div#wrapper div#main div.main-container div.col-main div.m-block div.search-result-block div.category-products ul.products-grid li.item</td>
+	<td>diego</td>
+</tr>
+<tr>
+	<td>echo</td>
+	<td>${diego}</td>
+	<td></td>
+</tr>
+<tr>
+	<td>store</td>
+	<td>false</td>
+	<td>switch</td>
+</tr>
+<tr>
+	<td>gotoIf</td>
+	<td>${diego} == false</td>
+	<td>jumpdiego</td>
+</tr>
+<tr>
+	<td>clickAndWait</td>
+	<td>css=html body.catalogsearch-result-index div#wrapper div#main div.main-container div.col-main div.m-block div.search-result-block div.category-products ul.products-grid li.item div a#link_39140.product-image</td>
+	<td></td>
+</tr>
+<tr>
+	<td>verifyText</td>
+	<td>css=html body.catalog-product-view div#wrapper div#main div.main-container div.product-view div.product-essential form#product_addtocart_form div.product-shop strong.info</td>
+	<td>DIEGO-B-BLK-1</td>
+</tr>
+<tr>
+	<td>store</td>
+	<td>true</td>
+	<td>switch</td>
+</tr>
+<tr>
+	<td>label</td>
+	<td>jumpdiego</td>
+	<td></td>
+</tr>
+<tr>
+	<td>gotoIf</td>
+	<td>${switch} == true</td>
+	<td>jumpout</td>
+</tr>
+<tr>
+	<td>runScript</td>
+	<td></td>
+	<td>javascript{alert('There is no DIEGO Black Jacket (Search BY SKU)');}</td>
+</tr>
+<tr>
+	<td>type</td>
+	<td>id=search</td>
+	<td>LOUISE-SAND-1</td>
+</tr>
+<tr>
+	<td>clickAndWait</td>
+	<td>${newSearch}</td>
+	<td></td>
+</tr>
+<tr>
+	<td>clickAndWait</td>
+	<td>css=img[alt=&quot;LOUISE&quot;]</td>
+	<td></td>
+</tr>
+<tr>
+	<td>verifyText</td>
+	<td>css=html body.catalog-product-view div#wrapper div#main div.main-container div.product-view div.product-essential form#product_addtocart_form div.product-shop strong.info</td>
+	<td>LOUISE-SAND-1</td>
+</tr>
+<tr>
+	<td>label</td>
+	<td>jumpout</td>
+	<td></td>
+</tr>
+</tbody></table>
+</body>
+</html>

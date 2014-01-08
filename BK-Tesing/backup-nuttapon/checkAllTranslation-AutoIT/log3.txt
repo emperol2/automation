@@ -1,0 +1,524 @@
+[info] Executing: |open | http://bktesting.openface.com/Login.aspx |  |
+[info] Executing: |storeSelectOptions | id=ctl00_pageContentPlace__languageSelect | languages |
+[info] Executing: |storeEval | storedVars.languages.length | langsize |
+[info] script is: storedVars.languages.length
+[info] Executing: |storeEval | 0 | x |
+[info] echo: translation: Please confirm your password. and result: has not
+[info] script is: 0
+[info] echo: translation: Please confirm your password. and result: has not
+[info] Executing: |while | storedVars.x <= langsize |  |
+[error] Unexpected Exception: ReferenceError: langsize is not defined. fileName -> chrome://selenium-ide/content/tools.js -> file:///C:/Users/nuttapon/Downloads/sideflow-master/sideflow-master/sideflow.js?1380692956941, lineNumber -> 100, columnNumber -> 0
+[info] Executing: |while | storedVars.x <= langsize |  |
+[error] Unexpected Exception: ReferenceError: langsize is not defined. fileName -> chrome://selenium-ide/content/tools.js -> file:///C:/Users/nuttapon/Downloads/sideflow-master/sideflow-master/sideflow.js?1380692956941, lineNumber -> 100, columnNumber -> 0
+[info] Executing: |open | http://bktesting.openface.com/Login.aspx |  |
+[info] Executing: |storeSelectOptions | id=ctl00_pageContentPlace__languageSelect | languages |
+[info] Executing: |storeEval | storedVars.languages.length | langsize |
+[info] script is: storedVars.languages.length
+[info] Executing: |storeEval | 0 | x |
+[info] echo: translation: Please confirm your password. and result: has not
+[info] script is: 0
+[info] Executing: |while | storedVars.x <= storedVars.langsize |  |
+[info] Executing: |select | id=ctl00_pageContentPlace__languageSelect | index=${x} |
+[info] Executing: |echo | javascript{alert(storedVars.languages[storedVars.x])} |  |
+[info] echo: null
+[info] Executing: |clickAndWait | id=ctl00_pageContentPlace__newUserLnk |  |
+[info] Executing: |clickAndWait | id=ctl00_pageContentPlace__submitBtn |  |
+[info] Executing: |storeHtmlSource | htmlsource |  |
+[info] Executing: |storeEval | new Array ('Nová registrace u~ivatele', 'Vítejte u online zkouaky nazvané', 'VyplHte ní~e uvedená pole a absolvujte zkouaku 0 týdno po dokon
+ení vaaí registrace.', 'Ujistte se, ~e jsou informace o novém pracovníkovi zadány správn  jakákoli nesprávn zapsaná jména 
+i nesprávné údaje povedou ke vzniku chyb na certifikátu Základy.', 'Do ní~e uvedených polí zadejte informace. Povinná pole jsou ozna
+ena', 'Po~adované u~ivatelské jméno', 'E-mailová adresa', 'Heslo', 'Potvrte heslo', 'Zvolte takové heslo, které má alespoH 6 znako a obsahuje 
+íslice nebo speciální znaky.', 'KYestní jméno', 'PYíjmení', 'KYestní jméno vaaeho akolitele', 'PYíjmení vaaeho akolitele', 'íslo restaurace, v ní~ se akolíte', 'íslo restaurace, v ní~ budete pracovat', 'Pozice akolitele', 'Datum zahájení akolení', 'Registrovat se', 'Zruait','Zvolte u~ivatelské jméno.', 'Zadejte platnou e-mailovou adresu.', 'Zvolte heslo.', 'Please confirm your password.', 'Ujistte se, ~e jsou vaechna pole vyplnna.') | arraySV |
+[info] script is: new Array ('Nová registrace u~ivatele', 'Vítejte u online zkouaky nazvané', 'VyplHte ní~e uvedená pole a absolvujte zkouaku 0 týdno po dokon
+ení vaaí registrace.', 'Ujistte se, ~e jsou informace o novém pracovníkovi zadány správn  jakákoli nesprávn zapsaná jména 
+i nesprávné údaje povedou ke vzniku chyb na certifikátu Základy.', 'Do ní~e uvedených polí zadejte informace. Povinná pole jsou ozna
+ena', 'Po~adované u~ivatelské jméno', 'E-mailová adresa', 'Heslo', 'Potvrte heslo', 'Zvolte takové heslo, které má alespoH 6 znako a obsahuje 
+íslice nebo speciální znaky.', 'KYestní jméno', 'PYíjmení', 'KYestní jméno vaaeho akolitele', 'PYíjmení vaaeho akolitele', 'íslo restaurace, v ní~ se akolíte', 'íslo restaurace, v ní~ budete pracovat', 'Pozice akolitele', 'Datum zahájení akolení', 'Registrovat se', 'Zruait','Zvolte u~ivatelské jméno.', 'Zadejte platnou e-mailovou adresu.', 'Zvolte heslo.', 'Please confirm your password.', 'Ujistte se, ~e jsou vaechna pole vyplnna.')
+[info] Executing: |storeEval | storedVars.arraySV.length | svSize |
+[info] script is: storedVars.arraySV.length
+[info] Executing: |store | 0 | lang |
+[info] Executing: |while | storedVars.lang <= storedVars.svSize |  |
+[info] Executing: |storeEval | storedVars.htmlsource.indexOf(storedVars.arraySV[storedVars.lang]) | result |
+[info] script is: storedVars.htmlsource.indexOf(storedVars.arraySV[storedVars.lang])
+[info] Executing: |gotoIf | storedVars.result > -1 | hasnot |
+[info] Executing: |storeEval | "has" | resulttext |
+[info] script is: "has"
+[info] Executing: |echo | javascript{alert('has')} |  |
+[info] echo: null
+[info] Executing: |label | out |  |
+[info] Executing: |storeEval | storedVars.arraySV[storedVars.lang] | word |
+[info] script is: storedVars.arraySV[storedVars.lang]
+[info] Executing: |echo | ${word} |  |
+[info] echo: Nová registrace u~ivatele
+[info] Executing: |echo | translation: ${word} and result: ${resulttext} |  |
+[info] echo: translation: Nová registrace u~ivatele and result: has
+[info] Executing: |storeEval | storedVars.lang++; |  |
+[info] script is: storedVars.lang++;
+[info] Executing: |endWhile |  |  |
+[info] Executing: |while | storedVars.lang <= storedVars.svSize |  |
+[info] Executing: |storeEval | storedVars.htmlsource.indexOf(storedVars.arraySV[storedVars.lang]) | result |
+[info] script is: storedVars.htmlsource.indexOf(storedVars.arraySV[storedVars.lang])
+[info] Executing: |gotoIf | storedVars.result > -1 | hasnot |
+[info] Executing: |storeEval | "has" | resulttext |
+[info] script is: "has"
+[info] Executing: |echo | javascript{alert('has')} |  |
+[info] echo: null
+[info] Executing: |label | out |  |
+[info] Executing: |storeEval | storedVars.arraySV[storedVars.lang] | word |
+[info] script is: storedVars.arraySV[storedVars.lang]
+[info] Executing: |echo | ${word} |  |
+[info] echo: Vítejte u online zkouaky nazvané
+[info] Executing: |echo | translation: ${word} and result: ${resulttext} |  |
+[info] echo: translation: Vítejte u online zkouaky nazvané and result: has
+[info] Executing: |storeEval | storedVars.lang++; |  |
+[info] script is: storedVars.lang++;
+[info] Executing: |endWhile |  |  |
+[info] Executing: |while | storedVars.lang <= storedVars.svSize |  |
+[info] Executing: |storeEval | storedVars.htmlsource.indexOf(storedVars.arraySV[storedVars.lang]) | result |
+[info] script is: storedVars.htmlsource.indexOf(storedVars.arraySV[storedVars.lang])
+[info] Executing: |gotoIf | storedVars.result > -1 | hasnot |
+[info] Executing: |storeEval | "has" | resulttext |
+[info] script is: "has"
+[info] Executing: |echo | javascript{alert('has')} |  |
+[info] echo: null
+[info] Executing: |label | out |  |
+[info] Executing: |storeEval | storedVars.arraySV[storedVars.lang] | word |
+[info] script is: storedVars.arraySV[storedVars.lang]
+[info] Executing: |echo | ${word} |  |
+[info] echo: VyplHte ní~e uvedená pole a absolvujte zkouaku 0 týdno po dokon
+ení vaaí registrace.
+[info] Executing: |echo | translation: ${word} and result: ${resulttext} |  |
+[info] echo: translation: VyplHte ní~e uvedená pole a absolvujte zkouaku 0 týdno po dokon
+ení vaaí registrace. and result: has
+[info] Executing: |storeEval | storedVars.lang++; |  |
+[info] script is: storedVars.lang++;
+[info] Executing: |endWhile |  |  |
+[info] Executing: |while | storedVars.lang <= storedVars.svSize |  |
+[info] Executing: |storeEval | storedVars.htmlsource.indexOf(storedVars.arraySV[storedVars.lang]) | result |
+[info] script is: storedVars.htmlsource.indexOf(storedVars.arraySV[storedVars.lang])
+[info] Executing: |gotoIf | storedVars.result > -1 | hasnot |
+[info] Executing: |storeEval | "has" | resulttext |
+[info] script is: "has"
+[info] Executing: |echo | javascript{alert('has')} |  |
+[info] echo: null
+[info] Executing: |label | out |  |
+[info] Executing: |storeEval | storedVars.arraySV[storedVars.lang] | word |
+[info] script is: storedVars.arraySV[storedVars.lang]
+[info] Executing: |echo | ${word} |  |
+[info] echo: Ujistte se, ~e jsou informace o novém pracovníkovi zadány správn  jakákoli nesprávn zapsaná jména 
+i nesprávné údaje povedou ke vzniku chyb na certifikátu Základy.
+[info] Executing: |echo | translation: ${word} and result: ${resulttext} |  |
+[info] echo: translation: Ujistte se, ~e jsou informace o novém pracovníkovi zadány správn  jakákoli nesprávn zapsaná jména 
+i nesprávné údaje povedou ke vzniku chyb na certifikátu Základy. and result: has
+[info] Executing: |storeEval | storedVars.lang++; |  |
+[info] script is: storedVars.lang++;
+[info] Executing: |endWhile |  |  |
+[info] Executing: |while | storedVars.lang <= storedVars.svSize |  |
+[info] Executing: |storeEval | storedVars.htmlsource.indexOf(storedVars.arraySV[storedVars.lang]) | result |
+[info] script is: storedVars.htmlsource.indexOf(storedVars.arraySV[storedVars.lang])
+[info] Executing: |gotoIf | storedVars.result > -1 | hasnot |
+[info] Executing: |storeEval | "has" | resulttext |
+[info] script is: "has"
+[info] Executing: |echo | javascript{alert('has')} |  |
+[info] echo: null
+[info] Executing: |label | out |  |
+[info] Executing: |storeEval | storedVars.arraySV[storedVars.lang] | word |
+[info] script is: storedVars.arraySV[storedVars.lang]
+[info] Executing: |echo | ${word} |  |
+[info] echo: Do ní~e uvedených polí zadejte informace. Povinná pole jsou ozna
+ena
+[info] Executing: |echo | translation: ${word} and result: ${resulttext} |  |
+[info] echo: translation: Do ní~e uvedených polí zadejte informace. Povinná pole jsou ozna
+ena and result: has
+[info] Executing: |storeEval | storedVars.lang++; |  |
+[info] script is: storedVars.lang++;
+[info] Executing: |endWhile |  |  |
+[info] Executing: |while | storedVars.lang <= storedVars.svSize |  |
+[info] Executing: |storeEval | storedVars.htmlsource.indexOf(storedVars.arraySV[storedVars.lang]) | result |
+[info] script is: storedVars.htmlsource.indexOf(storedVars.arraySV[storedVars.lang])
+[info] Executing: |gotoIf | storedVars.result > -1 | hasnot |
+[info] Executing: |storeEval | "has" | resulttext |
+[info] script is: "has"
+[info] Executing: |echo | javascript{alert('has')} |  |
+[info] echo: null
+[info] Executing: |label | out |  |
+[info] Executing: |storeEval | storedVars.arraySV[storedVars.lang] | word |
+[info] script is: storedVars.arraySV[storedVars.lang]
+[info] Executing: |echo | ${word} |  |
+[info] echo: Po~adované u~ivatelské jméno
+[info] Executing: |echo | translation: ${word} and result: ${resulttext} |  |
+[info] echo: translation: Po~adované u~ivatelské jméno and result: has
+[info] Executing: |storeEval | storedVars.lang++; |  |
+[info] script is: storedVars.lang++;
+[info] Executing: |endWhile |  |  |
+[info] Executing: |while | storedVars.lang <= storedVars.svSize |  |
+[info] Executing: |storeEval | storedVars.htmlsource.indexOf(storedVars.arraySV[storedVars.lang]) | result |
+[info] script is: storedVars.htmlsource.indexOf(storedVars.arraySV[storedVars.lang])
+[info] Executing: |gotoIf | storedVars.result > -1 | hasnot |
+[info] Executing: |storeEval | "has" | resulttext |
+[info] script is: "has"
+[info] Executing: |echo | javascript{alert('has')} |  |
+[info] echo: null
+[info] Executing: |label | out |  |
+[info] Executing: |storeEval | storedVars.arraySV[storedVars.lang] | word |
+[info] script is: storedVars.arraySV[storedVars.lang]
+[info] Executing: |echo | ${word} |  |
+[info] echo: E-mailová adresa
+[info] Executing: |echo | translation: ${word} and result: ${resulttext} |  |
+[info] echo: translation: E-mailová adresa and result: has
+[info] Executing: |storeEval | storedVars.lang++; |  |
+[info] script is: storedVars.lang++;
+[info] Executing: |endWhile |  |  |
+[info] Executing: |while | storedVars.lang <= storedVars.svSize |  |
+[info] Executing: |storeEval | storedVars.htmlsource.indexOf(storedVars.arraySV[storedVars.lang]) | result |
+[info] script is: storedVars.htmlsource.indexOf(storedVars.arraySV[storedVars.lang])
+[info] Executing: |gotoIf | storedVars.result > -1 | hasnot |
+[info] Executing: |storeEval | "has" | resulttext |
+[info] script is: "has"
+[info] Executing: |echo | javascript{alert('has')} |  |
+[info] echo: null
+[info] Executing: |label | out |  |
+[info] Executing: |storeEval | storedVars.arraySV[storedVars.lang] | word |
+[info] script is: storedVars.arraySV[storedVars.lang]
+[info] Executing: |echo | ${word} |  |
+[info] echo: Heslo
+[info] Executing: |echo | translation: ${word} and result: ${resulttext} |  |
+[info] echo: translation: Heslo and result: has
+[info] Executing: |storeEval | storedVars.lang++; |  |
+[info] script is: storedVars.lang++;
+[info] Executing: |endWhile |  |  |
+[info] Executing: |while | storedVars.lang <= storedVars.svSize |  |
+[info] Executing: |storeEval | storedVars.htmlsource.indexOf(storedVars.arraySV[storedVars.lang]) | result |
+[info] script is: storedVars.htmlsource.indexOf(storedVars.arraySV[storedVars.lang])
+[info] Executing: |gotoIf | storedVars.result > -1 | hasnot |
+[info] Executing: |storeEval | "has" | resulttext |
+[info] script is: "has"
+[info] Executing: |echo | javascript{alert('has')} |  |
+[info] echo: null
+[info] Executing: |label | out |  |
+[info] Executing: |storeEval | storedVars.arraySV[storedVars.lang] | word |
+[info] script is: storedVars.arraySV[storedVars.lang]
+[info] Executing: |echo | ${word} |  |
+[info] echo: Potvrte heslo
+[info] Executing: |echo | translation: ${word} and result: ${resulttext} |  |
+[info] echo: translation: Potvrte heslo and result: has
+[info] Executing: |storeEval | storedVars.lang++; |  |
+[info] script is: storedVars.lang++;
+[info] Executing: |endWhile |  |  |
+[info] Executing: |while | storedVars.lang <= storedVars.svSize |  |
+[info] Executing: |storeEval | storedVars.htmlsource.indexOf(storedVars.arraySV[storedVars.lang]) | result |
+[info] script is: storedVars.htmlsource.indexOf(storedVars.arraySV[storedVars.lang])
+[info] Executing: |gotoIf | storedVars.result > -1 | hasnot |
+[info] Executing: |storeEval | "has" | resulttext |
+[info] script is: "has"
+[info] Executing: |echo | javascript{alert('has')} |  |
+[info] echo: null
+[info] Executing: |label | out |  |
+[info] Executing: |storeEval | storedVars.arraySV[storedVars.lang] | word |
+[info] script is: storedVars.arraySV[storedVars.lang]
+[info] Executing: |echo | ${word} |  |
+[info] echo: Zvolte takové heslo, které má alespoH 6 znako a obsahuje 
+íslice nebo speciální znaky.
+[info] Executing: |echo | translation: ${word} and result: ${resulttext} |  |
+[info] echo: translation: Zvolte takové heslo, které má alespoH 6 znako a obsahuje 
+íslice nebo speciální znaky. and result: has
+[info] Executing: |storeEval | storedVars.lang++; |  |
+[info] script is: storedVars.lang++;
+[info] Executing: |endWhile |  |  |
+[info] Executing: |while | storedVars.lang <= storedVars.svSize |  |
+[info] Executing: |storeEval | storedVars.htmlsource.indexOf(storedVars.arraySV[storedVars.lang]) | result |
+[info] script is: storedVars.htmlsource.indexOf(storedVars.arraySV[storedVars.lang])
+[info] Executing: |gotoIf | storedVars.result > -1 | hasnot |
+[info] Executing: |storeEval | "has" | resulttext |
+[info] script is: "has"
+[info] Executing: |echo | javascript{alert('has')} |  |
+[info] echo: null
+[info] Executing: |label | out |  |
+[info] Executing: |storeEval | storedVars.arraySV[storedVars.lang] | word |
+[info] script is: storedVars.arraySV[storedVars.lang]
+[info] Executing: |echo | ${word} |  |
+[info] echo: KYestní jméno
+[info] Executing: |echo | translation: ${word} and result: ${resulttext} |  |
+[info] echo: translation: KYestní jméno and result: has
+[info] Executing: |storeEval | storedVars.lang++; |  |
+[info] script is: storedVars.lang++;
+[info] Executing: |endWhile |  |  |
+[info] Executing: |while | storedVars.lang <= storedVars.svSize |  |
+[info] Executing: |storeEval | storedVars.htmlsource.indexOf(storedVars.arraySV[storedVars.lang]) | result |
+[info] script is: storedVars.htmlsource.indexOf(storedVars.arraySV[storedVars.lang])
+[info] Executing: |gotoIf | storedVars.result > -1 | hasnot |
+[info] Executing: |storeEval | "has" | resulttext |
+[info] script is: "has"
+[info] Executing: |echo | javascript{alert('has')} |  |
+[info] echo: null
+[info] Executing: |label | out |  |
+[info] Executing: |storeEval | storedVars.arraySV[storedVars.lang] | word |
+[info] script is: storedVars.arraySV[storedVars.lang]
+[info] Executing: |echo | ${word} |  |
+[info] echo: PYíjmení
+[info] Executing: |echo | translation: ${word} and result: ${resulttext} |  |
+[info] echo: translation: PYíjmení and result: has
+[info] Executing: |storeEval | storedVars.lang++; |  |
+[info] script is: storedVars.lang++;
+[info] Executing: |endWhile |  |  |
+[info] Executing: |while | storedVars.lang <= storedVars.svSize |  |
+[info] Executing: |storeEval | storedVars.htmlsource.indexOf(storedVars.arraySV[storedVars.lang]) | result |
+[info] script is: storedVars.htmlsource.indexOf(storedVars.arraySV[storedVars.lang])
+[info] Executing: |gotoIf | storedVars.result > -1 | hasnot |
+[info] Executing: |storeEval | "has" | resulttext |
+[info] script is: "has"
+[info] Executing: |echo | javascript{alert('has')} |  |
+[info] echo: null
+[info] Executing: |label | out |  |
+[info] Executing: |storeEval | storedVars.arraySV[storedVars.lang] | word |
+[info] script is: storedVars.arraySV[storedVars.lang]
+[info] Executing: |echo | ${word} |  |
+[info] echo: KYestní jméno vaaeho akolitele
+[info] Executing: |echo | translation: ${word} and result: ${resulttext} |  |
+[info] echo: translation: KYestní jméno vaaeho akolitele and result: has
+[info] Executing: |storeEval | storedVars.lang++; |  |
+[info] script is: storedVars.lang++;
+[info] Executing: |endWhile |  |  |
+[info] Executing: |while | storedVars.lang <= storedVars.svSize |  |
+[info] Executing: |storeEval | storedVars.htmlsource.indexOf(storedVars.arraySV[storedVars.lang]) | result |
+[info] script is: storedVars.htmlsource.indexOf(storedVars.arraySV[storedVars.lang])
+[info] Executing: |gotoIf | storedVars.result > -1 | hasnot |
+[info] Executing: |storeEval | "has" | resulttext |
+[info] script is: "has"
+[info] Executing: |echo | javascript{alert('has')} |  |
+[info] echo: null
+[info] Executing: |label | out |  |
+[info] Executing: |storeEval | storedVars.arraySV[storedVars.lang] | word |
+[info] script is: storedVars.arraySV[storedVars.lang]
+[info] Executing: |echo | ${word} |  |
+[info] echo: PYíjmení vaaeho akolitele
+[info] Executing: |echo | translation: ${word} and result: ${resulttext} |  |
+[info] echo: translation: PYíjmení vaaeho akolitele and result: has
+[info] Executing: |storeEval | storedVars.lang++; |  |
+[info] script is: storedVars.lang++;
+[info] Executing: |endWhile |  |  |
+[info] Executing: |while | storedVars.lang <= storedVars.svSize |  |
+[info] Executing: |storeEval | storedVars.htmlsource.indexOf(storedVars.arraySV[storedVars.lang]) | result |
+[info] script is: storedVars.htmlsource.indexOf(storedVars.arraySV[storedVars.lang])
+[info] Executing: |gotoIf | storedVars.result > -1 | hasnot |
+[info] Executing: |storeEval | "has not" | resulttext |
+[info] script is: "has not"
+[info] Executing: |echo | javascript{alert('has not')} |  |
+[info] echo: null
+[info] Executing: |gotoLabel | out |  |
+[info] Executing: |storeEval | storedVars.arraySV[storedVars.lang] | word |
+[info] script is: storedVars.arraySV[storedVars.lang]
+[info] Executing: |echo | ${word} |  |
+[info] echo: íslo restaurace, v ní~ se akolíte
+[info] Executing: |echo | translation: ${word} and result: ${resulttext} |  |
+[info] echo: translation: íslo restaurace, v ní~ se akolíte and result: has not
+[info] Executing: |storeEval | storedVars.lang++; |  |
+[info] script is: storedVars.lang++;
+[info] Executing: |endWhile |  |  |
+[info] Executing: |while | storedVars.lang <= storedVars.svSize |  |
+[info] Executing: |storeEval | storedVars.htmlsource.indexOf(storedVars.arraySV[storedVars.lang]) | result |
+[info] script is: storedVars.htmlsource.indexOf(storedVars.arraySV[storedVars.lang])
+[info] Executing: |gotoIf | storedVars.result > -1 | hasnot |
+[info] Executing: |storeEval | "has not" | resulttext |
+[info] script is: "has not"
+[info] Executing: |echo | javascript{alert('has not')} |  |
+[info] echo: null
+[info] Executing: |gotoLabel | out |  |
+[info] Executing: |storeEval | storedVars.arraySV[storedVars.lang] | word |
+[info] script is: storedVars.arraySV[storedVars.lang]
+[info] Executing: |echo | ${word} |  |
+[info] echo: íslo restaurace, v ní~ budete pracovat
+[info] Executing: |echo | translation: ${word} and result: ${resulttext} |  |
+[info] echo: translation: íslo restaurace, v ní~ budete pracovat and result: has not
+[info] Executing: |storeEval | storedVars.lang++; |  |
+[info] script is: storedVars.lang++;
+[info] Executing: |endWhile |  |  |
+[info] Executing: |while | storedVars.lang <= storedVars.svSize |  |
+[info] Executing: |storeEval | storedVars.htmlsource.indexOf(storedVars.arraySV[storedVars.lang]) | result |
+[info] script is: storedVars.htmlsource.indexOf(storedVars.arraySV[storedVars.lang])
+[info] Executing: |gotoIf | storedVars.result > -1 | hasnot |
+[info] Executing: |storeEval | "has" | resulttext |
+[info] script is: "has"
+[info] Executing: |echo | javascript{alert('has')} |  |
+[info] echo: null
+[info] Executing: |label | out |  |
+[info] Executing: |storeEval | storedVars.arraySV[storedVars.lang] | word |
+[info] script is: storedVars.arraySV[storedVars.lang]
+[info] Executing: |echo | ${word} |  |
+[info] echo: Pozice akolitele
+[info] Executing: |echo | translation: ${word} and result: ${resulttext} |  |
+[info] echo: translation: Pozice akolitele and result: has
+[info] Executing: |storeEval | storedVars.lang++; |  |
+[info] script is: storedVars.lang++;
+[info] Executing: |endWhile |  |  |
+[info] Executing: |while | storedVars.lang <= storedVars.svSize |  |
+[info] Executing: |storeEval | storedVars.htmlsource.indexOf(storedVars.arraySV[storedVars.lang]) | result |
+[info] script is: storedVars.htmlsource.indexOf(storedVars.arraySV[storedVars.lang])
+[info] Executing: |gotoIf | storedVars.result > -1 | hasnot |
+[info] Executing: |storeEval | "has" | resulttext |
+[info] script is: "has"
+[info] Executing: |echo | javascript{alert('has')} |  |
+[info] echo: null
+[info] Executing: |label | out |  |
+[info] Executing: |storeEval | storedVars.arraySV[storedVars.lang] | word |
+[info] script is: storedVars.arraySV[storedVars.lang]
+[info] Executing: |echo | ${word} |  |
+[info] echo: Datum zahájení akolení
+[info] Executing: |echo | translation: ${word} and result: ${resulttext} |  |
+[info] echo: translation: Datum zahájení akolení and result: has
+[info] Executing: |storeEval | storedVars.lang++; |  |
+[info] script is: storedVars.lang++;
+[info] Executing: |endWhile |  |  |
+[info] Executing: |while | storedVars.lang <= storedVars.svSize |  |
+[info] Executing: |storeEval | storedVars.htmlsource.indexOf(storedVars.arraySV[storedVars.lang]) | result |
+[info] script is: storedVars.htmlsource.indexOf(storedVars.arraySV[storedVars.lang])
+[info] Executing: |gotoIf | storedVars.result > -1 | hasnot |
+[info] Executing: |storeEval | "has" | resulttext |
+[info] script is: "has"
+[info] Executing: |echo | javascript{alert('has')} |  |
+[info] echo: null
+[info] Executing: |label | out |  |
+[info] Executing: |storeEval | storedVars.arraySV[storedVars.lang] | word |
+[info] script is: storedVars.arraySV[storedVars.lang]
+[info] Executing: |echo | ${word} |  |
+[info] echo: Registrovat se
+[info] Executing: |echo | translation: ${word} and result: ${resulttext} |  |
+[info] echo: translation: Registrovat se and result: has
+[info] Executing: |storeEval | storedVars.lang++; |  |
+[info] script is: storedVars.lang++;
+[info] Executing: |endWhile |  |  |
+[info] Executing: |while | storedVars.lang <= storedVars.svSize |  |
+[info] Executing: |storeEval | storedVars.htmlsource.indexOf(storedVars.arraySV[storedVars.lang]) | result |
+[info] script is: storedVars.htmlsource.indexOf(storedVars.arraySV[storedVars.lang])
+[info] Executing: |gotoIf | storedVars.result > -1 | hasnot |
+[info] Executing: |storeEval | "has" | resulttext |
+[info] script is: "has"
+[info] Executing: |echo | javascript{alert('has')} |  |
+[info] echo: null
+[info] Executing: |label | out |  |
+[info] Executing: |storeEval | storedVars.arraySV[storedVars.lang] | word |
+[info] script is: storedVars.arraySV[storedVars.lang]
+[info] Executing: |echo | ${word} |  |
+[info] echo: Zruait
+[info] Executing: |echo | translation: ${word} and result: ${resulttext} |  |
+[info] echo: translation: Zruait and result: has
+[info] Executing: |storeEval | storedVars.lang++; |  |
+[info] script is: storedVars.lang++;
+[info] Executing: |endWhile |  |  |
+[info] Executing: |while | storedVars.lang <= storedVars.svSize |  |
+[info] Executing: |storeEval | storedVars.htmlsource.indexOf(storedVars.arraySV[storedVars.lang]) | result |
+[info] script is: storedVars.htmlsource.indexOf(storedVars.arraySV[storedVars.lang])
+[info] Executing: |gotoIf | storedVars.result > -1 | hasnot |
+[info] Executing: |storeEval | "has" | resulttext |
+[info] script is: "has"
+[info] Executing: |echo | javascript{alert('has')} |  |
+[info] echo: null
+[info] Executing: |label | out |  |
+[info] Executing: |storeEval | storedVars.arraySV[storedVars.lang] | word |
+[info] script is: storedVars.arraySV[storedVars.lang]
+[info] Executing: |echo | ${word} |  |
+[info] echo: Zvolte u~ivatelské jméno.
+[info] Executing: |echo | translation: ${word} and result: ${resulttext} |  |
+[info] echo: translation: Zvolte u~ivatelské jméno. and result: has
+[info] Executing: |storeEval | storedVars.lang++; |  |
+[info] script is: storedVars.lang++;
+[info] Executing: |endWhile |  |  |
+[info] Executing: |while | storedVars.lang <= storedVars.svSize |  |
+[info] Executing: |storeEval | storedVars.htmlsource.indexOf(storedVars.arraySV[storedVars.lang]) | result |
+[info] script is: storedVars.htmlsource.indexOf(storedVars.arraySV[storedVars.lang])
+[info] Executing: |gotoIf | storedVars.result > -1 | hasnot |
+[info] Executing: |storeEval | "has" | resulttext |
+[info] script is: "has"
+[info] Executing: |echo | javascript{alert('has')} |  |
+[info] echo: null
+[info] Executing: |label | out |  |
+[info] Executing: |storeEval | storedVars.arraySV[storedVars.lang] | word |
+[info] script is: storedVars.arraySV[storedVars.lang]
+[info] Executing: |echo | ${word} |  |
+[info] echo: Zadejte platnou e-mailovou adresu.
+[info] Executing: |echo | translation: ${word} and result: ${resulttext} |  |
+[info] echo: translation: Zadejte platnou e-mailovou adresu. and result: has
+[info] Executing: |storeEval | storedVars.lang++; |  |
+[info] script is: storedVars.lang++;
+[info] Executing: |endWhile |  |  |
+[info] Executing: |while | storedVars.lang <= storedVars.svSize |  |
+[info] Executing: |storeEval | storedVars.htmlsource.indexOf(storedVars.arraySV[storedVars.lang]) | result |
+[info] script is: storedVars.htmlsource.indexOf(storedVars.arraySV[storedVars.lang])
+[info] Executing: |gotoIf | storedVars.result > -1 | hasnot |
+[info] Executing: |storeEval | "has" | resulttext |
+[info] script is: "has"
+[info] Executing: |echo | javascript{alert('has')} |  |
+[info] echo: null
+[info] Executing: |label | out |  |
+[info] Executing: |storeEval | storedVars.arraySV[storedVars.lang] | word |
+[info] script is: storedVars.arraySV[storedVars.lang]
+[info] Executing: |echo | ${word} |  |
+[info] echo: Zvolte heslo.
+[info] Executing: |echo | translation: ${word} and result: ${resulttext} |  |
+[info] echo: translation: Zvolte heslo. and result: has
+[info] Executing: |storeEval | storedVars.lang++; |  |
+[info] script is: storedVars.lang++;
+[info] Executing: |endWhile |  |  |
+[info] Executing: |while | storedVars.lang <= storedVars.svSize |  |
+[info] Executing: |storeEval | storedVars.htmlsource.indexOf(storedVars.arraySV[storedVars.lang]) | result |
+[info] script is: storedVars.htmlsource.indexOf(storedVars.arraySV[storedVars.lang])
+[info] Executing: |gotoIf | storedVars.result > -1 | hasnot |
+[info] Executing: |storeEval | "has not" | resulttext |
+[info] script is: "has not"
+[info] Executing: |echo | javascript{alert('has not')} |  |
+[info] echo: null
+[info] Executing: |gotoLabel | out |  |
+[info] Executing: |storeEval | storedVars.arraySV[storedVars.lang] | word |
+[info] script is: storedVars.arraySV[storedVars.lang]
+[info] Executing: |echo | ${word} |  |
+[info] echo: Please confirm your password.
+[info] Executing: |echo | translation: ${word} and result: ${resulttext} |  |
+[info] echo: translation: Please confirm your password. and result: has not
+[info] Executing: |storeEval | storedVars.lang++; |  |
+[info] script is: storedVars.lang++;
+[info] Executing: |endWhile |  |  |
+[info] Executing: |while | storedVars.lang <= storedVars.svSize |  |
+[info] Executing: |storeEval | storedVars.htmlsource.indexOf(storedVars.arraySV[storedVars.lang]) | result |
+[info] script is: storedVars.htmlsource.indexOf(storedVars.arraySV[storedVars.lang])
+[info] Executing: |gotoIf | storedVars.result > -1 | hasnot |
+[info] Executing: |storeEval | "has" | resulttext |
+[info] script is: "has"
+[info] Executing: |echo | javascript{alert('has')} |  |
+[info] echo: null
+[info] Executing: |label | out |  |
+[info] Executing: |storeEval | storedVars.arraySV[storedVars.lang] | word |
+[info] script is: storedVars.arraySV[storedVars.lang]
+[info] Executing: |echo | ${word} |  |
+[info] echo: Ujistte se, ~e jsou vaechna pole vyplnna.
+[info] Executing: |echo | translation: ${word} and result: ${resulttext} |  |
+[info] echo: translation: Ujistte se, ~e jsou vaechna pole vyplnna. and result: has
+[info] Executing: |storeEval | storedVars.lang++; |  |
+[info] script is: storedVars.lang++;
+[info] Executing: |endWhile |  |  |
+[info] Executing: |while | storedVars.lang <= storedVars.svSize |  |
+[info] Executing: |storeEval | storedVars.htmlsource.indexOf(storedVars.arraySV[storedVars.lang]) | result |
+[info] script is: storedVars.htmlsource.indexOf(storedVars.arraySV[storedVars.lang])
+[info] Executing: |gotoIf | storedVars.result > -1 | hasnot |
+[info] Executing: |storeEval | "has not" | resulttext |
+[info] script is: "has not"
+[info] Executing: |echo | javascript{alert('has not')} |  |
+[info] echo: null
+[info] Executing: |gotoLabel | out |  |
+[info] Executing: |storeEval | storedVars.arraySV[storedVars.lang] | word |
+[info] script is: storedVars.arraySV[storedVars.lang]
+[info] Executing: |echo | ${word} |  |
+[info] echo: null
+[info] Executing: |echo | translation: ${word} and result: ${resulttext} |  |
+[info] echo: translation: null and result: has not
+[info] Executing: |storeEval | storedVars.lang++; |  |
+[info] script is: storedVars.lang++;
+[info] Executing: |endWhile |  |  |
+[info] Executing: |while | storedVars.lang <= storedVars.svSize |  |
+[info] Executing: |storeEval | storedVars.x++ |  |
+[info] script is: storedVars.x++
+[info] Executing: |endWhile |  |  |
+[info] Executing: |while | storedVars.x <= storedVars.langsize |  |
+[info] Executing: |select | id=ctl00_pageContentPlace__languageSelect | index=${x} |
+[error] Element id=ctl00_pageContentPlace__languageSelect not found
+[info] Executing: |open | http://bktesting.openface.com/Login.aspx |  |
+[info] Executing: |select | id=ctl00_pageContentPlace__languageSelect | index=${x} |

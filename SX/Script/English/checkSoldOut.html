@@ -1,0 +1,201 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en" lang="en">
+<head profile="http://selenium-ide.openqa.org/profiles/test-case">
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+<link rel="selenium.base" href="http://www.stylexchange.com/" />
+<title>test</title>
+</head>
+<body>
+<table cellpadding="1" cellspacing="1" border="1">
+<thead>
+<tr><td rowspan="1" colspan="3">test</td></tr>
+</thead><tbody>
+<tr>
+	<td>open</td>
+	<td>${domain}/en/</td>
+	<td></td>
+</tr>
+<tr>
+	<td>clickAndWait</td>
+	<td>link=Stylexchange</td>
+	<td></td>
+</tr>
+<tr>
+	<td>clickAndWait</td>
+	<td>css=a[title=&quot;Women&quot;] &gt; span</td>
+	<td></td>
+</tr>
+<tr>
+	<td>clickAndWait</td>
+	<td>css=div[title=&quot;XS&quot;]</td>
+	<td></td>
+</tr>
+<tr>
+	<td>pause</td>
+	<td>6000</td>
+	<td>6000</td>
+</tr>
+<tr>
+	<td>storeText</td>
+	<td>css=div[title=&quot;XS&quot;]</td>
+	<td>selectedsize</td>
+</tr>
+<tr>
+	<td>store</td>
+	<td>${selectedsize} * Sold Out</td>
+	<td>selectedsize</td>
+</tr>
+<tr>
+	<td>echo</td>
+	<td>${selectedsize}</td>
+	<td></td>
+</tr>
+<tr>
+	<td>storeHtmlSource</td>
+	<td>htmlsource</td>
+	<td></td>
+</tr>
+<tr>
+	<td>echo</td>
+	<td>${htmlsource}</td>
+	<td></td>
+</tr>
+<tr>
+	<td>storeEval</td>
+	<td>storedVars['htmlsource'].match(/&quot;img_[0-9]+&quot;/g);</td>
+	<td>IdImg</td>
+</tr>
+<tr>
+	<td>storeEval</td>
+	<td>storedVars['IdImg'].length;</td>
+	<td>ImgLength</td>
+</tr>
+<tr>
+	<td>storeEval</td>
+	<td>Math.floor(Math.random() * (${ImgLength} ));</td>
+	<td>randID</td>
+</tr>
+<tr>
+	<td>storeEval</td>
+	<td>storedVars['IdImg'][storedVars['randID']];</td>
+	<td>getIdImg</td>
+</tr>
+<tr>
+	<td>storeEval</td>
+	<td>storedVars['getIdImg'].substr(1,9);</td>
+	<td>pureid</td>
+</tr>
+<tr>
+	<td>clickAndWait</td>
+	<td>id=${pureid}</td>
+	<td></td>
+</tr>
+<tr>
+	<td>storeSelectOptions</td>
+	<td>id=attribute164</td>
+	<td>options</td>
+</tr>
+<tr>
+	<td>echo</td>
+	<td>${options}</td>
+	<td></td>
+</tr>
+<tr>
+	<td>getEval</td>
+	<td>index = 1;</td>
+	<td></td>
+</tr>
+<tr>
+	<td>storeEval</td>
+	<td>storedVars['options'].length;</td>
+	<td>length</td>
+</tr>
+<tr>
+	<td>echo</td>
+	<td>${length}</td>
+	<td></td>
+</tr>
+<tr>
+	<td>storeEval</td>
+	<td>index</td>
+	<td>index</td>
+</tr>
+<tr>
+	<td>while</td>
+	<td>index &lt; storedVars['options'].length;</td>
+	<td></td>
+</tr>
+<tr>
+	<td>storeEval</td>
+	<td>index</td>
+	<td>index</td>
+</tr>
+<tr>
+	<td>store</td>
+	<td>* Sold Out</td>
+	<td>soldout</td>
+</tr>
+<tr>
+	<td>echo</td>
+	<td>javascript{storedVars['options'][storedVars['index']]}</td>
+	<td></td>
+</tr>
+<tr>
+	<td>storeEval</td>
+	<td>storedVars['options'][storedVars['index']];</td>
+	<td>size</td>
+</tr>
+<tr>
+	<td>storeEval</td>
+	<td>storedVars['size'].substr(0,2)</td>
+	<td>substr</td>
+</tr>
+<tr>
+	<td>gotoIf</td>
+	<td>storedVars['selectedsize'] != storedVars['size']</td>
+	<td>test</td>
+</tr>
+<tr>
+	<td>runScript</td>
+	<td></td>
+	<td>javascript{alert('SOLD OUT PROBLEM on size ' + storedVars['substr']);}</td>
+</tr>
+<tr>
+	<td>store</td>
+	<td>true</td>
+	<td>switch</td>
+</tr>
+<tr>
+	<td>gotoIf</td>
+	<td>${switch} == true</td>
+	<td>jumpout</td>
+</tr>
+<tr>
+	<td>label</td>
+	<td>test</td>
+	<td></td>
+</tr>
+<tr>
+	<td>runScript</td>
+	<td></td>
+	<td>javascript{alert('No Problem on size ' + storedVars['substr']);}</td>
+</tr>
+<tr>
+	<td>label</td>
+	<td>jumpout</td>
+	<td></td>
+</tr>
+<tr>
+	<td>getEval</td>
+	<td>index++;</td>
+	<td></td>
+</tr>
+<tr>
+	<td>endWhile</td>
+	<td></td>
+	<td></td>
+</tr>
+</tbody></table>
+</body>
+</html>

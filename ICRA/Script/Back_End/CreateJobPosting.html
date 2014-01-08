@@ -1,0 +1,171 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en" lang="en">
+<head profile="http://selenium-ide.openqa.org/profiles/test-case">
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+<link rel="selenium.base" href="http://change-this-to-the-site-you-are-testing/" />
+<title>CreateJobPosting</title>
+</head>
+<body>
+<table cellpadding="1" cellspacing="1" border="1">
+<thead>
+<tr><td rowspan="1" colspan="3">CreateJobPosting</td></tr>
+</thead><tbody>
+<tr>
+	<td>storeHtmlSource</td>
+	<td>iframeid</td>
+	<td></td>
+</tr>
+<tr>
+	<td>storeEval</td>
+	<td>storedVars['iframeid'].replace(/frameborder=&quot;0&quot; /g,&quot;&quot;);</td>
+	<td>iframeid</td>
+</tr>
+<tr>
+	<td>storeEval</td>
+	<td>storedVars['iframeid'].match(/iframe id=&quot;[a-z]+[0-9]+&quot;/g);</td>
+	<td>iframeid</td>
+</tr>
+<tr>
+	<td>storeEval</td>
+	<td>storedVars['iframeid'][0].match(/[a-z]+[0-9]+/g);</td>
+	<td>iframeid</td>
+</tr>
+<tr>
+	<td>echo</td>
+	<td>${iframeid}</td>
+	<td></td>
+</tr>
+<tr>
+	<td>selectFrame</td>
+	<td>id=${iframeid}</td>
+	<td></td>
+</tr>
+<tr>
+	<td>mouseDown</td>
+	<td>xpath=//*[@title=&quot;Job Postings for CPBI&quot;]</td>
+	<td></td>
+</tr>
+<tr>
+	<td>mouseDown</td>
+	<td>xpath=//*[local-name()='treenode'][4]/node()[position()=1]/node()[last()]</td>
+	<td></td>
+</tr>
+<tr>
+	<td>keyDown</td>
+	<td>xpath=//*[local-name()='treenode'][4]/node()[position()=1]/node()[last()]</td>
+	<td>\40</td>
+</tr>
+<tr>
+	<td>mouseDown</td>
+	<td>xpath=//*[@label=&quot;Manage Job Postings&quot;]</td>
+	<td></td>
+</tr>
+<tr>
+	<td>mouseUp</td>
+	<td>xpath=//*[@label=&quot;Manage Job Postings&quot;]</td>
+	<td></td>
+</tr>
+<tr>
+	<td>pause</td>
+	<td>7000</td>
+	<td>7000</td>
+</tr>
+<tr>
+	<td>clickAndWait</td>
+	<td>id=ctl00_MPFooter_btnCreateNew</td>
+	<td></td>
+</tr>
+<tr>
+	<td>storeEval</td>
+	<td>javascript{Math.round (Math.random() * 40000)}</td>
+	<td>organization</td>
+</tr>
+<tr>
+	<td>echo</td>
+	<td>Test Organization ${organization}</td>
+	<td></td>
+</tr>
+<tr>
+	<td>type</td>
+	<td>id=ctl00_MPContent_ctlJobPostingEditor_txtOrganization</td>
+	<td>Test Organization ${organization}</td>
+</tr>
+<tr>
+	<td>storeEval</td>
+	<td>javascript{Math.round (Math.random() * 40000)}</td>
+	<td>position</td>
+</tr>
+<tr>
+	<td>echo</td>
+	<td>Test Position ${position}</td>
+	<td></td>
+</tr>
+<tr>
+	<td>type</td>
+	<td>id=ctl00_MPContent_ctlJobPostingEditor_txtPosition</td>
+	<td>Test Position ${position}</td>
+</tr>
+<tr>
+	<td>select</td>
+	<td>id=ctl00_MPContent_ctlJobPostingEditor_ddlProvince_ddlLookupData</td>
+	<td>Alberta</td>
+</tr>
+<tr>
+	<td>type</td>
+	<td>id=ctl00_MPContent_ctlJobPostingEditor_txtLocation</td>
+	<td>Test Locaion</td>
+</tr>
+<tr>
+	<td>click</td>
+	<td>id=ctl00_MPContent_ctlJobPostingEditor_dtpJobStartDate_txtDatePicker</td>
+	<td></td>
+</tr>
+<tr>
+	<td>click</td>
+	<td>link=17</td>
+	<td></td>
+</tr>
+<tr>
+	<td>select</td>
+	<td>id=ctl00_MPContent_ctlJobPostingEditor_ddlApplicationMethod_ddlLookupData</td>
+	<td>Apply Through Email using CPBI-ICRA Web Form</td>
+</tr>
+<tr>
+	<td>storeEval</td>
+	<td>javascript{Math.round (Math.random() * 40000)}</td>
+	<td>contact</td>
+</tr>
+<tr>
+	<td>echo</td>
+	<td>Test ${contact}</td>
+	<td></td>
+</tr>
+<tr>
+	<td>type</td>
+	<td>id=ctl00_MPContent_ctlJobPostingEditor_txtContactFirstname</td>
+	<td>Test ${contact}</td>
+</tr>
+<tr>
+	<td>type</td>
+	<td>id=ctl00_MPContent_ctlJobPostingEditor_txtContactLastname</td>
+	<td>Contact</td>
+</tr>
+<tr>
+	<td>type</td>
+	<td>id=ctl00_MPContent_ctlJobPostingEditor_txtContactEmail</td>
+	<td>test${contact}@contactperson.com</td>
+</tr>
+<tr>
+	<td>type</td>
+	<td>id=ctl00_MPContent_ctlJobPostingEditor_txtContactPhone</td>
+	<td>(563) 1234-8547</td>
+</tr>
+<tr>
+	<td>clickAndWait</td>
+	<td>id=ctl00_MPContent_ctlJobPostingEditor_btnSave</td>
+	<td></td>
+</tr>
+</tbody></table>
+</body>
+</html>

@@ -1,0 +1,633 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en" lang="en">
+<head profile="http://selenium-ide.openqa.org/profiles/test-case">
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+<link rel="selenium.base" href="http://www.stylexchange.com/" />
+<title>YoCanada_Checkout</title>
+</head>
+<body>
+<table cellpadding="1" cellspacing="1" border="1">
+<thead>
+<tr><td rowspan="1" colspan="3">YoCanada_Checkout</td></tr>
+</thead><tbody>
+<tr>
+	<td>open</td>
+	<td>${domain}/fr/</td>
+	<td></td>
+</tr>
+<tr>
+	<td>clickAndWait</td>
+	<td>link=Stylexchange</td>
+	<td></td>
+</tr>
+<tr>
+	<td>clickAndWait</td>
+	<td>css=a[title=&quot;Hommes&quot;] &gt; span</td>
+	<td></td>
+</tr>
+<tr>
+	<td>click</td>
+	<td>id=search</td>
+	<td></td>
+</tr>
+<tr>
+	<td>type</td>
+	<td>id=search</td>
+	<td>YOCANADA-TEE-1</td>
+</tr>
+<!--Yo Canada product TEE-->
+<tr>
+	<td>clickAndWait</td>
+	<td>${newSearch}</td>
+	<td></td>
+</tr>
+<tr>
+	<td>storeElementPresent</td>
+	<td>css=html img#img_57482</td>
+	<td>yotee</td>
+</tr>
+<tr>
+	<td>echo</td>
+	<td>${yotee}</td>
+	<td></td>
+</tr>
+<tr>
+	<td>store</td>
+	<td>true</td>
+	<td>checktrue</td>
+</tr>
+<tr>
+	<td>echo</td>
+	<td>${checktrue}</td>
+	<td></td>
+</tr>
+<!--Check if there is no "Yo TEE" jump to normal product-->
+<tr>
+	<td>gotoIf</td>
+	<td>${yotee} != ${checktrue}</td>
+	<td>endyotee</td>
+</tr>
+<tr>
+	<td>clickAndWait</td>
+	<td>id=img_57482</td>
+	<td></td>
+</tr>
+<tr>
+	<td>select</td>
+	<td>id=attribute164</td>
+	<td>label=Sélectionner une taille</td>
+</tr>
+<tr>
+	<td>click</td>
+	<td>css=span.pview-btn-add-more-text</td>
+	<td></td>
+</tr>
+<tr>
+	<td>verifyElementPresent</td>
+	<td>css=html body.catalog-product-view div.fancybox-overlay div.fancybox-wrap</td>
+	<td></td>
+</tr>
+<tr>
+	<td>click</td>
+	<td>css=a.fancybox-item.fancybox-close</td>
+	<td></td>
+</tr>
+<tr>
+	<td>verifyElementNotPresent</td>
+	<td>css=html body.catalog-product-view div.fancybox-overlay div.fancybox-wrap</td>
+	<td></td>
+</tr>
+<tr>
+	<td>click</td>
+	<td>css=span.pview-btn-add-more-text</td>
+	<td></td>
+</tr>
+<tr>
+	<td>click</td>
+	<td>css=#yocanada_map_extra &gt; area</td>
+	<td></td>
+</tr>
+<tr>
+	<td>click</td>
+	<td>css=span.pview-btn-add-more-text</td>
+	<td></td>
+</tr>
+<tr>
+	<td>click</td>
+	<td>//map[@id='yocanada_map_extra']/area[2]</td>
+	<td></td>
+</tr>
+<tr>
+	<td>verifyTextPresent</td>
+	<td>Donnée obligatoire.</td>
+	<td></td>
+</tr>
+<tr>
+	<td>select</td>
+	<td>id=attribute164</td>
+	<td>label=M</td>
+</tr>
+<tr>
+	<td>click</td>
+	<td>css=option[value=&quot;1301&quot;]</td>
+	<td></td>
+</tr>
+<tr>
+	<td>click</td>
+	<td>css=span.pview-btn-add-more-text</td>
+	<td></td>
+</tr>
+<tr>
+	<td>clickAndWait</td>
+	<td>//map[@id='yocanada_map_extra']/area[2]</td>
+	<td></td>
+</tr>
+<tr>
+	<td>select</td>
+	<td>id=attribute164</td>
+	<td>label=M</td>
+</tr>
+<tr>
+	<td>pause</td>
+	<td>5000</td>
+	<td>5000</td>
+</tr>
+<tr>
+	<td>verifyTextPresent</td>
+	<td>YO CANADA TEE a été ajouté dans votre panier.</td>
+	<td></td>
+</tr>
+<tr>
+	<td>verifyTextPresent</td>
+	<td>1 article ajouté au panier.</td>
+	<td></td>
+</tr>
+<tr>
+	<td>label</td>
+	<td>endyotee</td>
+	<td></td>
+</tr>
+<tr>
+	<td>clickAndWait</td>
+	<td>link=Stylexchange</td>
+	<td></td>
+</tr>
+<tr>
+	<td>clickAndWait</td>
+	<td>css=a[title=&quot;Femmes&quot;] &gt; span</td>
+	<td></td>
+</tr>
+<!--Normal Women product-->
+<tr>
+	<td>click</td>
+	<td>id=search</td>
+	<td></td>
+</tr>
+<tr>
+	<td>type</td>
+	<td>id=search</td>
+	<td>MULTICOLOR BURN OUT TANK</td>
+</tr>
+<tr>
+	<td>clickAndWait</td>
+	<td>${newSearch}</td>
+	<td></td>
+</tr>
+<tr>
+	<td>clickAndWait</td>
+	<td>css=html a.product-image</td>
+	<td></td>
+</tr>
+<tr>
+	<td>storeTitle</td>
+	<td>gettitle</td>
+	<td></td>
+</tr>
+<tr>
+	<td>echo</td>
+	<td>${gettitle}</td>
+	<td></td>
+</tr>
+<tr>
+	<td>select</td>
+	<td>id=attribute164</td>
+	<td>label=Sélectionner une taille</td>
+</tr>
+<tr>
+	<td>select</td>
+	<td>id=attribute164</td>
+	<td>label=L</td>
+</tr>
+<tr>
+	<td>click</td>
+	<td>css=option[value=&quot;1302&quot;]</td>
+	<td></td>
+</tr>
+<tr>
+	<td>clickAndWait</td>
+	<td>css=span.pview-btn-add-more-text</td>
+	<td></td>
+</tr>
+<tr>
+	<td>verifyElementNotPresent</td>
+	<td>css=html body.catalog-product-view div.fancybox-overlay div.fancybox-wrap</td>
+	<td></td>
+</tr>
+<tr>
+	<td>select</td>
+	<td>id=attribute164</td>
+	<td>label=L</td>
+</tr>
+<!--Split title by seperator ("-") to array-->
+<tr>
+	<td>storeEval</td>
+	<td>storedVars['gettitle'].split(&quot;-&quot;); </td>
+	<td>newtitle</td>
+</tr>
+<tr>
+	<td>storeEval</td>
+	<td>storedVars['newtitle'][0];</td>
+	<td>newtitle</td>
+</tr>
+<tr>
+	<td>echo</td>
+	<td>${newtitle}</td>
+	<td></td>
+</tr>
+<tr>
+	<td>verifyText</td>
+	<td>css=html body.catalog-product-view div#wrapper div#main div.main-container div#messages_product_view ul.messages li.success-msg ul li span</td>
+	<td>${newtitle}a été ajouté dans votre panier.</td>
+</tr>
+<tr>
+	<td>clickAndWait</td>
+	<td>link=Stylexchange</td>
+	<td></td>
+</tr>
+<tr>
+	<td>pause</td>
+	<td>2000</td>
+	<td>2000</td>
+</tr>
+<tr>
+	<td>click</td>
+	<td>id=search</td>
+	<td></td>
+</tr>
+<tr>
+	<td>type</td>
+	<td>id=search</td>
+	<td>YOCANADA-1</td>
+</tr>
+<tr>
+	<td>pause</td>
+	<td>3000</td>
+	<td>3000</td>
+</tr>
+<!--Yo Canada product Snapback-->
+<tr>
+	<td>clickAndWait</td>
+	<td>${newSearch}</td>
+	<td></td>
+</tr>
+<tr>
+	<td>pause</td>
+	<td>2000</td>
+	<td>2000</td>
+</tr>
+<tr>
+	<td>storeElementPresent</td>
+	<td>css=css=html a.product-image</td>
+	<td>yosnapback</td>
+</tr>
+<tr>
+	<td>echo</td>
+	<td>${yosnapback}</td>
+	<td></td>
+</tr>
+<!--Check if there is no "Yo Snapback" jump to checkout-->
+<tr>
+	<td>gotoIf</td>
+	<td>${yosnapback} != ${checktrue}</td>
+	<td>endyosnapback</td>
+</tr>
+<tr>
+	<td>clickAndWait</td>
+	<td>id=img_56773</td>
+	<td></td>
+</tr>
+<tr>
+	<td>select</td>
+	<td>id=attribute164</td>
+	<td>label=Sélectionner une taille</td>
+</tr>
+<tr>
+	<td>click</td>
+	<td>css=span.pview-btn-add-more-text</td>
+	<td></td>
+</tr>
+<tr>
+	<td>verifyElementPresent</td>
+	<td>css=html body.catalog-product-view div.fancybox-overlay div.fancybox-wrap</td>
+	<td></td>
+</tr>
+<tr>
+	<td>click</td>
+	<td>css=a.fancybox-item.fancybox-close</td>
+	<td></td>
+</tr>
+<tr>
+	<td>verifyElementNotPresent</td>
+	<td>css=html body.catalog-product-view div.fancybox-overlay div.fancybox-wrap</td>
+	<td></td>
+</tr>
+<tr>
+	<td>click</td>
+	<td>css=span.pview-btn-add-more-text</td>
+	<td></td>
+</tr>
+<tr>
+	<td>click</td>
+	<td>css=#yocanada_map_extra &gt; area</td>
+	<td></td>
+</tr>
+<tr>
+	<td>click</td>
+	<td>css=span.pview-btn-add-more-text</td>
+	<td></td>
+</tr>
+<tr>
+	<td>click</td>
+	<td>xpath=//map[@id='yocanada_map_extra']/area[2]</td>
+	<td></td>
+</tr>
+<tr>
+	<td>verifyTextPresent</td>
+	<td>Donnée obligatoire.</td>
+	<td></td>
+</tr>
+<tr>
+	<td>click</td>
+	<td>id=attribute164</td>
+	<td></td>
+</tr>
+<tr>
+	<td>select</td>
+	<td>id=attribute164</td>
+	<td>label=OS</td>
+</tr>
+<tr>
+	<td>click</td>
+	<td>css=option[value=&quot;1306&quot;]</td>
+	<td></td>
+</tr>
+<tr>
+	<td>click</td>
+	<td>css=span.pview-btn-add-more-text</td>
+	<td></td>
+</tr>
+<tr>
+	<td>clickAndWait</td>
+	<td>//map[@id='yocanada_map_extra']/area[2]</td>
+	<td></td>
+</tr>
+<tr>
+	<td>select</td>
+	<td>id=attribute164</td>
+	<td>label=OS</td>
+</tr>
+<tr>
+	<td>click</td>
+	<td>css=#messages_product_view &gt; ul.messages &gt; li.success-msg &gt; ul &gt; li &gt; span</td>
+	<td></td>
+</tr>
+<tr>
+	<td>verifyElementNotPresent</td>
+	<td>css=html body.catalog-product-view div.fancybox-overlay div.fancybox-wrap</td>
+	<td></td>
+</tr>
+<tr>
+	<td>pause</td>
+	<td>2000</td>
+	<td>2000</td>
+</tr>
+<tr>
+	<td>verifyTextPresent</td>
+	<td>YO CANADA TEE a été ajouté dans votre panier.</td>
+	<td></td>
+</tr>
+<tr>
+	<td>click</td>
+	<td>//body</td>
+	<td></td>
+</tr>
+<tr>
+	<td>clickAndWait</td>
+	<td>link=PANIER D’ACHAT</td>
+	<td></td>
+</tr>
+<tr>
+	<td>verifyHtmlSource</td>
+	<td>*&lt;strong&gt;Vintage Frames&lt;/strong&gt;*</td>
+	<td></td>
+</tr>
+<tr>
+	<td>verifyHtmlSource</td>
+	<td>*YO CANADA*</td>
+	<td></td>
+</tr>
+<tr>
+	<td>label</td>
+	<td>endyosnapback</td>
+	<td></td>
+</tr>
+<tr>
+	<td>clickAndWait</td>
+	<td>link=PANIER D’ACHAT</td>
+	<td></td>
+</tr>
+<tr>
+	<td>clickAndWait</td>
+	<td>css=a.btn-checkout &gt; h2.shopping-bag-title-font-small</td>
+	<td></td>
+</tr>
+<tr>
+	<td>pause</td>
+	<td>5000</td>
+	<td>5000</td>
+</tr>
+<tr>
+	<td>click</td>
+	<td>id=billing:use_for_shipping_yes</td>
+	<td></td>
+</tr>
+<tr>
+	<td>type</td>
+	<td>id=billing:firstname</td>
+	<td>nuttapon</td>
+</tr>
+<tr>
+	<td>type</td>
+	<td>id=billing:lastname</td>
+	<td>pichetpongsa</td>
+</tr>
+<tr>
+	<td>type</td>
+	<td>id=billing:email</td>
+	<td>nuttapon@openface.com</td>
+</tr>
+<tr>
+	<td>type</td>
+	<td>id=billing:street1</td>
+	<td>test</td>
+</tr>
+<tr>
+	<td>type</td>
+	<td>id=billing:city</td>
+	<td>city</td>
+</tr>
+<tr>
+	<td>click</td>
+	<td>id=billing:country_id</td>
+	<td></td>
+</tr>
+<tr>
+	<td>click</td>
+	<td>id=billing:use_for_shipping_yes</td>
+	<td></td>
+</tr>
+<tr>
+	<td>click</td>
+	<td>css=div.input-checkbox.input-different-shipping &gt; label</td>
+	<td></td>
+</tr>
+<tr>
+	<td>select</td>
+	<td>id=billing:country_id</td>
+	<td>label=Bolivie</td>
+</tr>
+<tr>
+	<td>select</td>
+	<td>id=billing:country_id</td>
+	<td>label=Canada</td>
+</tr>
+<tr>
+	<td>click</td>
+	<td>id=billing:use_for_shipping_yes</td>
+	<td></td>
+</tr>
+<tr>
+	<td>type</td>
+	<td>id=billing:postcode</td>
+	<td>111111</td>
+</tr>
+<tr>
+	<td>select</td>
+	<td>id=billing:region_id</td>
+	<td>label=Ontario</td>
+</tr>
+<tr>
+	<td>click</td>
+	<td>css=option[value=&quot;74&quot;]</td>
+	<td></td>
+</tr>
+<tr>
+	<td>click</td>
+	<td>id=billing:telephone</td>
+	<td></td>
+</tr>
+<tr>
+	<td>type</td>
+	<td>id=billing:telephone</td>
+	<td>111111</td>
+</tr>
+<tr>
+	<td>pause</td>
+	<td>5000</td>
+	<td>5000</td>
+</tr>
+<tr>
+	<td>verifyElementPresent</td>
+	<td>css=html body.onestepcheckout-index-index div#wrapper div#main div.main-container div.onestepcheckout form#onestepcheckout-form fieldset.group-select div.checkoutcontainer div.order-section div.onestepcheckout-shipping-method div.onestepcheckout-shipping-method-block dl.shipment-methods dd</td>
+	<td>css=html body.onestepcheckout-index-index div#wrapper div#main div.main-container div.onestepcheckout form#onestepcheckout-form fieldset.group-select div.checkoutcontainer div.order-section div.onestepcheckout-shipping-method div.onestepcheckout-shipping-method-block dl.shipment-methods dd</td>
+</tr>
+<tr>
+	<td>click</td>
+	<td>xpath=//*[@id=&quot;p_method_paypal_direct&quot;]</td>
+	<td></td>
+</tr>
+<tr>
+	<td>verifyElementPresent</td>
+	<td>css=html body.onestepcheckout-index-index div#wrapper div#main div.main-container div.onestepcheckout form#onestepcheckout-form fieldset.group-select div.checkoutcontainer div.order-section div.payment-section div.section-title h2</td>
+	<td>css=html body.onestepcheckout-index-index div#wrapper div#main div.main-container div.onestepcheckout form#onestepcheckout-form fieldset.group-select div.checkoutcontainer div.order-section div.payment-section div.section-title h2</td>
+</tr>
+<tr>
+	<td>click</td>
+	<td>id=paypal_direct_cc_owner</td>
+	<td></td>
+</tr>
+<tr>
+	<td>type</td>
+	<td>id=paypal_direct_cc_owner</td>
+	<td>test</td>
+</tr>
+<tr>
+	<td>click</td>
+	<td>css=div.checkoutcontainer</td>
+	<td></td>
+</tr>
+<tr>
+	<td>select</td>
+	<td>id=paypal_direct_cc_type</td>
+	<td>label=Visa</td>
+</tr>
+<tr>
+	<td>click</td>
+	<td>css=#paypal_direct_cc_type &gt; option[value=&quot;VI&quot;]</td>
+	<td></td>
+</tr>
+<tr>
+	<td>type</td>
+	<td>id=paypal_direct_cc_number</td>
+	<td>4283616195575413</td>
+</tr>
+<tr>
+	<td>select</td>
+	<td>id=paypal_direct_expiration</td>
+	<td>label=01 - janvier</td>
+</tr>
+<tr>
+	<td>select</td>
+	<td>id=paypal_direct_expiration_yr</td>
+	<td>label=2018</td>
+</tr>
+<tr>
+	<td>click</td>
+	<td>id=paypal_direct_cc_cid</td>
+	<td></td>
+</tr>
+<tr>
+	<td>type</td>
+	<td>id=paypal_direct_cc_cid</td>
+	<td>111</td>
+</tr>
+<tr>
+	<td>pause</td>
+	<td>4000</td>
+	<td>4000</td>
+</tr>
+<tr>
+	<td>clickAndWait</td>
+	<td>css=html body.onestepcheckout-index-index div#wrapper div#main div.main-container div.onestepcheckout form#onestepcheckout-form fieldset.group-select div.checkoutcontainer div.order-section div.onestepcheckout-place-order-wrapper button#onestepcheckout-place-order.large</td>
+	<td></td>
+</tr>
+<!--this is for blackout event; xpath=/html/body/div/div[2]/div/div[2]/form/fieldset/div-->
+<tr>
+	<td>verifyTextPresent</td>
+	<td></td>
+	<td>Le paiement est refusé par votre banque et/ou PayPal. Essayer de nouveau avec une autre methode de paiement.</td>
+</tr>
+</tbody></table>
+</body>
+</html>

@@ -1,0 +1,176 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en" lang="en">
+<head profile="http://selenium-ide.openqa.org/profiles/test-case">
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+<link rel="selenium.base" href="http://change-this-to-the-site-you-are-testing/" />
+<title>New Test</title>
+</head>
+<body>
+<table cellpadding="1" cellspacing="1" border="1">
+<thead>
+<tr><td rowspan="1" colspan="3">New Test</td></tr>
+</thead><tbody>
+<tr>
+	<td>open</td>
+	<td>http://bktesting.openface.com/Login.aspx</td>
+	<td></td>
+</tr>
+<tr>
+	<td>storeSelectOptions</td>
+	<td>id=ctl00_pageContentPlace__languageSelect</td>
+	<td>languages</td>
+</tr>
+<tr>
+	<td>storeEval</td>
+	<td>storedVars.languages.length</td>
+	<td>langsize</td>
+</tr>
+<tr>
+	<td>storeEval</td>
+	<td>0</td>
+	<td>x</td>
+</tr>
+<!--for 20 languages-->
+<tr>
+	<td>while</td>
+	<td>storedVars.x &lt;= storedVars.langsize</td>
+	<td></td>
+</tr>
+<tr>
+	<td>open</td>
+	<td>http://bktesting.openface.com/Login.aspx</td>
+	<td></td>
+</tr>
+<tr>
+	<td>select</td>
+	<td>id=ctl00_pageContentPlace__languageSelect</td>
+	<td>index=${x}</td>
+</tr>
+<tr>
+	<td>echo</td>
+	<td>javascript{alert(storedVars.languages[storedVars.x])}</td>
+	<td></td>
+</tr>
+<!--click at register link-->
+<tr>
+	<td>clickAndWait</td>
+	<td>id=ctl00_pageContentPlace__newUserLnk</td>
+	<td></td>
+</tr>
+<!--click at submit button to show all alert-->
+<tr>
+	<td>clickAndWait</td>
+	<td>id=ctl00_pageContentPlace__submitBtn</td>
+	<td></td>
+</tr>
+<!----------------------------------------------------------------------------------------------->
+<!--start taking page source-->
+<tr>
+	<td>storeHtmlSource</td>
+	<td>htmlsource</td>
+	<td></td>
+</tr>
+<tr>
+	<td>storeEval</td>
+	<td>new Array ('Nová registrace uživatele', 'Vítejte u online zkoušky nazvané', 'Vyplňte níže uvedená pole a absolvujte zkoušku 0 týdnů po dokončení vaší registrace.', 'Ujistěte se, že jsou informace o novém pracovníkovi zadány správně – jakákoli nesprávně zapsaná jména či nesprávné údaje povedou ke vzniku chyb na certifikátu Základy.', 'Do níže uvedených polí zadejte informace. Povinná pole jsou označena', 'Požadované uživatelské jméno', 'E-mailová adresa', 'Heslo', 'Potvrďte heslo', 'Zvolte takové heslo, které má alespoň 6 znaků a obsahuje číslice nebo speciální znaky.', 'Křestní jméno', 'Příjmení', 'Křestní jméno vašeho školitele', 'Příjmení vašeho školitele', 'Číslo restaurace, v níž se školíte', 'Číslo restaurace, v níž budete pracovat', 'Pozice školitele', 'Datum zahájení školení', 'Registrovat se', 'Zrušit','Zvolte uživatelské jméno.', 'Zadejte platnou e-mailovou adresu.', 'Zvolte heslo.', 'Please confirm your password.', 'Ujistěte se, že jsou všechna pole vyplněna.')</td>
+	<td>arraySV</td>
+</tr>
+<tr>
+	<td>storeEval</td>
+	<td>storedVars.arraySV.length</td>
+	<td>svSize</td>
+</tr>
+<tr>
+	<td>store</td>
+	<td>0</td>
+	<td>lang</td>
+</tr>
+<tr>
+	<td>while</td>
+	<td>storedVars.lang &lt;= storedVars.svSize</td>
+	<td></td>
+</tr>
+<tr>
+	<td>storeEval</td>
+	<td>storedVars.htmlsource.indexOf(storedVars.arraySV[storedVars.lang])</td>
+	<td>result</td>
+</tr>
+<tr>
+	<td>gotoIf</td>
+	<td>storedVars.result &gt; -1</td>
+	<td>hasnot</td>
+</tr>
+<tr>
+	<td>storeEval</td>
+	<td>&quot;has not&quot;</td>
+	<td>resulttext</td>
+</tr>
+<tr>
+	<td>echo</td>
+	<td>javascript{alert('has not')}</td>
+	<td></td>
+</tr>
+<tr>
+	<td>gotoLabel</td>
+	<td>out</td>
+	<td></td>
+</tr>
+<tr>
+	<td>label</td>
+	<td>hasnot</td>
+	<td></td>
+</tr>
+<tr>
+	<td>storeEval</td>
+	<td>&quot;has&quot;</td>
+	<td>resulttext</td>
+</tr>
+<tr>
+	<td>echo</td>
+	<td>javascript{alert('has')}</td>
+	<td></td>
+</tr>
+<tr>
+	<td>label</td>
+	<td>out</td>
+	<td></td>
+</tr>
+<tr>
+	<td>storeEval</td>
+	<td>storedVars.arraySV[storedVars.lang]</td>
+	<td>word</td>
+</tr>
+<tr>
+	<td>echo</td>
+	<td>${word}</td>
+	<td></td>
+</tr>
+<tr>
+	<td>echo</td>
+	<td>translation: ${word} and result: ${resulttext}</td>
+	<td></td>
+</tr>
+<tr>
+	<td>storeEval</td>
+	<td>storedVars.lang++;</td>
+	<td></td>
+</tr>
+<tr>
+	<td>endWhile</td>
+	<td></td>
+	<td></td>
+</tr>
+<tr>
+	<td>storeEval</td>
+	<td>storedVars.x++</td>
+	<td></td>
+</tr>
+<tr>
+	<td>endWhile</td>
+	<td></td>
+	<td></td>
+</tr>
+</tbody></table>
+</body>
+</html>

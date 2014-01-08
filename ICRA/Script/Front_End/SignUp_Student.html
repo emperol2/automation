@@ -1,0 +1,429 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en" lang="en">
+<head profile="http://selenium-ide.openqa.org/profiles/test-case">
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+<link rel="selenium.base" href="http://icra-dev/" />
+<title>SignUp_Student</title>
+</head>
+<body>
+<table cellpadding="1" cellspacing="1" border="1">
+<thead>
+<tr><td rowspan="1" colspan="3">SignUp_Student</td></tr>
+</thead><tbody>
+<tr>
+	<td>open</td>
+	<td>${icra}</td>
+	<td></td>
+</tr>
+<tr>
+	<td>pause</td>
+	<td>4000</td>
+	<td>4000</td>
+</tr>
+<tr>
+	<td>clickAndWait</td>
+	<td>id=lnkSignupPage</td>
+	<td></td>
+</tr>
+<tr>
+	<td>click</td>
+	<td>id=btnNextToVerifyDetail</td>
+	<td></td>
+</tr>
+<!--Your information-->
+<tr>
+	<td>pause</td>
+	<td>3000</td>
+	<td>3000</td>
+</tr>
+<tr>
+	<td>select</td>
+	<td>id=ctl00_ctl00_phContent_ctl11_ddlContactSalutation_ddlLookupData</td>
+	<td>Ms.</td>
+</tr>
+<tr>
+	<td>store</td>
+	<td>javascript{Math.round(Math.random() * 20000);}</td>
+	<td>random</td>
+</tr>
+<tr>
+	<td>echo</td>
+	<td>Test ${random}</td>
+	<td></td>
+</tr>
+<tr>
+	<td>type</td>
+	<td>id=txtContactFirstName</td>
+	<td>Test ${random}</td>
+</tr>
+<tr>
+	<td>type</td>
+	<td>id=txtContactLastName</td>
+	<td>Student</td>
+</tr>
+<tr>
+	<td>type</td>
+	<td>id=txtContactEmail</td>
+	<td>test@student${random}.com</td>
+</tr>
+<tr>
+	<td>select</td>
+	<td>id=ddlBirthYear</td>
+	<td>1990</td>
+</tr>
+<!--Profile Type (Membership Class)-->
+<tr>
+	<td>clickAndWait</td>
+	<td>name=ctl00$ctl00$phContent$ctl11$rptMembershipClass$ctl02$MembershipCategory</td>
+	<td></td>
+</tr>
+<!--Business & Contact Info-->
+<tr>
+	<td>type</td>
+	<td>id=ctl00_ctl00_phContent_ctl11_ctlAddressEditor_txtAddress1</td>
+	<td>Test address</td>
+</tr>
+<tr>
+	<td>select</td>
+	<td>id=ctl00_ctl00_phContent_ctl11_ctlAddressEditor_ddlCountry</td>
+	<td>Canada</td>
+</tr>
+<tr>
+	<td>pause</td>
+	<td>3000</td>
+	<td>3000</td>
+</tr>
+<tr>
+	<td>type</td>
+	<td>id=ctl00_ctl00_phContent_ctl11_ctlAddressEditor_txtCity</td>
+	<td>Test city</td>
+</tr>
+<tr>
+	<td>select</td>
+	<td>id=ctl00_ctl00_phContent_ctl11_ctlAddressEditor_ddlProvince</td>
+	<td>Manitoba</td>
+</tr>
+<tr>
+	<td>pause</td>
+	<td>6000</td>
+	<td>6000</td>
+</tr>
+<tr>
+	<td>verifyElementPresent</td>
+	<td>xpath=//*[@id=&quot;pnlPayment&quot;]</td>
+	<td></td>
+</tr>
+<tr>
+	<td>type</td>
+	<td>id=ctl00_ctl00_phContent_ctl11_ctlAddressEditor_txtPostalCode</td>
+	<td>t0a9i8</td>
+</tr>
+<tr>
+	<td>type</td>
+	<td>id=ctl00_ctl00_phContent_ctl11_ctlAddressEditor_txtPhone</td>
+	<td>(333) 444-5555</td>
+</tr>
+<tr>
+	<td>type</td>
+	<td>id=ctl00_ctl00_phContent_ctl11_ctlAddressEditor_txtPhoneExt</td>
+	<td>444</td>
+</tr>
+<tr>
+	<td>type</td>
+	<td>id=ctl00_ctl00_phContent_ctl11_ctlAddressEditor_txtFax</td>
+	<td>(333) 444-5555</td>
+</tr>
+<tr>
+	<td>type</td>
+	<td>id=ctl00_ctl00_phContent_ctl11_ctlAddressEditor_txtMobile</td>
+	<td>(333) 444-5555</td>
+</tr>
+<!--Additional Details-->
+<tr>
+	<td>verifyElementNotPresent</td>
+	<td>id=ctl00_ctl00_phContent_ctl11_ctlMemberAttributeEditor_rdoSectorProvider</td>
+	<td></td>
+</tr>
+<tr>
+	<td>verifyElementNotPresent</td>
+	<td>id=ctl00_ctl00_phContent_ctl11_ctlMemberAttributeEditor_rdoIsTaxExempt_0</td>
+	<td></td>
+</tr>
+<tr>
+	<td>verifyElementNotPresent</td>
+	<td>id=ctl00_ctl00_phContent_ctl11_ctlMemberAttributeEditor_rdoRequireCECredit_0</td>
+	<td></td>
+</tr>
+<tr>
+	<td>verifyTextPresent</td>
+	<td>Post Secondary Institution</td>
+	<td></td>
+</tr>
+<tr>
+	<td>type</td>
+	<td>id=ctl00_ctl00_phContent_ctl11_ctlMemberAttributeEditor_ctlMemberAttributeCustomAttributesEditor_ControlGenerator_RowPanel_a664891afde14d129c7d2a40520e89fa_InputPanel_Text_TextControl</td>
+	<td>Post-123456</td>
+</tr>
+<tr>
+	<td>verifyTextPresent</td>
+	<td>Student Number</td>
+	<td></td>
+</tr>
+<tr>
+	<td>type</td>
+	<td>id=ctl00_ctl00_phContent_ctl11_ctlMemberAttributeEditor_ctlMemberAttributeCustomAttributesEditor_ControlGenerator_RowPanel_d89e10bfd659486c97af544ac11501e8_InputPanel_Number_NumberControl</td>
+	<td>123456789</td>
+</tr>
+<!--Payment Information-->
+<tr>
+	<td>select</td>
+	<td>id=ctl00_ctl00_phContent_ctl11_ctlPaymentPanel_ddlPaymentMethod_ddlLookupData</td>
+	<td>Pay offline</td>
+</tr>
+<tr>
+	<td>click</td>
+	<td>id=ctl00_ctl00_phContent_ctl11_ctlPaymentPanel_rdoOtherAddress</td>
+	<td></td>
+</tr>
+<tr>
+	<td>verifyElementPresent</td>
+	<td>css=div#ctl00_ctl00_phContent_ctl11_ctlPaymentPanel_pnlBillingToOtherAddress</td>
+	<td></td>
+</tr>
+<tr>
+	<td>type</td>
+	<td>id=ctl00_ctl00_phContent_ctl11_ctlPaymentPanel_txtAddress1</td>
+	<td>Address</td>
+</tr>
+<tr>
+	<td>select</td>
+	<td>id=ctl00_ctl00_phContent_ctl11_ctlPaymentPanel_ddlCountry</td>
+	<td>United States</td>
+</tr>
+<tr>
+	<td>pause</td>
+	<td>6000</td>
+	<td>6000</td>
+</tr>
+<tr>
+	<td>type</td>
+	<td>id=ctl00_ctl00_phContent_ctl11_ctlPaymentPanel_txtCity</td>
+	<td>City</td>
+</tr>
+<tr>
+	<td>select</td>
+	<td>id=ctl00_ctl00_phContent_ctl11_ctlPaymentPanel_ddlProvince</td>
+	<td>Alabama</td>
+</tr>
+<tr>
+	<td>type</td>
+	<td>id=ctl00_ctl00_phContent_ctl11_ctlPaymentPanel_txtPostalCode</td>
+	<td>12345-0001</td>
+</tr>
+<tr>
+	<td>type</td>
+	<td>id=ctl00_ctl00_phContent_ctl11_ctlPaymentPanel_txtPhone</td>
+	<td>(000) 999-8888</td>
+</tr>
+<!--Send an additional-->
+<tr>
+	<td>check</td>
+	<td>id=ctl00_ctl00_phContent_ctl11_ctlPaymentPanel_chkSendCopyToAnotherEmail</td>
+	<td></td>
+</tr>
+<tr>
+	<td>type</td>
+	<td>id=ctl00_ctl00_phContent_ctl11_ctlPaymentPanel_txtSendCopyToAnotherEmail</td>
+	<td>su.chavengpoj@gmail.com</td>
+</tr>
+<!--Privacy Consent-->
+<tr>
+	<td>check</td>
+	<td>id=chkPrivacyConsent</td>
+	<td></td>
+</tr>
+<tr>
+	<td>clickAndWait</td>
+	<td>id=btnNextToVerifyDetail</td>
+	<td></td>
+</tr>
+<!--Verify Details-->
+<tr>
+	<td>assertTextPresent</td>
+	<td>Verify Your Information</td>
+	<td></td>
+</tr>
+<tr>
+	<td>assertText</td>
+	<td>css=div#membershipTypePanel.widget-box strong</td>
+	<td>Student / Étudiant :</td>
+</tr>
+<tr>
+	<td>clickAndWait</td>
+	<td>id=btnNextToCompleteStep</td>
+	<td></td>
+</tr>
+<!--Complete Page-->
+<tr>
+	<td>assertElementPresent</td>
+	<td>css=div#pnlSuccessUser.form-editor span#lblThankyouToCreateProfile b</td>
+	<td>*Thank you*</td>
+</tr>
+<tr>
+	<td>storeText</td>
+	<td>css=div.editor-row p strong span#lblUserID</td>
+	<td>yourUserID</td>
+</tr>
+<tr>
+	<td>echo</td>
+	<td>${yourUserID}</td>
+	<td></td>
+</tr>
+<tr>
+	<td>store</td>
+	<td>javascript{storedVars['yourUserID'].substring(14,19)}</td>
+	<td>stdUserID</td>
+</tr>
+<tr>
+	<td>echo</td>
+	<td>${stdUserID}</td>
+	<td></td>
+</tr>
+<tr>
+	<td>storeText</td>
+	<td>css=div.editor-row p strong span#lblPassword</td>
+	<td>yourPassword</td>
+</tr>
+<tr>
+	<td>echo</td>
+	<td>${yourPassword}</td>
+	<td></td>
+</tr>
+<tr>
+	<td>store</td>
+	<td>javascript{storedVars['yourPassword'].substring(15,23)}</td>
+	<td>stdPassword</td>
+</tr>
+<tr>
+	<td>echo</td>
+	<td>${stdPassword}</td>
+	<td></td>
+</tr>
+<tr>
+	<td>clickAndWait</td>
+	<td>id=btnCompleted</td>
+	<td></td>
+</tr>
+<!--Log in as Non-member-->
+<tr>
+	<td>type</td>
+	<td>id=UserName</td>
+	<td>${stdUserID}</td>
+</tr>
+<tr>
+	<td>type</td>
+	<td>id=Password</td>
+	<td>${stdPassword}</td>
+</tr>
+<tr>
+	<td>clickAndWait</td>
+	<td>id=btnLogin</td>
+	<td></td>
+</tr>
+<!--My account-->
+<tr>
+	<td>clickAndWait</td>
+	<td>link=My Account</td>
+	<td></td>
+</tr>
+<tr>
+	<td>assertTitle</td>
+	<td>My Account</td>
+	<td></td>
+</tr>
+<tr>
+	<td>storeText</td>
+	<td>css=div.pull-left h1</td>
+	<td>welcome</td>
+</tr>
+<tr>
+	<td>echo</td>
+	<td>${welcome}</td>
+	<td></td>
+</tr>
+<tr>
+	<td>assertText</td>
+	<td>css=div.padding-space</td>
+	<td>*Student*</td>
+</tr>
+<!--Edit profile setting-->
+<tr>
+	<td>clickAndWait</td>
+	<td>id=lnkEditNameAndContactInfo</td>
+	<td></td>
+</tr>
+<tr>
+	<td>assertTextNotPresent</td>
+	<td>Title</td>
+	<td></td>
+</tr>
+<tr>
+	<td>assertTextNotPresent</td>
+	<td>Employer</td>
+	<td></td>
+</tr>
+<tr>
+	<td>select</td>
+	<td>id=ctl00_ctl00_phContent_ctl19_ctlAddressEditor_ddlCountry</td>
+	<td>United States</td>
+</tr>
+<tr>
+	<td>pause</td>
+	<td>4000</td>
+	<td>4000</td>
+</tr>
+<tr>
+	<td>assertElementPresent</td>
+	<td>id=ctl00_ctl00_phContent_ctl19_ctlAddressEditor_ddlProvince</td>
+	<td>Select ...</td>
+</tr>
+<tr>
+	<td>select</td>
+	<td>id=ctl00_ctl00_phContent_ctl19_ctlAddressEditor_ddlProvince</td>
+	<td>Alabama</td>
+</tr>
+<tr>
+	<td>pause</td>
+	<td>3000</td>
+	<td>3000</td>
+</tr>
+<tr>
+	<td>type</td>
+	<td>id=ctl00_ctl00_phContent_ctl19_ctlAddressEditor_txtPostalCode</td>
+	<td>12345-1234</td>
+</tr>
+<tr>
+	<td>click</td>
+	<td>id=btnSaveBusinessAndContact</td>
+	<td></td>
+</tr>
+<tr>
+	<td>pause</td>
+	<td>4000</td>
+	<td>4000</td>
+</tr>
+<!--Logout-->
+<tr>
+	<td>pause</td>
+	<td>4000</td>
+	<td>4000</td>
+</tr>
+<tr>
+	<td>clickAndWait</td>
+	<td>id=ctl00_ctl00_ctl37_ctlLoginView_btnLogout</td>
+	<td></td>
+</tr>
+</tbody></table>
+</body>
+</html>

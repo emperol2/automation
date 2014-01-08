@@ -1,0 +1,682 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en" lang="en">
+<head profile="http://selenium-ide.openqa.org/profiles/test-case">
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+<link rel="selenium.base" href="http://change-this-to-the-site-you-are-testing/" />
+<title>searchAdvanceSearch</title>
+</head>
+<body>
+<table cellpadding="1" cellspacing="1" border="1">
+<thead>
+<tr><td rowspan="1" colspan="3">searchAdvanceSearch</td></tr>
+</thead><tbody>
+<tr>
+	<td>storeHtmlSource</td>
+	<td>iframeid</td>
+	<td></td>
+</tr>
+<tr>
+	<td>storeEval</td>
+	<td>storedVars['iframeid'].replace(/frameborder=&quot;0&quot; /g,&quot;&quot;);</td>
+	<td>iframeid</td>
+</tr>
+<tr>
+	<td>storeEval</td>
+	<td>storedVars['iframeid'].match(/iframe id=&quot;[a-z]+[0-9]+&quot;/g);</td>
+	<td>iframeid</td>
+</tr>
+<tr>
+	<td>storeEval</td>
+	<td>storedVars['iframeid'][0].match(/[a-z]+[0-9]+/g);</td>
+	<td>iframeid</td>
+</tr>
+<tr>
+	<td>echo</td>
+	<td>${iframeid}</td>
+	<td></td>
+</tr>
+<tr>
+	<td>selectFrame</td>
+	<td>id=${iframeid}</td>
+	<td></td>
+</tr>
+<tr>
+	<td>mouseDown</td>
+	<td>xpath=//*[@title=&quot;Members for CPBI&quot;]</td>
+	<td></td>
+</tr>
+<tr>
+	<td>mouseDown</td>
+	<td>xpath=//*[local-name()='treenode'][5]/node()[position()=1]/node()[last()]</td>
+	<td></td>
+</tr>
+<tr>
+	<td>keyDown</td>
+	<td>xpath=//*[local-name()='treenode'][5]/node()[position()=1]/node()[last()]</td>
+	<td>\40</td>
+</tr>
+<tr>
+	<td>mouseDown</td>
+	<td>xpath=//*[@label=&quot;Manage Users&quot;]</td>
+	<td></td>
+</tr>
+<tr>
+	<td>mouseUp</td>
+	<td>xpath=//*[@label=&quot;Manage Users&quot;]</td>
+	<td></td>
+</tr>
+<tr>
+	<td>pause</td>
+	<td>6000</td>
+	<td></td>
+</tr>
+<tr>
+	<td>clickAndWait</td>
+	<td>id=ctl00_MPContent_ctlUserSearchFilter_btnSwitchToAdvancedSearch</td>
+	<td></td>
+</tr>
+<!--Search by user details: userId-->
+<tr>
+	<td>type</td>
+	<td>xpath=//*[@id=&quot;ctl00_MPContent_ctlUserSearchAdvancedFilter_txtSearchUsername&quot;]</td>
+	<td>5</td>
+</tr>
+<tr>
+	<td>clickAndWait</td>
+	<td>id=ctl00_MPContent_ctlUserSearchAdvancedFilter_btnSearch</td>
+	<td></td>
+</tr>
+<tr>
+	<td>assertText</td>
+	<td>id=ctl00_MPContent_ctlUserList_grdData</td>
+	<td>*5*</td>
+</tr>
+<tr>
+	<td>clickAndWait</td>
+	<td>id=ctl00_MPFooter_btnNewSearch</td>
+	<td></td>
+</tr>
+<!--Search by membership class-->
+<tr>
+	<td>type</td>
+	<td>id=ctl00_MPContent_ctlUserSearchAdvancedFilter_txtSearchUsername</td>
+	<td></td>
+</tr>
+<tr>
+	<td>select</td>
+	<td>id=ctl00_MPContent_ctlUserSearchAdvancedFilter_lbxMembershipClass</td>
+	<td>Student</td>
+</tr>
+<tr>
+	<td>clickAndWait</td>
+	<td>id=ctl00_MPContent_ctlUserSearchAdvancedFilter_btnSearch</td>
+	<td></td>
+</tr>
+<tr>
+	<td>assertText</td>
+	<td>id=ctl00_MPContent_ctlUserList_grdData</td>
+	<td>*Student*</td>
+</tr>
+<tr>
+	<td>clickAndWait</td>
+	<td>id=ctl00_MPFooter_btnNewSearch</td>
+	<td></td>
+</tr>
+<!--Search by status-->
+<tr>
+	<td>select</td>
+	<td>id=ctl00_MPContent_ctlUserSearchAdvancedFilter_lbxMembershipStatus</td>
+	<td>Pending</td>
+</tr>
+<tr>
+	<td>clickAndWait</td>
+	<td>id=ctl00_MPContent_ctlUserSearchAdvancedFilter_btnSearch</td>
+	<td></td>
+</tr>
+<tr>
+	<td>assertText</td>
+	<td>id=ctl00_MPContent_ctlUserList_grdData</td>
+	<td>*Pending*</td>
+</tr>
+<tr>
+	<td>clickAndWait</td>
+	<td>id=ctl00_MPFooter_btnNewSearch</td>
+	<td></td>
+</tr>
+<!--Search by birth year-->
+<tr>
+	<td>select</td>
+	<td>id=ctl00_MPContent_ctlUserSearchAdvancedFilter_ddlBirthYearFrom</td>
+	<td>1930</td>
+</tr>
+<tr>
+	<td>select</td>
+	<td>id=ctl00_MPContent_ctlUserSearchAdvancedFilter_ddlBirthYearTo</td>
+	<td>1950</td>
+</tr>
+<tr>
+	<td>clickAndWait</td>
+	<td>id=ctl00_MPContent_ctlUserSearchAdvancedFilter_btnSearch</td>
+	<td></td>
+</tr>
+<tr>
+	<td>clickAndWait</td>
+	<td>id=ctl00_MPFooter_btnNewSearch</td>
+	<td></td>
+</tr>
+<!--Search by first name and last name-->
+<tr>
+	<td>select</td>
+	<td>id=ctl00_MPContent_ctlUserSearchAdvancedFilter_ddlBirthYearFrom</td>
+	<td>Select ...</td>
+</tr>
+<tr>
+	<td>select</td>
+	<td>id=ctl00_MPContent_ctlUserSearchAdvancedFilter_ddlBirthYearTo</td>
+	<td>Select ...</td>
+</tr>
+<tr>
+	<td>type</td>
+	<td>xpath=//*[@id=&quot;ctl00_MPContent_ctlUserSearchAdvancedFilter_txtFirstName&quot;]</td>
+	<td>Test</td>
+</tr>
+<tr>
+	<td>type</td>
+	<td>xpath=//*[@id=&quot;ctl00_MPContent_ctlUserSearchAdvancedFilter_txtLastName&quot;]</td>
+	<td>AUT</td>
+</tr>
+<tr>
+	<td>clickAndWait</td>
+	<td>id=ctl00_MPContent_ctlUserSearchAdvancedFilter_btnSearch</td>
+	<td></td>
+</tr>
+<tr>
+	<td>assertText</td>
+	<td>id=ctl00_MPContent_ctlUserList_grdData</td>
+	<td>*Test AUT*</td>
+</tr>
+<tr>
+	<td>clickAndWait</td>
+	<td>id=ctl00_MPFooter_btnNewSearch</td>
+	<td></td>
+</tr>
+<!--Search by email-->
+<tr>
+	<td>type</td>
+	<td>xpath=//*[@id=&quot;ctl00_MPContent_ctlUserSearchAdvancedFilter_txtFirstName&quot;]</td>
+	<td></td>
+</tr>
+<tr>
+	<td>type</td>
+	<td>xpath=//*[@id=&quot;ctl00_MPContent_ctlUserSearchAdvancedFilter_txtLastName&quot;]</td>
+	<td></td>
+</tr>
+<tr>
+	<td>type</td>
+	<td>xpath=//*[@id=&quot;ctl00_MPContent_ctlUserSearchAdvancedFilter_txtEmailAddress&quot;]</td>
+	<td>su.chavengpoj@gmail.com</td>
+</tr>
+<tr>
+	<td>clickAndWait</td>
+	<td>id=ctl00_MPContent_ctlUserSearchAdvancedFilter_btnSearch</td>
+	<td></td>
+</tr>
+<tr>
+	<td>assertElementPresent</td>
+	<td>id=ctl00_MPContent_ctlUserList_grdData</td>
+	<td></td>
+</tr>
+<tr>
+	<td>clickAndWait</td>
+	<td>id=ctl00_MPFooter_btnNewSearch</td>
+	<td></td>
+</tr>
+<!--Search by title-->
+<tr>
+	<td>type</td>
+	<td>xpath=//*[@id=&quot;ctl00_MPContent_ctlUserSearchAdvancedFilter_txtEmailAddress&quot;]</td>
+	<td></td>
+</tr>
+<tr>
+	<td>type</td>
+	<td>xpath=//*[@id=&quot;ctl00_MPContent_ctlUserSearchAdvancedFilter_txtTitle&quot;]</td>
+	<td>Test%</td>
+</tr>
+<tr>
+	<td>clickAndWait</td>
+	<td>id=ctl00_MPContent_ctlUserSearchAdvancedFilter_btnSearch</td>
+	<td></td>
+</tr>
+<tr>
+	<td>assertElementPresent</td>
+	<td>id=ctl00_MPContent_ctlUserList_grdData</td>
+	<td></td>
+</tr>
+<tr>
+	<td>assertText</td>
+	<td>id=ctl00_MPContent_ctlUserList_grdData</td>
+	<td>*Test AUT*</td>
+</tr>
+<tr>
+	<td>clickAndWait</td>
+	<td>id=ctl00_MPFooter_btnNewSearch</td>
+	<td></td>
+</tr>
+<!--Search  by employer-->
+<tr>
+	<td>type</td>
+	<td>xpath=//*[@id=&quot;ctl00_MPContent_ctlUserSearchAdvancedFilter_txtTitle&quot;]</td>
+	<td></td>
+</tr>
+<tr>
+	<td>type</td>
+	<td>xpath=//*[@id=&quot;ctl00_MPContent_ctlUserSearchAdvancedFilter_txtEmployer&quot;]</td>
+	<td>%EMP</td>
+</tr>
+<tr>
+	<td>clickAndWait</td>
+	<td>id=ctl00_MPContent_ctlUserSearchAdvancedFilter_btnSearch</td>
+	<td></td>
+</tr>
+<tr>
+	<td>assertElementPresent</td>
+	<td>id=ctl00_MPContent_ctlUserList_grdData</td>
+	<td></td>
+</tr>
+<tr>
+	<td>clickAndWait</td>
+	<td>id=ctl00_MPFooter_btnNewSearch</td>
+	<td></td>
+</tr>
+<!--Search by address1 and address2-->
+<tr>
+	<td>type</td>
+	<td>xpath=//*[@id=&quot;ctl00_MPContent_ctlUserSearchAdvancedFilter_txtEmployer&quot;]</td>
+	<td></td>
+</tr>
+<tr>
+	<td>type</td>
+	<td>xpath=//*[@id=&quot;ctl00_MPContent_ctlUserSearchAdvancedFilter_txtAddress1&quot;]</td>
+	<td>Address1</td>
+</tr>
+<tr>
+	<td>type</td>
+	<td>xpath=//*[@id=&quot;ctl00_MPContent_ctlUserSearchAdvancedFilter_txtAddress2&quot;]</td>
+	<td>Address2</td>
+</tr>
+<tr>
+	<td>clickAndWait</td>
+	<td>id=ctl00_MPContent_ctlUserSearchAdvancedFilter_btnSearch</td>
+	<td></td>
+</tr>
+<tr>
+	<td>assertElementPresent</td>
+	<td>id=ctl00_MPContent_ctlUserList_grdData</td>
+	<td></td>
+</tr>
+<tr>
+	<td>assertText</td>
+	<td>id=ctl00_MPContent_ctlUserList_grdData</td>
+	<td>*Test AUT*</td>
+</tr>
+<tr>
+	<td>clickAndWait</td>
+	<td>id=ctl00_MPFooter_btnNewSearch</td>
+	<td></td>
+</tr>
+<!--Search by suite-->
+<tr>
+	<td>type</td>
+	<td>xpath=//*[@id=&quot;ctl00_MPContent_ctlUserSearchAdvancedFilter_txtAddress1&quot;]</td>
+	<td></td>
+</tr>
+<tr>
+	<td>type</td>
+	<td>xpath=//*[@id=&quot;ctl00_MPContent_ctlUserSearchAdvancedFilter_txtAddress2&quot;]</td>
+	<td></td>
+</tr>
+<tr>
+	<td>type</td>
+	<td>xpath=//*[@id=&quot;ctl00_MPContent_ctlUserSearchAdvancedFilter_txtSuite&quot;]</td>
+	<td>Suite</td>
+</tr>
+<tr>
+	<td>clickAndWait</td>
+	<td>id=ctl00_MPContent_ctlUserSearchAdvancedFilter_btnSearch</td>
+	<td></td>
+</tr>
+<tr>
+	<td>assertElementPresent</td>
+	<td>id=ctl00_MPContent_ctlUserList_grdData</td>
+	<td></td>
+</tr>
+<tr>
+	<td>assertText</td>
+	<td>id=ctl00_MPContent_ctlUserList_grdData</td>
+	<td>*AUT*</td>
+</tr>
+<tr>
+	<td>clickAndWait</td>
+	<td>id=ctl00_MPFooter_btnNewSearch</td>
+	<td></td>
+</tr>
+<!--Search by city-->
+<tr>
+	<td>type</td>
+	<td>xpath=//*[@id=&quot;ctl00_MPContent_ctlUserSearchAdvancedFilter_txtSuite&quot;]</td>
+	<td></td>
+</tr>
+<tr>
+	<td>type</td>
+	<td>xpath=//*[@id=&quot;ctl00_MPContent_ctlUserSearchAdvancedFilter_txtCity&quot;]</td>
+	<td>City</td>
+</tr>
+<tr>
+	<td>clickAndWait</td>
+	<td>id=ctl00_MPContent_ctlUserSearchAdvancedFilter_btnSearch</td>
+	<td></td>
+</tr>
+<tr>
+	<td>assertElementPresent</td>
+	<td>id=ctl00_MPContent_ctlUserList_grdData</td>
+	<td></td>
+</tr>
+<tr>
+	<td>assertText</td>
+	<td>id=ctl00_MPContent_ctlUserList_grdData</td>
+	<td>*AUT*</td>
+</tr>
+<tr>
+	<td>clickAndWait</td>
+	<td>id=ctl00_MPFooter_btnNewSearch</td>
+	<td></td>
+</tr>
+<!--Search by country-->
+<tr>
+	<td>type</td>
+	<td>xpath=//*[@id=&quot;ctl00_MPContent_ctlUserSearchAdvancedFilter_txtCity&quot;]</td>
+	<td></td>
+</tr>
+<tr>
+	<td>select</td>
+	<td>id=ctl00_MPContent_ctlUserSearchAdvancedFilter_ddlCountry</td>
+	<td>Canada</td>
+</tr>
+<tr>
+	<td>pause</td>
+	<td>3000</td>
+	<td>3000</td>
+</tr>
+<tr>
+	<td>clickAndWait</td>
+	<td>id=ctl00_MPContent_ctlUserSearchAdvancedFilter_btnSearch</td>
+	<td></td>
+</tr>
+<tr>
+	<td>pause</td>
+	<td>4000</td>
+	<td>4000</td>
+</tr>
+<tr>
+	<td>assertElementPresent</td>
+	<td>id=ctl00_MPContent_ctlUserList_grdData</td>
+	<td></td>
+</tr>
+<tr>
+	<td>clickAndWait</td>
+	<td>id=ctl00_MPFooter_btnNewSearch</td>
+	<td></td>
+</tr>
+<!--Search by postal or zip code-->
+<tr>
+	<td>select</td>
+	<td>id=ctl00_MPContent_ctlUserSearchAdvancedFilter_ddlCountry</td>
+	<td>Select ...</td>
+</tr>
+<tr>
+	<td>pause</td>
+	<td>3000</td>
+	<td></td>
+</tr>
+<tr>
+	<td>type</td>
+	<td>xpath=//*[@id=&quot;ctl00_MPContent_ctlUserSearchAdvancedFilter_txtPostalCode&quot;]</td>
+	<td>t0a9i8</td>
+</tr>
+<tr>
+	<td>clickAndWait</td>
+	<td>id=ctl00_MPContent_ctlUserSearchAdvancedFilter_btnSearch</td>
+	<td></td>
+</tr>
+<tr>
+	<td>assertElementPresent</td>
+	<td>id=ctl00_MPContent_ctlUserList_grdData</td>
+	<td></td>
+</tr>
+<tr>
+	<td>assertText</td>
+	<td>id=ctl00_MPContent_ctlUserList_grdData</td>
+	<td>*Test*</td>
+</tr>
+<tr>
+	<td>clickAndWait</td>
+	<td>id=ctl00_MPFooter_btnNewSearch</td>
+	<td></td>
+</tr>
+<!--Search by user attributes: life time member-->
+<tr>
+	<td>type</td>
+	<td>xpath=//*[@id=&quot;ctl00_MPContent_ctlUserSearchAdvancedFilter_txtPostalCode&quot;]</td>
+	<td></td>
+</tr>
+<tr>
+	<td>click</td>
+	<td>id=ctl00_MPContent_ctlUserSearchAdvancedFilter_rdoIsLifetimeMember_0</td>
+	<td></td>
+</tr>
+<tr>
+	<td>clickAndWait</td>
+	<td>id=ctl00_MPContent_ctlUserSearchAdvancedFilter_btnSearch</td>
+	<td></td>
+</tr>
+<tr>
+	<td>clickAndWait</td>
+	<td>id=ctl00_MPFooter_btnNewSearch</td>
+	<td></td>
+</tr>
+<!--Search by split membership-->
+<tr>
+	<td>type</td>
+	<td>xpath=//*[@id=&quot;ctl00_MPContent_ctlUserSearchAdvancedFilter_txtPostalCode&quot;]</td>
+	<td></td>
+</tr>
+<tr>
+	<td>click</td>
+	<td>id=ctl00_MPContent_ctlUserSearchAdvancedFilter_rdoIsLifetimeMember_2</td>
+	<td></td>
+</tr>
+<tr>
+	<td>click</td>
+	<td>id=ctl00_MPContent_ctlUserSearchAdvancedFilter_rdoIsSplitMembership_0</td>
+	<td></td>
+</tr>
+<tr>
+	<td>clickAndWait</td>
+	<td>id=ctl00_MPContent_ctlUserSearchAdvancedFilter_btnSearch</td>
+	<td></td>
+</tr>
+<tr>
+	<td>assertElementPresent</td>
+	<td>id=ctl00_MPContent_ctlUserList_grdData</td>
+	<td></td>
+</tr>
+<tr>
+	<td>clickAndWait</td>
+	<td>id=ctl00_MPFooter_btnNewSearch</td>
+	<td></td>
+</tr>
+<!--Search by paln sponsor group membership-->
+<tr>
+	<td>click</td>
+	<td>id=ctl00_MPContent_ctlUserSearchAdvancedFilter_rdoIsSplitMembership_2</td>
+	<td></td>
+</tr>
+<tr>
+	<td>click</td>
+	<td>id=ctl00_MPContent_ctlUserSearchAdvancedFilter_rdoIsGroupMembership_0</td>
+	<td></td>
+</tr>
+<tr>
+	<td>clickAndWait</td>
+	<td>id=ctl00_MPContent_ctlUserSearchAdvancedFilter_btnSearch</td>
+	<td></td>
+</tr>
+<tr>
+	<td>assertElementPresent</td>
+	<td>id=ctl00_MPContent_ctlUserList_grdData</td>
+	<td></td>
+</tr>
+<tr>
+	<td>clickAndWait</td>
+	<td>id=ctl00_MPFooter_btnNewSearch</td>
+	<td></td>
+</tr>
+<!--Search by sector-->
+<tr>
+	<td>click</td>
+	<td>id=ctl00_MPContent_ctlUserSearchAdvancedFilter_rdoIsGroupMembership_2</td>
+	<td></td>
+</tr>
+<tr>
+	<td>select</td>
+	<td>id=ctl00_MPContent_ctlUserSearchAdvancedFilter_ddlSector</td>
+	<td>Provider</td>
+</tr>
+<tr>
+	<td>clickAndWait</td>
+	<td>id=ctl00_MPContent_ctlUserSearchAdvancedFilter_btnSearch</td>
+	<td></td>
+</tr>
+<tr>
+	<td>assertElementPresent</td>
+	<td>id=ctl00_MPContent_ctlUserList_grdData</td>
+	<td></td>
+</tr>
+<tr>
+	<td>clickAndWait</td>
+	<td>id=ctl00_MPFooter_btnNewSearch</td>
+	<td></td>
+</tr>
+<!--Search by sector and specially-->
+<tr>
+	<td>select</td>
+	<td>id=ctl00_MPContent_ctlUserSearchAdvancedFilter_ddlSector</td>
+	<td>Plan Sponsor</td>
+</tr>
+<tr>
+	<td>select</td>
+	<td>id=ctl00_MPContent_ctlUserSearchAdvancedFilter_ddlSectorSpecialty_ddlLookupData</td>
+	<td>Benefits</td>
+</tr>
+<tr>
+	<td>clickAndWait</td>
+	<td>id=ctl00_MPContent_ctlUserSearchAdvancedFilter_btnSearch</td>
+	<td></td>
+</tr>
+<tr>
+	<td>assertElementPresent</td>
+	<td>id=ctl00_MPContent_ctlUserList_grdData</td>
+	<td></td>
+</tr>
+<tr>
+	<td>clickAndWait</td>
+	<td>id=ctl00_MPFooter_btnNewSearch</td>
+	<td></td>
+</tr>
+<!--Search by communication preferences: preference languages-->
+<tr>
+	<td>select</td>
+	<td>id=ctl00_MPContent_ctlUserSearchAdvancedFilter_ddlSector</td>
+	<td>Select...</td>
+</tr>
+<tr>
+	<td>select</td>
+	<td>id=ctl00_MPContent_ctlUserSearchAdvancedFilter_ddlSectorSpecialty_ddlLookupData</td>
+	<td>Accounting</td>
+</tr>
+<tr>
+	<td>select</td>
+	<td>id=ctl00_MPContent_ctlUserSearchAdvancedFilter_ddlPreferredLanguage</td>
+	<td>English</td>
+</tr>
+<tr>
+	<td>clickAndWait</td>
+	<td>id=ctl00_MPContent_ctlUserSearchAdvancedFilter_btnSearch</td>
+	<td></td>
+</tr>
+<tr>
+	<td>assertElementPresent</td>
+	<td>id=ctl00_MPContent_ctlUserList_grdData</td>
+	<td></td>
+</tr>
+<tr>
+	<td>clickAndWait</td>
+	<td>id=ctl00_MPFooter_btnNewSearch</td>
+	<td></td>
+</tr>
+<!--Search by event notifications - regions-->
+<tr>
+	<td>select</td>
+	<td>id=ctl00_MPContent_ctlUserSearchAdvancedFilter_ddlPreferredLanguage</td>
+	<td>Select...</td>
+</tr>
+<tr>
+	<td>check</td>
+	<td>id=ctl00_MPContent_ctlUserSearchAdvancedFilter_chkEventNotificationRegions_4</td>
+	<td></td>
+</tr>
+<tr>
+	<td>check</td>
+	<td>id=ctl00_MPContent_ctlUserSearchAdvancedFilter_chkNewsletterRegions_4</td>
+	<td></td>
+</tr>
+<tr>
+	<td>clickAndWait</td>
+	<td>id=ctl00_MPContent_ctlUserSearchAdvancedFilter_btnSearch</td>
+	<td></td>
+</tr>
+<tr>
+	<td>clickAndWait</td>
+	<td>id=ctl00_MPFooter_btnNewSearch</td>
+	<td></td>
+</tr>
+<!--Search by Content Access Groups-->
+<tr>
+	<td>check</td>
+	<td>id=ctl00_MPContent_ctlUserSearchAdvancedFilter_chkContentAccessGroups_0</td>
+	<td></td>
+</tr>
+<tr>
+	<td>check</td>
+	<td>id=ctl00_MPContent_ctlUserSearchAdvancedFilter_chkContentAccessGroups_1</td>
+	<td></td>
+</tr>
+<tr>
+	<td>clickAndWait</td>
+	<td>id=ctl00_MPContent_ctlUserSearchAdvancedFilter_btnSearch</td>
+	<td></td>
+</tr>
+<tr>
+	<td>verifyElementPresent</td>
+	<td>id=ctl00_MPContent_ctlUserList_grdData</td>
+	<td></td>
+</tr>
+<tr>
+	<td>clickAndWait</td>
+	<td>id=ctl00_MPFooter_btnNewSearch</td>
+	<td></td>
+</tr>
+</tbody></table>
+</body>
+</html>

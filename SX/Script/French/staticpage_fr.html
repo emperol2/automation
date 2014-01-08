@@ -1,0 +1,131 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en" lang="en">
+<head profile="http://selenium-ide.openqa.org/profiles/test-case">
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+<link rel="selenium.base" href="http://www.stylexchange.com/" />
+<title>static page</title>
+</head>
+<body>
+<table cellpadding="1" cellspacing="1" border="1">
+<thead>
+<tr><td rowspan="1" colspan="3">static page</td></tr>
+</thead><tbody>
+<tr>
+	<td>open</td>
+	<td>${domain}/fr/</td>
+	<td></td>
+</tr>
+<tr>
+	<td>clickAndWait</td>
+	<td>link=Stylexchange</td>
+	<td></td>
+</tr>
+<tr>
+	<td>storeElementPresent</td>
+	<td>css=a[title=&quot;Commandes Internationalesv&quot;] &gt; span</td>
+	<td>international</td>
+</tr>
+<tr>
+	<td>echo</td>
+	<td>${international}</td>
+	<td></td>
+</tr>
+<tr>
+	<td>gotoIf</td>
+	<td>${international} == false</td>
+	<td>jump</td>
+</tr>
+<tr>
+	<td>clickAndWait</td>
+	<td>css=a[title=&quot;Commandes Internationalesv&quot;] &gt; span</td>
+	<td></td>
+</tr>
+<tr>
+	<td>clickAndWait</td>
+	<td>link=exact:LIVRAISON GRATUITE SUR LES COMMANDES $100 *</td>
+	<td></td>
+</tr>
+<tr>
+	<td>label</td>
+	<td>jump</td>
+	<td></td>
+</tr>
+<tr>
+	<td>pause</td>
+	<td>3000</td>
+	<td>3000</td>
+</tr>
+<tr>
+	<td>clickAndWait</td>
+	<td>link=Aide</td>
+	<td></td>
+</tr>
+<tr>
+	<td>clickAndWait</td>
+	<td>css=a[title=&quot;Notre Histoire&quot;] &gt; span</td>
+	<td></td>
+</tr>
+<tr>
+	<td>assertElementPresent</td>
+	<td>css=html body.cms-page-view div#wrapper div#main div.main-container div.std div#content div.promo-box table tbody tr td div.text-box h2</td>
+	<td>css=html body.cms-page-view div#wrapper div#main div.main-container div.std div#content div.promo-box table tbody tr td div.text-box h2</td>
+</tr>
+<tr>
+	<td>clickAndWait</td>
+	<td>css=a[title=&quot;Politique sur la vie privée&quot;] </td>
+	<td></td>
+</tr>
+<tr>
+	<td>assertElementPresent</td>
+	<td>css=html body.cms-page-view div#wrapper div#main div.main-container div.std p </td>
+	<td>css=html body.cms-page-view div#wrapper div#main div.main-container div.std p </td>
+</tr>
+<tr>
+	<td>clickAndWait</td>
+	<td>css=a[title=&quot;Termes et Conditions&quot;] </td>
+	<td></td>
+</tr>
+<tr>
+	<td>assertElementPresent</td>
+	<td>css=html body.cms-page-view div#wrapper div#main div.main-container div.std p</td>
+	<td>css=html body.cms-page-view div#wrapper div#main div.main-container div.std p</td>
+</tr>
+<tr>
+	<td>clickAndWait</td>
+	<td>css=a[title=&quot;Carrières&quot;] &gt; span</td>
+	<td></td>
+</tr>
+<tr>
+	<td>assertElementPresent</td>
+	<td>css=html body.cms-page-view div#wrapper div#main div.main-container div.std div#content</td>
+	<td>css=html body.cms-page-view div#wrapper div#main div.main-container div.std div#content</td>
+</tr>
+<tr>
+	<td>clickAndWait</td>
+	<td>css=a[title=&quot;Affiliates&quot;] &gt; span</td>
+	<td></td>
+</tr>
+<tr>
+	<td>assertElementPresent</td>
+	<td>css=html body.cms-page-view div#wrapper div#main div.main-container div.std p</td>
+	<td>css=html body.cms-page-view div#wrapper div#main div.main-container div.std p</td>
+</tr>
+<tr>
+	<td>clickAndWait</td>
+	<td>css=a[title=&quot;Notre Histoire&quot;] &gt; span</td>
+	<td></td>
+</tr>
+<tr>
+	<td>clickAndWait</td>
+	<td>css=a[title=&quot;Service À La Clientèle&quot;] &gt; span</td>
+	<td></td>
+</tr>
+<tr>
+	<td>clickAndWait</td>
+	<td>link=Stylexchange</td>
+	<td></td>
+</tr>
+</tbody></table>
+</body>
+</html>

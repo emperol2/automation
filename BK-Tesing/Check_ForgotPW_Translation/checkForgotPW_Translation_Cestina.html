@@ -1,0 +1,290 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en" lang="en">
+<head profile="http://selenium-ide.openqa.org/profiles/test-case">
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+<link rel="selenium.base" href="http://bktesting.openface.com/" />
+<title>New Test</title>
+</head>
+<body>
+<table cellpadding="1" cellspacing="1" border="1">
+<thead>
+<tr><td rowspan="1" colspan="3">New Test</td></tr>
+</thead><tbody>
+<tr>
+	<td>clickAndWait</td>
+	<td>css=#ctl00__navMenu_ctl02_HyperLink1 &gt; img</td>
+	<td></td>
+</tr>
+<tr>
+	<td>store</td>
+	<td>1</td>
+	<td>looptimes</td>
+</tr>
+<tr>
+	<td>while</td>
+	<td>storedVars.looptimes &lt; 4</td>
+	<td></td>
+</tr>
+<tr>
+	<td>label</td>
+	<td>Openlink</td>
+	<td></td>
+</tr>
+<tr>
+	<td>gotoIf</td>
+	<td>storedVars.looptimes==1</td>
+	<td>ForgotPassword</td>
+</tr>
+<tr>
+	<td>gotoIf</td>
+	<td>storedVars.looptimes==2</td>
+	<td>EnterCode</td>
+</tr>
+<tr>
+	<td>gotoIf</td>
+	<td>storedVars.looptimes==3</td>
+	<td>ChangePassword</td>
+</tr>
+<tr>
+	<td>gotoIf</td>
+	<td>storedVars.looptimes &gt; 3</td>
+	<td>EnterPassword</td>
+</tr>
+<!--Forgot password-->
+<tr>
+	<td>label</td>
+	<td>ForgotPassword</td>
+	<td></td>
+</tr>
+<tr>
+	<td>clickAndWait</td>
+	<td>id=ctl00_pageContentPlace__resetPassLnk</td>
+	<td></td>
+</tr>
+<tr>
+	<td>type</td>
+	<td>id=ctl00_pageContentPlace__email</td>
+	<td>su.chavengpoj@gmail.com</td>
+</tr>
+<tr>
+	<td>type</td>
+	<td>id=ctl00_pageContentPlace__username</td>
+	<td>Testname24</td>
+</tr>
+<tr>
+	<td>clickAndWait</td>
+	<td>id=ctl00_pageContentPlace__submitBtn</td>
+	<td></td>
+</tr>
+<tr>
+	<td>storeHtmlSource</td>
+	<td>htmlsource</td>
+	<td></td>
+</tr>
+<tr>
+	<td>storeEval</td>
+	<td>new Array ('Password Reset','If you have forgotten your login information and/or would like to reset your password, enter your email address below. Instructions will be sent to you via email.','Email','Username','Submit','Cancel','Your login information has been sent to')</td>
+	<td>arraySV</td>
+</tr>
+<tr>
+	<td>gotoLabel</td>
+	<td>Checking</td>
+	<td></td>
+</tr>
+<!--Enter code to change password-->
+<tr>
+	<td>label</td>
+	<td>EnterCode</td>
+	<td></td>
+</tr>
+<tr>
+	<td>open</td>
+	<td>http://dev.bktesting.com/Users/PasswordProcess.aspx?lang=cs-CS&amp;surveyUrl=</td>
+	<td></td>
+</tr>
+<tr>
+	<td>clickAndWait</td>
+	<td>id=ctl00_pageContentPlace__codeContinueBtn</td>
+	<td></td>
+</tr>
+<tr>
+	<td>storeHtmlSource</td>
+	<td>htmlsource</td>
+	<td></td>
+</tr>
+<tr>
+	<td>storeEval</td>
+	<td>new Array ('Change Password','Please enter the code that you received via email and click the Continue button.','Continue','The entered code is not valid.')</td>
+	<td>arraySV</td>
+</tr>
+<tr>
+	<td>gotoLabel</td>
+	<td>Checking</td>
+	<td></td>
+</tr>
+<tr>
+	<td>label</td>
+	<td>ChangePassword</td>
+	<td></td>
+</tr>
+<tr>
+	<td>type</td>
+	<td>id=ctl00_pageContentPlace__guid</td>
+	<td>8923c995-cb61-48d2-9ab1-ae52365e1b36</td>
+</tr>
+<tr>
+	<td>clickAndWait</td>
+	<td>id=ctl00_pageContentPlace__codeContinueBtn</td>
+	<td></td>
+</tr>
+<!--Change password-->
+<tr>
+	<td>storeHtmlSource</td>
+	<td>htmlsource</td>
+	<td></td>
+</tr>
+<tr>
+	<td>storeEval</td>
+	<td>new Array ('Change Password','Enter your new password information below then click the Continue button.','Login Information','Username','Password','Confirm Password','Choose a password that is at least 6 characters long; including a number or special character','Continue')</td>
+	<td>arraySV</td>
+</tr>
+<tr>
+	<td>gotoLabel</td>
+	<td>Checking</td>
+	<td></td>
+</tr>
+<tr>
+	<td>label</td>
+	<td>EnterPassword</td>
+	<td></td>
+</tr>
+<tr>
+	<td>type</td>
+	<td>id=ctl00_pageContentPlace__newPassword</td>
+	<td>test123</td>
+</tr>
+<tr>
+	<td>type</td>
+	<td>id=ctl00_pageContentPlace__confirmPassword</td>
+	<td>test123</td>
+</tr>
+<tr>
+	<td>clickAndWait</td>
+	<td>id=ctl00_pageContentPlace__passwordContinueBtn</td>
+	<td></td>
+</tr>
+<tr>
+	<td>gotoLabel</td>
+	<td>Exit</td>
+	<td></td>
+</tr>
+<!--Checking-->
+<tr>
+	<td>label</td>
+	<td>Checking</td>
+	<td></td>
+</tr>
+<tr>
+	<td>storeEval</td>
+	<td>storedVars.arraySV.length</td>
+	<td>svSize</td>
+</tr>
+<tr>
+	<td>store</td>
+	<td>0</td>
+	<td>lang</td>
+</tr>
+<tr>
+	<td>while</td>
+	<td>storedVars.lang &lt;= storedVars.svSize - 1</td>
+	<td></td>
+</tr>
+<tr>
+	<td>storeEval</td>
+	<td>storedVars.htmlsource.indexOf(storedVars.arraySV[storedVars.lang])</td>
+	<td>result</td>
+</tr>
+<tr>
+	<td>gotoIf</td>
+	<td>storedVars.result &gt; -1</td>
+	<td>has</td>
+</tr>
+<tr>
+	<td>storeEval</td>
+	<td>&quot;has not&quot;</td>
+	<td>resulttext</td>
+</tr>
+<tr>
+	<td>gotoLabel</td>
+	<td>quit</td>
+	<td></td>
+</tr>
+<tr>
+	<td>label</td>
+	<td>has</td>
+	<td></td>
+</tr>
+<tr>
+	<td>storeEval</td>
+	<td>&quot;has&quot;</td>
+	<td>resulttext</td>
+</tr>
+<tr>
+	<td>label</td>
+	<td>quit</td>
+	<td></td>
+</tr>
+<tr>
+	<td>storeEval</td>
+	<td>storedVars.arraySV[storedVars.lang]</td>
+	<td>word</td>
+</tr>
+<tr>
+	<td>echo</td>
+	<td>${word}</td>
+	<td></td>
+</tr>
+<tr>
+	<td>echo</td>
+	<td>translation: ${word} and result: ${resulttext}</td>
+	<td></td>
+</tr>
+<tr>
+	<td>storeEval</td>
+	<td>storedVars.lang++;</td>
+	<td></td>
+</tr>
+<tr>
+	<td>endWhile</td>
+	<td></td>
+	<td></td>
+</tr>
+<tr>
+	<td>echo</td>
+	<td>${looptimes}</td>
+	<td></td>
+</tr>
+<tr>
+	<td>storeEval</td>
+	<td>storedVars.looptimes++;</td>
+	<td></td>
+</tr>
+<tr>
+	<td>gotoLabel</td>
+	<td>Openlink</td>
+	<td></td>
+</tr>
+<tr>
+	<td>endWhile</td>
+	<td></td>
+	<td></td>
+</tr>
+<tr>
+	<td>label</td>
+	<td>Exit</td>
+	<td></td>
+</tr>
+</tbody></table>
+</body>
+</html>

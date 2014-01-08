@@ -1,0 +1,196 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en" lang="en">
+<head profile="http://selenium-ide.openqa.org/profiles/test-case">
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+<link rel="selenium.base" href="http://www.stylexchange.com/" />
+<title>browse</title>
+</head>
+<body>
+<table cellpadding="1" cellspacing="1" border="1">
+<thead>
+<tr><td rowspan="1" colspan="3">browse</td></tr>
+</thead><tbody>
+<tr>
+	<td>open</td>
+	<td>${domain}/en/</td>
+	<td></td>
+</tr>
+<tr>
+	<td>clickAndWait</td>
+	<td>link=Stylexchange</td>
+	<td></td>
+</tr>
+<tr>
+	<td>clickAndWait</td>
+	<td>css=a[title=&quot;Women&quot;] &gt; span</td>
+	<td></td>
+</tr>
+<tr>
+	<td>clickAndWait</td>
+	<td>link=brands</td>
+	<td></td>
+</tr>
+<tr>
+	<td>clickAndWait</td>
+	<td>link=Sale</td>
+	<td></td>
+</tr>
+<!--Are you on Sale page ?-->
+<tr>
+	<td>assertTitle</td>
+	<td>Sale - Stylexchange</td>
+	<td></td>
+</tr>
+<tr>
+	<td>clickAndWait</td>
+	<td>css=html body.catalogsale-index-index div#wrapper div#main div.main-container div.col-main div.category-products ul.products-grid li.item div a.product-image</td>
+	<td></td>
+</tr>
+<tr>
+	<td>assertHtmlSource</td>
+	<td>*&lt;span class=&quot;old-price&quot;&gt;*</td>
+	<td></td>
+</tr>
+<tr>
+	<td>clickAndWait</td>
+	<td>link=Stylexchange</td>
+	<td></td>
+</tr>
+<tr>
+	<td>clickAndWait</td>
+	<td>css=a[title=&quot;Women&quot;] &gt; span</td>
+	<td></td>
+</tr>
+<!--Are you on Women page ?-->
+<tr>
+	<td>assertTitle</td>
+	<td>Shop Women - Stylexchange</td>
+	<td></td>
+</tr>
+<tr>
+	<td>assertText</td>
+	<td>css=html body.catalog-category-view div#wrapper div#main div.main-container div.m-block div.breadcrumbs ul li.active</td>
+	<td>Women</td>
+</tr>
+<tr>
+	<td>storeHtmlSource</td>
+	<td>htmlsource</td>
+	<td></td>
+</tr>
+<!--<tr>
+	<td>echo</td>
+	<td>${htmlsource}</td>
+	<td></td>
+</tr>-->
+<tr>
+	<td>storeEval</td>
+	<td>storedVars['htmlsource'].match(/&quot;img_[0-9]+&quot;/g);</td>
+	<td>IdImg</td>
+</tr>
+<tr>
+	<td>storeEval</td>
+	<td>storedVars['IdImg'].length;</td>
+	<td>ImgLength</td>
+</tr>
+<tr>
+	<td>storeEval</td>
+	<td>Math.floor(Math.random() * (${ImgLength} + 1));</td>
+	<td>randID</td>
+</tr>
+<tr>
+	<td>storeEval</td>
+	<td>storedVars['IdImg'][storedVars['randID']];</td>
+	<td>getIdImg</td>
+</tr>
+<tr>
+	<td>storeEval</td>
+	<td>storedVars['getIdImg'].substr(1,9);</td>
+	<td>pureid</td>
+</tr>
+<tr>
+	<td>clickAndWait</td>
+	<td>id=${pureid}</td>
+	<td></td>
+</tr>
+<tr>
+	<td>clickAndWait</td>
+	<td>css=a[title=&quot;Men&quot;] &gt; span</td>
+	<td></td>
+</tr>
+<!--Are you on Men page ?-->
+<tr>
+	<td>assertTitle</td>
+	<td>Shop Men - Stylexchange</td>
+	<td></td>
+</tr>
+<tr>
+	<td>assertText</td>
+	<td>css=html body.catalog-category-view div#wrapper div#main div.main-container div.m-block div.breadcrumbs ul li.active</td>
+	<td>Men</td>
+</tr>
+<!--This is for blackout event, xpath=/html/body/div/div[2]/div/div[2]/div/div/ul/li/div/a-->
+<tr>
+	<td>clickAndWait</td>
+	<td>link=brands</td>
+	<td></td>
+</tr>
+<tr>
+	<td>pause</td>
+	<td>3000</td>
+	<td>3000</td>
+</tr>
+<tr>
+	<td>assertTitle</td>
+	<td>Shop By Brands - Stylexchange</td>
+	<td></td>
+</tr>
+<tr>
+	<td>clickAndWait</td>
+	<td>link=Numero</td>
+	<td></td>
+</tr>
+<!--Are you on Brands > Parajumpers ?-->
+<tr>
+	<td>assertText</td>
+	<td>css=html body.catalog-category-view div#wrapper div#main div.main-container div.col-main div.m-block div.category-products ul.products-grid li.item div.area</td>
+	<td>*Numero*</td>
+</tr>
+<tr>
+	<td>click</td>
+	<td>link=CAtEGORIES</td>
+	<td></td>
+</tr>
+<tr>
+	<td>clickAndWait</td>
+	<td>link=Footwear</td>
+	<td></td>
+</tr>
+<tr>
+	<td>click</td>
+	<td>css=div.pview-toolbar-viewall</td>
+	<td></td>
+</tr>
+<tr>
+	<td>waitForElementPresent</td>
+	<td>css=html body.catalog-category-view div#wrapper div#main div.main-container div.col-main div.category-products ul.products-grid li.item div a.product-image</td>
+	<td></td>
+</tr>
+<tr>
+	<td>click</td>
+	<td>link=BRANDS</td>
+	<td></td>
+</tr>
+<tr>
+	<td>clickAndWait</td>
+	<td>css=html body.catalog-category-view div#wrapper div#main div.main-container div.col-left div#tab-2.tab-content div.vscrollable div.scroll-content ul.catalog_tab li a</td>
+	<td></td>
+</tr>
+<tr>
+	<td>assertTitle</td>
+	<td>Ash for Women - Stylexchange</td>
+	<td></td>
+</tr>
+</tbody></table>
+</body>
+</html>

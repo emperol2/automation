@@ -1,0 +1,111 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en" lang="en">
+<head profile="http://selenium-ide.openqa.org/profiles/test-case">
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+<link rel="selenium.base" href="http://www.stylexchange.com/" />
+<title>deleteFunc_fr</title>
+</head>
+<body>
+<table cellpadding="1" cellspacing="1" border="1">
+<thead>
+<tr><td rowspan="1" colspan="3">deleteFunc_fr</td></tr>
+</thead><tbody>
+<tr>
+	<td>open</td>
+	<td>${domain}/fr/</td>
+	<td></td>
+</tr>
+<tr>
+	<td>clickAndWait</td>
+	<td>link=Stylexchange</td>
+	<td></td>
+</tr>
+<tr>
+	<td>click</td>
+	<td>link=Ouverture de session </td>
+	<td></td>
+</tr>
+<tr>
+	<td>type</td>
+	<td>id=mini-login</td>
+	<td>emperol2@gmail.com</td>
+</tr>
+<tr>
+	<td>click</td>
+	<td>id=mini-password</td>
+	<td></td>
+</tr>
+<tr>
+	<td>type</td>
+	<td>id=mini-password</td>
+	<td>111111</td>
+</tr>
+<tr>
+	<td>clickAndWait</td>
+	<td>css=input.submit</td>
+	<td></td>
+</tr>
+<tr>
+	<td>clickAndWait</td>
+	<td>link=MON COMPTE</td>
+	<td></td>
+</tr>
+<tr>
+	<td>clickAndWait</td>
+	<td>link=Gérer vos adresses</td>
+	<td></td>
+</tr>
+<tr>
+	<td>getEval</td>
+	<td>item=0</td>
+	<td></td>
+</tr>
+<tr>
+	<td>storeXpathCount</td>
+	<td>xpath=/html/body/div/div[2]/div/div/div/div[2]/div[2]/ol/li</td>
+	<td>itemClass</td>
+</tr>
+<tr>
+	<td>echo</td>
+	<td>${itemClass}</td>
+	<td></td>
+</tr>
+<tr>
+	<td>while</td>
+	<td>item &lt; storedVars['itemClass']</td>
+	<td></td>
+</tr>
+<tr>
+	<td>storeEval</td>
+	<td>storedVars['itemClass']+1</td>
+	<td></td>
+</tr>
+<tr>
+	<td>click</td>
+	<td>link=Supprimer</td>
+	<td></td>
+</tr>
+<tr>
+	<td>assertConfirmation</td>
+	<td>Désirez-vous vraiment supprimer cette adresse?</td>
+	<td></td>
+</tr>
+<tr>
+	<td>pause</td>
+	<td>5000</td>
+	<td>5000</td>
+</tr>
+<tr>
+	<td>getEval</td>
+	<td>item++</td>
+	<td></td>
+</tr>
+<tr>
+	<td>endWhile</td>
+	<td></td>
+	<td></td>
+</tr>
+</tbody></table>
+</body>
+</html>

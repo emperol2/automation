@@ -1,0 +1,111 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en" lang="en">
+<head profile="http://selenium-ide.openqa.org/profiles/test-case">
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+<link rel="selenium.base" href="http://change-this-to-the-site-you-are-testing/" />
+<title>New Test</title>
+</head>
+<body>
+<table cellpadding="1" cellspacing="1" border="1">
+<thead>
+<tr><td rowspan="1" colspan="3">New Test</td></tr>
+</thead><tbody>
+<tr>
+	<td>storeHtmlSource</td>
+	<td>htmlsource</td>
+	<td></td>
+</tr>
+<tr>
+	<td>storeEval</td>
+	<td>new Array ('Nová registrace uživatele', 'Vítejte u online zkoušky nazvané', 'Vyplňte níže uvedená pole a absolvujte zkoušku 0 týdnů po dokončení vaší registrace.', 'Ujistěte se, že jsou informace o novém pracovníkovi zadány správně – jakákoli nesprávně zapsaná jména či nesprávné údaje povedou ke vzniku chyb na certifikátu Základy.', 'Do níže uvedených polí zadejte informace. Povinná pole jsou označena', 'Požadované uživatelské jméno', 'E-mailová adresa', 'Heslo', 'Potvrďte heslo', 'Zvolte takové heslo, které má alespoň 6 znaků a obsahuje číslice nebo speciální znaky.', 'Křestní jméno', 'Příjmení', 'Křestní jméno vašeho školitele', 'Příjmení vašeho školitele', 'Číslo restaurace, v&nbsp;níž se školíte', 'Číslo restaurace, v&nbsp;níž budete pracovat', 'Pozice školitele', 'Datum zahájení školení', 'Registrovat se', 'Zrušit','Zvolte uživatelské jméno.', 'Zadejte platnou e-mailovou adresu.', 'Zvolte heslo.', 'Please confirm your password.', 'Ujistěte se, že jsou všechna pole vyplněna.')</td>
+	<td>arraySV</td>
+</tr>
+<tr>
+	<td>storeEval</td>
+	<td>storedVars.arraySV.length</td>
+	<td>xx</td>
+</tr>
+<tr>
+	<td>store</td>
+	<td>0</td>
+	<td>x</td>
+</tr>
+<tr>
+	<td>while</td>
+	<td>storedVars.x &lt;= storedVars.xx</td>
+	<td></td>
+</tr>
+<tr>
+	<td>storeEval</td>
+	<td>storedVars.htmlsource.indexOf(storedVars.arraySV[storedVars.x])</td>
+	<td>result</td>
+</tr>
+<tr>
+	<td>gotoIf</td>
+	<td>storedVars.result &gt; -1</td>
+	<td>hasnot</td>
+</tr>
+<tr>
+	<td>storeEval</td>
+	<td>&quot;has not&quot;</td>
+	<td>resulttext</td>
+</tr>
+<tr>
+	<td>echo</td>
+	<td>javascript{alert('hasnot')}</td>
+	<td></td>
+</tr>
+<tr>
+	<td>gotoLabel</td>
+	<td>out</td>
+	<td></td>
+</tr>
+<tr>
+	<td>label</td>
+	<td>hasnot</td>
+	<td></td>
+</tr>
+<tr>
+	<td>storeEval</td>
+	<td>&quot;has&quot;</td>
+	<td>resulttext</td>
+</tr>
+<tr>
+	<td>echo</td>
+	<td>javascript{alert('has')}</td>
+	<td></td>
+</tr>
+<tr>
+	<td>label</td>
+	<td>out</td>
+	<td></td>
+</tr>
+<tr>
+	<td>storeEval</td>
+	<td>storedVars.arraySV[storedVars.x]</td>
+	<td>word</td>
+</tr>
+<tr>
+	<td>echo</td>
+	<td>${word}</td>
+	<td></td>
+</tr>
+<tr>
+	<td>echo</td>
+	<td>translation: ${words} and result: ${resulttext}</td>
+	<td></td>
+</tr>
+<tr>
+	<td>storeEval</td>
+	<td>storedVars.x++;</td>
+	<td></td>
+</tr>
+<tr>
+	<td>endWhile</td>
+	<td></td>
+	<td></td>
+</tr>
+</tbody></table>
+</body>
+</html>

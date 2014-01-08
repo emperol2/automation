@@ -1,0 +1,118 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en" lang="en">
+<head profile="http://selenium-ide.openqa.org/profiles/test-case">
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+<link rel="selenium.base" href="http://www.stylexchange.com/" />
+<title>removeAll_fr</title>
+</head>
+<body>
+<table cellpadding="1" cellspacing="1" border="1">
+<thead>
+<tr><td rowspan="1" colspan="3">removeAll_fr</td></tr>
+</thead><tbody>
+<tr>
+	<td>open</td>
+	<td>${domain}/fr/</td>
+	<td></td>
+</tr>
+<tr>
+	<td>clickAndWait</td>
+	<td>link=Stylexchange</td>
+	<td></td>
+</tr>
+<tr>
+	<td>type</td>
+	<td>id=search</td>
+	<td>one teaspoon</td>
+</tr>
+<tr>
+	<td>clickAndWait</td>
+	<td>${newSearch}</td>
+	<td></td>
+</tr>
+<tr>
+	<td>click</td>
+	<td>css=div[title=&quot;S&quot;]</td>
+	<td></td>
+</tr>
+<tr>
+	<td>pause</td>
+	<td>3000</td>
+	<td>3000</td>
+</tr>
+<tr>
+	<td>click</td>
+	<td>css=div[title=&quot;M&quot;]</td>
+	<td></td>
+</tr>
+<tr>
+	<td>pause</td>
+	<td>5000</td>
+	<td>5000</td>
+</tr>
+<!--Remove Item: Size M-->
+<tr>
+	<td>click</td>
+	<td>xpath=(//a[contains(text(),'Remove This Item')])[2]</td>
+	<td></td>
+</tr>
+<tr>
+	<td>verifyText</td>
+	<td>css=html body.catalogsearch-result-index div#wrapper div#main div.main-container div.col-left div.m-block div.refine-your-search-block div.block div.block-content div.currently ol li</td>
+	<td>*S*</td>
+</tr>
+<tr>
+	<td>pause</td>
+	<td>3000</td>
+	<td></td>
+</tr>
+<tr>
+	<td>click</td>
+	<td>id=filter_left_price_50,100</td>
+	<td></td>
+</tr>
+<tr>
+	<td>verifyChecked</td>
+	<td>xpath=//*[@id=&quot;filter_left_price_50,100&quot;]</td>
+	<td></td>
+</tr>
+<tr>
+	<td>pause</td>
+	<td>3000</td>
+	<td></td>
+</tr>
+<tr>
+	<td>click</td>
+	<td>id=filter_left_price_100,200</td>
+	<td></td>
+</tr>
+<tr>
+	<td>assertChecked</td>
+	<td>xpath=//*[@id=&quot;filter_left_price_100,200&quot;]</td>
+	<td></td>
+</tr>
+<tr>
+	<td>pause</td>
+	<td>3000</td>
+	<td></td>
+</tr>
+<!--Remove Item: Size S-->
+<tr>
+	<td>click</td>
+	<td>link=Remove This Item</td>
+	<td></td>
+</tr>
+<tr>
+	<td>verifyTextNotPresent</td>
+	<td>css=html body.catalogsearch-result-index div#wrapper div#main div.main-container div.col-left div.m-block div.refine-your-search-block div.block div.block-content div.currently ol li</td>
+	<td>*S*</td>
+</tr>
+<tr>
+	<td>clickAndWait</td>
+	<td>link=Stylexchange</td>
+	<td></td>
+</tr>
+</tbody></table>
+</body>
+</html>

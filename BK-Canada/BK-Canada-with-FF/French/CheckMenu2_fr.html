@@ -1,0 +1,153 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en" lang="en">
+<head profile="http://selenium-ide.openqa.org/profiles/test-case">
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+<link rel="selenium.base" href="http://www.burgerking.ca/" />
+<title>New Test</title>
+</head>
+<body>
+<table cellpadding="1" cellspacing="1" border="1">
+<thead>
+<tr><td rowspan="1" colspan="3">New Test</td></tr>
+</thead><tbody>
+<tr>
+	<td>open</td>
+	<td>${baseurl}/fr/ca/index.html</td>
+	<td></td>
+</tr>
+<tr>
+	<td>clickAndWait</td>
+	<td>css=#bk-logo &gt; a &gt; img</td>
+	<td></td>
+</tr>
+<tr>
+	<td>click</td>
+	<td>link=MENU</td>
+	<td></td>
+</tr>
+<!--Snacks category-->
+<tr>
+	<td>clickAndWait</td>
+	<td>link=Collations</td>
+	<td></td>
+</tr>
+<tr>
+	<td>pause</td>
+	<td>4000</td>
+	<td>4000</td>
+</tr>
+<tr>
+	<td>assertTitle</td>
+	<td>Salades et Wraps | Collations | Menu | BURGER KING®</td>
+	<td></td>
+</tr>
+<tr>
+	<td>click</td>
+	<td>link=MENU</td>
+	<td></td>
+</tr>
+<tr>
+	<td>clickAndWait</td>
+	<td>xpath=(//a[contains(text(),'Salades et Wraps')])[2]</td>
+	<td></td>
+</tr>
+<tr>
+	<td>assertTitle</td>
+	<td>Salades et Wraps | Collations | Menu | BURGER KING®</td>
+	<td></td>
+</tr>
+<tr>
+	<td>click</td>
+	<td>link=MENU</td>
+	<td></td>
+</tr>
+<tr>
+	<td>clickAndWait</td>
+	<td>//a[contains(text(),'Frites, Poutine et accompagnements')]</td>
+	<td></td>
+</tr>
+<tr>
+	<td>assertTitle</td>
+	<td>Frites, Poutine et accompagnements | dîner et souper | Menu | BURGER KING®</td>
+	<td></td>
+</tr>
+<tr>
+	<td>clickAndWait</td>
+	<td>css=#bk-logo &gt; a &gt; img</td>
+	<td></td>
+</tr>
+<tr>
+	<td>click</td>
+	<td>link=MENU</td>
+	<td></td>
+</tr>
+<!--Dinner category-->
+<tr>
+	<td>clickAndWait</td>
+	<td>link=Menu dîner et souper</td>
+	<td></td>
+</tr>
+<tr>
+	<td>click</td>
+	<td>link=MENU</td>
+	<td></td>
+</tr>
+<tr>
+	<td>clickAndWait</td>
+	<td>//li[@id='niMenu']/div/div/ul[2]/li[11]/a</td>
+	<td></td>
+</tr>
+<tr>
+	<td>clickAndWait</td>
+	<td>//div[@id='list_menus']/ul/li[3]/a/img</td>
+	<td></td>
+</tr>
+<tr>
+	<td>verifyElementPresent</td>
+	<td>id=menu-info-header</td>
+	<td></td>
+</tr>
+<tr>
+	<td>verifyElementPresent</td>
+	<td>id=menu-info-desc</td>
+	<td></td>
+</tr>
+<tr>
+	<td>verifyElementPresent</td>
+	<td>id=btn-add-to-meal</td>
+	<td></td>
+</tr>
+<tr>
+	<td>verifyElementPresent</td>
+	<td>id=btn-order-at-bk</td>
+	<td></td>
+</tr>
+<tr>
+	<td>verifyElementPresent</td>
+	<td>link=Tout voir</td>
+	<td></td>
+</tr>
+<tr>
+	<td>verifyElementPresent</td>
+	<td>link=INFORMATION NUTRITIONNELLE</td>
+	<td></td>
+</tr>
+<tr>
+	<td>click</td>
+	<td>link=INFORMATION NUTRITIONNELLE</td>
+	<td></td>
+</tr>
+<tr>
+	<td>verifyElementPresent</td>
+	<td>id=nutritabs-customizable</td>
+	<td></td>
+</tr>
+<tr>
+	<td>clickAndWait</td>
+	<td>css=#bk-logo &gt; a &gt; img</td>
+	<td></td>
+</tr>
+</tbody></table>
+</body>
+</html>

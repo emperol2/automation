@@ -1,0 +1,83 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en" lang="en">
+<head profile="http://selenium-ide.openqa.org/profiles/test-case">
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+<link rel="selenium.base" href="http://www.stylexchange.com/" />
+<title>sx20extra</title>
+</head>
+<body>
+<table cellpadding="1" cellspacing="1" border="1">
+<thead>
+<tr><td rowspan="1" colspan="3">sx20extra</td></tr>
+</thead><tbody>
+<tr>
+	<td>open</td>
+	<td>${domain}/en/</td>
+	<td></td>
+</tr>
+<tr>
+	<td>clickAndWait</td>
+	<td>link=Stylexchange</td>
+	<td></td>
+</tr>
+<!--Verify four new elements-->
+<tr>
+	<td>storeElementPresent</td>
+	<td>css=html div#sidebar</td>
+	<td>x</td>
+</tr>
+<tr>
+	<td>echo</td>
+	<td>${x}</td>
+	<td></td>
+</tr>
+<tr>
+	<td>gotoIf</td>
+	<td>${x} == true</td>
+	<td>jump</td>
+</tr>
+<tr>
+	<td>verifyElementPresent</td>
+	<td>xpath=/html/body/div/div[2]/div/div/div/div/div[2]/a</td>
+	<td></td>
+</tr>
+<tr>
+	<td>verifyElementPresent</td>
+	<td>xpath=/html/body/div/div[2]/div/div/div/div/div[2]/a[2]</td>
+	<td></td>
+</tr>
+<tr>
+	<td>verifyElementPresent</td>
+	<td>xpath=/html/body/div/div[2]/div/div/div/div/div[2]/a[3]</td>
+	<td></td>
+</tr>
+<tr>
+	<td>verifyElementPresent</td>
+	<td>xpath=/html/body/div/div[2]/div[2]/div/form/fieldset/div/a</td>
+	<td></td>
+</tr>
+<!--The background color should not be Blue-->
+<tr>
+	<td>label</td>
+	<td>jump</td>
+	<td></td>
+</tr>
+<tr>
+	<td>verifyNotAttribute</td>
+	<td>css=html body.cms-index-index@style</td>
+	<td>background-color: rgb(2, 79, 133);</td>
+</tr>
+<tr>
+	<td>store</td>
+	<td>This is not Blue Monday Screen!</td>
+	<td>str</td>
+</tr>
+<tr>
+	<td>echo</td>
+	<td>javascript{storedVars['str'].fontcolor(&quot;green&quot;)}</td>
+	<td></td>
+</tr>
+</tbody></table>
+</body>
+</html>

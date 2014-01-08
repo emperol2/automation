@@ -1,0 +1,252 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en" lang="en">
+<head profile="http://selenium-ide.openqa.org/profiles/test-case">
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+<link rel="selenium.base" href="http://change-this-to-the-site-you-are-testing/" />
+<title>createMember</title>
+</head>
+<body>
+<table cellpadding="1" cellspacing="1" border="1">
+<thead>
+<tr><td rowspan="1" colspan="3">createMember</td></tr>
+</thead><tbody>
+<tr>
+	<td>storeHtmlSource</td>
+	<td>iframeid</td>
+	<td></td>
+</tr>
+<tr>
+	<td>storeEval</td>
+	<td>storedVars['iframeid'].replace(/frameborder=&quot;0&quot; /g,&quot;&quot;);</td>
+	<td>iframeid</td>
+</tr>
+<tr>
+	<td>storeEval</td>
+	<td>storedVars['iframeid'].match(/iframe id=&quot;[a-z]+[0-9]+&quot;/g);</td>
+	<td>iframeid</td>
+</tr>
+<tr>
+	<td>storeEval</td>
+	<td>storedVars['iframeid'][0].match(/[a-z]+[0-9]+/g);</td>
+	<td>iframeid</td>
+</tr>
+<tr>
+	<td>echo</td>
+	<td>${iframeid}</td>
+	<td></td>
+</tr>
+<tr>
+	<td>selectFrame</td>
+	<td>id=${iframeid}</td>
+	<td></td>
+</tr>
+<tr>
+	<td>mouseDown</td>
+	<td>xpath=//*[@label=&quot;Manage Users&quot;]</td>
+	<td></td>
+</tr>
+<tr>
+	<td>mouseUp</td>
+	<td>xpath=//*[@label=&quot;Manage Users&quot;]</td>
+	<td></td>
+</tr>
+<tr>
+	<td>pause</td>
+	<td>6000</td>
+	<td></td>
+</tr>
+<tr>
+	<td>clickAndWait</td>
+	<td>id=ctl00_MPFooter_btnCreateNew</td>
+	<td></td>
+</tr>
+<tr>
+	<td>select</td>
+	<td>id=ctl00_MPContent_ctlUserEditor_ddlMembershipStatus_ddlLookupData</td>
+	<td>Active</td>
+</tr>
+<tr>
+	<td>select</td>
+	<td>id=ctl00_MPContent_ctlUserEditor_ctlAddressEditor_ddlSalutation_ddlLookupData</td>
+	<td>Ms.</td>
+</tr>
+<tr>
+	<td>type</td>
+	<td>xpath=//*[@id=&quot;ctl00_MPContent_ctlUserEditor_ctlAddressEditor_txtFirstName&quot;]</td>
+	<td>Test</td>
+</tr>
+<tr>
+	<td>type</td>
+	<td>xpath=//*[@id=&quot;ctl00_MPContent_ctlUserEditor_ctlAddressEditor_txtLastName&quot;]</td>
+	<td>AUT</td>
+</tr>
+<tr>
+	<td>type</td>
+	<td>xpath=//*[@id=&quot;ctl00_MPContent_ctlUserEditor_ctlAddressEditor_txtEmail&quot;]</td>
+	<td>su.chavengpoj@gmail.com</td>
+</tr>
+<tr>
+	<td>select</td>
+	<td>id=ctl00_MPContent_ctlUserEditor_ddlBirthYear</td>
+	<td>1990</td>
+</tr>
+<tr>
+	<td>type</td>
+	<td>xpath=//*[@id=&quot;ctl00_MPContent_ctlUserEditor_ctlAddressEditor_txtTitle&quot;]</td>
+	<td>TEST AUT</td>
+</tr>
+<tr>
+	<td>type</td>
+	<td>xpath=//*[@id=&quot;ctl00_MPContent_ctlUserEditor_ctlAddressEditor_txtTitle&quot;]</td>
+	<td>TEST AUT</td>
+</tr>
+<tr>
+	<td>type</td>
+	<td>xpath=//*[@id=&quot;ctl00_MPContent_ctlUserEditor_ctlAddressEditor_txtEmployer&quot;]</td>
+	<td>TEST EMP</td>
+</tr>
+<tr>
+	<td>select</td>
+	<td>id=ctl00_MPContent_ctlUserEditor_ctlAddressEditor_ddlCountry</td>
+	<td>Canada</td>
+</tr>
+<tr>
+	<td>type</td>
+	<td>xpath=//*[@id=&quot;ctl00_MPContent_ctlUserEditor_ctlAddressEditor_txtAddress1&quot;]</td>
+	<td>Address1</td>
+</tr>
+<tr>
+	<td>type</td>
+	<td>xpath=//*[@id=&quot;ctl00_MPContent_ctlUserEditor_ctlAddressEditor_txtAddress2&quot;]</td>
+	<td>Address2</td>
+</tr>
+<tr>
+	<td>type</td>
+	<td>xpath=//*[@id=&quot;ctl00_MPContent_ctlUserEditor_ctlAddressEditor_txtSuite&quot;]</td>
+	<td>Suite</td>
+</tr>
+<tr>
+	<td>type</td>
+	<td>xpath=//*[@id=&quot;ctl00_MPContent_ctlUserEditor_ctlAddressEditor_txtCity&quot;]</td>
+	<td>City</td>
+</tr>
+<tr>
+	<td>select</td>
+	<td>id=ctl00_MPContent_ctlUserEditor_ctlAddressEditor_ddlProvince</td>
+	<td>Quebec</td>
+</tr>
+<tr>
+	<td>pause</td>
+	<td>3000</td>
+	<td></td>
+</tr>
+<tr>
+	<td>type</td>
+	<td>xpath=//*[@id=&quot;ctl00_MPContent_ctlUserEditor_ctlAddressEditor_txtPostalCode&quot;]</td>
+	<td>22222</td>
+</tr>
+<tr>
+	<td>type</td>
+	<td>xpath=//*[@id=&quot;ctl00_MPContent_ctlUserEditor_ctlAddressEditor_txtPhonePart1&quot;]</td>
+	<td>222</td>
+</tr>
+<tr>
+	<td>type</td>
+	<td>xpath=//*[@id=&quot;ctl00_MPContent_ctlUserEditor_ctlAddressEditor_txtPhonePart2&quot;]</td>
+	<td>222</td>
+</tr>
+<tr>
+	<td>type</td>
+	<td>xpath=//*[@id=&quot;ctl00_MPContent_ctlUserEditor_ctlAddressEditor_txtPhonePart3&quot;]</td>
+	<td>2222</td>
+</tr>
+<tr>
+	<td>type</td>
+	<td>xpath=//*[@id=&quot;ctl00_MPContent_ctlUserEditor_ctlAddressEditor_txtPhoneExt&quot;]</td>
+	<td>2222</td>
+</tr>
+<tr>
+	<td>type</td>
+	<td>xpath=//*[@id=&quot;ctl00_MPContent_ctlUserEditor_ctlAddressEditor_txtFaxPart1&quot;]</td>
+	<td>333</td>
+</tr>
+<tr>
+	<td>type</td>
+	<td>xpath=//*[@id=&quot;ctl00_MPContent_ctlUserEditor_ctlAddressEditor_txtFaxPart2&quot;]</td>
+	<td>333</td>
+</tr>
+<tr>
+	<td>type</td>
+	<td>xpath=//*[@id=&quot;ctl00_MPContent_ctlUserEditor_ctlAddressEditor_txtFaxPart3&quot;]</td>
+	<td>3333</td>
+</tr>
+<tr>
+	<td>type</td>
+	<td>xpath=//*[@id=&quot;ctl00_MPContent_ctlUserEditor_ctlAddressEditor_txtMobilePart1&quot;]</td>
+	<td>444</td>
+</tr>
+<tr>
+	<td>type</td>
+	<td>xpath=//*[@id=&quot;ctl00_MPContent_ctlUserEditor_ctlAddressEditor_txtMobilePart2&quot;]</td>
+	<td>444</td>
+</tr>
+<tr>
+	<td>type</td>
+	<td>xpath=//*[@id=&quot;ctl00_MPContent_ctlUserEditor_ctlAddressEditor_txtMobilePart3&quot;]</td>
+	<td>4444</td>
+</tr>
+<tr>
+	<td>clickAndWait</td>
+	<td>id=ctl00_MPContent_ctlUserEditor_rptMembershipClass_ctl01_rdoMembershipClass</td>
+	<td></td>
+</tr>
+<tr>
+	<td>click</td>
+	<td>id=ctl00_MPContent_ctlUserEditor_ctlMemberAttributeEditor_rdoIsTaxExempt_0</td>
+	<td></td>
+</tr>
+<tr>
+	<td>type</td>
+	<td>xpath=//*[@id=&quot;ctl00_MPContent_ctlUserEditor_ctlMemberAttributeEditor_txtTaxExemptionNumber&quot;]</td>
+	<td>13245</td>
+</tr>
+<tr>
+	<td>select</td>
+	<td>id=ctl00_MPContent_ctlUserEditor_ctlMemberAttributeEditor_ddlSectorPlanSponsor_ddlLookupData</td>
+	<td>Corporate</td>
+</tr>
+<tr>
+	<td>select</td>
+	<td>id=ctl00_MPContent_ctlUserEditor_ctlMemberAttributeEditor_ddlSectorSpecialty</td>
+	<td>Accounting</td>
+</tr>
+<tr>
+	<td>check</td>
+	<td>id=ctl00_MPContent_ctlUserEditor_chkAgree</td>
+	<td></td>
+</tr>
+<tr>
+	<td>clickAndWait</td>
+	<td>id=ctl00_MPContent_ctlUserEditor_btnSave</td>
+	<td></td>
+</tr>
+<!--Edit user profile-->
+<tr>
+	<td>click</td>
+	<td>id=ctl00_MPContent_ctlUserEditor_ctlMemberAttributeEditor_rdoIsTaxExempt_1</td>
+	<td></td>
+</tr>
+<tr>
+	<td>check</td>
+	<td>id=ctl00_MPContent_ctlUserEditor_chkAgree</td>
+	<td></td>
+</tr>
+<tr>
+	<td>clickAndWait</td>
+	<td>id=ctl00_MPContent_ctlUserEditor_btnSave</td>
+	<td></td>
+</tr>
+</tbody></table>
+</body>
+</html>

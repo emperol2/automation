@@ -1,0 +1,34 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en" lang="en">
+<head>
+  <meta content="text/html; charset=UTF-8" http-equiv="content-type" />
+  <title>Test Suite</title>
+</head>
+<body>
+<table id="suiteTable" cellpadding="1" cellspacing="1" border="1" class="selenium"><tbody>
+<tr><td><b>Test Suite</b></td></tr>
+<tr><td><a href="wordslist_Cestina.html">wordslist_Cestina</a></td></tr>
+<tr><td><a href="wordslist_Danish.html">wordslist_Danish</a></td></tr>
+<tr><td><a href="wordslist_German.html">wordslist_German</a></td></tr>
+<tr><td><a href="wordslist_English.html">wordslist_English</a></td></tr>
+<tr><td><a href="wordslist_Spanish.html">wordslist_Spanish</a></td></tr>
+<tr><td><a href="wordslist_French.html">wordslist_French</a></td></tr>
+<tr><td><a href="wordslist_Italian.html">wordslist_Italian</a></td></tr>
+<tr><td><a href="wordslist_Hungarian.html">wordslist_Hungarian</a></td></tr>
+<tr><td><a href="wordslist_Dutch.html">wordslist_Dutch</a></td></tr>
+<tr><td><a href="wordslist_Norwegian.html">wordslist_Norwegian</a></td></tr>
+<tr><td><a href="wordslist_Polish.html">wordslist_Polish</a></td></tr>
+<tr><td><a href="wordslist_Portuguese.html">wordslist_Portuguese</a></td></tr>
+<tr><td><a href="wordslist_Romanian.html">wordslist_Romanian</a></td></tr>
+<tr><td><a href="wordslist_Slovenian.html">wordslist_Slovenian</a></td></tr>
+<tr><td><a href="wordslist_Finland.html">wordslist_Finland</a></td></tr>
+<tr><td><a href="wordslist_Swedish.html">wordslist_Swedish</a></td></tr>
+<tr><td><a href="wordslist_Turkish.html">wordslist_Turkish</a></td></tr>
+<tr><td><a href="wordslist_Bulgarian.html">wordslist_Bulgarian</a></td></tr>
+<tr><td><a href="wordslist_Macedonian.html">wordslist_Macedonian</a></td></tr>
+<tr><td><a href="wordslist_Russian.html">wordslist_Russian</a></td></tr>
+<tr><td><a href="wordslist_Georgian.html">wordslist_Georgian</a></td></tr>
+</tbody></table>
+</body>
+</html>

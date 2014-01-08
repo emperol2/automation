@@ -1,0 +1,197 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en" lang="en">
+<head profile="http://selenium-ide.openqa.org/profiles/test-case">
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+<link rel="selenium.base" href="http://change-this-to-the-site-you-are-testing/" />
+<title>createDetatilsMember</title>
+</head>
+<body>
+<table cellpadding="1" cellspacing="1" border="1">
+<thead>
+<tr><td rowspan="1" colspan="3">createDetatilsMember</td></tr>
+</thead><tbody>
+<!--2. Membership Profile-->
+<!--Step 1. Complete Membership Profil-->
+<tr>
+	<td>clickAndWait</td>
+	<td>link=2. Membership Profile</td>
+	<td></td>
+</tr>
+<tr>
+	<td>pause</td>
+	<td>4000</td>
+	<td>4000</td>
+</tr>
+<tr>
+	<td>type</td>
+	<td>xpath=//*[@id=&quot;ctl00_MPContent_ctlMemberProfileEditor_txtFurthurInfo&quot;]</td>
+	<td>Further Information</td>
+</tr>
+<!--Step 2. Fill Out Membership Entrance Survey-->
+<tr>
+	<td>check</td>
+	<td>id=ctl00_MPContent_ctlMemberProfileEditor_ctlSurveyQuestionResponsePanel_rptQuestion_ctl00_ControlGenerator_Checkbox_CheckboxControl_0</td>
+	<td></td>
+</tr>
+<tr>
+	<td>select</td>
+	<td>id=ctl00_MPContent_ctlMemberProfileEditor_ctlSurveyQuestionResponsePanel_rptQuestion_ctl01_ControlGenerator_Dropdown_DropdownControl</td>
+	<td>Attended a meeting</td>
+</tr>
+<tr>
+	<td>type</td>
+	<td>xpath=//*[@id=&quot;ctl00_MPContent_ctlMemberProfileEditor_ctlSurveyQuestionResponsePanel_rptQuestion_ctl02_ControlGenerator_TextArea_TextAreaControl&quot;]</td>
+	<td>Test input</td>
+</tr>
+<!--Step 3. Set Content Access Groups-->
+<tr>
+	<td>check</td>
+	<td>id=ctl00_MPContent_ctlMemberProfileEditor_chkContentAccessGroups_0</td>
+	<td></td>
+</tr>
+<tr>
+	<td>check</td>
+	<td>id=ctl00_MPContent_ctlMemberProfileEditor_chkContentAccessGroups_1</td>
+	<td></td>
+</tr>
+<tr>
+	<td>click</td>
+	<td>id=ctl00_MPContent_ctlMemberProfileEditor_btnSave</td>
+	<td></td>
+</tr>
+<tr>
+	<td>pause</td>
+	<td>5000</td>
+	<td>5000</td>
+</tr>
+<!--3. Create Membership-->
+<tr>
+	<td>select</td>
+	<td>id=ctl00_MPContent_ctlMemberRegistrationEditor_ctlPaymentPanel_ddlPaymentMethod_ddlLookupData</td>
+	<td>Pay online</td>
+</tr>
+<tr>
+	<td>type</td>
+	<td>id=ctl00_MPContent_ctlMemberRegistrationEditor_ctlPaymentPanel_txtCreditCardHolder</td>
+	<td>test</td>
+</tr>
+<tr>
+	<td>select</td>
+	<td>id=ctl00_MPContent_ctlMemberRegistrationEditor_ctlPaymentPanel_ddlCreditCardType_ddlLookupData</td>
+	<td>Visa</td>
+</tr>
+<tr>
+	<td>type</td>
+	<td>id=ctl00_MPContent_ctlMemberRegistrationEditor_ctlPaymentPanel_txtCreditCardNumber</td>
+	<td>4111111111111111</td>
+</tr>
+<tr>
+	<td>select</td>
+	<td>id=ctl00_MPContent_ctlMemberRegistrationEditor_ctlPaymentPanel_ddlCCExpiryMonth</td>
+	<td>4</td>
+</tr>
+<tr>
+	<td>select</td>
+	<td>id=ctl00_MPContent_ctlMemberRegistrationEditor_ctlPaymentPanel_ddlCCExpiryYear</td>
+	<td>2021</td>
+</tr>
+<tr>
+	<td>click</td>
+	<td>id=ctl00_MPContent_ctlMemberRegistrationEditor_ctlPaymentPanel_rdoOtherAddress</td>
+	<td></td>
+</tr>
+<tr>
+	<td>type</td>
+	<td>xpath=//*[@id=&quot;ctl00_MPContent_ctlMemberRegistrationEditor_ctlPaymentPanel_txtAddress1&quot;]</td>
+	<td>Address01</td>
+</tr>
+<tr>
+	<td>type</td>
+	<td>xpath=//*[@id=&quot;ctl00_MPContent_ctlMemberRegistrationEditor_ctlPaymentPanel_txtAddress2&quot;]</td>
+	<td>Address02</td>
+</tr>
+<tr>
+	<td>type</td>
+	<td>xpath=//*[@id=&quot;ctl00_MPContent_ctlMemberRegistrationEditor_ctlPaymentPanel_txtPostalCode&quot;]</td>
+	<td>t3h2e1</td>
+</tr>
+<tr>
+	<td>type</td>
+	<td>xpath=//*[@id=&quot;ctl00_MPContent_ctlMemberRegistrationEditor_ctlPaymentPanel_txtCity&quot;]</td>
+	<td>Test City</td>
+</tr>
+<tr>
+	<td>select</td>
+	<td>id=ctl00_MPContent_ctlMemberRegistrationEditor_ctlPaymentPanel_ddlCountry</td>
+	<td>Canada</td>
+</tr>
+<tr>
+	<td>pause</td>
+	<td>4000</td>
+	<td>4000</td>
+</tr>
+<tr>
+	<td>select</td>
+	<td>id=ctl00_MPContent_ctlMemberRegistrationEditor_ctlPaymentPanel_ddlProvince</td>
+	<td>Yukon</td>
+</tr>
+<tr>
+	<td>type</td>
+	<td>xpath=//*[@id=&quot;ctl00_MPContent_ctlMemberRegistrationEditor_ctlPaymentPanel_txtPhone&quot;]</td>
+	<td>(555) 555-5555</td>
+</tr>
+<tr>
+	<td>type</td>
+	<td>xpath=//*[@id=&quot;ctl00_MPContent_ctlMemberRegistrationEditor_ctlPaymentPanel_txtPhoneExt&quot;]</td>
+	<td>5555</td>
+</tr>
+<tr>
+	<td>type</td>
+	<td>id=ctl00_MPContent_ctlMemberRegistrationEditor_ctlPaymentPanel_txtCreditCardNumber</td>
+	<td>4111111111111111</td>
+</tr>
+<tr>
+	<td>select</td>
+	<td>id=ctl00_MPContent_ctlMemberRegistrationEditor_ctlPaymentPanel_ddlCCExpiryMonth</td>
+	<td>4</td>
+</tr>
+<tr>
+	<td>select</td>
+	<td>id=ctl00_MPContent_ctlMemberRegistrationEditor_ctlPaymentPanel_ddlCCExpiryYear</td>
+	<td>2021</td>
+</tr>
+<tr>
+	<td>type</td>
+	<td>xpath=//*[@id=&quot;ctl00_MPContent_ctlMemberRegistrationEditor_ctlPaymentPanel_txtAdminNote&quot;]</td>
+	<td>Administrative Notes</td>
+</tr>
+<tr>
+	<td>check</td>
+	<td>id=ctl00_MPContent_ctlMemberRegistrationEditor_ctlPaymentPanel_chkOpenPDF</td>
+	<td></td>
+</tr>
+<tr>
+	<td>clickAndWait</td>
+	<td>id=ctl00_MPContent_ctlMemberRegistrationEditor_btnSave</td>
+	<td></td>
+</tr>
+<!--4. Membership history-->
+<tr>
+	<td>clickAndWait</td>
+	<td>id=ctl00_MPContent_ctlMemberRegistrationList_grdData_ctl02_lnkRegistrationDetail</td>
+	<td></td>
+</tr>
+<tr>
+	<td>check</td>
+	<td>id=ctl00_MPContent_ctlMemberRegistrationDetailEditor_ctlPaymentPanel_chkOpenPDF</td>
+	<td></td>
+</tr>
+<tr>
+	<td>clickAndWait</td>
+	<td>id=ctl00_MPContent_ctlMemberRegistrationDetailEditor_btnSave</td>
+	<td></td>
+</tr>
+</tbody></table>
+</body>
+</html>

@@ -1,0 +1,124 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en" lang="en">
+<head profile="http://selenium-ide.openqa.org/profiles/test-case">
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+<link rel="selenium.base" href="http://www.burgerking.ca/" />
+<title>CheckFooter</title>
+</head>
+<body>
+<table cellpadding="1" cellspacing="1" border="1">
+<thead>
+<tr><td rowspan="1" colspan="3">CheckFooter</td></tr>
+</thead><tbody>
+<tr>
+	<td>open</td>
+	<td>${baseurl}/fr/ca/index.html</td>
+	<td></td>
+</tr>
+<tr>
+	<td>clickAndWait</td>
+	<td>css=#bk-logo &gt; a &gt; img</td>
+	<td></td>
+</tr>
+<tr>
+	<td>clickAndWait</td>
+	<td>css=div.image &gt; a &gt; img</td>
+	<td></td>
+</tr>
+<!--click at Kids-->
+<tr>
+	<td>clickAndWait</td>
+	<td>css=div.image &gt; a &gt; img</td>
+	<td></td>
+</tr>
+<tr>
+	<td>clickAndWait</td>
+	<td>link=Au sujet de BURGER KING®</td>
+	<td></td>
+</tr>
+<!--check about BK title-->
+<tr>
+	<td>assertTitle</td>
+	<td>Au sujet de BURGER KING® | Info sur la Société | BURGER KING®</td>
+	<td></td>
+</tr>
+<!--<tr>
+	<td>click</td>
+	<td>link=Responsabilité de l'entreprise</td>
+	<td></td>
+</tr>
+<tr>
+	<td>verifyElementPresent</td>
+	<td>css=html body.skin-default div.modal_overlay</td>
+	<td></td>
+</tr>
+<tr>
+	<td>click</td>
+	<td>css=div.leave-site-close</td>
+	<td></td>
+</tr>
+<tr>
+	<td>click</td>
+	<td>link=Responsabilité de l'entreprise</td>
+	<td></td>
+</tr>
+<tr>
+	<td>verifyElementPresent</td>
+	<td>css=html body.skin-default div.modal_overlay</td>
+	<td></td>
+</tr>
+<tr>
+	<td>click</td>
+	<td>css=div.leave-site-close</td>
+	<td></td>
+</tr>-->
+<tr>
+	<td>clickAndWait</td>
+	<td>link=Plan du site</td>
+	<td></td>
+</tr>
+<tr>
+	<td>verifyTextPresent</td>
+	<td></td>
+	<td>Plan du site</td>
+</tr>
+<tr>
+	<td>clickAndWait</td>
+	<td>link=Emplacements internationaux</td>
+	<td></td>
+</tr>
+<!--check North America, Latin America & Caribbean-->
+<tr>
+	<td>verifyHtmlSource</td>
+	<td>*207,0,166,23,140,56,139,99,88,99,63,90,43,101,33,130,5,199,16,203,76,175,88,163,108,168,126,202,141,212,144,246,191,316,116,318,54,288,50,298,141,370,250,366,268,396,278,399,263,503,280,523,375,520,370,506,295,492,338,425,360,407,376,365,308,327,306,304,277,290,257,268,333,219,318,186,297,156,308,123,259,62,282,0*</td>
+	<td></td>
+</tr>
+<tr>
+	<td>clickAndWait</td>
+	<td>link=Juridique</td>
+	<td></td>
+</tr>
+<tr>
+	<td>verifyTextPresent</td>
+	<td></td>
+	<td>Les conditions d’utilisation prévues aux présentes régissent votre utilisation du site Web burgerking.ca et, sauf indication contraire, de tout autre site Web détenu ou exploité par Les Restaurants Burger King du Canada, Inc. (« RBKC ») ou exploité pour le compte de RBKC (collectivement appelés les « Sites Web »). Veuillez lire attentivement les conditions d’utilisation avant d’utiliser les Sites Web.</td>
+</tr>
+<tr>
+	<td>clickAndWait</td>
+	<td>xpath=(//a[contains(text(),'Politique de confidentialité')])[2]</td>
+	<td></td>
+</tr>
+<tr>
+	<td>verifyTextPresent</td>
+	<td></td>
+	<td>Nous pouvons également utiliser des pixels espions afin de dénombrer les visites sur une page effectuées par nos utilisateurs, d’accéder à nos témoins et d’améliorer votre expérience sur les Sites Web RBKC. Si vous vous êtes inscrit pour recevoir des courriers électroniques de notre part, nous pouvons aussi utiliser des pixels espions dans ces courriers afin de nous permettre de savoir quels courriers vous avez ouverts et auxquels vous avez donné suite, ce qui nous permet d’évaluer l’efficacité de nos communications et de nos campagnes de marketing. Si vous désirez ne plus recevoir ces courriers électroniques, vous n’avez qu’à suivre les directives incluses à ce sujet dans le courrier.</td>
+</tr>
+<tr>
+	<td>clickAndWait</td>
+	<td>css=#bk-logo &gt; a &gt; img</td>
+	<td></td>
+</tr>
+</tbody></table>
+</body>
+</html>

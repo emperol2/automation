@@ -1,0 +1,34 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en" lang="en">
+<head>
+  <meta content="text/html; charset=UTF-8" http-equiv="content-type" />
+  <title>Test Suite</title>
+</head>
+<body>
+<table id="suiteTable" cellpadding="1" cellspacing="1" border="1" class="selenium"><tbody>
+<tr><td><b>Test Suite</b></td></tr>
+<tr><td><a href="setup.html">setup</a></td></tr>
+<tr><td><a href="createMember.html">createMember</a></td></tr>
+<tr><td><a href="createDetatilsMember.html">createDetatilsMember</a></td></tr>
+<tr><td><a href="MergeUsers.html">MergeUsers</a></td></tr>
+<tr><td><a href="createMembershipClasses.html">createMembershipClasses</a></td></tr>
+<tr><td><a href="createMembershipFields.html">createMembershipFields</a></td></tr>
+<tr><td><a href="createMembershipSurveyQues.html">createMembershipSurveyQues</a></td></tr>
+<tr><td><a href="createMembershipGroups.html">createMembershipGroups</a></td></tr>
+<tr><td><a href="createMembershipGroupLevel.html">createMembershipGroupLevel</a></td></tr>
+<tr><td><a href="searchBasicSearchMember.html">searchBasicSearchMember</a></td></tr>
+<tr><td><a href="searchAdvanceSearchMember.html">searchAdvanceSearchMember</a></td></tr>
+<tr><td><a href="createEvent.html">createEvent</a></td></tr>
+<tr><td><a href="createDetailsEvents.html">createDetailsEvents</a></td></tr>
+<tr><td><a href="EventsDetailsPayOffline.html">EventsDetailsPayOffline</a></td></tr>
+<tr><td><a href="EventsDetailsPayOnline.html">EventsDetailsPayOnline</a></td></tr>
+<tr><td><a href="createAttendees.html">createAttendees</a></td></tr>
+<tr><td><a href="AttendeesPayOffline.html">AttendeesPayOffline</a></td></tr>
+<tr><td><a href="AttendeesPayOnline.html">AttendeesPayOnline</a></td></tr>
+<tr><td><a href="CreateJobPosting.html">CreateJobPosting</a></td></tr>
+<tr><td><a href="CreateJobPosting.html">CreateCoupon</a></td></tr>
+<tr><td><a href="CreateCoupons.html">CreateCoupon</a></td></tr>
+</tbody></table>
+</body>
+</html>

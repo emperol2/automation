@@ -1,0 +1,306 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en" lang="en">
+<head profile="http://selenium-ide.openqa.org/profiles/test-case">
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+<link rel="selenium.base" href="http://change-this-to-the-site-you-are-testing/" />
+<title>createMembershipGroups</title>
+</head>
+<body>
+<table cellpadding="1" cellspacing="1" border="1">
+<thead>
+<tr><td rowspan="1" colspan="3">createMembershipGroups</td></tr>
+</thead><tbody>
+<tr>
+	<td>storeHtmlSource</td>
+	<td>iframeid</td>
+	<td></td>
+</tr>
+<tr>
+	<td>storeEval</td>
+	<td>storedVars['iframeid'].replace(/frameborder=&quot;0&quot; /g,&quot;&quot;);</td>
+	<td>iframeid</td>
+</tr>
+<tr>
+	<td>storeEval</td>
+	<td>storedVars['iframeid'].match(/iframe id=&quot;[a-z]+[0-9]+&quot;/g);</td>
+	<td>iframeid</td>
+</tr>
+<tr>
+	<td>storeEval</td>
+	<td>storedVars['iframeid'][0].match(/[a-z]+[0-9]+/g);</td>
+	<td>iframeid</td>
+</tr>
+<tr>
+	<td>echo</td>
+	<td>${iframeid}</td>
+	<td></td>
+</tr>
+<tr>
+	<td>selectFrame</td>
+	<td>id=${iframeid}</td>
+	<td></td>
+</tr>
+<tr>
+	<td>mouseDown</td>
+	<td>xpath=//*[@label=&quot;Manage Membership Groups&quot;]</td>
+	<td></td>
+</tr>
+<tr>
+	<td>mouseUp</td>
+	<td>xpath=//*[@label=&quot;Manage Membership Groups&quot;]</td>
+	<td></td>
+</tr>
+<tr>
+	<td>pause</td>
+	<td>6000</td>
+	<td></td>
+</tr>
+<tr>
+	<td>clickAndWait</td>
+	<td>id=ctl00_MPFooter_btnCreateNew</td>
+	<td></td>
+</tr>
+<!--Membership group information-->
+<tr>
+	<td>type</td>
+	<td>xpath=//*[@id=&quot;ctl00_MPContent_ctlMembershipGroupCreator_txtGroupName&quot;]</td>
+	<td>AUT membership group</td>
+</tr>
+<tr>
+	<td>type</td>
+	<td>xpath=//*[@id=&quot;ctl00_MPContent_ctlMembershipGroupCreator_txtGroupManagerUserId&quot;]</td>
+	<td>123456789</td>
+</tr>
+<tr>
+	<td>type</td>
+	<td>xpath=//*[@id=&quot;ctl00_MPContent_ctlMembershipGroupCreator_txtConfirmPassword&quot;]</td>
+	<td>123456789</td>
+</tr>
+<tr>
+	<td>type</td>
+	<td>xpath=//*[@id=&quot;ctl00_MPContent_ctlMembershipGroupCreator_txtGroupManagerPassword&quot;]</td>
+	<td>123456789</td>
+</tr>
+<tr>
+	<td>select</td>
+	<td>id=ctl00_MPContent_ctlMembershipGroupCreator_ddlGroupLevel</td>
+	<td>ABC Group</td>
+</tr>
+<tr>
+	<td>pause</td>
+	<td>3000</td>
+	<td></td>
+</tr>
+<!--Contact and billing information-->
+<tr>
+	<td>select</td>
+	<td>id=ctl00_MPContent_ctlMembershipGroupCreator_ctlContactAddressEditor_ddlSalutation_ddlLookupData</td>
+	<td>Ms.</td>
+</tr>
+<tr>
+	<td>type</td>
+	<td>xpath=//*[@id=&quot;ctl00_MPContent_ctlMembershipGroupCreator_ctlContactAddressEditor_txtFirstName&quot;]</td>
+	<td>AUT</td>
+</tr>
+<tr>
+	<td>type</td>
+	<td>xpath=//*[@id=&quot;ctl00_MPContent_ctlMembershipGroupCreator_ctlContactAddressEditor_txtLastName&quot;]</td>
+	<td>AUT</td>
+</tr>
+<tr>
+	<td>type</td>
+	<td>xpath=//*[@id=&quot;ctl00_MPContent_ctlMembershipGroupCreator_ctlContactAddressEditor_txtEmail&quot;]</td>
+	<td>aut@test.com</td>
+</tr>
+<tr>
+	<td>type</td>
+	<td>xpath=//*[@id=&quot;ctl00_MPContent_ctlMembershipGroupCreator_ctlContactAddressEditor_txtEmployer&quot;]</td>
+	<td>AUT employer</td>
+</tr>
+<tr>
+	<td>select</td>
+	<td>id=ctl00_MPContent_ctlMembershipGroupCreator_ctlContactAddressEditor_ddlCountry</td>
+	<td>Canada</td>
+</tr>
+<tr>
+	<td>type</td>
+	<td>xpath=//*[@id=&quot;ctl00_MPContent_ctlMembershipGroupCreator_ctlContactAddressEditor_txtAddress1&quot;]</td>
+	<td>AUT address</td>
+</tr>
+<tr>
+	<td>type</td>
+	<td>xpath=//*[@id=&quot;ctl00_MPContent_ctlMembershipGroupCreator_ctlContactAddressEditor_txtAddress2&quot;]</td>
+	<td>AUT address2</td>
+</tr>
+<tr>
+	<td>pause</td>
+	<td>3000</td>
+	<td></td>
+</tr>
+<tr>
+	<td>type</td>
+	<td>xpath=//*[@id=&quot;ctl00_MPContent_ctlMembershipGroupCreator_ctlContactAddressEditor_txtSuite&quot;]</td>
+	<td>AUT suite</td>
+</tr>
+<tr>
+	<td>type</td>
+	<td>xpath=//*[@id=&quot;ctl00_MPContent_ctlMembershipGroupCreator_ctlContactAddressEditor_txtCity&quot;]</td>
+	<td>AUT city</td>
+</tr>
+<tr>
+	<td>select</td>
+	<td>id=ctl00_MPContent_ctlMembershipGroupCreator_ctlContactAddressEditor_ddlProvince</td>
+	<td>Manitoba</td>
+</tr>
+<tr>
+	<td>type</td>
+	<td>xpath=//*[@id=&quot;ctl00_MPContent_ctlMembershipGroupCreator_ctlContactAddressEditor_txtPostalCode&quot;]</td>
+	<td>12345</td>
+</tr>
+<tr>
+	<td>pause</td>
+	<td>3000</td>
+	<td></td>
+</tr>
+<tr>
+	<td>type</td>
+	<td>xpath=//*[@id=&quot;ctl00_MPContent_ctlMembershipGroupCreator_ctlContactAddressEditor_txtPhonePart1&quot;]</td>
+	<td>666</td>
+</tr>
+<tr>
+	<td>type</td>
+	<td>xpath=//*[@id=&quot;ctl00_MPContent_ctlMembershipGroupCreator_ctlContactAddressEditor_txtPhonePart2&quot;]</td>
+	<td>666</td>
+</tr>
+<tr>
+	<td>type</td>
+	<td>xpath=//*[@id=&quot;ctl00_MPContent_ctlMembershipGroupCreator_ctlContactAddressEditor_txtPhonePart3&quot;]</td>
+	<td>6666</td>
+</tr>
+<tr>
+	<td>type</td>
+	<td>xpath=//*[@id=&quot;ctl00_MPContent_ctlMembershipGroupCreator_ctlContactAddressEditor_txtPhoneExt&quot;]</td>
+	<td>6666</td>
+</tr>
+<tr>
+	<td>type</td>
+	<td>xpath=//*[@id=&quot;ctl00_MPContent_ctlMembershipGroupCreator_ctlContactAddressEditor_txtFaxPart1&quot;]</td>
+	<td>777</td>
+</tr>
+<tr>
+	<td>type</td>
+	<td>xpath=//*[@id=&quot;ctl00_MPContent_ctlMembershipGroupCreator_ctlContactAddressEditor_txtFaxPart2&quot;]</td>
+	<td>777</td>
+</tr>
+<tr>
+	<td>type</td>
+	<td>xpath=//*[@id=&quot;ctl00_MPContent_ctlMembershipGroupCreator_ctlContactAddressEditor_txtFaxPart3&quot;]</td>
+	<td>7777</td>
+</tr>
+<tr>
+	<td>type</td>
+	<td>xpath=//*[@id=&quot;ctl00_MPContent_ctlMembershipGroupCreator_ctlContactAddressEditor_txtMobilePart1&quot;]</td>
+	<td>888</td>
+</tr>
+<tr>
+	<td>type</td>
+	<td>xpath=//*[@id=&quot;ctl00_MPContent_ctlMembershipGroupCreator_ctlContactAddressEditor_txtMobilePart2&quot;]</td>
+	<td>888</td>
+</tr>
+<tr>
+	<td>type</td>
+	<td>xpath=//*[@id=&quot;ctl00_MPContent_ctlMembershipGroupCreator_ctlContactAddressEditor_txtMobilePart3&quot;]</td>
+	<td>8888</td>
+</tr>
+<!--Payment information-->
+<tr>
+	<td>select</td>
+	<td>id=ctl00_MPContent_ctlMembershipGroupCreator_ctlPaymentPanel_ddlPaymentMethod_ddlLookupData</td>
+	<td>Pay online</td>
+</tr>
+<tr>
+	<td>type</td>
+	<td>xpath=//*[@id=&quot;ctl00_MPContent_ctlMembershipGroupCreator_ctlPaymentPanel_txtCreditCardHolder&quot;]</td>
+	<td>AUT </td>
+</tr>
+<tr>
+	<td>select</td>
+	<td>id=ctl00_MPContent_ctlMembershipGroupCreator_ctlPaymentPanel_ddlCreditCardType</td>
+	<td>VISA</td>
+</tr>
+<tr>
+	<td>type</td>
+	<td>xpath=//*[@id=&quot;ctl00_MPContent_ctlMembershipGroupCreator_ctlPaymentPanel_txtCreditCardNumber&quot;]</td>
+	<td>4111111111111111</td>
+</tr>
+<tr>
+	<td>select</td>
+	<td>id=ctl00_MPContent_ctlMembershipGroupCreator_ctlPaymentPanel_ddlCCExpiryMonth</td>
+	<td>10</td>
+</tr>
+<tr>
+	<td>select</td>
+	<td>id=ctl00_MPContent_ctlMembershipGroupCreator_ctlPaymentPanel_ddlCCExpiryYear</td>
+	<td>2021</td>
+</tr>
+<tr>
+	<td>click</td>
+	<td>id=ctl00_MPContent_ctlMembershipGroupCreator_ctlPaymentPanel_rdoSameAddress</td>
+	<td></td>
+</tr>
+<tr>
+	<td>type</td>
+	<td>xpath=//*[@id=&quot;ctl00_MPContent_ctlMembershipGroupCreator_ctlPaymentPanel_txtAdminNote&quot;]</td>
+	<td>Administrative notes</td>
+</tr>
+<tr>
+	<td>check</td>
+	<td>id=ctl00_MPContent_ctlMembershipGroupCreator_ctlPaymentPanel_chkOpenPDF</td>
+	<td></td>
+</tr>
+<tr>
+	<td>type</td>
+	<td>xpath=//*[@id=&quot;ctl00_MPContent_ctlMembershipGroupCreator_txtConfirmPassword&quot;]</td>
+	<td>123456789</td>
+</tr>
+<tr>
+	<td>type</td>
+	<td>xpath=//*[@id=&quot;ctl00_MPContent_ctlMembershipGroupCreator_txtGroupManagerPassword&quot;]</td>
+	<td>123456789</td>
+</tr>
+<tr>
+	<td>clickAndWait</td>
+	<td>id=ctl00_MPContent_ctlMembershipGroupCreator_btnSave</td>
+	<td></td>
+</tr>
+<tr>
+	<td>clickAndWait</td>
+	<td>id=ctl00_MPContent_ctlMembershipGroupMemberSelector_btnCancel</td>
+	<td></td>
+</tr>
+<!--Search membership group-->
+<tr>
+	<td>type</td>
+	<td>xpath=//*[@id=&quot;ctl00_MPContent_ctlMembershipGroupSearchFilter_txtSearchGroupName&quot;]</td>
+	<td>AUT membership group</td>
+</tr>
+<tr>
+	<td>clickAndWait</td>
+	<td>id=ctl00_MPContent_ctlMembershipGroupSearchFilter_btnSearch</td>
+	<td></td>
+</tr>
+<tr>
+	<td>assertText</td>
+	<td>xpath=//*[@id=&quot;ctl00_MPContent_ctlMembershipGroupList_grdData&quot;]</td>
+	<td>*AUT membership group*</td>
+</tr>
+<tr>
+	<td>clickAndWait</td>
+	<td>id=ctl00_MPContent_ctlMembershipGroupList_grdData_ctl02_btnEdit</td>
+	<td></td>
+</tr>
+
+</tbody></table>
+</body>
+</html>

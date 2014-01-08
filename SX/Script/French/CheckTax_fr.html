@@ -1,0 +1,337 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en" lang="en">
+<head profile="http://selenium-ide.openqa.org/profiles/test-case">
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+<link rel="selenium.base" href="http://www.stylexchange.com/" />
+<title>CheckTax_fr</title>
+</head>
+<body>
+<table cellpadding="1" cellspacing="1" border="1">
+<thead>
+<tr><td rowspan="1" colspan="3">CheckTax_fr</td></tr>
+</thead><tbody>
+<!--Get Product ID-->
+<tr>
+	<td>open</td>
+	<td>${domain}/fr/</td>
+	<td></td>
+</tr>
+<tr>
+	<td>clickAndWait</td>
+	<td>css=a[title=&quot;Femmes&quot;] &gt; span</td>
+	<td></td>
+</tr>
+<tr>
+	<td>storeHtmlSource</td>
+	<td>htmlsource</td>
+	<td></td>
+</tr>
+<tr>
+	<td>echo</td>
+	<td>${htmlsource}</td>
+	<td></td>
+</tr>
+<tr>
+	<td>storeEval</td>
+	<td>storedVars['htmlsource'].match(/&quot;img_[0-9]+&quot;/g);</td>
+	<td>IdImg</td>
+</tr>
+<tr>
+	<td>storeEval</td>
+	<td>storedVars['IdImg'].length;</td>
+	<td>ImgLength</td>
+</tr>
+<tr>
+	<td>storeEval</td>
+	<td>Math.floor(Math.random() * (${ImgLength}));</td>
+	<td>randID</td>
+</tr>
+<tr>
+	<td>storeEval</td>
+	<td>storedVars['IdImg'][storedVars['randID']];</td>
+	<td>getIdImg</td>
+</tr>
+<tr>
+	<td>storeEval</td>
+	<td>storedVars['getIdImg'].substr(1,9);</td>
+	<td>pureid</td>
+</tr>
+<tr>
+	<td>clickAndWait</td>
+	<td>id=${pureid}</td>
+	<td></td>
+</tr>
+<!--Select size-->
+<tr>
+	<td>storeSelectOptions</td>
+	<td>id=attribute164</td>
+	<td>allOptions</td>
+</tr>
+<tr>
+	<td>echo</td>
+	<td>${allOptions}</td>
+	<td></td>
+</tr>
+<tr>
+	<td>getEval</td>
+	<td>index = 1;</td>
+	<td></td>
+</tr>
+<tr>
+	<td>storeEval</td>
+	<td>storedVars['allOptions'].length;</td>
+	<td>length</td>
+</tr>
+<tr>
+	<td>echo</td>
+	<td>${length}</td>
+	<td></td>
+</tr>
+<tr>
+	<td>storeEval</td>
+	<td>index</td>
+	<td>index</td>
+</tr>
+<!--Check soldout-->
+<tr>
+	<td>while</td>
+	<td>index &lt; storedVars['allOptions'].length;</td>
+	<td></td>
+</tr>
+<tr>
+	<td>storeEval</td>
+	<td>index</td>
+	<td>index</td>
+</tr>
+<tr>
+	<td>store</td>
+	<td>* Épuisé</td>
+	<td>soldout</td>
+</tr>
+<tr>
+	<td>echo</td>
+	<td>javascript{storedVars['allOptions'][storedVars['index']]}</td>
+	<td></td>
+</tr>
+<tr>
+	<td>storeEval</td>
+	<td>storedVars['allOptions'][storedVars['index']];</td>
+	<td>size</td>
+</tr>
+<tr>
+	<td>echo</td>
+	<td>${size}</td>
+	<td></td>
+</tr>
+<tr>
+	<td>storeEval</td>
+	<td>storedVars['size'].substring(3,13);</td>
+	<td>hasSoldout</td>
+</tr>
+<tr>
+	<td>echo</td>
+	<td>${hasSoldout}</td>
+	<td></td>
+</tr>
+<tr>
+	<td>gotoIf</td>
+	<td>storedVars['hasSoldout'] == storedVars['soldout'];</td>
+	<td>storeSoldout</td>
+</tr>
+<tr>
+	<td>select</td>
+	<td>id=attribute164</td>
+	<td>${size}</td>
+</tr>
+<tr>
+	<td>echo</td>
+	<td>${size}</td>
+	<td></td>
+</tr>
+<tr>
+	<td>gotoLabel</td>
+	<td>home</td>
+	<td></td>
+</tr>
+<tr>
+	<td>pause</td>
+	<td>5000</td>
+	<td>5000</td>
+</tr>
+<tr>
+	<td>label</td>
+	<td>storeSoldout</td>
+	<td></td>
+</tr>
+<tr>
+	<td>getEval</td>
+	<td>index++;</td>
+	<td></td>
+</tr>
+<tr>
+	<td>endWhile</td>
+	<td></td>
+	<td></td>
+</tr>
+<tr>
+	<td>label</td>
+	<td>home</td>
+	<td></td>
+</tr>
+<tr>
+	<td>click</td>
+	<td>css=html body.catalog-product-view div#wrapper div#main div.main-container div.product-view div.product-essential form#product_addtocart_form div.product-shop div.pview-button-block div.pview-btn-addtobag</td>
+	<td></td>
+</tr>
+<tr>
+	<td>pause</td>
+	<td>6000</td>
+	<td>6000</td>
+</tr>
+<tr>
+	<td>clickAndWait</td>
+	<td>link=Caisse</td>
+	<td></td>
+</tr>
+<!--Check zip code with state/province-->
+<tr>
+	<td>type</td>
+	<td>id=billing:postcode</td>
+	<td>T0A</td>
+</tr>
+<tr>
+	<td>pause</td>
+	<td>3000</td>
+	<td>3000</td>
+</tr>
+<tr>
+	<td>verifySelectedLabel</td>
+	<td>id=billing:region_id</td>
+	<td>Alberta</td>
+</tr>
+<tr>
+	<td>type</td>
+	<td>id=shipping:postcode</td>
+	<td>M6J</td>
+</tr>
+<tr>
+	<td>pause</td>
+	<td>3000</td>
+	<td>3000</td>
+</tr>
+<tr>
+	<td>verifySelectedLabel</td>
+	<td>id=shipping:region_id</td>
+	<td>Ontario</td>
+</tr>
+<!--Check tax: Ontario tax = 13%-->
+<tr>
+	<td>storeEval</td>
+	<td>0.13</td>
+	<td>onTax</td>
+</tr>
+<tr>
+	<td>echo</td>
+	<td>${onTax}</td>
+	<td></td>
+</tr>
+<tr>
+	<td>storeText</td>
+	<td>css=td.value &gt; span.price</td>
+	<td>ShoppingPrice</td>
+</tr>
+<tr>
+	<td>echo</td>
+	<td>${ShoppingPrice}</td>
+	<td></td>
+</tr>
+<tr>
+	<td>storeEval</td>
+	<td>storedVars['ShoppingPrice'].substring(0, storedVars['ShoppingPrice'].length-2).replace(&quot;,&quot;,&quot;.&quot;);</td>
+	<td>price</td>
+</tr>
+<tr>
+	<td>echo</td>
+	<td>${price}</td>
+	<td></td>
+</tr>
+<tr>
+	<td>storeText</td>
+	<td>xpath=//*[@id=&quot;onestepcheckout-form&quot;]/fieldset/div/div[2]/div[2]/table/tbody/tr[2]/td[2]/span</td>
+	<td>ShippingPrice</td>
+</tr>
+<tr>
+	<td>echo</td>
+	<td>${ShippingPrice}</td>
+	<td></td>
+</tr>
+<tr>
+	<td>storeEval</td>
+	<td>storedVars['ShippingPrice'].substring(0, storedVars['ShippingPrice'].length-2).replace(&quot;,&quot;,&quot;.&quot;);</td>
+	<td>shipping</td>
+</tr>
+<tr>
+	<td>echo</td>
+	<td>${shipping}</td>
+	<td></td>
+</tr>
+<tr>
+	<td>storeEval</td>
+	<td>new Number(storedVars['price']) + new Number(storedVars['shipping'])</td>
+	<td>ShopShip</td>
+</tr>
+<tr>
+	<td>echo</td>
+	<td>${ShopShip}</td>
+	<td></td>
+</tr>
+<tr>
+	<td>storeEval</td>
+	<td>new Number(storedVars['onTax']) * new Number(storedVars['ShopShip'])</td>
+	<td>getTax</td>
+</tr>
+<tr>
+	<td>echo</td>
+	<td>${getTax}</td>
+	<td></td>
+</tr>
+<tr>
+	<td>storeEval</td>
+	<td>new Number(storedVars['getTax']) + new Number(storedVars['ShopShip'])</td>
+	<td>total</td>
+</tr>
+<tr>
+	<td>echo</td>
+	<td>${total}</td>
+	<td></td>
+</tr>
+<!--Compare getTotal and grandTotal-->
+<tr>
+	<td>storeText</td>
+	<td>css=tr.grand-total td.value span.price</td>
+	<td>GrandTotal</td>
+</tr>
+<tr>
+	<td>echo</td>
+	<td>${GrandTotal}</td>
+	<td></td>
+</tr>
+<tr>
+	<td>storeEval</td>
+	<td>storedVars['GrandTotal'].substring(0, storedVars['GrandTotal'].length-2).replace(&quot;,&quot;,&quot;.&quot;);</td>
+	<td>grand</td>
+</tr>
+<tr>
+	<td>echo</td>
+	<td>${grand}</td>
+	<td></td>
+</tr>
+<tr>
+	<td>assertEval</td>
+	<td>${grand}</td>
+	<td>${total}</td>
+</tr>
+</tbody></table>
+</body>
+</html>

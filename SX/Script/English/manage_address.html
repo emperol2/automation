@@ -1,0 +1,151 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en" lang="en">
+<head profile="http://selenium-ide.openqa.org/profiles/test-case">
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+<link rel="selenium.base" href="http://www.stylexchange.com/" />
+<title>manage address</title>
+</head>
+<body>
+<table cellpadding="1" cellspacing="1" border="1">
+<thead>
+<tr><td rowspan="1" colspan="3">manage address</td></tr>
+</thead><tbody>
+<tr>
+	<td>open</td>
+	<td>${domain}/en/</td>
+	<td></td>
+</tr>
+<tr>
+	<td>clickAndWait</td>
+	<td>link=Stylexchange</td>
+	<td></td>
+</tr>
+<tr>
+	<td>click</td>
+	<td>link=Login</td>
+	<td></td>
+</tr>
+<tr>
+	<td>type</td>
+	<td>id=mini-login</td>
+	<td>emperol2@gmail.com</td>
+</tr>
+<tr>
+	<td>click</td>
+	<td>id=mini-password</td>
+	<td></td>
+</tr>
+<tr>
+	<td>type</td>
+	<td>id=mini-password</td>
+	<td>111111</td>
+</tr>
+<tr>
+	<td>clickAndWait</td>
+	<td>css=input.submit</td>
+	<td></td>
+</tr>
+<tr>
+	<td>clickAndWait</td>
+	<td>link=MY ACCOUNT</td>
+	<td></td>
+</tr>
+<tr>
+	<td>clickAndWait</td>
+	<td>link=Manage Addresses</td>
+	<td></td>
+</tr>
+<tr>
+	<td>clickAndWait</td>
+	<td>css=button.button</td>
+	<td></td>
+</tr>
+<tr>
+	<td>store</td>
+	<td>javascript{&quot;user&quot; + Math.floor(Math.random()*11)}</td>
+	<td>x</td>
+</tr>
+<tr>
+	<td>type</td>
+	<td>id=firstname</td>
+	<td>selenium test ${x}</td>
+</tr>
+<tr>
+	<td>type</td>
+	<td>id=lastname</td>
+	<td>selenium atuomate</td>
+</tr>
+<tr>
+	<td>type</td>
+	<td>id=company</td>
+	<td>SAP</td>
+</tr>
+<tr>
+	<td>type</td>
+	<td>id=telephone</td>
+	<td>11111111</td>
+</tr>
+<tr>
+	<td>type</td>
+	<td>id=street_1</td>
+	<td>street addesss 11 / 22 </td>
+</tr>
+<tr>
+	<td>click</td>
+	<td>id=city</td>
+	<td></td>
+</tr>
+<tr>
+	<td>type</td>
+	<td>id=city</td>
+	<td>1111111</td>
+</tr>
+<tr>
+	<td>click</td>
+	<td>id=zip</td>
+	<td></td>
+</tr>
+<tr>
+	<td>type</td>
+	<td>id=zip</td>
+	<td>111111</td>
+</tr>
+<tr>
+	<td>select</td>
+	<td>id=region_id</td>
+	<td>label=Ontario</td>
+</tr>
+<tr>
+	<td>click</td>
+	<td>//form[@id='form-validate']/div[2]/ul/li[5]</td>
+	<td></td>
+</tr>
+<tr>
+	<td>click</td>
+	<td>css=div.checkboxArea</td>
+	<td></td>
+</tr>
+<tr>
+	<td>click</td>
+	<td>css=div.checkboxArea</td>
+	<td></td>
+</tr>
+<tr>
+	<td>clickAndWait</td>
+	<td>css=button.button</td>
+	<td></td>
+</tr>
+<tr>
+	<td>verifyTextPresent</td>
+	<td>The address has been saved.</td>
+	<td></td>
+</tr>
+<tr>
+	<td>clickAndWait</td>
+	<td>link=LOGOUT</td>
+	<td></td>
+</tr>
+</tbody></table>
+</body>
+</html>

@@ -1,0 +1,254 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en" lang="en">
+<head profile="http://selenium-ide.openqa.org/profiles/test-case">
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+<link rel="selenium.base" href="http://change-this-to-the-site-you-are-testing/" />
+<title>MergeUsers</title>
+</head>
+<body>
+<table cellpadding="1" cellspacing="1" border="1">
+<thead>
+<tr><td rowspan="1" colspan="3">MergeUsers</td></tr>
+</thead><tbody>
+<tr>
+	<td>storeHtmlSource</td>
+	<td>iframeid</td>
+	<td></td>
+</tr>
+<tr>
+	<td>storeEval</td>
+	<td>storedVars['iframeid'].replace(/frameborder=&quot;0&quot; /g,&quot;&quot;);</td>
+	<td>iframeid</td>
+</tr>
+<tr>
+	<td>storeEval</td>
+	<td>storedVars['iframeid'].match(/iframe id=&quot;[a-z]+[0-9]+&quot;/g);</td>
+	<td>iframeid</td>
+</tr>
+<tr>
+	<td>storeEval</td>
+	<td>storedVars['iframeid'][0].match(/[a-z]+[0-9]+/g);</td>
+	<td>iframeid</td>
+</tr>
+<tr>
+	<td>echo</td>
+	<td>${iframeid}</td>
+	<td></td>
+</tr>
+<tr>
+	<td>selectFrame</td>
+	<td>id=${iframeid}</td>
+	<td></td>
+</tr>
+<tr>
+	<td>mouseDown</td>
+	<td>xpath=//*[@title=&quot;Members for CPBI&quot;]</td>
+	<td></td>
+</tr>
+<tr>
+	<td>mouseDown</td>
+	<td>xpath=//*[local-name()='treenode'][5]/node()[position()=1]/node()[last()]</td>
+	<td></td>
+</tr>
+<tr>
+	<td>mouseDown</td>
+	<td>xpath=//*[local-name()='treenode'][5]/node()[position()=1]/node()[last()]</td>
+	<td>\40</td>
+</tr>
+<tr>
+	<td>keyDown</td>
+	<td>xpath=//*[local-name()='treenode'][5]/node()[position()=1]/node()[last()]</td>
+	<td>\40</td>
+</tr>
+<tr>
+	<td>mouseDown</td>
+	<td>xpath=//*[@label=&quot;Manage Users&quot;]</td>
+	<td></td>
+</tr>
+<tr>
+	<td>mouseUp</td>
+	<td>xpath=//*[@label=&quot;Manage Users&quot;]</td>
+	<td></td>
+</tr>
+<tr>
+	<td>pause</td>
+	<td>7000</td>
+	<td>7000</td>
+</tr>
+<tr>
+	<td>type</td>
+	<td>id=ctl00_MPContent_ctlUserSearchFilter_txtSearchUsername</td>
+	<td>20139-20145</td>
+</tr>
+<tr>
+	<td>clickAndWait</td>
+	<td>id=ctl00_MPContent_ctlUserSearchFilter_btnSearch</td>
+	<td></td>
+</tr>
+<tr>
+	<td>check</td>
+	<td>id=ctl00_MPContent_ctlUserList_grdData_ctl02_chkSelect</td>
+	<td></td>
+</tr>
+<tr>
+	<td>check</td>
+	<td>id=ctl00_MPContent_ctlUserList_grdData_ctl03_chkSelect</td>
+	<td></td>
+</tr>
+<tr>
+	<td>select</td>
+	<td>id=ctl00_MPContent_ctlUserList_ddlAction</td>
+	<td>Merge Users</td>
+</tr>
+<tr>
+	<td>pause</td>
+	<td>4000</td>
+	<td>4000</td>
+</tr>
+<tr>
+	<td>click</td>
+	<td>id=ctl00_MPContent_rdoUserA</td>
+	<td></td>
+</tr>
+<tr>
+	<td>keyDown</td>
+	<td>id=dialogtoolbar</td>
+	<td>\13</td>
+</tr>
+<tr>
+	<td>pause</td>
+	<td>4000</td>
+	<td>4000</td>
+</tr>
+<tr>
+	<td>click</td>
+	<td>id=ctl00_MPContent_btnMergeUserID</td>
+	<td></td>
+</tr>
+<tr>
+	<td>storeText</td>
+	<td>id=ctl00_MPContent_lblDuplicateUserID</td>
+	<td>UserId</td>
+</tr>
+<tr>
+	<td>echo</td>
+	<td>${UserId}</td>
+	<td></td>
+</tr>
+<tr>
+	<td>click</td>
+	<td>id=ctl00_MPContent_btnMergeClass</td>
+	<td></td>
+</tr>
+<tr>
+	<td>storeText</td>
+	<td>id=ctl00_MPContent_lblDuplicateClass</td>
+	<td>MembershipClass</td>
+</tr>
+<tr>
+	<td>echo</td>
+	<td>${MembershipClass}</td>
+	<td></td>
+</tr>
+<tr>
+	<td>click</td>
+	<td>id=ctl00_MPContent_btnMergeEmail</td>
+	<td></td>
+</tr>
+<tr>
+	<td>store</td>
+	<td>aaaaaa@regular.com</td>
+	<td>email2</td>
+</tr>
+<tr>
+	<td>storeText</td>
+	<td>id=ctl00_MPContent_lblDuplicateEmail</td>
+	<td>email</td>
+</tr>
+<tr>
+	<td>echo</td>
+	<td>${email}</td>
+	<td></td>
+</tr>
+<tr>
+	<td>click</td>
+	<td>id=ctl00_MPContent_btnMergeMobile</td>
+	<td></td>
+</tr>
+<tr>
+	<td>storeText</td>
+	<td>id=ctl00_MPContent_lblDuplicateMobile</td>
+	<td>mobile</td>
+</tr>
+<tr>
+	<td>echo</td>
+	<td>${mobile}</td>
+	<td></td>
+</tr>
+<tr>
+	<td>click</td>
+	<td>id=ctl00_MPContent_btnMergeIsTaxExempt</td>
+	<td></td>
+</tr>
+<tr>
+	<td>storeText</td>
+	<td>id=ctl00_MPContent_lblDuplicateIsTaxExempt</td>
+	<td>TaxExempt</td>
+</tr>
+<tr>
+	<td>echo</td>
+	<td>${TaxExempt}</td>
+	<td></td>
+</tr>
+<tr>
+	<td>storeText</td>
+	<td>id=ctl00_MPContent_lblDuplicateTaxExemptNumber</td>
+	<td>TaxExemptNum</td>
+</tr>
+<tr>
+	<td>echo</td>
+	<td>${TaxExemptNum}</td>
+	<td></td>
+</tr>
+<tr>
+	<td>click</td>
+	<td>id=ctl00_MPContent_btnMergeRequireCECredits</td>
+	<td></td>
+</tr>
+<tr>
+	<td>storeText</td>
+	<td>id=ctl00_MPContent_lblDuplicateRequireCECredits</td>
+	<td>CEcredits</td>
+</tr>
+<tr>
+	<td>echo</td>
+	<td>${CEcredits}</td>
+	<td></td>
+</tr>
+<tr>
+	<td>clickAndWait</td>
+	<td>id=ctl00_MPContent_btnSave</td>
+	<td></td>
+</tr>
+<!--Assert email-->
+<tr>
+	<td>verifyValue</td>
+	<td>id=ctl00_MPContent_ctlUserEditor_ctlAddressEditor_txtEmail</td>
+	<td>${email}</td>
+</tr>
+<!--Assert mobile-->
+<tr>
+	<td>verifyValue</td>
+	<td>id=ctl00_MPContent_ctlUserEditor_ctlAddressEditor_txtMobile</td>
+	<td>${mobile}</td>
+</tr>
+<!--Assert Tax Exempt and Number-->
+<tr>
+	<td>verifyValue</td>
+	<td>id=ctl00_MPContent_ctlUserEditor_ctlMemberAttributeEditor_txtTaxExemptionNumber</td>
+	<td>${TaxExemptNum}</td>
+</tr>
+</tbody></table>
+</body>
+</html>

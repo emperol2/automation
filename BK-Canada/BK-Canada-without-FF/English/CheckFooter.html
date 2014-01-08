@@ -1,0 +1,139 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en" lang="en">
+<head profile="http://selenium-ide.openqa.org/profiles/test-case">
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+<link rel="selenium.base" href="http://www.burgerking.ca/" />
+<title>CheckFooter</title>
+</head>
+<body>
+<table cellpadding="1" cellspacing="1" border="1">
+<thead>
+<tr><td rowspan="1" colspan="3">CheckFooter</td></tr>
+</thead><tbody>
+<tr>
+	<td>open</td>
+	<td>${baseurl}/en/ca/index.html</td>
+	<td></td>
+</tr>
+<tr>
+	<td>clickAndWait</td>
+	<td>css=#bk-logo &gt; a &gt; img</td>
+	<td></td>
+</tr>
+<tr>
+	<td>clickAndWait</td>
+	<td>css=div.image &gt; a &gt; img</td>
+	<td></td>
+</tr>
+<!--click at Kids-->
+<tr>
+	<td>clickAndWait</td>
+	<td>css=div.image &gt; a &gt; img</td>
+	<td></td>
+</tr>
+<tr>
+	<td>clickAndWait</td>
+	<td>link=About BK®</td>
+	<td></td>
+</tr>
+<!--check about BK title-->
+<tr>
+	<td>assertTitle</td>
+	<td>About BK® | Company Information | BURGER KING®</td>
+	<td></td>
+</tr>
+<tr>
+	<td>click</td>
+	<td>link=Franchising</td>
+	<td></td>
+</tr>
+<tr>
+	<td>verifyElementPresent</td>
+	<td>css=html body.skin-default div.modal_overlay</td>
+	<td></td>
+</tr>
+<tr>
+	<td>click</td>
+	<td>css=div.leave-site-close</td>
+	<td></td>
+</tr>
+<tr>
+	<td>click</td>
+	<td>link=Corporate Responsibility</td>
+	<td></td>
+</tr>
+<tr>
+	<td>verifyElementPresent</td>
+	<td>css=html body.skin-default div.modal_overlay</td>
+	<td></td>
+</tr>
+<tr>
+	<td>click</td>
+	<td>css=div.leave-site-close</td>
+	<td></td>
+</tr>
+<tr>
+	<td>clickAndWait</td>
+	<td>link=Site Map</td>
+	<td></td>
+</tr>
+<tr>
+	<td>verifyTextPresent</td>
+	<td></td>
+	<td>SITEMAP</td>
+</tr>
+<tr>
+	<td>click</td>
+	<td>link=Investor Relations</td>
+	<td></td>
+</tr>
+<tr>
+	<td>verifyElementPresent</td>
+	<td>css=html body.skin-default div.modal_overlay</td>
+	<td></td>
+</tr>
+<tr>
+	<td>click</td>
+	<td>css=div.leave-site-close</td>
+	<td></td>
+</tr>
+<tr>
+	<td>clickAndWait</td>
+	<td>link=International Locations</td>
+	<td></td>
+</tr>
+<!--check North America, Latin America & Caribbean-->
+<tr>
+	<td>verifyHtmlSource</td>
+	<td>*207,0,166,23,140,56,139,99,88,99,63,90,43,101,33,130,5,199,16,203,76,175,88,163,108,168,126,202,141,212,144,246,191,316,116,318,54,288,50,298,141,370,250,366,268,396,278,399,263,503,280,523,375,520,370,506,295,492,338,425,360,407,376,365,308,327,306,304,277,290,257,268,333,219,318,186,297,156,308,123,259,62,282,0*</td>
+	<td></td>
+</tr>
+<tr>
+	<td>clickAndWait</td>
+	<td>link=Legal</td>
+	<td></td>
+</tr>
+<tr>
+	<td>verifyTextPresent</td>
+	<td></td>
+	<td>These Terms of Use govern your use of the burgerking.ca website and, unless otherwise stated, to your use of any other website owned or operated by Burger King Restaurants of Canada, Inc. (“BKRC”) or operated on behalf of BRKC (collectively the “Websites”). Please read these Terms of Use carefully before using the Websites.</td>
+</tr>
+<tr>
+	<td>clickAndWait</td>
+	<td>xpath=(//a[contains(text(),'Privacy Policy')])[2]</td>
+	<td></td>
+</tr>
+<tr>
+	<td>verifyTextPresent</td>
+	<td></td>
+	<td>We may also use web beacons to count page visits by our users, to access our cookies, and otherwise to improve your experience on BKRC Websites. If you have registered to receive emails from us, we may also use web beacons in our emails to let us know which emails you have opened and acted upon, allowing us to gauge the effectiveness of our communications and marketing campaigns. If you would like to opt-out of these emails, please follow the instructions in the email.</td>
+</tr>
+<tr>
+	<td>clickAndWait</td>
+	<td>css=#bk-logo &gt; a &gt; img</td>
+	<td></td>
+</tr>
+</tbody></table>
+</body>
+</html>

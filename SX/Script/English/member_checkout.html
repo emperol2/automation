@@ -1,0 +1,497 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en" lang="en">
+<head profile="http://selenium-ide.openqa.org/profiles/test-case">
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+<link rel="selenium.base" href="http://www.stylexchange.com/" />
+<title>Login_OrProduct</title>
+</head>
+<body>
+<table cellpadding="1" cellspacing="1" border="1">
+<thead>
+<tr><td rowspan="1" colspan="3">Login_OrProduct</td></tr>
+</thead><tbody>
+<tr>
+	<td>open</td>
+	<td>${domain}/en/</td>
+	<td></td>
+</tr>
+<tr>
+	<td>clickAndWait</td>
+	<td>link=Stylexchange</td>
+	<td></td>
+</tr>
+<tr>
+	<td>click</td>
+	<td>link=Login</td>
+	<td></td>
+</tr>
+<tr>
+	<td>store</td>
+	<td>emperol2@gmail.com</td>
+	<td>username</td>
+</tr>
+<tr>
+	<td>type</td>
+	<td>id=mini-login</td>
+	<td>${username}</td>
+</tr>
+<tr>
+	<td>echo</td>
+	<td>${username}</td>
+	<td></td>
+</tr>
+<tr>
+	<td>store</td>
+	<td>111111</td>
+	<td>password</td>
+</tr>
+<tr>
+	<td>type</td>
+	<td>id=mini-password</td>
+	<td>${password}</td>
+</tr>
+<tr>
+	<td>echo</td>
+	<td>${password}</td>
+	<td></td>
+</tr>
+<tr>
+	<td>clickAndWait</td>
+	<td>css=fieldset input.submit</td>
+	<td></td>
+</tr>
+<!--<tr>
+	<td>click</td>
+	<td>id=search</td>
+	<td></td>
+</tr>
+<tr>
+	<td>store</td>
+	<td>numero</td>
+	<td>var1</td>
+</tr>
+<tr>
+	<td>type</td>
+	<td>id=search</td>
+	<td>${var1}</td>
+</tr>
+<tr>
+	<td>echo</td>
+	<td>${var1}</td>
+	<td></td>
+</tr>
+<tr>
+	<td>clickAndWait</td>
+	<td>${newSearch}</td>
+	<td></td>
+</tr>
+<tr>
+	<td>clickAndWait</td>
+	<td>id=img_45931</td>
+	<td></td>
+</tr>
+<tr>
+	<td>verifyTitle</td>
+	<td>LADIES FLIPFLOPS - Stylexchange</td>
+	<td></td>
+</tr>-->
+<tr>
+	<td>clickAndWait</td>
+	<td>css=a[title=&quot;Men&quot;] &gt; span</td>
+	<td></td>
+</tr>
+<tr>
+	<td>storeHtmlSource</td>
+	<td>htmlsource</td>
+	<td></td>
+</tr>
+<tr>
+	<td>echo</td>
+	<td>${htmlsource}</td>
+	<td></td>
+</tr>
+<tr>
+	<td>storeEval</td>
+	<td>storedVars['htmlsource'].match(/&quot;img_[0-9]+&quot;/g);</td>
+	<td>IdImg</td>
+</tr>
+<tr>
+	<td>storeEval</td>
+	<td>storedVars['IdImg'].length;</td>
+	<td>ImgLength</td>
+</tr>
+<tr>
+	<td>storeEval</td>
+	<td>Math.floor(Math.random() * (${ImgLength}));</td>
+	<td>randID</td>
+</tr>
+<tr>
+	<td>storeEval</td>
+	<td>storedVars['IdImg'][storedVars['randID']];</td>
+	<td>getIdImg</td>
+</tr>
+<tr>
+	<td>storeEval</td>
+	<td>storedVars['getIdImg'].substr(1,9);</td>
+	<td>pureid</td>
+</tr>
+<tr>
+	<td>clickAndWait</td>
+	<td>id=${pureid}</td>
+	<td></td>
+</tr>
+<tr>
+	<td>storeSelectOptions</td>
+	<td>id=attribute164</td>
+	<td>allOptions</td>
+</tr>
+<tr>
+	<td>echo</td>
+	<td>${allOptions}</td>
+	<td></td>
+</tr>
+<tr>
+	<td>getEval</td>
+	<td>index = 1;</td>
+	<td></td>
+</tr>
+<tr>
+	<td>storeEval</td>
+	<td>storedVars['allOptions'].length;</td>
+	<td>length</td>
+</tr>
+<tr>
+	<td>echo</td>
+	<td>${length}</td>
+	<td></td>
+</tr>
+<tr>
+	<td>storeEval</td>
+	<td>index</td>
+	<td>index</td>
+</tr>
+<!--Second loop-->
+<tr>
+	<td>while</td>
+	<td>index &lt; storedVars['allOptions'].length;</td>
+	<td></td>
+</tr>
+<tr>
+	<td>storeEval</td>
+	<td>index</td>
+	<td>index</td>
+</tr>
+<tr>
+	<td>store</td>
+	<td>* Sold Out</td>
+	<td>soldout</td>
+</tr>
+<tr>
+	<td>echo</td>
+	<td>javascript{storedVars['allOptions'][storedVars['index']]}</td>
+	<td></td>
+</tr>
+<tr>
+	<td>storeEval</td>
+	<td>storedVars['allOptions'][storedVars['index']];</td>
+	<td>size</td>
+</tr>
+<tr>
+	<td>echo</td>
+	<td>${size}</td>
+	<td></td>
+</tr>
+<tr>
+	<td>storeEval</td>
+	<td>storedVars['size'].substring(3,13);</td>
+	<td>hasSoldout</td>
+</tr>
+<tr>
+	<td>echo</td>
+	<td>${hasSoldout}</td>
+	<td></td>
+</tr>
+<tr>
+	<td>gotoIf</td>
+	<td>storedVars['hasSoldout'] == storedVars['soldout'];</td>
+	<td>storeSoldout</td>
+</tr>
+<tr>
+	<td>select</td>
+	<td>id=attribute164</td>
+	<td>${size}</td>
+</tr>
+<tr>
+	<td>echo</td>
+	<td>${size}</td>
+	<td></td>
+</tr>
+<tr>
+	<td>gotoLabel</td>
+	<td>home</td>
+	<td></td>
+</tr>
+<tr>
+	<td>pause</td>
+	<td>5000</td>
+	<td>5000</td>
+</tr>
+<tr>
+	<td>label</td>
+	<td>storeSoldout</td>
+	<td></td>
+</tr>
+<tr>
+	<td>getEval</td>
+	<td>index++;</td>
+	<td></td>
+</tr>
+<tr>
+	<td>endWhile</td>
+	<td></td>
+	<td></td>
+</tr>
+<!--End second loop-->
+<!-->>>>> Stylechange-->
+<tr>
+	<td>label</td>
+	<td>home</td>
+	<td></td>
+</tr>
+<tr>
+	<td>click</td>
+	<td>css=html body.catalog-product-view div#wrapper div#main div.main-container div.product-view div.product-essential form#product_addtocart_form div.product-shop div.pview-button-block div.pview-btn-addtobag</td>
+	<td></td>
+</tr>
+<tr>
+	<td>pause</td>
+	<td>3000</td>
+	<td>3000</td>
+</tr>
+<tr>
+	<td>clickAndWait</td>
+	<td>link=Stylexchange</td>
+	<td></td>
+</tr>
+<tr>
+	<td>pause</td>
+	<td>3000</td>
+	<td>3000</td>
+</tr>
+<tr>
+	<td>clickAndWait</td>
+	<td>link=SHOPPING BAG</td>
+	<td></td>
+</tr>
+<tr>
+	<td>pause</td>
+	<td>5000</td>
+	<td>5000</td>
+</tr>
+<tr>
+	<td>clickAndWait</td>
+	<td>link=CHECKOUT</td>
+	<td></td>
+</tr>
+<!--<tr>
+	<td>select</td>
+	<td>id=billing-address-select</td>
+	<td>index=0</td>
+</tr>
+<tr>
+	<td>verifyElementPresent</td>
+	<td>css=html div.input-box select#billing-address-select</td>
+	<td></td>
+</tr>
+<tr>
+	<td>select</td>
+	<td>id=shipping-address-select</td>
+	<td>index=0</td>
+</tr>
+<tr>
+	<td>verifyElementPresent</td>
+	<td>css=html div.input-box select#shipping-address-select</td>
+	<td></td>
+</tr>
+<tr>
+	<td>pause</td>
+	<td>3000</td>
+	<td>3000</td>
+</tr>-->
+<!--Check if NEED Moneris Payment-->
+<!--<tr>
+	<td>gotoIf</td>
+	<td>storedVars['domain'] == &quot;http://stylexchange2011.dev.com&quot;</td>
+	<td>moneris</td>
+</tr>
+<tr>
+	<td>click</td>
+	<td>xpath=//*[@id=&quot;p_method_paypal_direct&quot;]</td>
+	<td></td>
+</tr>
+<tr>
+	<td>pause</td>
+	<td>3000</td>
+	<td>3000</td>
+</tr>
+<tr>
+	<td>type</td>
+	<td>id=paypal_direct_cc_owner</td>
+	<td>test</td>
+</tr>
+<tr>
+	<td>select</td>
+	<td>id=paypal_direct_cc_type</td>
+	<td>label=Visa</td>
+</tr>
+<tr>
+	<td>type</td>
+	<td>id=paypal_direct_cc_number</td>
+	<td>4283616195575413</td>
+</tr>
+<tr>
+	<td>click</td>
+	<td>id=paypal_direct_expiration</td>
+	<td></td>
+</tr>
+<tr>
+	<td>select</td>
+	<td>id=paypal_direct_expiration</td>
+	<td>label=11 - November</td>
+</tr>
+<tr>
+	<td>click</td>
+	<td>id=paypal_direct_expiration_yr</td>
+	<td></td>
+</tr>
+<tr>
+	<td>select</td>
+	<td>id=paypal_direct_expiration_yr</td>
+	<td>label=2022</td>
+</tr>
+<tr>
+	<td>type</td>
+	<td>id=paypal_direct_cc_cid</td>
+	<td>222</td>
+</tr>
+<tr>
+	<td>clickAndWait</td>
+	<td>id=onestepcheckout-place-order</td>
+	<td></td>
+</tr>
+<tr>
+	<td>pause</td>
+	<td>5000</td>
+	<td>5000</td>
+</tr>
+<tr>
+	<td>verifyTextPresent</td>
+	<td></td>
+	<td>The payment was rejected by your bank and/or PayPal. Please try again with a different form of payment.</td>
+</tr>
+<tr>
+	<td>gotoLabel</td>
+	<td>end</td>
+	<td></td>
+</tr>-->
+<!--IF MONERIS-->
+<!--<tr>
+	<td>label</td>
+	<td>moneris</td>
+	<td></td>
+</tr>
+<tr>
+	<td>click</td>
+	<td>xpath=//*[@id=&quot;p_method_eselectplus_direct&quot;]</td>
+	<td></td>
+</tr>
+<tr>
+	<td>verifyElementPresent</td>
+	<td>css=html body.onestepcheckout-index-index div#wrapper div#main div.main-container div.onestepcheckout form#onestepcheckout-form fieldset.group-select div.checkoutcontainer div.order-section div.payment-section div.section-title h2</td>
+	<td>css=html body.onestepcheckout-index-index div#wrapper div#main div.main-container div.onestepcheckout form#onestepcheckout-form fieldset.group-select div.checkoutcontainer div.order-section div.payment-section div.section-title h2</td>
+</tr>
+<tr>
+	<td>click</td>
+	<td>id=eselectplus_direct_cc_owner</td>
+	<td></td>
+</tr>
+<tr>
+	<td>type</td>
+	<td>id=eselectplus_direct_cc_owner</td>
+	<td>test</td>
+</tr>
+<tr>
+	<td>click</td>
+	<td>css=div.checkoutcontainer</td>
+	<td></td>
+</tr>
+<tr>
+	<td>select</td>
+	<td>id=eselectplus_direct_cc_type</td>
+	<td>label=Visa</td>
+</tr>
+<tr>
+	<td>click</td>
+	<td>css=#eselectplus_direct_cc_type &gt; option[value=&quot;VI&quot;]</td>
+	<td></td>
+</tr>
+<tr>
+	<td>type</td>
+	<td>id=eselectplus_direct_cc_number</td>
+	<td>4242424242424242</td>
+</tr>
+<tr>
+	<td>select</td>
+	<td>id=eselectplus_direct_expiration</td>
+	<td>label=01 - January</td>
+</tr>
+<tr>
+	<td>select</td>
+	<td>id=eselectplus_direct_expiration_yr</td>
+	<td>label=2019</td>
+</tr>
+<tr>
+	<td>click</td>
+	<td>id=eselectplus_direct_cc_cid</td>
+	<td></td>
+</tr>
+<tr>
+	<td>type</td>
+	<td>id=eselectplus_direct_cc_cid</td>
+	<td>123</td>
+</tr>
+<tr>
+	<td>pause</td>
+	<td>4000</td>
+	<td>4000</td>
+</tr>
+<tr>
+	<td>clickAndWait</td>
+	<td>css=html body.onestepcheckout-index-index div#wrapper div#main div.main-container div.onestepcheckout form#onestepcheckout-form fieldset.group-select div.checkoutcontainer div.order-section div.onestepcheckout-place-order-wrapper button#onestepcheckout-place-order.large</td>
+	<td></td>
+</tr>
+<tr>
+	<td>verifyTextPresent</td>
+	<td></td>
+	<td>The payment was rejected by your bank and/or PayPal. Please try again with a different form of payment.</td>
+</tr>-->
+<!--this is for blackout event; xpath=/html/body/div/div[2]/div/div[2]/form/fieldset/div-->
+<!--<tr>
+	<td>label</td>
+	<td>end</td>
+	<td></td>
+</tr>
+<tr>
+	<td>clickAndWait</td>
+	<td>link=LOGOUT</td>
+	<td></td>
+</tr>
+<tr>
+	<td>clickAndWait</td>
+	<td>link=Stylexchange</td>
+	<td></td>
+</tr>-->
+</tbody></table>
+</body>
+</html>
