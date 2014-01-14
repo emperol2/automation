@@ -101,12 +101,12 @@
 <tr>
 	<td>type</td>
 	<td>id=ctl00_MPContent_ctlUserSearchAdvancedFilter_txtSearchUsername</td>
-	<td></td>
+	<td>20000-30000</td>
 </tr>
 <tr>
 	<td>select</td>
 	<td>id=ctl00_MPContent_ctlUserSearchAdvancedFilter_lbxMembershipClass</td>
-	<td>Student</td>
+	<td>Student / Étudiant</td>
 </tr>
 <tr>
 	<td>clickAndWait</td>
@@ -194,7 +194,7 @@
 <tr>
 	<td>assertText</td>
 	<td>id=ctl00_MPContent_ctlUserList_grdData</td>
-	<td>*Test AUT*</td>
+	<td>*AUT*</td>
 </tr>
 <tr>
 	<td>clickAndWait</td>
@@ -215,7 +215,7 @@
 <tr>
 	<td>type</td>
 	<td>xpath=//*[@id=&quot;ctl00_MPContent_ctlUserSearchAdvancedFilter_txtEmailAddress&quot;]</td>
-	<td>su.chavengpoj@gmail.com</td>
+	<td>test@regular13582.com</td>
 </tr>
 <tr>
 	<td>clickAndWait</td>
@@ -256,7 +256,7 @@
 <tr>
 	<td>assertText</td>
 	<td>id=ctl00_MPContent_ctlUserList_grdData</td>
-	<td>*Test AUT*</td>
+	<td>*Test*</td>
 </tr>
 <tr>
 	<td>clickAndWait</td>
@@ -318,7 +318,7 @@
 <tr>
 	<td>assertText</td>
 	<td>id=ctl00_MPContent_ctlUserList_grdData</td>
-	<td>*Test AUT*</td>
+	<td>*Test*</td>
 </tr>
 <tr>
 	<td>clickAndWait</td>
@@ -442,7 +442,7 @@
 <tr>
 	<td>type</td>
 	<td>xpath=//*[@id=&quot;ctl00_MPContent_ctlUserSearchAdvancedFilter_txtPostalCode&quot;]</td>
-	<td>t0a9i8</td>
+	<td>T0A 8U9</td>
 </tr>
 <tr>
 	<td>clickAndWait</td>
@@ -632,13 +632,13 @@
 	<td>Select...</td>
 </tr>
 <tr>
-	<td>check</td>
-	<td>id=ctl00_MPContent_ctlUserSearchAdvancedFilter_chkEventNotificationRegions_4</td>
+	<td>click</td>
+	<td>id=ctl00_MPContent_ctlUserSearchAdvancedFilter_chkEventNotificationRegions_0</td>
 	<td></td>
 </tr>
 <tr>
-	<td>check</td>
-	<td>id=ctl00_MPContent_ctlUserSearchAdvancedFilter_chkNewsletterRegions_4</td>
+	<td>click</td>
+	<td>id=ctl00_MPContent_ctlUserSearchAdvancedFilter_chkNewsletterRegions_0</td>
 	<td></td>
 </tr>
 <tr>
@@ -653,12 +653,12 @@
 </tr>
 <!--Search by Content Access Groups-->
 <tr>
-	<td>check</td>
+	<td>click</td>
 	<td>id=ctl00_MPContent_ctlUserSearchAdvancedFilter_chkContentAccessGroups_0</td>
 	<td></td>
 </tr>
 <tr>
-	<td>check</td>
+	<td>click</td>
 	<td>id=ctl00_MPContent_ctlUserSearchAdvancedFilter_chkContentAccessGroups_1</td>
 	<td></td>
 </tr>
@@ -668,9 +668,9 @@
 	<td></td>
 </tr>
 <tr>
-	<td>verifyElementPresent</td>
-	<td>id=ctl00_MPContent_ctlUserList_grdData</td>
-	<td></td>
+	<td>assertText</td>
+	<td>id=ctl00_MPContent_ctlUserList_lblNoResult</td>
+	<td>Your search didn't return any results.</td>
 </tr>
 <tr>
 	<td>clickAndWait</td>
