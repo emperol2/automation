@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en" lang="en">
+<head>
+  <meta content="text/html; charset=UTF-8" http-equiv="content-type" />
+  <title>Test Suite</title>
+</head>
+<body>
+<table id="suiteTable" cellpadding="1" cellspacing="1" border="1" class="selenium"><tbody>
+<tr><td><b>Test Suite</b></td></tr>
+<tr><td><a href="start.html">start</a></td></tr>
+<tr><td><a href="SignUp_Nonmember.html">SignUp_Nonmember</a></td></tr>
+<tr><td><a href="SignUp_Regular.html">SignUp_Regular</a></td></tr>
+<tr><td><a href="SignUp_Associate.html">SignUp_Associate</a></td></tr>
+<tr><td><a href="SignUp_Student.html">SignUp_Student</a></td></tr>
+<tr><td><a href="CheckCalculate.html">CheckCalculate</a></td></tr>
+<tr><td><a href="CheckCalculate_Coupon.html">CheckCalculate_Coupon</a></td></tr>
+<tr><td><a href="Upgrade_asso_payOff.html">Upgrade_asso_payOff</a></td></tr>
+<tr><td><a href="EventRegistration.html">EventRegistration</a></td></tr>
+<tr><td><a href="Job_visitor_noLogin.html">Job_visitor_noLogin</a></td></tr>
+<tr><td><a href="Job_Login.html">Job_Login</a></td></tr>
+<tr><td><a href="JobListings_Page.html">JobListings_Page</a></td></tr>
+</tbody></table>
+</body>
+</html>
