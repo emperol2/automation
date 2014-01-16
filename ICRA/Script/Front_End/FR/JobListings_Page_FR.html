@@ -1,0 +1,124 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en" lang="en">
+<head profile="http://selenium-ide.openqa.org/profiles/test-case">
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+<link rel="selenium.base" href="http://icra-dev/" />
+<title>JobListings_Page</title>
+</head>
+<body>
+<table cellpadding="1" cellspacing="1" border="1">
+<thead>
+<tr><td rowspan="1" colspan="3">JobListings_Page</td></tr>
+</thead><tbody>
+<tr>
+	<td>open</td>
+	<td>${icra}</td>
+	<td></td>
+</tr>
+<tr>
+	<td>pause</td>
+	<td>4000</td>
+	<td>4000</td>
+</tr>
+<!--Job Listings Page-->
+<tr>
+	<td>clickAndWait</td>
+	<td>link=Postes affichés</td>
+	<td></td>
+</tr>
+<!--Select job posting-->
+<tr>
+	<td>clickAndWait</td>
+	<td>id=litJobTitleLink</td>
+	<td></td>
+</tr>
+<!--tr>
+	<td>assertText</td>
+	<td>css=div.info div.position</td>
+	<td>${positionVar}</td>
+</tr-->
+<tr>
+	<td>clickAndWait</td>
+	<td>id=btnApply</td>
+	<td></td>
+</tr>
+<tr>
+	<td>pause</td>
+	<td>3000</td>
+	<td>3000</td>
+</tr>
+<tr>
+	<td>assertTextPresent</td>
+	<td>Détails de l'emploi - Benefits and Pension Manager (2149)</td>
+	<td></td>
+</tr>
+<tr>
+	<td>storeText</td>
+	<td>css=div.job-details h1.step-title</td>
+	<td>stepTitle</td>
+</tr>
+<tr>
+	<td>echo</td>
+	<td>${stepTitle}</td>
+	<td></td>
+</tr>
+<!--Fill the data on application form-->
+<tr>
+	<td>storeEval</td>
+	<td>javascript{Math.round (Math.random() * 30000)}</td>
+	<td>randomLast</td>
+</tr>
+<tr>
+	<td>echo</td>
+	<td>Test ${randomLast}</td>
+	<td></td>
+</tr>
+<tr>
+	<td>type</td>
+	<td>id=txtLastName</td>
+	<td>Test ${randomLast}</td>
+</tr>
+<tr>
+	<td>type</td>
+	<td>id=txtFirstName</td>
+	<td>Resume</td>
+</tr>
+<tr>
+	<td>type</td>
+	<td>id=txtEmail</td>
+	<td>test${randomLast}@submitresume.com</td>
+</tr>
+<tr>
+	<td>type</td>
+	<td>id=txtPhone</td>
+	<td>(562) 1235-8566</td>
+</tr>
+<tr>
+	<td>click</td>
+	<td>id=fileCV</td>
+	<td></td>
+</tr>
+<tr>
+	<td>type</td>
+	<td>id=fileCV</td>
+	<td>D:\Project\ICRA\Files\Tests - Sign Up pages_Client_1.docx</td>
+</tr>
+<tr>
+	<td>type</td>
+	<td>id=txtAdditionalComments</td>
+	<td>Test Additional Comments</td>
+</tr>
+<!--tr>
+	<td>clickAndWait</td>
+	<td>id=btnSubmit</td>
+	<td></td>
+</tr-->
+<tr>
+	<td>click</td>
+	<td>id=logo</td>
+	<td></td>
+</tr>
+</tbody></table>
+</body>
+</html>

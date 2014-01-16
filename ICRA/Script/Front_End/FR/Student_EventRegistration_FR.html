@@ -1,0 +1,355 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en" lang="en">
+<head profile="http://selenium-ide.openqa.org/profiles/test-case">
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+<link rel="selenium.base" href="http://icra-dev/" />
+<title>Student_EventRegistration</title>
+</head>
+<body>
+<table cellpadding="1" cellspacing="1" border="1">
+<thead>
+<tr><td rowspan="1" colspan="3">Student_EventRegistration</td></tr>
+</thead><tbody>
+<tr>
+	<td>open</td>
+	<td>${icra}</td>
+	<td></td>
+</tr>
+<!--Log in as Non-member: 20207|NO20207-->
+<tr>
+	<td>type</td>
+	<td>id=UserName</td>
+	<td>20208</td>
+</tr>
+<tr>
+	<td>type</td>
+	<td>id=Password</td>
+	<td>st20208</td>
+</tr>
+<tr>
+	<td>clickAndWait</td>
+	<td>id=btnLogin</td>
+	<td></td>
+</tr>
+<tr>
+	<td>assertText</td>
+	<td>css=span#vldCusAuthentication.errormessage</td>
+	<td>Sorry, we couldn't find an account with that username and password.</td>
+</tr>
+<tr>
+	<td>type</td>
+	<td>id=UserName</td>
+	<td>20208</td>
+</tr>
+<tr>
+	<td>type</td>
+	<td>id=Password</td>
+	<td>ST20208</td>
+</tr>
+<tr>
+	<td>clickAndWait</td>
+	<td>id=btnLogin</td>
+	<td></td>
+</tr>
+<tr>
+	<td>assertElementPresent</td>
+	<td>css=ul#LogonPanel li a#ctl00_ctl00_ctl37_ctlLoginView_btnLogout</td>
+	<td></td>
+</tr>
+<!--Register events-->
+<tr>
+	<td>click</td>
+	<td>link=Events</td>
+	<td></td>
+</tr>
+<tr>
+	<td>clickAndWait</td>
+	<td>css=div.landing-menu a</td>
+	<td></td>
+</tr>
+<tr>
+	<td>clickAndWait</td>
+	<td>link=Register Now</td>
+	<td></td>
+</tr>
+<tr>
+	<td>assertTitle</td>
+	<td>Event Registration</td>
+	<td></td>
+</tr>
+<!--Edit user profile on event registration-->
+<tr>
+	<td>click</td>
+	<td>id=ctl00_ctl00_phContent_ctl13_ctlRegistrationMainRegistrant_lnkToEdit</td>
+	<td></td>
+</tr>
+<tr>
+	<td>pause</td>
+	<td>4000</td>
+	<td>4000</td>
+</tr>
+<tr>
+	<td>type</td>
+	<td>id=ctl00_ctl00_phContent_ctl13_ctlRegistrationMainRegistrant_ctlAddressEditor_txtPostalCode</td>
+	<td>u8y6t5</td>
+</tr>
+<tr>
+	<td>assertElementNotPresent</td>
+	<td>id=ctl00_ctl00_phContent_ctl13_ctlRegistrationMainRegistrant_ctlMemberAttributeEditor_rdoSectorPlanSponsor</td>
+	<td></td>
+</tr>
+<tr>
+	<td>assertElementNotPresent</td>
+	<td>css=div#ctl00_ctl00_phContent_ctl13_ctlRegistrationMainRegistrant_ctlMemberAttributeEditor_pnlTaxExempt div.group-title</td>
+	<td>Tax Exempt</td>
+</tr>
+<tr>
+	<td>assertTextPresent</td>
+	<td>Post Secondary Institution</td>
+	<td></td>
+</tr>
+<tr>
+	<td>type</td>
+	<td>id=ctl00_ctl00_phContent_ctl13_ctlRegistrationMainRegistrant_ctlMemberAttributeEditor_ctlMemberAttributeCustomAttributesEditor_ControlGenerator_RowPanel_6a3bfa27bb664f609ccfc54f0ae6ce60_InputPanel_Text_TextControl</td>
+	<td>123456-Post</td>
+</tr>
+<tr>
+	<td>type</td>
+	<td>id=ctl00_ctl00_phContent_ctl13_ctlRegistrationMainRegistrant_ctlMemberAttributeEditor_ctlMemberAttributeCustomAttributesEditor_ControlGenerator_RowPanel_e6aaab63672a42348fb929cc32f5c1eb_InputPanel_Number</td>
+	<td>78910</td>
+</tr>
+<tr>
+	<td>click</td>
+	<td>id=ctl00_ctl00_phContent_ctl13_ctlRegistrationMainRegistrant_btnSave</td>
+	<td></td>
+</tr>
+<tr>
+	<td>pause</td>
+	<td>3000</td>
+	<td>3000</td>
+</tr>
+<!--How did you hear about this event?-->
+<tr>
+	<td>select</td>
+	<td>id=ctl00_ctl00_phContent_ctl13_ddlReferralSource_ddlLookupData</td>
+	<td>CPBI email invitation</td>
+</tr>
+<!--Choose your registration type-->
+<tr>
+	<td>click</td>
+	<td>id=ctl00_ctl00_phContent_ctl13_rblRegistrationType_1</td>
+	<td></td>
+</tr>
+<tr>
+	<td>clickAndWait</td>
+	<td>id=ctl00_ctl00_ctl37_ctlLoginView_btnLogout</td>
+	<td></td>
+</tr>
+<tr>
+	<td>pause</td>
+	<td>4000</td>
+	<td>4000</td>
+</tr>
+<!--Group Table-->
+<tr>
+	<td>click</td>
+	<td>id=ctl00_ctl00_phContent_ctl13_ctlRegistrationOptionalActivities_btnCancel</td>
+	<td></td>
+</tr>
+<tr>
+	<td>click</td>
+	<td>css=h3.section-title</td>
+	<td></td>
+</tr>
+<tr>
+	<td>pause</td>
+	<td>6000</td>
+	<td>6000</td>
+</tr>
+<tr>
+	<td>verifyElementPresent</td>
+	<td>css=div#ctl00_ctl00_phContent_ctl13_ctlRegistrationGroupTable_pnlContent.section-content</td>
+	<td></td>
+</tr>
+<tr>
+	<td>select</td>
+	<td>id=ctl00_ctl00_phContent_ctl13_ctlRegistrationGroupTable_grdGroupOptions_ctl02_ddlQuantity</td>
+	<td>1</td>
+</tr>
+<tr>
+	<td>waitForElementPresent</td>
+	<td>css=div.persons-group</td>
+	<td></td>
+</tr>
+<tr>
+	<td>store</td>
+	<td>javascript{Math.round(Math.random() * 20000);}</td>
+	<td>random</td>
+</tr>
+<tr>
+	<td>echo</td>
+	<td>Test ${random}</td>
+	<td></td>
+</tr>
+<tr>
+	<td>type</td>
+	<td>id=ctl00_ctl00_phContent_ctl13_ctlRegistrationGroupTable_rptPersonsGroups_ctl00_rptPersons_ctl01_txtFirstName</td>
+	<td>Test ${random}</td>
+</tr>
+<tr>
+	<td>type</td>
+	<td>id=ctl00_ctl00_phContent_ctl13_ctlRegistrationGroupTable_rptPersonsGroups_ctl00_rptPersons_ctl01_txtLastName</td>
+	<td> Associate</td>
+</tr>
+<tr>
+	<td>type</td>
+	<td>id=ctl00_ctl00_phContent_ctl13_ctlRegistrationGroupTable_rptPersonsGroups_ctl00_rptPersons_ctl01_txtEmail</td>
+	<td>test@associate${random}.com</td>
+</tr>
+<tr>
+	<td>click</td>
+	<td>id=ctl00_ctl00_phContent_ctl13_ctlRegistrationGroupTable_btnSave</td>
+	<td></td>
+</tr>
+<tr>
+	<td>pause</td>
+	<td>4000</td>
+	<td>4000</td>
+</tr>
+<!--Attendees schedule-->
+<tr>
+	<td>click</td>
+	<td>css=div.section a#ctl00_ctl00_phContent_ctl13_ctlRegistrationOptionalActivities_lnkToggleContent.section-header-link div.section-header</td>
+	<td></td>
+</tr>
+<tr>
+	<td>waitForElementPresent</td>
+	<td>css=div.attendee-panel h3.attendee-title</td>
+	<td></td>
+</tr>
+<tr>
+	<td>click</td>
+	<td>css= div.attendee-panel h3.attendee-title</td>
+	<td></td>
+</tr>
+<tr>
+	<td>click</td>
+	<td>id=ctl00_ctl00_phContent_ctl13_ctlRegistrationOptionalActivities_rptAttendees_ctl00_ctlAttendeeOptionalActivitiesEditor_rptActivityDates_ctl00_rptActivities_ctl00_chkIsParticipated</td>
+	<td></td>
+</tr>
+<tr>
+	<td>click</td>
+	<td>id=ctl00_ctl00_phContent_ctl13_ctlRegistrationOptionalActivities_btnSave</td>
+	<td></td>
+</tr>
+<tr>
+	<td>pause</td>
+	<td>3000</td>
+	<td>3000</td>
+</tr>
+<tr>
+	<td>click</td>
+	<td>id=btnStep1Next</td>
+	<td></td>
+</tr>
+<tr>
+	<td>pause</td>
+	<td>3000</td>
+	<td>3000</td>
+</tr>
+<tr>
+	<td>click</td>
+	<td>id=btnStep2Next</td>
+	<td></td>
+</tr>
+<!--Payment-->
+<tr>
+	<td>pause</td>
+	<td>3000</td>
+	<td>3000</td>
+</tr>
+<tr>
+	<td>type</td>
+	<td>id=ctl00_ctl00_phContent_ctl13_ctlRegistrationPayment_ctlPaymentPanel_txtCreditCardHolder</td>
+	<td>master</td>
+</tr>
+<tr>
+	<td>select</td>
+	<td>id=ctl00_ctl00_phContent_ctl13_ctlRegistrationPayment_ctlPaymentPanel_ddlCreditCardType_ddlLookupData</td>
+	<td>MasterCard</td>
+</tr>
+<tr>
+	<td>type</td>
+	<td>id=ctl00_ctl00_phContent_ctl13_ctlRegistrationPayment_ctlPaymentPanel_txtCreditCardNumber</td>
+	<td>5555555555554444</td>
+</tr>
+<tr>
+	<td>select</td>
+	<td>id=ctl00_ctl00_phContent_ctl13_ctlRegistrationPayment_ctlPaymentPanel_ddlCCExpiryMonth</td>
+	<td>4</td>
+</tr>
+<tr>
+	<td>select</td>
+	<td>id=ctl00_ctl00_phContent_ctl13_ctlRegistrationPayment_ctlPaymentPanel_ddlCCExpiryYear</td>
+	<td>2020</td>
+</tr>
+<tr>
+	<td>click</td>
+	<td>id=btnSubmit</td>
+	<td></td>
+</tr>
+<tr>
+	<td>assertText</td>
+	<td>css=div.agree-panel div.validators span#vldCusAgreeToPolicy.errormessage</td>
+	<td>You must review this event's cancellation policy.</td>
+</tr>
+<tr>
+	<td>click</td>
+	<td>id=chkAgreeToPolicy</td>
+	<td></td>
+</tr>
+<tr>
+	<td>click</td>
+	<td>id=btnSubmit</td>
+	<td></td>
+</tr>
+<tr>
+	<td>pause</td>
+	<td>5000</td>
+	<td>5000</td>
+</tr>
+<tr>
+	<td>assertTitle</td>
+	<td>Event Registration Complete</td>
+	<td></td>
+</tr>
+<tr>
+	<td>storeText</td>
+	<td>css=div.section div b</td>
+	<td>paymentMes</td>
+</tr>
+<tr>
+	<td>echo</td>
+	<td>${paymentMes}</td>
+	<td></td>
+</tr>
+<tr>
+	<td>clickAndWait</td>
+	<td>link=View event details</td>
+	<td></td>
+</tr>
+<tr>
+	<td>assertText</td>
+	<td>css=div.actions div.register-panel span.label</td>
+	<td>Registered</td>
+</tr>
+<!--Logout-->
+<tr>
+	<td>clickAndWait</td>
+	<td>id=ctl00_ctl00_ctl37_ctlLoginView_btnLogout</td>
+	<td></td>
+</tr>
+</tbody></table>
+</body>
+</html>
