@@ -1,0 +1,256 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en" lang="en">
+<head profile="http://selenium-ide.openqa.org/profiles/test-case">
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+<link rel="selenium.base" href="http://icra-dev/" />
+<title>CheckCalculate</title>
+</head>
+<body>
+<table cellpadding="1" cellspacing="1" border="1">
+<thead>
+<tr><td rowspan="1" colspan="3">CheckCalculate</td></tr>
+</thead><tbody>
+<tr>
+	<td>open</td>
+	<td>${icra}</td>
+	<td></td>
+</tr>
+<tr>
+	<td>pause</td>
+	<td>4000</td>
+	<td>4000</td>
+</tr>
+<tr>
+	<td>clickAndWait</td>
+	<td>id=lnkSignupPage</td>
+	<td></td>
+</tr>
+<tr>
+	<td>click</td>
+	<td>name=ctl00$ctl00$phContent$ctl11$rptMembershipClass$ctl00$MembershipCategory</td>
+	<td></td>
+</tr>
+<tr>
+	<td>pause</td>
+	<td>4000</td>
+	<td>4000</td>
+</tr>
+<tr>
+	<td>select</td>
+	<td>id=ctl00_ctl00_phContent_ctl11_ctlAddressEditor_ddlProvince</td>
+	<td>Colombie-Britannique</td>
+</tr>
+<tr>
+	<td>pause</td>
+	<td>4000</td>
+	<td>4000</td>
+</tr>
+<!--Membership class-->
+<tr>
+	<td>storeChecked</td>
+	<td>name=ctl00$ctl00$phContent$ctl11$rptMembershipClass$ctl00$MembershipCategory</td>
+	<td>memberClass</td>
+</tr>
+<tr>
+	<td>echo</td>
+	<td>${memberClass}</td>
+	<td></td>
+</tr>
+<tr>
+	<td>gotoIf</td>
+	<td>storedVars['memberClass']=true</td>
+	<td>MemberClassTrue</td>
+</tr>
+<!--Tax exempt = NO-->
+<tr>
+	<td>label</td>
+	<td>MemberClassTrue</td>
+	<td></td>
+</tr>
+<tr>
+	<td>storeChecked</td>
+	<td>id=ctl00_ctl00_phContent_ctl11_ctlMemberAttributeEditor_rdoIsTaxExempt_1</td>
+	<td>taxEmpNo</td>
+</tr>
+<tr>
+	<td>echo</td>
+	<td>${taxEmpNo}</td>
+	<td></td>
+</tr>
+<tr>
+	<td>gotoIf</td>
+	<td>storedVars['taxEmpNo']=true</td>
+	<td>TaxEmemptTrue</td>
+</tr>
+<!--If tax exempt is no-->
+<tr>
+	<td>label</td>
+	<td>TaxEmemptTrue</td>
+	<td></td>
+</tr>
+<tr>
+	<td>assertElementPresent</td>
+	<td>xpath=/html/body/form/div[2]/div/div[2]/div/div[2]/div/div/div/div[9]/div[2]/div/div[4]</td>
+	<td></td>
+</tr>
+<tr>
+	<td>storeText</td>
+	<td>xpath=/html/body/form/div[2]/div/div[2]/div/div[2]/div/div/div/div[9]/div[2]/div/div[4]</td>
+	<td>taxableAssert</td>
+</tr>
+<tr>
+	<td>echo</td>
+	<td>${taxableAssert}</td>
+	<td></td>
+</tr>
+<!--Membership Cost-->
+<tr>
+	<td>storeText</td>
+	<td>xpath=/html/body/form/div[2]/div/div[2]/div/div[2]/div/div/div/div[9]/div[2]/div/div/div/div[2]</td>
+	<td>VarmemberCost</td>
+</tr>
+<tr>
+	<td>echo</td>
+	<td>${VarmemberCost}</td>
+	<td></td>
+</tr>
+<tr>
+	<td>store</td>
+	<td>javascript{storedVars['VarmemberCost'].split(&quot;$&quot;)[0]}</td>
+	<td>memberCost</td>
+</tr>
+<tr>
+	<td>echo</td>
+	<td>${memberCost}</td>
+	<td></td>
+</tr>
+<!--Invoice total-->
+<tr>
+	<td>storeText</td>
+	<td>xpath=/html/body/form/div[2]/div/div[2]/div/div[2]/div/div/div/div[9]/div[2]/div/div[3]/div/div[2]</td>
+	<td>VarinvoiceTotal</td>
+</tr>
+<tr>
+	<td>echo</td>
+	<td>${VarinvoiceTotal}</td>
+	<td></td>
+</tr>
+<tr>
+	<td>store</td>
+	<td>javascript{storedVars['VarinvoiceTotal'].split(&quot;$&quot;)[0]}</td>
+	<td>invoiceTotal</td>
+</tr>
+<tr>
+	<td>echo</td>
+	<td>${invoiceTotal}</td>
+	<td></td>
+</tr>
+<!--Tax exempt = No-->
+<tr>
+	<td>storeText</td>
+	<td>xpath=/html/body/form/div[2]/div/div[2]/div/div[2]/div/div/div/div[9]/div[2]/div/div[4]/div/div[2]</td>
+	<td>VartaxExempt</td>
+</tr>
+<tr>
+	<td>echo</td>
+	<td>${VartaxExempt}</td>
+	<td></td>
+</tr>
+<tr>
+	<td>store</td>
+	<td>javascript{storedVars['VartaxExempt'].split(&quot;$&quot;)[0]}</td>
+	<td>taxExempt</td>
+</tr>
+<tr>
+	<td>echo</td>
+	<td>${taxExempt}</td>
+	<td></td>
+</tr>
+<!--Tax-->
+<tr>
+	<td>storeText</td>
+	<td>xpath=/html/body/form/div[2]/div/div[2]/div/div[2]/div/div/div/div[9]/div[2]/div/div[5]/div/div[2]</td>
+	<td>Vartax</td>
+</tr>
+<tr>
+	<td>echo</td>
+	<td>${Vartax}</td>
+	<td></td>
+</tr>
+<tr>
+	<td>store</td>
+	<td>javascript{storedVars['Vartax'].split(&quot;$&quot;)[0]}</td>
+	<td>tax</td>
+</tr>
+<tr>
+	<td>echo</td>
+	<td>${tax}</td>
+	<td></td>
+</tr>
+<!--Check memberCost == invoiceTotal == taxExempt-->
+<tr>
+	<td>gotoIf</td>
+	<td>(storedVars['memberCost'] == storedVars['invoiceTotal']) &amp;&amp; (storedVars['memberCost'] ==storedVars['taxExempt'])</td>
+	<td>TotalCost</td>
+</tr>
+<tr>
+	<td>gotoIf</td>
+	<td>(storedVars['memberCost'] !== storedVars['invoiceTotal']) &amp;&amp; (storedVars['memberCost'] !==storedVars['taxExempt'])</td>
+	<td>NotEqual</td>
+</tr>
+<tr>
+	<td>label</td>
+	<td>NotEqual</td>
+	<td></td>
+</tr>
+<tr>
+	<td>echo</td>
+	<td>Something wrong !!!</td>
+	<td></td>
+</tr>
+<!--Calculate total cost-->
+<tr>
+	<td>label</td>
+	<td>TotalCost</td>
+	<td></td>
+</tr>
+<tr>
+	<td>storeEval</td>
+	<td>${taxExempt}+${tax};</td>
+	<td>totalCost</td>
+</tr>
+<tr>
+	<td>echo</td>
+	<td>${totalCost}</td>
+	<td></td>
+</tr>
+<tr>
+	<td>storeText</td>
+	<td>xpath=/html/body/form/div[2]/div/div[2]/div/div[2]/div/div/div/div[9]/div[2]/div/div[6]/div/div[2]</td>
+	<td>grandTotal</td>
+</tr>
+<tr>
+	<td>echo</td>
+	<td>${grandTotal}</td>
+	<td></td>
+</tr>
+<tr>
+	<td>store</td>
+	<td>javascript{storedVars['grandTotal'].split(&quot;$&quot;)[0]}</td>
+	<td>total</td>
+</tr>
+<tr>
+	<td>echo</td>
+	<td>${total}</td>
+	<td></td>
+</tr>
+<tr>
+	<td>assertEval</td>
+	<td>${total}</td>
+	<td>${totalCost}</td>
+</tr>
+<!----------------------------->
+</tbody></table>
+</body>
+</html>
