@@ -71,99 +71,274 @@
 	<td>7000</td>
 	<td>7000</td>
 </tr>
+<!--Search job posting-->
+<!--Search by posting ID-->
 <tr>
-	<td>clickAndWait</td>
-	<td>id=ctl00_MPFooter_btnCreateNew</td>
+	<td>type</td>
+	<td>id=ctl00_MPContent_ctlSearchFilter_txtPostingId</td>
+	<td>4000-5000</td>
+</tr>
+<tr>
+	<td>click</td>
+	<td>id=ctl00_MPContent_ctlSearchFilter_btnSearch</td>
 	<td></td>
 </tr>
 <tr>
-	<td>storeEval</td>
-	<td>javascript{Math.round (Math.random() * 40000)}</td>
-	<td>organization</td>
+	<td>pause</td>
+	<td>4000</td>
+	<td>4000</td>
+</tr>
+<tr>
+	<td>storeText</td>
+	<td>id=ctl00_MPContent_ctlJobPostingsList_grdJobPostings_ctl02_lnkInvoice</td>
+	<td>invoiceNumber</td>
 </tr>
 <tr>
 	<td>echo</td>
-	<td>Test Organization ${organization}</td>
+	<td>${invoiceNumber}</td>
 	<td></td>
 </tr>
 <tr>
-	<td>type</td>
-	<td>id=ctl00_MPContent_ctlJobPostingEditor_txtOrganization</td>
-	<td>Test Organization ${organization}</td>
-</tr>
-<tr>
-	<td>storeEval</td>
-	<td>javascript{Math.round (Math.random() * 40000)}</td>
-	<td>position</td>
-</tr>
-<tr>
-	<td>echo</td>
-	<td>Test Position ${position}</td>
+	<td>click</td>
+	<td>id=ctl00_MPContent_ctlJobPostingsList_grdJobPostings_ctl02_LinkButton1</td>
 	<td></td>
 </tr>
 <tr>
+	<td>pause</td>
+	<td>4000</td>
+	<td>4000</td>
+</tr>
+<tr>
+	<td>click</td>
+	<td>id=ctl00_MPContent_ctlJobPostingEditor_btnCancel</td>
+	<td></td>
+</tr>
+<!--Search by submitter last name-->
+<tr>
+	<td>pause</td>
+	<td>4000</td>
+	<td>4000</td>
+</tr>
+<tr>
 	<td>type</td>
-	<td>id=ctl00_MPContent_ctlJobPostingEditor_txtPosition</td>
-	<td>Test Position ${position}</td>
+	<td>id=ctl00_MPContent_ctlSearchFilter_txtSubmitterLastName</td>
+	<td>Test</td>
+</tr>
+<tr>
+	<td>click</td>
+	<td>id=ctl00_MPContent_ctlSearchFilter_btnSearch</td>
+	<td></td>
+</tr>
+<tr>
+	<td>pause</td>
+	<td>4000</td>
+	<td>4000</td>
+</tr>
+<tr>
+	<td>click</td>
+	<td>id=ctl00_MPFooter_btnNewSearch</td>
+	<td></td>
+</tr>
+<!--Search by invoice number-->
+<tr>
+	<td>pause</td>
+	<td>4000</td>
+	<td>4000</td>
+</tr>
+<tr>
+	<td>type</td>
+	<td>id=ctl00_MPContent_ctlSearchFilter_txtInvoiceNumber</td>
+	<td>${invoiceNumber}</td>
+</tr>
+<tr>
+	<td>click</td>
+	<td>id=ctl00_MPContent_ctlSearchFilter_btnSearch</td>
+	<td></td>
+</tr>
+<tr>
+	<td>pause</td>
+	<td>4000</td>
+	<td>4000</td>
+</tr>
+<tr>
+	<td>click</td>
+	<td>id=ctl00_MPFooter_btnNewSearch</td>
+	<td></td>
+</tr>
+<!--Search by position title-->
+<tr>
+	<td>pause</td>
+	<td>4000</td>
+	<td>4000</td>
+</tr>
+<tr>
+	<td>type</td>
+	<td>id=ctl00_MPContent_ctlSearchFilter_txtPositionTitle</td>
+	<td>Test position%</td>
+</tr>
+<tr>
+	<td>click</td>
+	<td>id=ctl00_MPContent_ctlSearchFilter_btnSearch</td>
+	<td></td>
+</tr>
+<tr>
+	<td>pause</td>
+	<td>4000</td>
+	<td>4000</td>
+</tr>
+<tr>
+	<td>click</td>
+	<td>id=ctl00_MPFooter_btnNewSearch</td>
+	<td></td>
+</tr>
+<!--Search by organization-->
+<tr>
+	<td>pause</td>
+	<td>4000</td>
+	<td>4000</td>
+</tr>
+<tr>
+	<td>type</td>
+	<td>id=ctl00_MPContent_ctlSearchFilter_txtOrganization</td>
+	<td>Test organization%</td>
+</tr>
+<tr>
+	<td>click</td>
+	<td>id=ctl00_MPContent_ctlSearchFilter_btnSearch</td>
+	<td></td>
+</tr>
+<tr>
+	<td>pause</td>
+	<td>4000</td>
+	<td>4000</td>
+</tr>
+<tr>
+	<td>click</td>
+	<td>id=ctl00_MPFooter_btnNewSearch</td>
+	<td></td>
+</tr>
+<!--Search by province-->
+<tr>
+	<td>pause</td>
+	<td>4000</td>
+	<td>4000</td>
 </tr>
 <tr>
 	<td>select</td>
-	<td>id=ctl00_MPContent_ctlJobPostingEditor_ddlProvince_ddlLookupData</td>
+	<td>id=ctl00_MPContent_ctlSearchFilter_ddlProvince_ddlLookupData</td>
 	<td>Alberta</td>
 </tr>
 <tr>
-	<td>type</td>
-	<td>id=ctl00_MPContent_ctlJobPostingEditor_txtLocation</td>
-	<td>Test Locaion</td>
-</tr>
-<tr>
 	<td>click</td>
-	<td>id=ctl00_MPContent_ctlJobPostingEditor_dtpJobStartDate_txtDatePicker</td>
+	<td>id=ctl00_MPContent_ctlSearchFilter_btnSearch</td>
 	<td></td>
 </tr>
 <tr>
+	<td>pause</td>
+	<td>4000</td>
+	<td>4000</td>
+</tr>
+<tr>
 	<td>click</td>
-	<td>link=17</td>
+	<td>id=ctl00_MPFooter_btnNewSearch</td>
 	<td></td>
+</tr>
+<!--Search by posting approval status-->
+<tr>
+	<td>pause</td>
+	<td>4000</td>
+	<td>4000</td>
 </tr>
 <tr>
 	<td>select</td>
-	<td>id=ctl00_MPContent_ctlJobPostingEditor_ddlApplicationMethod_ddlLookupData</td>
-	<td>Apply Through Email using CPBI-ICRA Web Form</td>
+	<td>id=ctl00_MPContent_ctlSearchFilter_ddlJobPostingStatus_ddlLookupData</td>
+	<td>Not Approved</td>
 </tr>
 <tr>
-	<td>storeEval</td>
-	<td>javascript{Math.round (Math.random() * 40000)}</td>
-	<td>contact</td>
-</tr>
-<tr>
-	<td>echo</td>
-	<td>Test ${contact}</td>
+	<td>click</td>
+	<td>id=ctl00_MPContent_ctlSearchFilter_btnSearch</td>
 	<td></td>
 </tr>
 <tr>
-	<td>type</td>
-	<td>id=ctl00_MPContent_ctlJobPostingEditor_txtContactFirstname</td>
-	<td>Test ${contact}</td>
+	<td>pause</td>
+	<td>4000</td>
+	<td>4000</td>
+</tr>
+<tr>
+	<td>click</td>
+	<td>id=ctl00_MPFooter_btnNewSearch</td>
+	<td></td>
+</tr>
+<!--Select by payment status-->
+<tr>
+	<td>pause</td>
+	<td>4000</td>
+	<td>4000</td>
+</tr>
+<tr>
+	<td>select</td>
+	<td>id=ctl00_MPContent_ctlSearchFilter_ddlPaymentStatus_ddlLookupData</td>
+	<td>Pending</td>
+</tr>
+<tr>
+	<td>click</td>
+	<td>id=ctl00_MPContent_ctlSearchFilter_btnSearch</td>
+	<td></td>
+</tr>
+<tr>
+	<td>pause</td>
+	<td>4000</td>
+	<td>4000</td>
+</tr>
+<tr>
+	<td>click</td>
+	<td>id=ctl00_MPFooter_btnNewSearch</td>
+	<td></td>
+</tr>
+<!--Search by posting ID, invoice number, postion title, posting status, and payment status-->
+<tr>
+	<td>pause</td>
+	<td>4000</td>
+	<td>4000</td>
 </tr>
 <tr>
 	<td>type</td>
-	<td>id=ctl00_MPContent_ctlJobPostingEditor_txtContactLastname</td>
-	<td>Contact</td>
+	<td>id=ctl00_MPContent_ctlSearchFilter_txtPostingId</td>
+	<td>4000-5000</td>
 </tr>
 <tr>
 	<td>type</td>
-	<td>id=ctl00_MPContent_ctlJobPostingEditor_txtContactEmail</td>
-	<td>test${contact}@contactperson.com</td>
+	<td>id=ctl00_MPContent_ctlSearchFilter_txtInvoiceNumber</td>
+	<td>${invoiceNumber}</td>
 </tr>
 <tr>
 	<td>type</td>
-	<td>id=ctl00_MPContent_ctlJobPostingEditor_txtContactPhone</td>
-	<td>(563) 1234-8547</td>
+	<td>id=ctl00_MPContent_ctlSearchFilter_txtPositionTitle</td>
+	<td>Test%</td>
 </tr>
 <tr>
-	<td>clickAndWait</td>
-	<td>id=ctl00_MPContent_ctlJobPostingEditor_btnSave</td>
+	<td>select</td>
+	<td>id=ctl00_MPContent_ctlSearchFilter_ddlJobPostingStatus_ddlLookupData</td>
+	<td>Not Approved</td>
+</tr>
+<tr>
+	<td>select</td>
+	<td>id=ctl00_MPContent_ctlSearchFilter_ddlPaymentStatus_ddlLookupData</td>
+	<td>Successful</td>
+</tr>
+<tr>
+	<td>click</td>
+	<td>id=ctl00_MPContent_ctlSearchFilter_btnSearch</td>
+	<td></td>
+</tr>
+<tr>
+	<td>pause</td>
+	<td>4000</td>
+	<td>4000</td>
+</tr>
+<tr>
+	<td>click</td>
+	<td>id=ctl00_MPFooter_btnNewSearch</td>
 	<td></td>
 </tr>
 </tbody></table>
