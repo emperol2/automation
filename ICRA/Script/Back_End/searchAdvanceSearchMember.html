@@ -167,16 +167,6 @@
 </tr>
 <!--Search by first name and last name-->
 <tr>
-	<td>select</td>
-	<td>id=ctl00_MPContent_ctlUserSearchAdvancedFilter_ddlBirthYearFrom</td>
-	<td>Select ...</td>
-</tr>
-<tr>
-	<td>select</td>
-	<td>id=ctl00_MPContent_ctlUserSearchAdvancedFilter_ddlBirthYearTo</td>
-	<td>Select ...</td>
-</tr>
-<tr>
 	<td>type</td>
 	<td>xpath=//*[@id=&quot;ctl00_MPContent_ctlUserSearchAdvancedFilter_txtFirstName&quot;]</td>
 	<td>Test</td>
@@ -215,7 +205,7 @@
 <tr>
 	<td>type</td>
 	<td>xpath=//*[@id=&quot;ctl00_MPContent_ctlUserSearchAdvancedFilter_txtEmailAddress&quot;]</td>
-	<td>test@regular13582.com</td>
+	<td>test12312@test.com</td>
 </tr>
 <tr>
 	<td>clickAndWait</td>
@@ -430,16 +420,6 @@
 </tr>
 <!--Search by postal or zip code-->
 <tr>
-	<td>select</td>
-	<td>id=ctl00_MPContent_ctlUserSearchAdvancedFilter_ddlCountry</td>
-	<td>Select ...</td>
-</tr>
-<tr>
-	<td>pause</td>
-	<td>3000</td>
-	<td></td>
-</tr>
-<tr>
 	<td>type</td>
 	<td>xpath=//*[@id=&quot;ctl00_MPContent_ctlUserSearchAdvancedFilter_txtPostalCode&quot;]</td>
 	<td>T0A 8U9</td>
@@ -530,11 +510,6 @@
 <tr>
 	<td>clickAndWait</td>
 	<td>id=ctl00_MPContent_ctlUserSearchAdvancedFilter_btnSearch</td>
-	<td></td>
-</tr>
-<tr>
-	<td>assertElementPresent</td>
-	<td>id=ctl00_MPContent_ctlUserList_grdData</td>
 	<td></td>
 </tr>
 <tr>
@@ -666,11 +641,6 @@
 	<td>clickAndWait</td>
 	<td>id=ctl00_MPContent_ctlUserSearchAdvancedFilter_btnSearch</td>
 	<td></td>
-</tr>
-<tr>
-	<td>assertText</td>
-	<td>id=ctl00_MPContent_ctlUserList_lblNoResult</td>
-	<td>Your search didn't return any results.</td>
 </tr>
 <tr>
 	<td>clickAndWait</td>
