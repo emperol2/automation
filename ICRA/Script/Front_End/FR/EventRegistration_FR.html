@@ -123,33 +123,23 @@
 </tr>
 <tr>
 	<td>storeEval</td>
-	<td>storedVars['body'].match(/ctl[0-9]*_ctl[0-9]*_phContent_ctl[0-9]*_ddlReferralSource_ddlLookupData/g)</td>
-	<td>howToKnow</td>
+	<td>storedVars['body'].match(/ctl[0-9]*_ctl[0-9]*_phContent_ctl[0-9]*/g)</td>
+	<td>number</td>
 </tr>
 <tr>
 	<td>storeEval</td>
-	<td>storedVars['howToKnow'][0]</td>
-	<td>howToKnowID</td>
+	<td>storedVars['number'][0]</td>
+	<td>numberID</td>
 </tr>
 <tr>
 	<td>select</td>
-	<td>id=${howToKnowID}</td>
+	<td>id=${numberID}_ddlReferralSource_ddlLookupData</td>
 	<td>Un collègue</td>
 </tr>
 <!--Edit user profile-->
 <tr>
-	<td>storeEval</td>
-	<td>storedVars['body'].match(/ctl[0-9]*_ctl[0-9]*_phContent_ctl[0-9]*_rblRegistrationType_1/g)</td>
-	<td>multiple</td>
-</tr>
-<tr>
-	<td>storeEval</td>
-	<td>storedVars['multiple'][0]</td>
-	<td>multipleID</td>
-</tr>
-<tr>
 	<td>click</td>
-	<td>id=${multipleID}</td>
+	<td>id=${numberID}_rblRegistrationType_1</td>
 	<td></td>
 </tr>
 <tr>
@@ -158,18 +148,8 @@
 	<td>3000</td>
 </tr>
 <tr>
-	<td>storeEval</td>
-	<td>storedVars['body'].match(/ctl[0-9]*_ctl[0-9]*_phContent_ctl[0-9]*_ctlRegistrationMainRegistrant_lnkToEdit/g)</td>
-	<td>edit</td>
-</tr>
-<tr>
-	<td>storeEval</td>
-	<td>storedVars['edit'][0]</td>
-	<td>editID</td>
-</tr>
-<tr>
 	<td>click</td>
-	<td>id=${editID}</td>
+	<td>id=${numberID}_ctlRegistrationMainRegistrant_lnkToEdit</td>
 	<td></td>
 </tr>
 <tr>
@@ -183,18 +163,8 @@
 	<td></td>
 </tr>
 <tr>
-	<td>storeEval</td>
-	<td>storedVars['body'].match(/ctl[0-9]*_ctl[0-9]*_phContent_ctl[0-9]*_ctlRegistrationMainRegistrant_btnCancel/g)</td>
-	<td>cancel</td>
-</tr>
-<tr>
-	<td>storeEval</td>
-	<td>storedVars['cancel'][0]</td>
-	<td>cancelID</td>
-</tr>
-<tr>
 	<td>click</td>
-	<td>id=${cancelID}</td>
+	<td>id=${numberID}_ctlRegistrationMainRegistrant_btnCancel</td>
 	<td></td>
 </tr>
 <!--Event Registration-->
@@ -245,9 +215,19 @@
 	<td></td>
 </tr>
 <tr>
-	<td>storeEval</td>
-	<td>storedVars['body'].match(/ctl[09]*_ctl[0-9]*_phContent_ctl[0-9]*_ctlRegistrationGroupTable_grdGroupOptions_ctl02_ddlQuantity/</td>
+	<td>pause</td>
+	<td>4000</td>
+	<td>4000</td>
+</tr>
+<tr>
+	<td>click</td>
+	<td>id=${numberID}_ctlRegistrationOptionalActivities_btnCancel</td>
 	<td></td>
+</tr>
+<tr>
+	<td>pause</td>
+	<td>4000</td>
+	<td>4000</td>
 </tr>
 <tr>
 	<td>click</td>
@@ -260,23 +240,8 @@
 	<td>4000</td>
 </tr>
 <tr>
-	<td>storeHtmlSource</td>
-	<td>body</td>
-	<td></td>
-</tr>
-<tr>
-	<td>storeEval</td>
-	<td>storedVars['body'].match(/ctl[09]*_ctl[0-9]*_phContent_ctl[0-9]*_ctlRegistrationGroupTable_grdGroupOptions_ctl02_ddlQuantity/g)</td>
-	<td>quantityGroup</td>
-</tr>
-<tr>
-	<td>storeEval</td>
-	<td>storedVars['quantityGroup'][0]</td>
-	<td>quantityGroupID</td>
-</tr>
-<tr>
 	<td>select</td>
-	<td>id=${quantityGroupID}</td>
+	<td>id=${numberID}_ctlRegistrationGroupTable_grdGroupOptions_ctl02_ddlQuantity</td>
 	<td>1</td>
 </tr>
 <tr>
@@ -292,50 +257,50 @@
 <!--Group/Table: Attendee#2-->
 <tr>
 	<td>type</td>
-	<td>id=ctl00_ctl00_phContent_ctl14_ctlRegistrationGroupTable_rptPersonsGroups_ctl00_rptPersons_ctl01_txtFirstName</td>
+	<td>id=${numberID}_ctlRegistrationGroupTable_rptPersonsGroups_ctl00_rptPersons_ctl01_txtFirstName</td>
 	<td>Attendee2</td>
 </tr>
 <tr>
 	<td>type</td>
-	<td>id=ctl00_ctl00_phContent_ctl14_ctlRegistrationGroupTable_rptPersonsGroups_ctl00_rptPersons_ctl01_txtLastName</td>
+	<td>id=${numberID}_ctlRegistrationGroupTable_rptPersonsGroups_ctl00_rptPersons_ctl01_txtLastName</td>
 	<td>Test</td>
 </tr>
 <!--Group/Table: Attendee#3-->
 <tr>
 	<td>type</td>
-	<td>id=ctl00_ctl00_phContent_ctl14_ctlRegistrationGroupTable_rptPersonsGroups_ctl00_rptPersons_ctl02_txtFirstName</td>
+	<td>id=${numberID}_ctlRegistrationGroupTable_rptPersonsGroups_ctl00_rptPersons_ctl02_txtFirstName</td>
 	<td>Attendee3</td>
 </tr>
 <tr>
 	<td>type</td>
-	<td>id=ctl00_ctl00_phContent_ctl14_ctlRegistrationGroupTable_rptPersonsGroups_ctl00_rptPersons_ctl02_txtLastName</td>
+	<td>id=${numberID}_ctlRegistrationGroupTable_rptPersonsGroups_ctl00_rptPersons_ctl02_txtLastName</td>
 	<td>Test</td>
 </tr>
 <!--Group/Table: Attendee#4-->
 <tr>
 	<td>type</td>
-	<td>id=ctl00_ctl00_phContent_ctl14_ctlRegistrationGroupTable_rptPersonsGroups_ctl00_rptPersons_ctl03_txtFirstName</td>
+	<td>id=${numberID}_ctlRegistrationGroupTable_rptPersonsGroups_ctl00_rptPersons_ctl03_txtFirstName</td>
 	<td>Attendee4</td>
 </tr>
 <tr>
 	<td>type</td>
-	<td>id=ctl00_ctl00_phContent_ctl14_ctlRegistrationGroupTable_rptPersonsGroups_ctl00_rptPersons_ctl03_txtLastName</td>
+	<td>id=${numberID}_ctlRegistrationGroupTable_rptPersonsGroups_ctl00_rptPersons_ctl03_txtLastName</td>
 	<td>Test</td>
 </tr>
 <!--Group/Table: Attendee#5-->
 <tr>
 	<td>type</td>
-	<td>id=ctl00_ctl00_phContent_ctl14_ctlRegistrationGroupTable_rptPersonsGroups_ctl00_rptPersons_ctl04_txtFirstName</td>
+	<td>id=${numberID}_ctlRegistrationGroupTable_rptPersonsGroups_ctl00_rptPersons_ctl04_txtFirstName</td>
 	<td>Attendee5</td>
 </tr>
 <tr>
 	<td>type</td>
-	<td>id=ctl00_ctl00_phContent_ctl14_ctlRegistrationGroupTable_rptPersonsGroups_ctl00_rptPersons_ctl04_txtLastName</td>
+	<td>id=${numberID}_ctlRegistrationGroupTable_rptPersonsGroups_ctl00_rptPersons_ctl04_txtLastName</td>
 	<td>Test</td>
 </tr>
 <tr>
 	<td>click</td>
-	<td>id=ctl00_ctl00_phContent_ctl14_ctlRegistrationGroupTable_btnSave</td>
+	<td>id=${numberID}_ctlRegistrationGroupTable_btnSave</td>
 	<td></td>
 </tr>
 <tr>
@@ -351,7 +316,7 @@
 </tr>
 <tr>
 	<td>click</td>
-	<td>css=div.content-panel div.section a#ctl00_ctl00_phContent_ctl14_ctlRegistrationAdditionalAttendees_lnkToggleContent.section-header-link div.section-header</td>
+	<td>css=div.content-panel div.section a#${numberID}_ctlRegistrationAdditionalAttendees_lnkToggleContent.section-header-link div.section-header</td>
 	<td></td>
 </tr>
 <tr>
@@ -361,7 +326,7 @@
 </tr>
 <tr>
 	<td>assertElementPresent</td>
-	<td>id=ctl00_ctl00_phContent_ctl14_ctlRegistrationAdditionalAttendees_grdAttendeeOptions</td>
+	<td>id=${numberID}_ctlRegistrationAdditionalAttendees_grdAttendeeOptions</td>
 	<td></td>
 </tr>
 <!--Variables for additional attendee type-->
@@ -387,7 +352,7 @@
 </tr>
 <tr>
 	<td>storeText</td>
-	<td>css=div table#ctl00_ctl00_phContent_ctl14_ctlRegistrationAdditionalAttendees_grdAttendeeOptions tbody tr.row0</td>
+	<td>css=div table#${numberID}_ctlRegistrationAdditionalAttendees_grdAttendeeOptions tbody tr.row0</td>
 	<td>regType</td>
 </tr>
 <tr>
@@ -397,7 +362,7 @@
 </tr>
 <tr>
 	<td>storeText</td>
-	<td>css=div table#ctl00_ctl00_phContent_ctl14_ctlRegistrationAdditionalAttendees_grdAttendeeOptions tbody tr.row1</td>
+	<td>css=div table#${numberID}_ctlRegistrationAdditionalAttendees_grdAttendeeOptions tbody tr.row1</td>
 	<td>assoType</td>
 </tr>
 <tr>
@@ -455,7 +420,7 @@
 </tr>
 <tr>
 	<td>select</td>
-	<td>id=ctl00_ctl00_phContent_ctl14_ctlRegistrationAdditionalAttendees_grdAttendeeOptions_ctl03_ddlQuantity</td>
+	<td>id=${numberID}_ctlRegistrationAdditionalAttendees_grdAttendeeOptions_ctl03_ddlQuantity</td>
 	<td>1</td>
 </tr>
 <tr>
@@ -465,12 +430,12 @@
 </tr>
 <tr>
 	<td>type</td>
-	<td>id=ctl00_ctl00_phContent_ctl14_ctlRegistrationAdditionalAttendees_rptAttendees_ctl00_txtUsername</td>
+	<td>id=${numberID}_ctlRegistrationAdditionalAttendees_rptAttendees_ctl00_txtUsername</td>
 	<td>${assoUserID}</td>
 </tr>
 <tr>
 	<td>click</td>
-	<td>id=ctl00_ctl00_phContent_ctl14_ctlRegistrationAdditionalAttendees_rptAttendees_ctl00_btnValidateMemberID</td>
+	<td>id=${numberID}_ctlRegistrationAdditionalAttendees_rptAttendees_ctl00_btnValidateMemberID</td>
 	<td></td>
 </tr>
 <!--Non-member-->
@@ -481,7 +446,7 @@
 </tr>
 <tr>
 	<td>select</td>
-	<td>id=ctl00_ctl00_phContent_ctl14_ctlRegistrationAdditionalAttendees_grdAttendeeOptions_ctl05_ddlQuantity</td>
+	<td>id=${numberID}_ctlRegistrationAdditionalAttendees_grdAttendeeOptions_ctl05_ddlQuantity</td>
 	<td>1</td>
 </tr>
 <tr>
@@ -491,12 +456,12 @@
 </tr>
 <tr>
 	<td>type</td>
-	<td>id=ctl00_ctl00_phContent_ctl14_ctlRegistrationAdditionalAttendees_rptAttendees_ctl01_txtUsername</td>
+	<td>id=${numberID}_ctlRegistrationAdditionalAttendees_rptAttendees_ctl01_txtUsername</td>
 	<td>${nonUserID}</td>
 </tr>
 <tr>
 	<td>click</td>
-	<td>id=ctl00_ctl00_phContent_ctl14_ctlRegistrationAdditionalAttendees_rptAttendees_ctl01_btnValidateMemberID</td>
+	<td>id=${numberID}_ctlRegistrationAdditionalAttendees_rptAttendees_ctl01_btnValidateMemberID</td>
 	<td></td>
 </tr>
 <tr>
@@ -506,7 +471,7 @@
 </tr>
 <tr>
 	<td>click</td>
-	<td>id=ctl00_ctl00_phContent_ctl14_ctlRegistrationAdditionalAttendees_btnSave</td>
+	<td>id=${numberID}_ctlRegistrationAdditionalAttendees_btnSave</td>
 	<td></td>
 </tr>
 <tr>
@@ -609,9 +574,24 @@
 	<td>4000</td>
 </tr>
 <tr>
+	<td>storeHtmlSource</td>
+	<td>body</td>
+	<td></td>
+</tr>
+<tr>
+	<td>storeEval</td>
+	<td>storedVars['body'].match(/ctl[0-9]*_ctl[0-9]*_phContent_ctl[0-9]*/g)</td>
+	<td>number</td>
+</tr>
+<tr>
+	<td>storeEval</td>
+	<td>storedVars['number'][0]</td>
+	<td>numberID</td>
+</tr>
+<tr>
 	<td>assertText</td>
-	<td>css=div#ctl00_ctl00_phContent_ctl14_ajpAllContent div.content-panel h2.step-title</td>
-	<td>Verify Details</td>
+	<td>css=div#${numberID}_ajpAllContent div.content-panel h2.step-title</td>
+	<td>Suivant : Vérifier les détails</td>
 </tr>
 <tr>
 	<td>click</td>
@@ -630,38 +610,53 @@
 	<td></td>
 </tr>
 <tr>
+	<td>storeHtmlSource</td>
+	<td>body</td>
+	<td></td>
+</tr>
+<tr>
+	<td>storeEval</td>
+	<td>storedVars['body'].match(/ctl[0-9]*_ctl[0-9]*_phContent_ctl[0-9]*/g)</td>
+	<td>number</td>
+</tr>
+<tr>
+	<td>storeEval</td>
+	<td>storedVars['number'][0]</td>
+	<td>numberID</td>
+</tr>
+<tr>
 	<td>type</td>
-	<td>id=ctl00_ctl00_phContent_ctl14_ctlRegistrationPayment_ctlPaymentPanel_txtCreditCardHolder</td>
+	<td>id=${numberID}_ctlRegistrationPayment_ctlPaymentPanel_txtCreditCardHolder</td>
 	<td>test</td>
 </tr>
 <tr>
 	<td>select</td>
-	<td>id=ctl00_ctl00_phContent_ctl14_ctlRegistrationPayment_ctlPaymentPanel_ddlCreditCardType_ddlLookupData</td>
+	<td>id=${numberID}_ctlRegistrationPayment_ctlPaymentPanel_ddlCreditCardType_ddlLookupData</td>
 	<td>MasterCard</td>
 </tr>
 <tr>
 	<td>type</td>
-	<td>id=ctl00_ctl00_phContent_ctl14_ctlRegistrationPayment_ctlPaymentPanel_txtCreditCardNumber</td>
+	<td>id=${numberID}_ctlRegistrationPayment_ctlPaymentPanel_txtCreditCardNumber</td>
 	<td>5105105105105100</td>
 </tr>
 <tr>
 	<td>select</td>
-	<td>id=ctl00_ctl00_phContent_ctl14_ctlRegistrationPayment_ctlPaymentPanel_ddlCCExpiryMonth</td>
+	<td>id=${numberID}_ctlRegistrationPayment_ctlPaymentPanel_ddlCCExpiryMonth</td>
 	<td>4</td>
 </tr>
 <tr>
 	<td>select</td>
-	<td>id=ctl00_ctl00_phContent_ctl14_ctlRegistrationPayment_ctlPaymentPanel_ddlCCExpiryYear</td>
+	<td>id=${numberID}_ctlRegistrationPayment_ctlPaymentPanel_ddlCCExpiryYear</td>
 	<td>2020</td>
 </tr>
 <tr>
 	<td>check</td>
-	<td>id=ctl00_ctl00_phContent_ctl14_ctlRegistrationPayment_ctlPaymentPanel_chkSendCopyToAnotherEmail</td>
+	<td>id=${numberID}_ctlRegistrationPayment_ctlPaymentPanel_chkSendCopyToAnotherEmail</td>
 	<td></td>
 </tr>
 <tr>
 	<td>type</td>
-	<td>id=ctl00_ctl00_phContent_ctl14_ctlRegistrationPayment_ctlPaymentPanel_txtSendCopyToAnotherEmail</td>
+	<td>id=${numberID}_ctlRegistrationPayment_ctlPaymentPanel_txtSendCopyToAnotherEmail</td>
 	<td>su.chavengpoj@gmail.com</td>
 </tr>
 <!--tr>
@@ -671,7 +666,7 @@
 </tr-->
 <tr>
 	<td>clickAndWait</td>
-	<td>link=Logout</td>
+	<td>id=ctl00_ctl00_ctl37_ctlLoginView_btnLogout</td>
 	<td></td>
 </tr>
 </tbody></table>
