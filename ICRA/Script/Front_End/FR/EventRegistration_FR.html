@@ -38,8 +38,8 @@
 	<td></td>
 </tr>
 <tr>
-	<td>clickAndWait</td>
-	<td>id=logo</td>
+	<td>label</td>
+	<td>BackToEvent</td>
 	<td></td>
 </tr>
 <tr>
@@ -54,9 +54,15 @@
 </tr>
 <tr>
 	<td>pause</td>
-	<td>5000</td>
-	<td>5000</td>
+	<td>6000</td>
+	<td>6000</td>
 </tr>
+<tr>
+	<td>assertTitle</td>
+	<td>Activités</td>
+	<td></td>
+</tr>
+<!--Select show all regions for event registration-->
 <tr>
 	<td>click</td>
 	<td>//button[@type='button']</td>
@@ -72,9 +78,36 @@
 	<td>Activités</td>
 	<td></td>
 </tr>
+<!--Click title on first event-->
 <tr>
 	<td>clickAndWait</td>
 	<td>css=div.event-details-list div.event-item div.details a.title</td>
+	<td></td>
+</tr>
+<!--Condition event registration-->
+<tr>
+	<td>store</td>
+	<td>M’inscrire maintenant</td>
+	<td>regisText</td>
+</tr>
+<tr>
+	<td>storeText</td>
+	<td>css=div.actions div.register-panel div.register-action</td>
+	<td>regisBut</td>
+</tr>
+<tr>
+	<td>gotoIf</td>
+	<td>storedVars['regisText'] == storedVars['regisBut']</td>
+	<td>Register</td>
+</tr>
+<tr>
+	<td>gotoIf</td>
+	<td>storedVars['regisBut'] !== storedVars['regisText']</td>
+	<td>BackToEvent</td>
+</tr>
+<tr>
+	<td>label</td>
+	<td>Register</td>
 	<td></td>
 </tr>
 <tr>
@@ -82,25 +115,41 @@
 	<td>css=div.actions div.register-panel div.register-action a.btn</td>
 	<td></td>
 </tr>
+<!--Select how did you hear about this event?-->
+<tr>
+	<td>storeHtmlSource</td>
+	<td>body</td>
+	<td></td>
+</tr>
+<tr>
+	<td>storeEval</td>
+	<td>storedVars['body'].match(/ctl[0-9]*_ctl[0-9]*_phContent_ctl[0-9]*_ddlReferralSource_ddlLookupData/g)</td>
+	<td>howToKnow</td>
+</tr>
+<tr>
+	<td>storeEval</td>
+	<td>storedVars['howToKnow'][0]</td>
+	<td>howToKnowID</td>
+</tr>
+<tr>
+	<td>select</td>
+	<td>id=${howToKnowID}</td>
+	<td>Un collègue</td>
+</tr>
 <!--Edit user profile-->
 <tr>
-	<td>focus</td>
-	<td>id=ctl00_ctl00_phContent_ctl13_rblRegistrationType_1</td>
-	<td></td>
+	<td>storeEval</td>
+	<td>storedVars['body'].match(/ctl[0-9]*_ctl[0-9]*_phContent_ctl[0-9]*_rblRegistrationType_1/g)</td>
+	<td>multiple</td>
+</tr>
+<tr>
+	<td>storeEval</td>
+	<td>storedVars['multiple'][0]</td>
+	<td>multipleID</td>
 </tr>
 <tr>
 	<td>click</td>
-	<td>id=ctl00_ctl00_phContent_ctl13_rblRegistrationType_1</td>
-	<td></td>
-</tr>
-<tr>
-	<td>pause</td>
-	<td>3000</td>
-	<td>3000</td>
-</tr>
-<tr>
-	<td>click</td>
-	<td>id=ctl00_ctl00_phContent_ctl13_ctlRegistrationMainRegistrant_lnkToEdit</td>
+	<td>id=${multipleID}</td>
 	<td></td>
 </tr>
 <tr>
@@ -109,19 +158,49 @@
 	<td>3000</td>
 </tr>
 <tr>
-	<td>type</td>
-	<td>id=ctl00_ctl00_phContent_ctl13_ctlRegistrationMainRegistrant_ctlAddressEditor_txtPhone</td>
-	<td>(999) 9996-9995</td>
+	<td>storeEval</td>
+	<td>storedVars['body'].match(/ctl[0-9]*_ctl[0-9]*_phContent_ctl[0-9]*_ctlRegistrationMainRegistrant_lnkToEdit/g)</td>
+	<td>edit</td>
+</tr>
+<tr>
+	<td>storeEval</td>
+	<td>storedVars['edit'][0]</td>
+	<td>editID</td>
 </tr>
 <tr>
 	<td>click</td>
-	<td>id=ctl00_ctl00_phContent_ctl13_ctlRegistrationMainRegistrant_btnSave</td>
+	<td>id=${editID}</td>
+	<td></td>
+</tr>
+<tr>
+	<td>pause</td>
+	<td>4000</td>
+	<td>4000</td>
+</tr>
+<tr>
+	<td>storeHtmlSource</td>
+	<td>body</td>
+	<td></td>
+</tr>
+<tr>
+	<td>storeEval</td>
+	<td>storedVars['body'].match(/ctl[0-9]*_ctl[0-9]*_phContent_ctl[0-9]*_ctlRegistrationMainRegistrant_btnCancel/g)</td>
+	<td>cancel</td>
+</tr>
+<tr>
+	<td>storeEval</td>
+	<td>storedVars['cancel'][0]</td>
+	<td>cancelID</td>
+</tr>
+<tr>
+	<td>click</td>
+	<td>id=${cancelID}</td>
 	<td></td>
 </tr>
 <!--Event Registration-->
 <tr>
-	<td>check</td>
-	<td>id=ctl00_ctl00_phContent_ctl13_rblRegistrationType_1</td>
+	<td>label</td>
+	<td>eventRegistration</td>
 	<td></td>
 </tr>
 <tr>
@@ -130,6 +209,46 @@
 	<td>4000</td>
 </tr>
 <!--Group/table-->
+<tr>
+	<td>store</td>
+	<td>GROUP / TABLE </td>
+	<td>group</td>
+</tr>
+<tr>
+	<td>echo</td>
+	<td>${group}</td>
+	<td></td>
+</tr>
+<tr>
+	<td>storeText</td>
+	<td>css=div.section-header h3.section-title</td>
+	<td>groupName</td>
+</tr>
+<tr>
+	<td>echo</td>
+	<td>${groupName}</td>
+	<td></td>
+</tr>
+<tr>
+	<td>gotoIf</td>
+	<td>storedVars['group'] = storedVars['groupName']</td>
+	<td>AddGroup</td>
+</tr>
+<tr>
+	<td>gotoIf</td>
+	<td>storedVars['group'] !== storedVars['groupName']</td>
+	<td>AddIndividualAdditional</td>
+</tr>
+<tr>
+	<td>label</td>
+	<td>AddGroup</td>
+	<td></td>
+</tr>
+<tr>
+	<td>storeEval</td>
+	<td>storedVars['body'].match(/ctl[09]*_ctl[0-9]*_phContent_ctl[0-9]*_ctlRegistrationGroupTable_grdGroupOptions_ctl02_ddlQuantity/</td>
+	<td></td>
+</tr>
 <tr>
 	<td>click</td>
 	<td>css=h3.section-title</td>
@@ -141,8 +260,23 @@
 	<td>4000</td>
 </tr>
 <tr>
+	<td>storeHtmlSource</td>
+	<td>body</td>
+	<td></td>
+</tr>
+<tr>
+	<td>storeEval</td>
+	<td>storedVars['body'].match(/ctl[09]*_ctl[0-9]*_phContent_ctl[0-9]*_ctlRegistrationGroupTable_grdGroupOptions_ctl02_ddlQuantity/g)</td>
+	<td>quantityGroup</td>
+</tr>
+<tr>
+	<td>storeEval</td>
+	<td>storedVars['quantityGroup'][0]</td>
+	<td>quantityGroupID</td>
+</tr>
+<tr>
 	<td>select</td>
-	<td>id=ctl00_ctl00_phContent_ctl13_ctlRegistrationAdditionalAttendees_grdAttendeeOptions_ctl02_ddlQuantity</td>
+	<td>id=${quantityGroupID}</td>
 	<td>1</td>
 </tr>
 <tr>
@@ -158,50 +292,50 @@
 <!--Group/Table: Attendee#2-->
 <tr>
 	<td>type</td>
-	<td>id=ctl00_ctl00_phContent_ctl13_ctlRegistrationGroupTable_rptPersonsGroups_ctl00_rptPersons_ctl01_txtFirstName</td>
+	<td>id=ctl00_ctl00_phContent_ctl14_ctlRegistrationGroupTable_rptPersonsGroups_ctl00_rptPersons_ctl01_txtFirstName</td>
 	<td>Attendee2</td>
 </tr>
 <tr>
 	<td>type</td>
-	<td>id=ctl00_ctl00_phContent_ctl13_ctlRegistrationGroupTable_rptPersonsGroups_ctl00_rptPersons_ctl01_txtLastName</td>
+	<td>id=ctl00_ctl00_phContent_ctl14_ctlRegistrationGroupTable_rptPersonsGroups_ctl00_rptPersons_ctl01_txtLastName</td>
 	<td>Test</td>
 </tr>
 <!--Group/Table: Attendee#3-->
 <tr>
 	<td>type</td>
-	<td>id=ctl00_ctl00_phContent_ctl13_ctlRegistrationGroupTable_rptPersonsGroups_ctl00_rptPersons_ctl02_txtFirstName</td>
+	<td>id=ctl00_ctl00_phContent_ctl14_ctlRegistrationGroupTable_rptPersonsGroups_ctl00_rptPersons_ctl02_txtFirstName</td>
 	<td>Attendee3</td>
 </tr>
 <tr>
 	<td>type</td>
-	<td>id=ctl00_ctl00_phContent_ctl13_ctlRegistrationGroupTable_rptPersonsGroups_ctl00_rptPersons_ctl02_txtLastName</td>
+	<td>id=ctl00_ctl00_phContent_ctl14_ctlRegistrationGroupTable_rptPersonsGroups_ctl00_rptPersons_ctl02_txtLastName</td>
 	<td>Test</td>
 </tr>
 <!--Group/Table: Attendee#4-->
 <tr>
 	<td>type</td>
-	<td>id=ctl00_ctl00_phContent_ctl13_ctlRegistrationGroupTable_rptPersonsGroups_ctl00_rptPersons_ctl03_txtFirstName</td>
+	<td>id=ctl00_ctl00_phContent_ctl14_ctlRegistrationGroupTable_rptPersonsGroups_ctl00_rptPersons_ctl03_txtFirstName</td>
 	<td>Attendee4</td>
 </tr>
 <tr>
 	<td>type</td>
-	<td>id=ctl00_ctl00_phContent_ctl13_ctlRegistrationGroupTable_rptPersonsGroups_ctl00_rptPersons_ctl03_txtLastName</td>
+	<td>id=ctl00_ctl00_phContent_ctl14_ctlRegistrationGroupTable_rptPersonsGroups_ctl00_rptPersons_ctl03_txtLastName</td>
 	<td>Test</td>
 </tr>
 <!--Group/Table: Attendee#5-->
 <tr>
 	<td>type</td>
-	<td>id=ctl00_ctl00_phContent_ctl13_ctlRegistrationGroupTable_rptPersonsGroups_ctl00_rptPersons_ctl04_txtFirstName</td>
+	<td>id=ctl00_ctl00_phContent_ctl14_ctlRegistrationGroupTable_rptPersonsGroups_ctl00_rptPersons_ctl04_txtFirstName</td>
 	<td>Attendee5</td>
 </tr>
 <tr>
 	<td>type</td>
-	<td>id=ctl00_ctl00_phContent_ctl13_ctlRegistrationGroupTable_rptPersonsGroups_ctl00_rptPersons_ctl04_txtLastName</td>
+	<td>id=ctl00_ctl00_phContent_ctl14_ctlRegistrationGroupTable_rptPersonsGroups_ctl00_rptPersons_ctl04_txtLastName</td>
 	<td>Test</td>
 </tr>
 <tr>
 	<td>click</td>
-	<td>id=ctl00_ctl00_phContent_ctl13_ctlRegistrationGroupTable_btnSave</td>
+	<td>id=ctl00_ctl00_phContent_ctl14_ctlRegistrationGroupTable_btnSave</td>
 	<td></td>
 </tr>
 <tr>
@@ -211,8 +345,13 @@
 </tr>
 <!--Individual additional attendees-->
 <tr>
+	<td>label</td>
+	<td>AddIndividualAdditional</td>
+	<td></td>
+</tr>
+<tr>
 	<td>click</td>
-	<td>css=html#html_tag.js body#generalpage form#Form1 div#page-wrapper div.container div#content-wrapper div#content-container div.row div.span12 div#contentcolumn.general-page-content div#pnlEventRegistration.event-registration div#ctl00_ctl00_phContent_ctl13_ctl00_ctl00_phContent_ctl13_ajpAllContentPanel.RadAjaxPanel div#ctl00_ctl00_phContent_ctl13_ajpAllContent.update-panel div.content-panel div.section div#ctl00_ctl00_phContent_ctl13_ctlRegistrationOptionalActivities_pnlContent.section-content div#multiOpenAccordion.attendees-panel div.attendee-panel h3.attendee-title</td>
+	<td>css=div.content-panel div.section a#ctl00_ctl00_phContent_ctl14_ctlRegistrationAdditionalAttendees_lnkToggleContent.section-header-link div.section-header</td>
 	<td></td>
 </tr>
 <tr>
@@ -221,18 +360,153 @@
 	<td>3000</td>
 </tr>
 <tr>
-	<td>click</td>
-	<td>id=ctl00_ctl00_phContent_ctl13_ctlRegistrationOptionalActivities_rptAttendees_ctl00_ctlAttendeeOptionalActivitiesEditor_rptActivityDates_ctl00_rptActivities_ctl00_chkIsParticipated</td>
+	<td>assertElementPresent</td>
+	<td>id=ctl00_ctl00_phContent_ctl14_ctlRegistrationAdditionalAttendees_grdAttendeeOptions</td>
+	<td></td>
+</tr>
+<!--Variables for additional attendee type-->
+<tr>
+	<td>store</td>
+	<td>*Regular*</td>
+	<td>regular</td>
+</tr>
+<tr>
+	<td>store</td>
+	<td>*Associate*</td>
+	<td>associate</td>
+</tr>
+<tr>
+	<td>store</td>
+	<td>*Student*</td>
+	<td>student</td>
+</tr>
+<tr>
+	<td>store</td>
+	<td>*Non Member*</td>
+	<td>nonMember</td>
+</tr>
+<tr>
+	<td>storeText</td>
+	<td>css=div table#ctl00_ctl00_phContent_ctl14_ctlRegistrationAdditionalAttendees_grdAttendeeOptions tbody tr.row0</td>
+	<td>regType</td>
+</tr>
+<tr>
+	<td>echo</td>
+	<td>${regType}</td>
+	<td></td>
+</tr>
+<tr>
+	<td>storeText</td>
+	<td>css=div table#ctl00_ctl00_phContent_ctl14_ctlRegistrationAdditionalAttendees_grdAttendeeOptions tbody tr.row1</td>
+	<td>assoType</td>
+</tr>
+<tr>
+	<td>echo</td>
+	<td>${assoType}</td>
+	<td></td>
+</tr>
+<tr>
+	<td>storeText</td>
+	<td>xpath=/html/body/form/div[2]/div/div[2]/div/div[2]/div/div/div/div[2]/div/div[2]/div[4]/div/div/div/div/table/tbody/tr[4]</td>
+	<td>stdType</td>
+</tr>
+<tr>
+	<td>echo</td>
+	<td>${stdType}</td>
+	<td></td>
+</tr>
+<tr>
+	<td>storeText</td>
+	<td>xpath=/html/body/form/div[2]/div/div[2]/div/div[2]/div/div/div/div[2]/div/div[2]/div[4]/div/div/div/div/table/tbody/tr[5]</td>
+	<td>nonType</td>
+</tr>
+<tr>
+	<td>echo</td>
+	<td>${nonType}</td>
+	<td></td>
+</tr>
+<!--Condition for additional attendee type-->
+<!--Regular-->
+<tr>
+	<td>gotoIf</td>
+	<td>storedVars['regular'] = storedVars['regType']</td>
+	<td>checkAsso</td>
+</tr>
+<!--Associate-->
+<tr>
+	<td>label</td>
+	<td>checkAsso</td>
+	<td></td>
+</tr>
+<tr>
+	<td>gotoIf</td>
+	<td>storedVars['associate'] = storedVars['assoType']</td>
+	<td>selectAsso</td>
+</tr>
+<tr>
+	<td>gotoIf</td>
+	<td>storedVars['associate'] !== storedVars['assoType']</td>
+	<td>checkNonmember</td>
+</tr>
+<tr>
+	<td>label</td>
+	<td>selectAsso</td>
+	<td></td>
+</tr>
+<tr>
+	<td>select</td>
+	<td>id=ctl00_ctl00_phContent_ctl14_ctlRegistrationAdditionalAttendees_grdAttendeeOptions_ctl03_ddlQuantity</td>
 	<td>1</td>
 </tr>
 <tr>
 	<td>pause</td>
-	<td>3000</td>
-	<td>3000</td>
+	<td>4000</td>
+	<td>4000</td>
+</tr>
+<tr>
+	<td>type</td>
+	<td>id=ctl00_ctl00_phContent_ctl14_ctlRegistrationAdditionalAttendees_rptAttendees_ctl00_txtUsername</td>
+	<td>${assoUserID}</td>
 </tr>
 <tr>
 	<td>click</td>
-	<td>css=html#html_tag.js body#generalpage form#Form1 div#page-wrapper div.container div#content-wrapper div#content-container div.row div.span12 div#contentcolumn.general-page-content div#pnlEventRegistration.event-registration div#ctl00_ctl00_phContent_ctl13_ctl00_ctl00_phContent_ctl13_ajpAllContentPanel.RadAjaxPanel div#ctl00_ctl00_phContent_ctl13_ajpAllContent.update-panel div.content-panel div.section div#ctl00_ctl00_phContent_ctl13_ctlRegistrationOptionalActivities_pnlContent.section-content div.control-commands input#ctl00_ctl00_phContent_ctl13_ctlRegistrationOptionalActivities_btnSave.btn</td>
+	<td>id=ctl00_ctl00_phContent_ctl14_ctlRegistrationAdditionalAttendees_rptAttendees_ctl00_btnValidateMemberID</td>
+	<td></td>
+</tr>
+<!--Non-member-->
+<tr>
+	<td>label</td>
+	<td>checkNonmember</td>
+	<td></td>
+</tr>
+<tr>
+	<td>select</td>
+	<td>id=ctl00_ctl00_phContent_ctl14_ctlRegistrationAdditionalAttendees_grdAttendeeOptions_ctl05_ddlQuantity</td>
+	<td>1</td>
+</tr>
+<tr>
+	<td>pause</td>
+	<td>5000</td>
+	<td>5000</td>
+</tr>
+<tr>
+	<td>type</td>
+	<td>id=ctl00_ctl00_phContent_ctl14_ctlRegistrationAdditionalAttendees_rptAttendees_ctl01_txtUsername</td>
+	<td>${nonUserID}</td>
+</tr>
+<tr>
+	<td>click</td>
+	<td>id=ctl00_ctl00_phContent_ctl14_ctlRegistrationAdditionalAttendees_rptAttendees_ctl01_btnValidateMemberID</td>
+	<td></td>
+</tr>
+<tr>
+	<td>pause</td>
+	<td>4000</td>
+	<td>4000</td>
+</tr>
+<tr>
+	<td>click</td>
+	<td>id=ctl00_ctl00_phContent_ctl14_ctlRegistrationAdditionalAttendees_btnSave</td>
 	<td></td>
 </tr>
 <tr>
@@ -325,11 +599,6 @@
 </tr>
 <tr-->
 <tr>
-	<td>select</td>
-	<td>id=ctl00_ctl00_phContent_ctl13_ddlReferralSource_ddlLookupData</td>
-	<td>Annonce dans un magazine de notre industrie</td>
-</tr>
-<tr>
 	<td>click</td>
 	<td>id=btnStep1Next</td>
 	<td></td>
@@ -341,8 +610,8 @@
 </tr>
 <tr>
 	<td>assertText</td>
-	<td>css=div#ctl00_ctl00_phContent_ctl13_ajpAllContent div.content-panel h2.step-title</td>
-	<td>Suivant : Vérifier les détails</td>
+	<td>css=div#ctl00_ctl00_phContent_ctl14_ajpAllContent div.content-panel h2.step-title</td>
+	<td>Verify Details</td>
 </tr>
 <tr>
 	<td>click</td>
@@ -362,37 +631,37 @@
 </tr>
 <tr>
 	<td>type</td>
-	<td>id=ctl00_ctl00_phContent_ctl13_ctlRegistrationPayment_ctlPaymentPanel_txtCreditCardHolder</td>
+	<td>id=ctl00_ctl00_phContent_ctl14_ctlRegistrationPayment_ctlPaymentPanel_txtCreditCardHolder</td>
 	<td>test</td>
 </tr>
 <tr>
 	<td>select</td>
-	<td>id=ctl00_ctl00_phContent_ctl13_ctlRegistrationPayment_ctlPaymentPanel_ddlCreditCardType_ddlLookupData</td>
+	<td>id=ctl00_ctl00_phContent_ctl14_ctlRegistrationPayment_ctlPaymentPanel_ddlCreditCardType_ddlLookupData</td>
 	<td>MasterCard</td>
 </tr>
 <tr>
 	<td>type</td>
-	<td>id=ctl00_ctl00_phContent_ctl13_ctlRegistrationPayment_ctlPaymentPanel_txtCreditCardNumber</td>
+	<td>id=ctl00_ctl00_phContent_ctl14_ctlRegistrationPayment_ctlPaymentPanel_txtCreditCardNumber</td>
 	<td>5105105105105100</td>
 </tr>
 <tr>
 	<td>select</td>
-	<td>id=ctl00_ctl00_phContent_ctl13_ctlRegistrationPayment_ctlPaymentPanel_ddlCCExpiryMonth</td>
+	<td>id=ctl00_ctl00_phContent_ctl14_ctlRegistrationPayment_ctlPaymentPanel_ddlCCExpiryMonth</td>
 	<td>4</td>
 </tr>
 <tr>
 	<td>select</td>
-	<td>id=ctl00_ctl00_phContent_ctl13_ctlRegistrationPayment_ctlPaymentPanel_ddlCCExpiryYear</td>
+	<td>id=ctl00_ctl00_phContent_ctl14_ctlRegistrationPayment_ctlPaymentPanel_ddlCCExpiryYear</td>
 	<td>2020</td>
 </tr>
 <tr>
 	<td>check</td>
-	<td>id=ctl00_ctl00_phContent_ctl13_ctlRegistrationPayment_ctlPaymentPanel_chkSendCopyToAnotherEmail</td>
+	<td>id=ctl00_ctl00_phContent_ctl14_ctlRegistrationPayment_ctlPaymentPanel_chkSendCopyToAnotherEmail</td>
 	<td></td>
 </tr>
 <tr>
 	<td>type</td>
-	<td>id=ctl00_ctl00_phContent_ctl13_ctlRegistrationPayment_ctlPaymentPanel_txtSendCopyToAnotherEmail</td>
+	<td>id=ctl00_ctl00_phContent_ctl14_ctlRegistrationPayment_ctlPaymentPanel_txtSendCopyToAnotherEmail</td>
 	<td>su.chavengpoj@gmail.com</td>
 </tr>
 <!--tr>
@@ -401,19 +670,9 @@
 	<td></td>
 </tr-->
 <tr>
-	<td>pause</td>
-	<td>4000</td>
-	<td>4000</td>
-</tr>
-<tr>
 	<td>clickAndWait</td>
-	<td>id=ctl00_ctl00_ctl37_ctlLoginView_btnLogout</td>
+	<td>link=Logout</td>
 	<td></td>
-</tr>
-<tr>
-	<td>pause</td>
-	<td>4000</td>
-	<td>4000</td>
 </tr>
 </tbody></table>
 </body>

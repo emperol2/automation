@@ -49,8 +49,23 @@
 </tr>
 <!--1. User & Job information: Fill the data: Your information-->
 <tr>
+	<td>storeHtmlSource</td>
+	<td>body</td>
+	<td></td>
+</tr>
+<tr>
+	<td>storeEval</td>
+	<td>storedVars['body'].match(/ctl[0-9]*_ctl[0-9]*_phContent_ctl[0-9]*/g)</td>
+	<td>number</td>
+</tr>
+<tr>
+	<td>storeEval</td>
+	<td>storedVars['number'][0]</td>
+	<td>numberID</td>
+</tr>
+<tr>
 	<td>select</td>
-	<td>id=ctl00_ctl00_phContent_ctl14_ctlYourInformation_ctlAddressEditorVisitor_ddlSalutation_ddlLookupData</td>
+	<td>id=${numberID}_ctlYourInformation_ctlAddressEditorVisitor_ddlSalutation_ddlLookupData</td>
 	<td>Mr.</td>
 </tr>
 <tr>
@@ -65,17 +80,17 @@
 </tr>
 <tr>
 	<td>type</td>
-	<td>id=ctl00_ctl00_phContent_ctl14_ctlYourInformation_ctlAddressEditorVisitor_txtFirstName</td>
+	<td>id=${numberID}_ctlYourInformation_ctlAddressEditorVisitor_txtFirstName</td>
 	<td>Test ${random1}</td>
 </tr>
 <tr>
 	<td>type</td>
-	<td>id=ctl00_ctl00_phContent_ctl14_ctlYourInformation_ctlAddressEditorVisitor_txtLastName</td>
+	<td>id=${numberID}_ctlYourInformation_ctlAddressEditorVisitor_txtLastName</td>
 	<td>Job</td>
 </tr>
 <tr>
 	<td>type</td>
-	<td>id=ctl00_ctl00_phContent_ctl14_ctlYourInformation_ctlAddressEditorVisitor_txtEmail</td>
+	<td>id=${numberID}_ctlYourInformation_ctlAddressEditorVisitor_txtEmail</td>
 	<td>suchada@openface.ca</td>
 </tr>
 <tr>
@@ -85,32 +100,32 @@
 </tr>
 <tr>
 	<td>type</td>
-	<td>id=ctl00_ctl00_phContent_ctl14_ctlYourInformation_ctlAddressEditorVisitor_txtTitle</td>
+	<td>id=${numberID}_ctlYourInformation_ctlAddressEditorVisitor_txtTitle</td>
 	<td>Job test title</td>
 </tr>
 <tr>
 	<td>type</td>
-	<td>id=ctl00_ctl00_phContent_ctl14_ctlYourInformation_ctlAddressEditorVisitor_txtEmployer</td>
+	<td>id=${numberID}_ctlYourInformation_ctlAddressEditorVisitor_txtEmployer</td>
 	<td>AUT</td>
 </tr>
 <tr>
 	<td>type</td>
-	<td>id=ctl00_ctl00_phContent_ctl14_ctlYourInformation_ctlAddressEditorVisitor_txtAddress1</td>
+	<td>id=${numberID}_ctlYourInformation_ctlAddressEditorVisitor_txtAddress1</td>
 	<td>Test</td>
 </tr>
 <tr>
 	<td>select</td>
-	<td>id=ctl00_ctl00_phContent_ctl14_ctlYourInformation_ctlAddressEditorVisitor_ddlCountry</td>
+	<td>id=${numberID}_ctlYourInformation_ctlAddressEditorVisitor_ddlCountry</td>
 	<td>Canada</td>
 </tr>
 <tr>
 	<td>type</td>
-	<td>id=ctl00_ctl00_phContent_ctl14_ctlYourInformation_ctlAddressEditorVisitor_txtCity</td>
+	<td>id=${numberID}_ctlYourInformation_ctlAddressEditorVisitor_txtCity</td>
 	<td>Test</td>
 </tr>
 <tr>
 	<td>select</td>
-	<td>id=ctl00_ctl00_phContent_ctl14_ctlYourInformation_ctlAddressEditorVisitor_ddlProvince</td>
+	<td>id=${numberID}_ctlYourInformation_ctlAddressEditorVisitor_ddlProvince</td>
 	<td>Manitoba</td>
 </tr>
 <tr>
@@ -120,12 +135,12 @@
 </tr>
 <tr>
 	<td>type</td>
-	<td>id=ctl00_ctl00_phContent_ctl14_ctlYourInformation_ctlAddressEditorVisitor_txtPostalCode</td>
+	<td>id=${numberID}_ctlYourInformation_ctlAddressEditorVisitor_txtPostalCode</td>
 	<td>j8k7y6</td>
 </tr>
 <tr>
 	<td>type</td>
-	<td>id=ctl00_ctl00_phContent_ctl14_ctlYourInformation_ctlAddressEditorVisitor_txtPhone</td>
+	<td>id=${numberID}_ctlYourInformation_ctlAddressEditorVisitor_txtPhone</td>
 	<td>(123) 7894-4561</td>
 </tr>
 <!--Fill the data: Job posting information-->
@@ -182,7 +197,7 @@
 <!--Edit description-->
 <tr>
 	<td>click</td>
-	<td>id=ctl00_ctl00_phContent_ctl14_ctlJobPostingInformation_rteDescription_btnEdit</td>
+	<td>id=${numberID}_ctlJobPostingInformation_rteDescription_btnEdit</td>
 	<td></td>
 </tr>
 <tr>
@@ -192,7 +207,7 @@
 </tr>
 <tr>
 	<td>assertText</td>
-	<td>css=div#ctl00_ctl00_phContent_ctl14_ctlJobPostingInformation_rteDescription_htmlEditor h2</td>
+	<td>css=div#${numberID}_ctlJobPostingInformation_rteDescription_htmlEditor h2</td>
 	<td>Description</td>
 </tr>
 <tr>
@@ -202,7 +217,7 @@
 </tr>
 <tr>
 	<td>type</td>
-	<td>css=tbody tr td#cke_contents_ctl00_ctl00_phContent_ctl14_ctlJobPostingInformation_rteDescription_CKEditor1.cke_contents textarea.cke_source</td>
+	<td>css=tbody tr td#cke_contents_${numberID}_ctlJobPostingInformation_rteDescription_CKEditor1.cke_contents textarea.cke_source</td>
 	<td>Test description</td>
 </tr>
 <tr>
@@ -223,7 +238,7 @@
 <!--Edit requirement-->
 <tr>
 	<td>click</td>
-	<td>id=ctl00_ctl00_phContent_ctl14_ctlJobPostingInformation_rteRequirements_btnEdit</td>
+	<td>id=${numberID}_ctlJobPostingInformation_rteRequirements_btnEdit</td>
 	<td></td>
 </tr>
 <tr>
@@ -233,7 +248,7 @@
 </tr>
 <tr>
 	<td>assertText</td>
-	<td>css=div#ctl00_ctl00_phContent_ctl14_ctlJobPostingInformation_rteRequirements_htmlEditor h2</td>
+	<td>css=div#${numberID}_ctlJobPostingInformation_rteRequirements_htmlEditor h2</td>
 	<td>Requirements</td>
 </tr>
 <tr>
@@ -243,7 +258,7 @@
 </tr>
 <tr>
 	<td>type</td>
-	<td>css=tbody tr td#cke_contents_ctl00_ctl00_phContent_ctl14_ctlJobPostingInformation_rteRequirements_CKEditor1.cke_contents textarea.cke_source</td>
+	<td>css=tbody tr td#cke_contents_${numberID}_ctlJobPostingInformation_rteRequirements_CKEditor1.cke_contents textarea.cke_source</td>
 	<td>Test requirement</td>
 </tr>
 <tr>
@@ -288,7 +303,7 @@
 </tr>
 <tr>
 	<td>select</td>
-	<td>id=ctl00_ctl00_phContent_ctl14_ctlJobPostingInformation_ddlSalutation_ddlLookupData</td>
+	<td>id=${numberID}_ctlJobPostingInformation_ddlSalutation_ddlLookupData</td>
 	<td>Ms.</td>
 </tr>
 <tr>
@@ -359,53 +374,68 @@
 	<td></td>
 </tr>
 <tr>
+	<td>storeHtmlSource</td>
+	<td>body</td>
+	<td></td>
+</tr>
+<tr>
+	<td>storeEval</td>
+	<td>storedVars['body'].match(/ctl[0-9]*_ctl[0-9]*_phContent_ctl[0-9]*/g)</td>
+	<td>number</td>
+</tr>
+<tr>
+	<td>storeEval</td>
+	<td>storedVars['number'][0]</td>
+	<td>numberID</td>
+</tr>
+<tr>
 	<td>select</td>
-	<td>id=ctl00_ctl00_phContent_ctl14_ctlJobPostingPayment_ctlPaymentPanel_ddlPaymentMethod_ddlLookupData</td>
+	<td>id=${numberID}_ctlJobPostingPayment_ctlPaymentPanel_ddlPaymentMethod_ddlLookupData</td>
 	<td>Pay online</td>
 </tr>
 <tr>
 	<td>type</td>
-	<td>id=ctl00_ctl00_phContent_ctl14_ctlJobPostingPayment_ctlPaymentPanel_txtCreditCardHolder</td>
+	<td>id=${numberID}_ctlJobPostingPayment_ctlPaymentPanel_txtCreditCardHolder</td>
 	<td>American Test</td>
 </tr>
 <tr>
 	<td>select</td>
-	<td>id=ctl00_ctl00_phContent_ctl14_ctlJobPostingPayment_ctlPaymentPanel_ddlCreditCardType_ddlLookupData</td>
+	<td>id=${numberID}_ctlJobPostingPayment_ctlPaymentPanel_ddlCreditCardType_ddlLookupData</td>
 	<td>American Express</td>
 </tr>
 <tr>
 	<td>type</td>
-	<td>id=ctl00_ctl00_phContent_ctl14_ctlJobPostingPayment_ctlPaymentPanel_txtCreditCardNumber</td>
+	<td>id=${numberID}_ctlJobPostingPayment_ctlPaymentPanel_txtCreditCardNumber</td>
 	<td>371449635398431</td>
 </tr>
 <tr>
 	<td>select</td>
-	<td>id=ctl00_ctl00_phContent_ctl14_ctlJobPostingPayment_ctlPaymentPanel_ddlCCExpiryMonth</td>
+	<td>id=${numberID}_ctlJobPostingPayment_ctlPaymentPanel_ddlCCExpiryMonth</td>
 	<td>4</td>
 </tr>
 <tr>
 	<td>select</td>
-	<td>id=ctl00_ctl00_phContent_ctl14_ctlJobPostingPayment_ctlPaymentPanel_ddlCCExpiryYear</td>
+	<td>id=${numberID}_ctlJobPostingPayment_ctlPaymentPanel_ddlCCExpiryYear</td>
 	<td>2020</td>
 </tr>
 <tr>
 	<td>click</td>
-	<td>id=ctl00_ctl00_phContent_ctl14_ctlJobPostingPayment_ctlPaymentPanel_rdoOtherAddress</td>
+	<td>id=${numberID}_ctlJobPostingPayment_ctlPaymentPanel_rdoOtherAddress</td>
 	<td></td>
 </tr>
 <tr>
 	<td>assertElementPresent</td>
-	<td>id=ctl00_ctl00_phContent_ctl14_ctlJobPostingPayment_ctlPaymentPanel_pnlBillingToOtherAddress</td>
+	<td>id=${numberID}_ctlJobPostingPayment_ctlPaymentPanel_pnlBillingToOtherAddress</td>
 	<td></td>
 </tr>
 <tr>
 	<td>type</td>
-	<td>id=ctl00_ctl00_phContent_ctl14_ctlJobPostingPayment_ctlPaymentPanel_txtAddress1</td>
+	<td>id=${numberID}_ctlJobPostingPayment_ctlPaymentPanel_txtAddress1</td>
 	<td>Test</td>
 </tr>
 <tr>
 	<td>select</td>
-	<td>id=ctl00_ctl00_phContent_ctl14_ctlJobPostingPayment_ctlPaymentPanel_ddlCountry</td>
+	<td>id=${numberID}_ctlJobPostingPayment_ctlPaymentPanel_ddlCountry</td>
 	<td>Canada</td>
 </tr>
 <tr>
@@ -415,37 +445,37 @@
 </tr>
 <tr>
 	<td>type</td>
-	<td>id=ctl00_ctl00_phContent_ctl14_ctlJobPostingPayment_ctlPaymentPanel_txtCity</td>
+	<td>id=${numberID}_ctlJobPostingPayment_ctlPaymentPanel_txtCity</td>
 	<td>Test</td>
 </tr>
 <tr>
 	<td>select</td>
-	<td>id=ctl00_ctl00_phContent_ctl14_ctlJobPostingPayment_ctlPaymentPanel_ddlProvince</td>
+	<td>id=${numberID}_ctlJobPostingPayment_ctlPaymentPanel_ddlProvince</td>
 	<td>Alberta</td>
 </tr>
 <tr>
 	<td>type</td>
-	<td>id=ctl00_ctl00_phContent_ctl14_ctlJobPostingPayment_ctlPaymentPanel_txtPostalCode</td>
+	<td>id=${numberID}_ctlJobPostingPayment_ctlPaymentPanel_txtPostalCode</td>
 	<td>y7u7y6</td>
 </tr>
 <tr>
 	<td>type</td>
-	<td>id=ctl00_ctl00_phContent_ctl14_ctlJobPostingPayment_ctlPaymentPanel_txtPhone</td>
+	<td>id=${numberID}_ctlJobPostingPayment_ctlPaymentPanel_txtPhone</td>
 	<td>(592) 1223-4556</td>
 </tr>
 <tr>
 	<td>type</td>
-	<td>id=ctl00_ctl00_phContent_ctl14_ctlJobPostingPayment_ctlPaymentPanel_txtCreditCardNumber</td>
+	<td>id=${numberID}_ctlJobPostingPayment_ctlPaymentPanel_txtCreditCardNumber</td>
 	<td>371449635398431</td>
 </tr>
 <tr>
 	<td>select</td>
-	<td>id=ctl00_ctl00_phContent_ctl14_ctlJobPostingPayment_ctlPaymentPanel_ddlCCExpiryMonth</td>
+	<td>id=${numberID}_ctlJobPostingPayment_ctlPaymentPanel_ddlCCExpiryMonth</td>
 	<td>4</td>
 </tr>
 <tr>
 	<td>select</td>
-	<td>id=ctl00_ctl00_phContent_ctl14_ctlJobPostingPayment_ctlPaymentPanel_ddlCCExpiryYear</td>
+	<td>id=${numberID}_ctlJobPostingPayment_ctlPaymentPanel_ddlCCExpiryYear</td>
 	<td>2020</td>
 </tr>
 <tr>
