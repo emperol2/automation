@@ -26,28 +26,18 @@
 	<td>3000</td>
 	<td>3000</td>
 </tr>
+<!--Verified link to Follow BK on Facebook-->
 <tr>
-	<td>clickAndWait</td>
+	<td>verifyElementPresent</td>
 	<td>css=div.image &gt; a &gt; img</td>
 	<td></td>
 </tr>
-<!--click at Kids-->
-<tr>
-	<td>clickAndWait</td>
-	<td>css=div.image &gt; a &gt; img</td>
-	<td></td>
-</tr>
-<tr>
-	<td>pause</td>
-	<td>3000</td>
-	<td>3000</td>
-</tr>
+<!--check about BK title-->
 <tr>
 	<td>clickAndWait</td>
 	<td>link=About BK®</td>
 	<td></td>
 </tr>
-<!--check about BK title-->
 <tr>
 	<td>assertTitle</td>
 	<td>About BK® | Company Information | BURGER KING®</td>
@@ -75,13 +65,13 @@
 </tr>
 <tr>
 	<td>clickAndWait</td>
-	<td>link=Testimonials</td>
+	<td>link=Real Estate and Site Information</td>
 	<td></td>
 </tr>
 <tr>
 	<td>assertText</td>
-	<td>xpath=//div[@id=&quot;testimonialTitle&quot;]</td>
-	<td>TESTIMONIALS</td>
+	<td>css=div.contentH1Title h1</td>
+	<td>Real Estate and Site Information</td>
 </tr>
 <tr>
 	<td>click</td>
