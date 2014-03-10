@@ -1,0 +1,7 @@
+@@ set 
+     Url        qa.healthnow.com/Pages/Patientregistration.aspx
+     size       1024x798
+
+Patient registration page on a desktop
+     http://${Url}     ${size}
+        check patientregis.spec --include "desktop"

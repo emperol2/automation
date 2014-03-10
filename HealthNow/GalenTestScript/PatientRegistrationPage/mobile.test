@@ -1,0 +1,7 @@
+@@ set 
+     Url        qa.healthnow.com/Pages/Patientregistration.aspx
+     size       320x600
+
+Patient registration page on a small mobile device
+     http://${Url}     ${size}
+        check patientregis.spec --include "mobile"
