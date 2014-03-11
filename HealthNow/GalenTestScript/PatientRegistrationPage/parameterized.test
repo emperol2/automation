@@ -1,0 +1,8 @@
+@@ parameterized
+     | deviceName    | tags      | size      |
+     | Mobile        | mobile    | 320x600   |
+     | Desktop       | desktop   | 1024x800  |
+
+Home page on ${deviceName} device
+     http://qa.healthnow.com/Pages/Patientregistration.aspx
+        check patientregis.spec --include "${tags}"
