@@ -1,0 +1,39 @@
+<html>
+    <head>
+        <title>Galen Report | \</title>
+        <link rel="stylesheet" type="text/css" href="galen-report.css"/>
+        <script src="jquery-1.10.2.min.js"></script>
+        <script src="galen-report.js"></script>
+    </head>
+    <body>
+        <script>$(function() {Galen.formatSuiteReport();});</script>
+        <h1>\</h1>
+        <div class="suite">
+            <h2 class="test">http://qa.healthnow.com 388x522</h2>
+            <div class="test">
+                <h2 class="page-action">check homepage.spec \ --url http://qa.healthnow.com --size 388x522 --htmlreport . </h2>
+                <div class="page-action" data-screenshot="report-2---screenshot-1.png">
+                </div>
+                <div class="global-error">
+                    <span>java.io.FileNotFoundException: \ (The system cannot find the path specified)</span>
+                    <ul>
+                        <li>at java.io.FileInputStream.open(FileInputStream.java:-2)</li>
+                        <li>at java.io.FileInputStream.&lt;init&gt;(FileInputStream.java:120)</li>
+                        <li>at net.mindengine.galen.specs.reader.page.PageSpecReader.read(PageSpecReader.java:65)</li>
+                        <li>at net.mindengine.galen.suite.actions.GalenPageActionCheck.execute(GalenPageActionCheck.java:55)</li>
+                        <li>at net.mindengine.galen.runner.GalenPageRunner.executeAction(GalenPageRunner.java:88)</li>
+                        <li>at net.mindengine.galen.runner.GalenPageRunner.run(GalenPageRunner.java:68)</li>
+                        <li>at net.mindengine.galen.runner.GalenSuiteRunner.runPageTest(GalenSuiteRunner.java:100)</li>
+                        <li>at net.mindengine.galen.runner.GalenSuiteRunner.runSuite(GalenSuiteRunner.java:67)</li>
+                        <li>at net.mindengine.galen.GalenMain.runSuitesInSingleThread(GalenMain.java:248)</li>
+                        <li>at net.mindengine.galen.GalenMain.runSuites(GalenMain.java:238)</li>
+                        <li>at net.mindengine.galen.GalenMain.performCheck(GalenMain.java:173)</li>
+                        <li>at net.mindengine.galen.GalenMain.execute(GalenMain.java:66)</li>
+                        <li>at net.mindengine.galen.GalenMain.main(GalenMain.java:192)</li>
+                    </ul>
+                    <a href="report-2---screenshot-2.png">Screenshot</a>
+                </div>
+            </div>
+        </div>
+    </body>
+</html>

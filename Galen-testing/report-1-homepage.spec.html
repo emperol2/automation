@@ -1,0 +1,159 @@
+<html>
+    <head>
+        <title>Galen Report | homepage.spec</title>
+        <link rel="stylesheet" type="text/css" href="galen-report.css"/>
+        <script src="jquery-1.10.2.min.js"></script>
+        <script src="galen-report.js"></script>
+    </head>
+    <body>
+        <script>$(function() {Galen.formatSuiteReport();});</script>
+        <h1>homepage.spec</h1>
+        <div class="suite">
+            <h2 class="test">http://qa.healthnow.com 388x522</h2>
+            <div class="test">
+                <h2 class="page-action">check homepage.spec --url http://qa.healthnow.com --size 388x522 --htmlreport . </h2>
+                <div class="page-action" data-screenshot="report-1-homepage.spec-screenshot-1.png">
+                    <h2 class="page-section">Section 1. Testing header</h2>
+                    <div class="page-section">
+<h3 class="object">header-top</h3>
+<div class="object" data-area="0,0,357,56" data-name="header-top">
+    <ul class="test-specs">
+            <li class="success">
+                <div class="description">
+                    <span>inside: screen 0px top</span>
+                </div>
+            </li>
+            <li class="success">
+                <div class="description">
+                    <span>width: 100% of screen/width</span>
+                </div>
+            </li>
+    </ul>
+</div>
+                    </div>
+                    <h2 class="page-section">Section 2. Testing hero text</h2>
+                    <div class="page-section">
+<h3 class="object">first-line</h3>
+<div class="object" data-area="35,70,287,69" data-name="first-line">
+    <ul class="test-specs">
+            <li class="fail">
+                <div class="description">
+                    <span>inside: home-hero &lt; 10 px top</span>
+                    <ul class="error-message">
+                        <li>&quot;first-line&quot; is 25px top but it should be less than 10px</li>
+                    </ul>
+                    <ul class="areas">
+                        <li data-area="35,70,287,69">first-line</li>
+                        <li data-area="0,45,357,161">home-hero</li>
+                    </ul>
+                </div>
+            </li>
+    </ul>
+</div>
+<h3 class="object">second-line</h3>
+<div class="object" data-area="35,149,287,42" data-name="second-line">
+    <ul class="test-specs">
+            <li class="fail">
+                <div class="description">
+                    <span>below: first-line &gt; 10 px top</span>
+                    <ul class="error-message">
+                        <li>&quot;second-line&quot; is 10px below &quot;first-line&quot; but it should be greater than 10px</li>
+                    </ul>
+                    <ul class="areas">
+                        <li data-area="35,149,287,42">second-line</li>
+                        <li data-area="35,70,287,69">first-line</li>
+                    </ul>
+                </div>
+            </li>
+    </ul>
+</div>
+                    </div>
+                    <h2 class="page-section">Section 3. Testing log-in form</h2>
+                    <div class="page-section">
+<h3 class="object">login-form</h3>
+<div class="object" data-area="0,206,357,226" data-name="login-form">
+    <ul class="test-specs">
+            <li class="success">
+                <div class="description">
+                    <span>below: home-hero &lt; 10 px top</span>
+                </div>
+            </li>
+    </ul>
+</div>
+                    </div>
+                    <h2 class="page-section">Section 4. Testing username and password field</h2>
+                    <div class="page-section">
+<h3 class="object">username-box</h3>
+<div class="object" data-area="35,251,287,34" data-name="username-box">
+    <ul class="test-specs">
+            <li class="success">
+                <div class="description">
+                    <span>inside: login-form &gt; 10 px top</span>
+                </div>
+            </li>
+    </ul>
+</div>
+<h3 class="object">password-box</h3>
+<div class="object" data-area="35,325,287,34" data-name="password-box">
+    <ul class="test-specs">
+            <li class="success">
+                <div class="description">
+                    <span>inside: login-form &gt; 10 px top</span>
+                </div>
+            </li>
+            <li class="success">
+                <div class="description">
+                    <span>below: login-form &lt; 10 px top</span>
+                </div>
+            </li>
+    </ul>
+</div>
+                    </div>
+                    <h2 class="page-section">Section 5. Testing button and footer</h2>
+                    <div class="page-section">
+<h3 class="object">buttons</h3>
+<div class="object" data-area="35,374,287,38" data-name="buttons">
+    <ul class="test-specs">
+            <li class="fail">
+                <div class="description">
+                    <span>below: login-form &gt; 10 px top</span>
+                    <ul class="error-message">
+                        <li>&quot;buttons&quot; is -58px below &quot;login-form&quot; but it should be greater than 10px</li>
+                    </ul>
+                    <ul class="areas">
+                        <li data-area="35,374,287,38">buttons</li>
+                        <li data-area="0,206,357,226">login-form</li>
+                    </ul>
+                </div>
+            </li>
+    </ul>
+</div>
+<h3 class="object">footer</h3>
+<div class="object" data-area="0,433,357,70" data-name="footer">
+    <ul class="test-specs">
+            <li class="success">
+                <div class="description">
+                    <span>below: buttons &gt; 10 px top</span>
+                </div>
+            </li>
+    </ul>
+</div>
+                    </div>
+                    <h2 class="page-section">Section 6. Testing footer text align center</h2>
+                    <div class="page-section">
+<h3 class="object">footer-text</h3>
+<div class="object" data-area="0,443,357,60" data-name="footer-text">
+    <ul class="test-specs">
+            <li class="success">
+                <div class="description">
+                    <span>centered horizontally inside: footer</span>
+                </div>
+            </li>
+    </ul>
+</div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </body>
+</html>
