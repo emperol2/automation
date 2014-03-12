@@ -1,3 +1,8 @@
-Home login page
-     http://qa.healthnow.com     320x600
+@@ parameterized
+     | deviceName   | tags      | size      |      
+     | Mobile       | mobile    | 320x600   |
+     | Tablet       | desktop   | 1200x800  |
+
+     http://qa.healthnow.com
         run homelogin.js
+        check profile.spec --include --include "${tags}"

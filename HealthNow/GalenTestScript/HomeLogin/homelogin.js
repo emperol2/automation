@@ -1,5 +1,5 @@
 // Include the GalenJs library
-load("galenjs.js");
+load("../galenjs.js");
 
 // Create a GalenJs instance from driver
 var $ = GalenJs.create(driver);
