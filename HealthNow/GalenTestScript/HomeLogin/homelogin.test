@@ -1,8 +1,9 @@
 @@ parameterized
-     | deviceName   | tags      | size      |      
-     | Mobile       | mobile    | 320x600   |
-     | Tablet       | desktop   | 1200x800  |
+    | deviceName   | tags      | size      |      
+    | Mobile       | mobile    | 320x600   |
+    | Tablet       | tablet   | 1200x800  |
 
-     http://qa.healthnow.com
+Profile on ${deviceName} device
+     http://qa.healthnow.com/ ${size}
         run homelogin.js
-        check profile.spec --include --include "${tags}"
+        check profile.spec --include "${tags}"

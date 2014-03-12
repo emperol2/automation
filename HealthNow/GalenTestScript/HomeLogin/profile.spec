@@ -10,8 +10,8 @@ logo-hntext-icon      id        divTagline
 @ tablet
 ------------------------------------------------------------
 navigation-top
-     width: 1039px
-     height: 51px
+     width: 1186px
+     height: 52px
 
 navigation-greenbar
      inside: navigation-top 0px top
@@ -20,23 +20,23 @@ navigation-header
      below: navigation-greenbar
 
 navbar-user-icon
-     inside: navigation-header 11px top
+     inside: navigation-header 12px top
      below: navigation-greenbar
 
 navbar-user-profile
-     width: 176px
+     width: 178px
      height: 41px
      below: navigation-greenbar
 
 logo-hntext-icon
      visible
-     inside: navigation-top 10px top
+     inside: navigation-top 15px top
 	 
 @ mobile
 ------------------------------------------------------------
 navigation-top
-     width: 1039px
-     height: 51px
+     width: 289px
+     height: 47px
 
 navigation-greenbar
      inside: navigation-top 0px top
@@ -45,13 +45,12 @@ navigation-header
      below: navigation-greenbar
 
 navbar-user-icon
-     absent
+     visible
+     width: 21px
+     height: 21px
 
 navbar-user-profile
-     visible
-     width: 176px
-     height: 41px
-     below: navigation-greenbar
+     absent
 
 logo-hntext-icon
      absent

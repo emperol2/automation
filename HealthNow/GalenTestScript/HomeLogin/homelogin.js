@@ -16,4 +16,5 @@ homeLogin.username.typeText("papajohn_jr");
 homeLogin.password.typeText("1981papajohn_jr");
 homeLogin.login.click();
 
-window.location = "http://qa.healthnow.com/pages/profile.aspx";
+driver.navigate().to("http://qa.healthnow.com/pages/profile.aspx");
+Thread.sleep(3000);
