@@ -10,7 +10,7 @@ logo-hntext-icon      id        divTagline
 @ tablet
 ------------------------------------------------------------
 navigation-top
-     width: 1039px
+     width: > 139px
      height: 51px
 
 navigation-greenbar

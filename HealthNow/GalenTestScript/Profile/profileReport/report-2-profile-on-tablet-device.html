@@ -14,8 +14,122 @@
                 <h2 class="page-action">        run profile.js</h2>
                 <div class="page-action">
                 </div>
-                <h2 class="page-action">        check profile.spec --include &quot;desktop&quot;</h2>
+                <h2 class="page-action">        check profile.spec --include &quot;tablet&quot;</h2>
                 <div class="page-action" data-screenshot="report-2-profile-on-tablet-device-screenshot-1.png">
+                    <h2 class="page-section">tablet</h2>
+                    <div class="page-section">
+<h3 class="object">navigation-top</h3>
+<div class="object" data-area="0,0,1186,52" data-name="navigation-top">
+    <ul class="test-specs">
+            <li class="success">
+                <div class="description">
+                    <span>width: &gt; 139px</span>
+                </div>
+            </li>
+            <li class="fail">
+                <div class="description">
+                    <span>height: 51px</span>
+                    <ul class="error-message">
+                        <li>&quot;navigation-top&quot; height is 52px instead of 51px</li>
+                    </ul>
+                    <ul class="areas">
+                        <li data-area="0,0,1186,52">navigation-top</li>
+                    </ul>
+                </div>
+            </li>
+    </ul>
+</div>
+<h3 class="object">navigation-greenbar</h3>
+<div class="object" data-area="0,0,1186,5" data-name="navigation-greenbar">
+    <ul class="test-specs">
+            <li class="success">
+                <div class="description">
+                    <span>inside: navigation-top 0px top</span>
+                </div>
+            </li>
+    </ul>
+</div>
+<h3 class="object">navigation-header</h3>
+<div class="object" data-area="108,5,970,46" data-name="navigation-header">
+    <ul class="test-specs">
+            <li class="success">
+                <div class="description">
+                    <span>below: navigation-greenbar</span>
+                </div>
+            </li>
+    </ul>
+</div>
+<h3 class="object">navbar-user-icon</h3>
+<div class="object" data-area="1047,17,21,21" data-name="navbar-user-icon">
+    <ul class="test-specs">
+            <li class="fail">
+                <div class="description">
+                    <span>inside: navigation-header 11px top</span>
+                    <ul class="error-message">
+                        <li>&quot;navbar-user-icon&quot; is 12px top instead of 11px</li>
+                    </ul>
+                    <ul class="areas">
+                        <li data-area="1047,17,21,21">navbar-user-icon</li>
+                        <li data-area="108,5,970,46">navigation-header</li>
+                    </ul>
+                </div>
+            </li>
+            <li class="success">
+                <div class="description">
+                    <span>below: navigation-greenbar</span>
+                </div>
+            </li>
+    </ul>
+</div>
+<h3 class="object">navbar-user-profile</h3>
+<div class="object" data-area="859,10,178,41" data-name="navbar-user-profile">
+    <ul class="test-specs">
+            <li class="fail">
+                <div class="description">
+                    <span>width: 176px</span>
+                    <ul class="error-message">
+                        <li>&quot;navbar-user-profile&quot; width is 178px instead of 176px</li>
+                    </ul>
+                    <ul class="areas">
+                        <li data-area="859,10,178,41">navbar-user-profile</li>
+                    </ul>
+                </div>
+            </li>
+            <li class="success">
+                <div class="description">
+                    <span>height: 41px</span>
+                </div>
+            </li>
+            <li class="success">
+                <div class="description">
+                    <span>below: navigation-greenbar</span>
+                </div>
+            </li>
+    </ul>
+</div>
+<h3 class="object">logo-hntext-icon</h3>
+<div class="object" data-area="154,15,162,32" data-name="logo-hntext-icon">
+    <ul class="test-specs">
+            <li class="success">
+                <div class="description">
+                    <span>visible</span>
+                </div>
+            </li>
+            <li class="fail">
+                <div class="description">
+                    <span>inside: navigation-top 10px top</span>
+                    <ul class="error-message">
+                        <li>&quot;logo-hntext-icon&quot; is 15px top instead of 10px</li>
+                    </ul>
+                    <ul class="areas">
+                        <li data-area="154,15,162,32">logo-hntext-icon</li>
+                        <li data-area="0,0,1186,52">navigation-top</li>
+                    </ul>
+                </div>
+            </li>
+    </ul>
+</div>
+                    </div>
                 </div>
             </div>
         </div>
