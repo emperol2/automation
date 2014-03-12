@@ -1,0 +1,9 @@
+@@ parameterized
+    | deviceName   | tags      | size      |      
+    | Mobile       | mobile    | 320x600   |
+    | Tablet       | desktop   | 1200x800  |
+
+Profile on ${deviceName} device
+     http://qa.healthnow.com/ ${size}
+        run profile.js
+        check profile.spec --include "${tags}"
