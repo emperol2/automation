@@ -12,11 +12,11 @@ var homeLogin = $.page({
 });
 
 // Perform login flow
-homeLogin.username.typeText("sam2014");
-homeLogin.password.typeText("papajohn");
+homeLogin.username.typeText("papajohn_jr");
+homeLogin.password.typeText("1981papajohn_jr");
 homeLogin.login.click();
 
-driver.navigate().to("http://my.healthnow.net/pages/profile.aspx");
+driver.navigate().to("http://qa.healthnow.com/pages/profile.aspx");
 Thread.sleep(3000);
 
 // Account Setting Page
@@ -26,5 +26,5 @@ var accountSetting = $.page({
 
 accountSetting.accountPatient.click();
 
-driver.navigate().to("http://my.healthnow.net/pages/AccountSetting.aspx");
+driver.navigate().to("http://qa.healthnow.com/pages/AccountSetting.aspx");
 Thread.sleep(5000);

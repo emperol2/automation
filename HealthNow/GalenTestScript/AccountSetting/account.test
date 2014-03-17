@@ -4,6 +4,6 @@
     | Tablet       | tablet   | 1200x800  |
 
 Profile on ${deviceName} device
-     http://my.healthnow.net/ ${size}
+     http://qa.healthnow.com/ ${size}
         run account.js
         check account.spec --include "${tags}"
