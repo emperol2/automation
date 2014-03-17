@@ -21,7 +21,7 @@ Thread.sleep(3000);
 
 // Health Team List Page
 var healthTeamList = $.page({
-    healthTeamImg: ".img-responsive"
+    healthTeamImg: ".btn-team-menu .img-responsive"
 });
 
 healthTeamList.healthTeamImg.click();
