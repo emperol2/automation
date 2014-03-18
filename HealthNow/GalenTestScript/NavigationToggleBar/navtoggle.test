@@ -1,0 +1,9 @@
+@@ parameterized
+    | deviceName   | tags      | size      |      
+    | Mobile       | mobile    | 320x600   |
+    | Tablet       | tablet    | 1200x800  |
+
+Navigation toggle bar on ${deviceName} device
+     http://qa.healthnow.com/ ${size}
+        run navtoggle.js
+        check navtoggle.spec --include "${tags}"
