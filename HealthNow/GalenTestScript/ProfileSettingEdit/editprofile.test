@@ -1,0 +1,9 @@
+@@ parameterized
+    | deviceName   | tags      | size      |      
+    | Mobile       | mobile    | 320x600   |
+    | Tablet       | tablet    | 1200x800  |
+
+Profile Setting Edit page on ${deviceName} device
+     http://qa.healthnow.com/ ${size}
+        run editprofile.js
+        check editprofile.spec --include "${tags}"
