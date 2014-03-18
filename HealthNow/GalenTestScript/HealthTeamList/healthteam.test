@@ -3,7 +3,7 @@
     | Mobile       | mobile    | 320x600   |
     | Tablet       | tablet   | 1200x800  |
 
-Profile on ${deviceName} device
+Health Team List page on ${deviceName} device
      http://qa.healthnow.com/ ${size}
         run healthteam.js
         check healthteam.spec --include "${tags}"

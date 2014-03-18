@@ -3,7 +3,7 @@
     | Mobile       | mobile    | 320x600   |
     | Tablet       | tablet    | 1200x800  |
 
-Profile on ${deviceName} device
+Update Location page on ${deviceName} device
      http://qa.healthnow.com/ ${size}
         run updatelocation.js
         check updatelocation.spec --include "${tags}"
