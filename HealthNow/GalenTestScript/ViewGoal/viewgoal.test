@@ -1,0 +1,9 @@
+@@ parameterized
+    | deviceName   | tags      | size      |      
+    | Mobile       | mobile    | 320x600   |
+    | Tablet       | tablet    | 1200x800  |
+
+View Issue page on ${deviceName} device
+     http://qa.healthnow.com/Pages/Login.aspx ${size}
+        run viewgoal.js
+        check viewgoal.spec --include "${tags}"
