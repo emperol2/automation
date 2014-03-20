@@ -1,0 +1,22 @@
+@@ table devices
+    | deviceName   | tags      | size      |      
+    | Mobile       | mobile    | 320x600   |
+    | Tablet       | tablet    | 1200x800  |
+
+@@ parameterized using devices
+Profile on ${deviceName} device
+     https://my.healthnow.net/Pages/Login.aspx ${size}
+        run homelogin.js
+        check homelogin.spec --include "${tags}"
+
+@@ parameterized using devices
+Health Team List page on ${deviceName} device
+     https://my.healthnow.net/Pages/Login.aspx ${size}
+        run healthteam.js
+        check healthteam.spec --include "${tags}"
+		
+@@ parameterized using devices
+View Issue page on ${deviceName} device
+     https://my.healthnow.net/Pages/Login.aspx ${size}
+        run viewissue.js
+        check viewissue.spec --include "${tags}"

@@ -1,0 +1,9 @@
+@@ parameterized
+    | deviceName   | tags      | size      |      
+    | Mobile       | mobile    | 320x600   |
+    | Tablet       | tablet   | 1200x800  |
+
+Health Team List page on ${deviceName} device
+     https://my.healthnow.net/Pages/Login.aspx ${size}
+        run healthteam.js
+        check healthteam.spec --include "${tags}"
