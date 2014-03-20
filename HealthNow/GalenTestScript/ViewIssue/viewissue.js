@@ -12,11 +12,11 @@ var homeLogin = $.page({
 });
 
 // Perform login flow
-homeLogin.username.typeText("papajohn_jr");
-homeLogin.password.typeText("1981papajohn_jr");
+homeLogin.username.typeText("sam2014");
+homeLogin.password.typeText("papajohn");
 homeLogin.login.click();
 
-driver.navigate().to("http://qa.healthnow.com/pages/profile.aspx");
+driver.navigate().to("https://my.healthnow.net/Pages/Profile.aspx");
 Thread.sleep(3000);
 
 // View Issue Page
@@ -26,5 +26,5 @@ var viewIssue = $.page({
 
 viewIssue.viewallIssue.click();
 
-driver.navigate().to("http://qa.healthnow.com/Pages/List/Issuelist.aspx");
+driver.navigate().to("https://my.healthnow.net/Pages/List/Issuelist.aspx");
 Thread.sleep(5000);
