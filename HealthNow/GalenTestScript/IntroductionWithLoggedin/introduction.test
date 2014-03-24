@@ -3,7 +3,7 @@
     | Mobile       | mobile    | 320x600   |
     | Tablet       | tablet    | 1200x800  |
 
-View Issue page on ${deviceName} device
+Introduction with Logged in page on ${deviceName} device
      http://qa.healthnow.com/Pages/Login.aspx ${size}
         run introduction.js
         check introduction.spec --include "${tags}"
