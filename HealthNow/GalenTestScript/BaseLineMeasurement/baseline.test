@@ -1,0 +1,9 @@
+@@ parameterized
+    | deviceName   | tags      | size      |      
+    | Mobile       | mobile    | 320x600   |
+    | Tablet       | tablet    | 1200x800  |
+
+Privacy with Logged in page on ${deviceName} device
+     http://qa.healthnow.com/Pages/Login.aspx ${size}
+        run baseline.js
+        check baseline.spec --include "${tags}"
