@@ -3,7 +3,7 @@
     | Mobile       | mobile    | 320x600   |
     | Tablet       | tablet    | 1200x800  |
 
-Privacy with Logged in page on ${deviceName} device
+Instruction page on ${deviceName} device
      http://qa.healthnow.com/Pages/Login.aspx ${size}
         run instruction.js
         check instruction.spec --include "${tags}"
