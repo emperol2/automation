@@ -4,6 +4,6 @@
     | Tablet       | tablet   | 1200x800  |
 
 Profile on ${deviceName} device
-     http://qa.healthnow.com/ ${size}
+     https://my.healthnow.net/Pages/Login.aspx ${size}
         run homelogin.js
-        check profile.spec --include "${tags}"
+        check homelogin.spec --include "${tags}"

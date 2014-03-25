@@ -12,9 +12,9 @@ var homeLogin = $.page({
 });
 
 // Perform login flow
-homeLogin.username.typeText("papajohn_jr");
-homeLogin.password.typeText("1981papajohn_jr");
+homeLogin.username.typeText("sam2014");
+homeLogin.password.typeText("papajohn");
 homeLogin.login.click();
 
-driver.navigate().to("http://qa.healthnow.com/pages/profile.aspx");
+driver.navigate().to("https://my.healthnow.net/Pages/profile.aspx");
 Thread.sleep(3000);
