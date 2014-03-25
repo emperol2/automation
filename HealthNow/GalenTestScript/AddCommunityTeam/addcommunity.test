@@ -3,7 +3,7 @@
     | Mobile       | mobile    | 320x600   |
     | Tablet       | tablet    | 1200x800  |
 
-Privacy with Logged in page on ${deviceName} device
+Health Team List with add community page on ${deviceName} device
      http://qa.healthnow.com/Pages/Login.aspx ${size}
         run addcommunity.js
         check addcommunity.spec --include "${tags}"
