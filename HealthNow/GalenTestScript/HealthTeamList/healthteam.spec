@@ -51,15 +51,15 @@ inpatient-team-form
      below: community-team-form 0px top
 
 add-community-team
-     near: community-header 121px right
+     near: community-header 104px right
 
 add-inpatient-team
-     near: inpatient-header 139px right
+     near: inpatient-header 122px right
 
 @ tablet
 ------------------------------------------------------------
 navigation-top
-     width: 1186px
+     width: 1169px
      height: 52px
 
 navigation-greenbar
@@ -74,7 +74,7 @@ navbar-user-icon
      below: navigation-greenbar
 
 navbar-user-profile
-     width: 175px
+     width: 200px
      height: 41px
      below: navigation-greenbar
 

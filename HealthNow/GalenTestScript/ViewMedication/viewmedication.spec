@@ -18,7 +18,7 @@ current-mdc-notes     css       #currentMedicationsPanel .pull-right .btn-note
 @ mobile
 ------------------------------------------------------------
 navigation-top
-     width: 289px
+     width: 306px
      height: 47px
 
 navigation-greenbar
@@ -77,7 +77,7 @@ navbar-user-icon
      below: navigation-greenbar
 
 navbar-user-profile
-     width: 175px
+     width: 200px
      height: 41px
      below: navigation-greenbar
 

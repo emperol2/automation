@@ -4,6 +4,6 @@
     | Tablet       | tablet    | 1200x800  |
 
 View Issue page on ${deviceName} device
-     https://my.healthnow.net/Pages/Login.aspx ${size}
+     http://qa.healthnow.com/Pages/Login.aspx ${size}
         run viewissue.js
         check viewissue.spec --include "${tags}"

@@ -50,13 +50,13 @@ login-head-inline
      near: login-edit-icon 119px left
 
 profile-image-set
-     inside: account-setting-form 206px top
+     inside: account-setting-form 186px top
      width: 65px
      height: 65px
 
 profile-info-set
-     inside: account-setting-form 273px top
-     near: profile-image-set 0px right
+     inside: account-setting-form 253px top
+     near: profile-image-set -65px right
 
 @ tablet
 ------------------------------------------------------------
@@ -96,5 +96,5 @@ profile-image-set
      height: 65px
 
 profile-info-set
-     inside: account-setting-form 210px top
+     inside: account-setting-form 190px top
      near: profile-image-set 14px right

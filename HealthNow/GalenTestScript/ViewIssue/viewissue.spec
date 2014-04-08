@@ -19,7 +19,7 @@ second-issues-notes   css       #secondaryActiveIssuePanel .pull-right .btn-note
 @ mobile
 ------------------------------------------------------------
 navigation-top
-     width: 289px
+     width: 306px
      height: 47px
 
 navigation-greenbar
@@ -49,7 +49,7 @@ user-info-header
      text contains: Sam Johnston
 
 user-info-image
-     inside: user-info-header 26px top
+     inside: user-info-header 12px top
      width: 38px
      height: 35px
 
@@ -61,11 +61,9 @@ top-three-issues
 
 second-active-issues
      aligned vertically left: top-three-issues
-     near: second-issues-add -300px right
 
 second-issues-notes
      aligned horizontally top: second-active-issues
-     near: second-issues-add -1px left
 @ tablet
 ------------------------------------------------------------
 navigation-top
@@ -84,7 +82,7 @@ navbar-user-icon
      below: navigation-greenbar
 
 navbar-user-profile
-     width: 178px
+     width: 200px
      height: 41px
      below: navigation-greenbar
 
@@ -116,8 +114,6 @@ top-three-issues
 
 second-active-issues
      aligned vertically left: top-three-issues
-     near: second-issues-add -901px right
 
 second-issues-notes
      aligned horizontally top: second-active-issues
-     near: second-issues-add -107px left

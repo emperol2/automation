@@ -87,7 +87,7 @@ navbar-user-icon
      below: navigation-greenbar
 
 navbar-user-profile
-     width: 211px
+     width: 200px
      height: 41px
      below: navigation-greenbar
 
