@@ -1,0 +1,15 @@
+*** Settings ***
+Resource          editLoginResource.txt
+
+*** Test Cases ***
+Login page
+    Open Browser To Login Page
+    Input Username    drjill2014
+    Input Password    1975drjill
+    Submit Credentials
+    Welcome Page Should Be Patient List
+	Go to Account Setting page as Provider
+	Go to Edit Profile Setting page
+	Capture Page Screenshot
+	Close Browser
+

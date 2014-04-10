@@ -1,0 +1,111 @@
+*** Settings ***
+Library       Selenium2Library
+
+*** Variables ***
+${URL}         		http://qa.healthnow.com
+${BROWSER}        	Firefox
+${DELAY}          	0
+${VALID USER}     	drjill2014
+${VALID PASSWORD}	1975drjill
+${LOGIN URL}      	${URL}/Pages/Login.aspx
+${PATIENT LIST}		${URL}/Pages/List/PatientList.aspx
+
+*** Keywords ***
+Open Browser To Login Page
+    Open Browser    ${LOGIN URL}    ${BROWSER}
+    Set Window Size	${320}	${800}
+	${width}	${height}=	Get Window Size
+	Should Be Equal	${width}	${320}
+	Should Be Equal	${height}	${800}
+    Set Selenium Speed    ${DELAY}
+    Login Page Should Be Open
+
+Login Page Should Be Open
+    Title Should Be    Login
+
+Go To Login Page
+    Go To    ${LOGIN URL}
+    Login Page Should Be Open
+	Set Selenium Speed    ${DELAY}
+
+Input Username
+    [Arguments]    ${username}
+    Input Text    txtUsername    ${username}
+
+Input Password
+    [Arguments]    ${password}
+    Input Text    txtPassword    ${password}
+
+Submit Credentials
+    Click Element    btnLogin
+	Set Selenium Speed    ${DELAY}
+	
+Welcome Page Should Be Patient List
+	Location Should Be    ${PATIENT LIST}
+	Title Should Be    Patient List
+	
+Select First Patient on Patient List page
+	Click Element	//div[@id='patientListPanel']/div/div/img
+	Set Selenium Speed    ${DELAY}
+	Title Should Be		Profile
+	Element Text Should Be	//div[@id='content-wrapper']/div/div/div[2]/div		Sam Marsxx Johnstonsxx
+
+Back to Patient List page
+	Click Element	//div[@id='content-wrapper']/div/div/div/a/img
+	Set Selenium Speed    ${DELAY}
+	Title Should Be		Patient List
+
+Select Second Patient on Patient List page
+	Click Element	//div[@id='patientListPanel']/div[2]/div/img
+	Set Selenium Speed    ${DELAY}
+	Title Should Be		Profile
+	Element Text Should Be	//div[@id='content-wrapper']/div/div/div[2]/div		Mr. QA test Openface1
+
+Introduction page
+	Click Element				lnkQuiz
+	Set Selenium Speed    		${DELAY}
+	Title Should Be				Introduction
+	Page Should Contain			What happens when patients and families are given the opportunity to chart their progress along side the medical team?
+	Click Element				btnNext
+	Set Selenium Speed    		${DELAY}
+
+Privacy page
+	Title Should Be			Privacy and Security
+	Page Should Contain		If you wish to share your answers only with the study team, place the carbon copies
+	Element Text Should Be	lblTopHeader		Dr. Jill Crosby
+	Click Element			btnNext
+	Set Selenium Speed    	${DELAY}	
+	
+Baseline Measurement page
+	Title Should Be			Baseline Measurement
+	Page Should Contain		For each of the questions below, using a scale of 0 (poor) to 10 (perfect), circle the number that best matches YOUR opinion.
+	Click Element			btnNext
+	Set Selenium Speed    	${DELAY}
+	
+Instructions page
+	Title Should Be			Instructions
+	Page Should Contain		We are conducting a study to answer this question. Thank you for accepting our invitation to participate
+	Click Element			btnNext
+	Set Selenium Speed    	${DELAY}	
+	
+Exercises page
+	Title Should Be			Health Now Exercises
+	Page Should Contain		This series of exercises are being studied to determine the effect of improving communition and team work between you and your care team.
+	Element Should Be Visible	//div[@id='content-wrapper']/div/div/div[2]/div/div
+	Element Should Contain		//div[@id='content-wrapper']/div/div/div[2]/div/div			Getting to Know You
+	Element Should Be Visible	//div[@id='content-wrapper']/div/div/div[2]/div/div[2]
+	Element Should Contain		//div[@id='content-wrapper']/div/div/div[2]/div/div[2]		Participating In Your Treatment
+	
+Getting to Know You
+	Wait Until Element Is Visible	lnkPartId-1
+	Click Element		lnkPartId-1
+	Location Should Contain		ExerciseList
+	Click Link		Me & My Circle of Care
+	Click Link		Introduce Yourself
+
+Do Quiz Part-1
+	Set Selenium Speed    		${DELAY}
+	Wait Until Element Is Visible	css=div#q-nav
+	Page Should Contain Element		css=div#q-nav
+	Page Should Contain Textfield	css=input.hn-textbox
+	Page Should Contain Link		Change Source

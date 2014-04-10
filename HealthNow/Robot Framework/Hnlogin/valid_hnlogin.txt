@@ -1,0 +1,11 @@
+*** Settings ***
+Resource          loginResource.txt
+
+*** Test Cases ***
+Valid Login
+    Open Browser To Login Page
+    Input Username    papajohn_jr
+    Input Password    1981papajohn_jr
+    Submit Credentials
+    Welcome Page Should Be Profile
+    Close Browser

@@ -1,0 +1,89 @@
+*** Settings ***
+Library       Selenium2Library
+
+*** Variables ***
+${URL}         		http://qa.healthnow.com
+${BROWSER}        	Firefox
+${DELAY}          	0
+${VALID USER}     	papajohn_jr
+${VALID PASSWORD}	1981papajohn_jr
+${LOGIN URL}      	${URL}/Pages/Login.aspx
+${PROFILE URL}    	${URL}/Pages/Profile.aspx
+${ACCOUNT URL}		${URL}/Pages/AccountSetting.aspx
+${PATIENT LIST}		${URL}/Pages/List/PatientList.aspx
+
+*** Keywords ***
+Open Browser To Login Page
+    Open Browser    ${LOGIN URL}    ${BROWSER}
+    Set Window Size	${320}	${800}
+	${width}	${height}=	Get Window Size
+	Should Be Equal	${width}	${320}
+	Should Be Equal	${height}	${800}
+    Set Selenium Speed    ${DELAY}
+    Login Page Should Be Open
+
+Login Page Should Be Open
+    Title Should Be    Login
+
+Go To Login Page
+    Go To    ${LOGIN URL}
+    Login Page Should Be Open
+	Set Selenium Speed    ${DELAY}
+
+Input Username
+    [Arguments]    ${username}
+    Input Text    txtUsername    ${username}
+
+Input Password
+    [Arguments]    ${password}
+    Input Text    txtPassword    ${password}
+
+Submit Credentials
+    Click Element    btnLogin
+	Set Selenium Speed    ${DELAY}
+
+Welcome Page Should Be Profile
+    Location Should Be    ${PROFILE URL}
+    Title Should Be    Profile
+	
+Welcome Page Should Be Patient List
+	Location Should Be    ${PATIENT LIST}
+	Title Should Be    Patient List
+
+Go to Account Setting page as Patient
+	Click Link	/Pages/AccountSetting.aspx
+	Title Should Be		Account Settings
+	Set Selenium Speed    ${DELAY}
+	
+Go to Account Setting page as Provider
+	Click Image		btn-menu
+	Click Element	lnkAccountSetting
+	Title Should Be		Account Settings
+	Set Selenium Speed    ${DELAY}
+	
+Go to Edit Login Setting page
+	Click Element	btnEditLogin
+	Title Should Be		Edit Login Settings
+	Set Selenium Speed    ${DELAY}
+	
+Go to Edit Profile Setting page
+	Click Element		btnEditProfile
+	Title Should be		Patient Registration
+	
+Enter Current Password
+	[Arguments]		${currentPassword}
+	Input Text		txtCurrentPassword		${currentPassword}
+	
+Enter New Password
+	[Arguments]		${newPassword}
+	Input Text		txtNewPassword			${newPassword}
+	
+Enter Re New Password
+	[Arguments]		${reNewPassword}
+	Input Text		txtRetypePassword		${reNewPassword}
+
+Submit Save New Password
+	Click Element	btnSave
+	
+Back to Account Setting
+	Title Should Be		Account Settings

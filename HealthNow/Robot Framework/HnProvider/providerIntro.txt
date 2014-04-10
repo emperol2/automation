@@ -1,0 +1,20 @@
+*** Settings ***
+Resource          providerSource.txt
+
+*** Test Cases ***
+Login page
+    Open Browser To Login Page
+    Input Username    drjill2014
+    Input Password    1975drjill
+    Submit Credentials
+	Welcome Page Should Be Patient List
+Go to Exercise page
+	Select First Patient on Patient List page
+	Introduction page
+	Privacy page
+	Baseline Measurement page
+	Instructions page
+	Exercises page
+Exercise lists
+	Getting to Know You
+	Do Quiz Part-1

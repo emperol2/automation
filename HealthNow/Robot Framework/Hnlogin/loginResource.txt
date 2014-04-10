@@ -1,0 +1,43 @@
+*** Settings ***
+Library       Selenium2Library
+
+*** Variables ***
+${URL}         		http://qa.healthnow.com
+${BROWSER}        	Firefox
+${DELAY}          	0
+${VALID USER}     	papajohn_jr
+${VALID PASSWORD}	1981papajohn_jr
+${LOGIN URL}      	${URL}/Pages/Login.aspx
+${PROFILE URL}    	${URL}/Pages/Profile.aspx
+
+*** Keywords ***
+Open Browser To Login Page
+    Open Browser    ${LOGIN URL}    ${BROWSER}
+    Set Window Size	${320}	${800}
+	${width}	${height}=	Get Window Size
+	Should Be Equal	${width}	${320}
+	Should Be Equal	${height}	${800}
+    Set Selenium Speed    ${DELAY}
+    Login Page Should Be Open
+
+Login Page Should Be Open
+    Title Should Be    Login
+
+Go To Login Page
+    Go To    ${LOGIN URL}
+    Login Page Should Be Open
+
+Input Username
+    [Arguments]    ${username}
+    Input Text    txtUsername    ${username}
+
+Input Password
+    [Arguments]    ${password}
+    Input Text    txtPassword    ${password}
+
+Submit Credentials
+    Click Element    btnLogin
+
+Welcome Page Should Be Profile
+    Location Should Be    ${PROFILE URL}
+    Title Should Be    Profile
