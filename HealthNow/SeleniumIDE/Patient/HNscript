@@ -1,0 +1,26 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en" lang="en">
+<head>
+  <meta content="text/html; charset=UTF-8" http-equiv="content-type" />
+  <title>Test Suite</title>
+</head>
+<body>
+<table id="suiteTable" cellpadding="1" cellspacing="1" border="1" class="selenium"><tbody>
+<tr><td><b>Test Suite</b></td></tr>
+<tr><td><a href="openHnSite.html">openHnSite</a></td></tr>
+<tr><td><a href="hnLogin.html">hnLogin</a></td></tr>
+<tr><td><a href="hnProfile.html">hnProfile</a></td></tr>
+<tr><td><a href="hnAccountSetting.html">hnAccountSetting</a></td></tr>
+<tr><td><a href="hnHealthTeamList.html">hnHealthTeamList</a></td></tr>
+<tr><td><a href="hnIntroduction.html">hnIntroduction</a></td></tr>
+<tr><td><a href="hnPrivacy.html">hnPrivacy</a></td></tr>
+<tr><td><a href="hnBaseline.html">hnBaseline</a></td></tr>
+<tr><td><a href="hnInstruction.html">hnInstruction</a></td></tr>
+<tr><td><a href="hnExercises.html">hnExercises</a></td></tr>
+<tr><td><a href="hnEditLoginSetting.html">hnEditLoginSetting</a></td></tr>
+<tr><td><a href="hnEditProfileSetting.html">hnEditProfileSetting</a></td></tr>
+<tr><td><a href="hnEditUpdateLocation.html">hnEditUpdateLocation</a></td></tr>
+</tbody></table>
+</body>
+</html>

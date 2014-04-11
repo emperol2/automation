@@ -1,0 +1,533 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en" lang="en">
+<head profile="http://selenium-ide.openqa.org/profiles/test-case">
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+<link rel="selenium.base" href="http://qa.healthnow.com/" />
+<title>hnEditLoginSetting</title>
+</head>
+<body>
+<table cellpadding="1" cellspacing="1" border="1">
+<thead>
+<tr><td rowspan="1" colspan="3">hnEditLoginSetting</td></tr>
+</thead><tbody>
+<tr>
+	<td>open</td>
+	<td>${hnDevSite}</td>
+	<td></td>
+</tr>
+<tr>
+	<td>type</td>
+	<td>id=txtUsername</td>
+	<td>papajohn_jr</td>
+</tr>
+<tr>
+	<td>type</td>
+	<td>id=txtPassword</td>
+	<td>1981papajohn_jr</td>
+</tr>
+<tr>
+	<td>clickAndWait</td>
+	<td>id=btnLogin</td>
+	<td></td>
+</tr>
+<tr>
+	<td>waitForTitle</td>
+	<td>Profile</td>
+	<td></td>
+</tr>
+<tr>
+	<td>assertTitle</td>
+	<td>Profile</td>
+	<td></td>
+</tr>
+<!--Go to account setting page-->
+<tr>
+	<td>click</td>
+	<td>css=div#top_navigation_header span.user-icon img#btn-menu</td>
+	<td></td>
+</tr>
+<tr>
+	<td>clickAndWait</td>
+	<td>id=lnkAccountSetting</td>
+	<td></td>
+</tr>
+<tr>
+	<td>assertTitle</td>
+	<td>Account Settings</td>
+	<td></td>
+</tr>
+<!--Go to edit login setting page-->
+<tr>
+	<td>clickAndWait</td>
+	<td>id=btnEditLogin</td>
+	<td></td>
+</tr>
+<tr>
+	<td>assertTitle</td>
+	<td>Edit Login Settings</td>
+	<td></td>
+</tr>
+<!--Edit login - invalid - wrong new password(7)-->
+<tr>
+	<td>type</td>
+	<td>id=txtCurrentPassword</td>
+	<td>1981papajohn_jr</td>
+</tr>
+<tr>
+	<td>type</td>
+	<td>id=txtNewPassword</td>
+	<td>test123</td>
+</tr>
+<tr>
+	<td>assertVisible</td>
+	<td>id=phContent_cphContent_RegularExpressionValidator2</td>
+	<td></td>
+</tr>
+<tr>
+	<td>storeText</td>
+	<td>id=phContent_cphContent_RegularExpressionValidator2</td>
+	<td>errorNewPassword</td>
+</tr>
+<tr>
+	<td>echo</td>
+	<td>${errorNewPassword}</td>
+	<td></td>
+</tr>
+<tr>
+	<td>assertVisible</td>
+	<td>id=phContent_cphContent_RequiredFieldValidator3</td>
+	<td></td>
+</tr>
+<tr>
+	<td>storeText</td>
+	<td>id=phContent_cphContent_RequiredFieldValidator3</td>
+	<td>errorReTypeNewPassword</td>
+</tr>
+<tr>
+	<td>echo</td>
+	<td>${errorReTypeNewPassword}</td>
+	<td></td>
+</tr>
+<tr>
+	<td>type</td>
+	<td>id=txtRetypePassword</td>
+	<td>test123</td>
+</tr>
+<tr>
+	<td>assertNotVisible</td>
+	<td>id=phContent_cphContent_RequiredFieldValidator3</td>
+	<td></td>
+</tr>
+<tr>
+	<td>click</td>
+	<td>id=btnSave</td>
+	<td></td>
+</tr>
+<!--Edit login - valid - new password(only number)-->
+<tr>
+	<td>type</td>
+	<td>id=txtCurrentPassword</td>
+	<td>1981papajohn_jr</td>
+</tr>
+<tr>
+	<td>store</td>
+	<td>12345678</td>
+	<td>onlyNumber</td>
+</tr>
+<tr>
+	<td>type</td>
+	<td>id=txtNewPassword</td>
+	<td>${onlyNumber}</td>
+</tr>
+<tr>
+	<td>assertNotVisible</td>
+	<td>id=phContent_cphContent_RegularExpressionValidator2</td>
+	<td></td>
+</tr>
+<tr>
+	<td>assertVisible</td>
+	<td>id=phContent_cphContent_RequiredFieldValidator3</td>
+	<td></td>
+</tr>
+<tr>
+	<td>type</td>
+	<td>id=txtRetypePassword</td>
+	<td>${onlyNumber}</td>
+</tr>
+<tr>
+	<td>assertNotVisible</td>
+	<td>id=phContent_cphContent_RequiredFieldValidator3</td>
+	<td></td>
+</tr>
+<tr>
+	<td>clickAndWait</td>
+	<td>id=btnSave</td>
+	<td></td>
+</tr>
+<tr>
+	<td>clickAndWait</td>
+	<td>id=btnEditLogin</td>
+	<td></td>
+</tr>
+<!--Edit login - invalid - new password(only text)-->
+<tr>
+	<td>type</td>
+	<td>id=txtCurrentPassword</td>
+	<td>${onlyNumber}</td>
+</tr>
+<tr>
+	<td>echo</td>
+	<td>${onlyNumber}</td>
+	<td></td>
+</tr>
+<tr>
+	<td>type</td>
+	<td>id=txtNewPassword</td>
+	<td>testtest</td>
+</tr>
+<tr>
+	<td>assertVisible</td>
+	<td>id=phContent_cphContent_RegularExpressionValidator2</td>
+	<td></td>
+</tr>
+<tr>
+	<td>storeText</td>
+	<td>id=phContent_cphContent_RegularExpressionValidator2</td>
+	<td>errorNewPassword</td>
+</tr>
+<tr>
+	<td>echo</td>
+	<td>${errorNewPassword}</td>
+	<td></td>
+</tr>
+<tr>
+	<td>assertVisible</td>
+	<td>id=phContent_cphContent_RequiredFieldValidator3</td>
+	<td></td>
+</tr>
+<tr>
+	<td>type</td>
+	<td>id=txtRetypePassword</td>
+	<td>testtest</td>
+</tr>
+<tr>
+	<td>assertNotVisible</td>
+	<td>id=phContent_cphContent_RequiredFieldValidator3</td>
+	<td></td>
+</tr>
+<tr>
+	<td>click</td>
+	<td>id=btnSave</td>
+	<td></td>
+</tr>
+<!--Edit login - valid - new password(num=7,text=1)-->
+<tr>
+	<td>type</td>
+	<td>id=txtCurrentPassword</td>
+	<td>${onlyNumber}</td>
+</tr>
+<tr>
+	<td>echo</td>
+	<td>${onlyNumber}</td>
+	<td></td>
+</tr>
+<tr>
+	<td>store</td>
+	<td>1234567T</td>
+	<td>numText</td>
+</tr>
+<tr>
+	<td>type</td>
+	<td>id=txtNewPassword</td>
+	<td>${numText}</td>
+</tr>
+<tr>
+	<td>assertNotVisible</td>
+	<td>id=phContent_cphContent_RegularExpressionValidator2</td>
+	<td></td>
+</tr>
+<tr>
+	<td>assertVisible</td>
+	<td>id=phContent_cphContent_RequiredFieldValidator3</td>
+	<td></td>
+</tr>
+<tr>
+	<td>type</td>
+	<td>id=txtRetypePassword</td>
+	<td>${numText}</td>
+</tr>
+<tr>
+	<td>assertNotVisible</td>
+	<td>id=phContent_cphContent_RequiredFieldValidator3</td>
+	<td></td>
+</tr>
+<tr>
+	<td>clickAndWait</td>
+	<td>id=btnSave</td>
+	<td></td>
+</tr>
+<tr>
+	<td>clickAndWait</td>
+	<td>id=btnEditLogin</td>
+	<td></td>
+</tr>
+<!--Edit login - valid - new password(num=1,text=7)-->
+<tr>
+	<td>type</td>
+	<td>id=txtCurrentPassword</td>
+	<td>${numText}</td>
+</tr>
+<tr>
+	<td>echo</td>
+	<td>${numText}</td>
+	<td></td>
+</tr>
+<tr>
+	<td>store</td>
+	<td>testing1</td>
+	<td>TextNum</td>
+</tr>
+<tr>
+	<td>type</td>
+	<td>id=txtNewPassword</td>
+	<td>${TextNum}</td>
+</tr>
+<tr>
+	<td>assertNotVisible</td>
+	<td>id=phContent_cphContent_RegularExpressionValidator2</td>
+	<td></td>
+</tr>
+<tr>
+	<td>assertVisible</td>
+	<td>id=phContent_cphContent_RequiredFieldValidator3</td>
+	<td></td>
+</tr>
+<tr>
+	<td>type</td>
+	<td>id=txtRetypePassword</td>
+	<td>${TextNum}</td>
+</tr>
+<tr>
+	<td>assertNotVisible</td>
+	<td>id=phContent_cphContent_RequiredFieldValidator3</td>
+	<td></td>
+</tr>
+<tr>
+	<td>clickAndWait</td>
+	<td>id=btnSave</td>
+	<td></td>
+</tr>
+<tr>
+	<td>clickAndWait</td>
+	<td>id=btnEditLogin</td>
+	<td></td>
+</tr>
+<!--Edit login - valid - new password(num=3,text=4,![8])-->
+<tr>
+	<td>type</td>
+	<td>id=txtCurrentPassword</td>
+	<td>${TextNum}</td>
+</tr>
+<tr>
+	<td>echo</td>
+	<td>${TextNum}</td>
+	<td></td>
+</tr>
+<tr>
+	<td>store</td>
+	<td>123test!</td>
+	<td>mixCharacter</td>
+</tr>
+<tr>
+	<td>type</td>
+	<td>id=txtNewPassword</td>
+	<td>${mixCharacter}</td>
+</tr>
+<tr>
+	<td>assertNotVisible</td>
+	<td>id=phContent_cphContent_RegularExpressionValidator2</td>
+	<td></td>
+</tr>
+<tr>
+	<td>assertVisible</td>
+	<td>id=phContent_cphContent_RequiredFieldValidator3</td>
+	<td></td>
+</tr>
+<tr>
+	<td>type</td>
+	<td>id=txtRetypePassword</td>
+	<td>${mixCharacter}</td>
+</tr>
+<tr>
+	<td>assertNotVisible</td>
+	<td>id=phContent_cphContent_RequiredFieldValidator3</td>
+	<td></td>
+</tr>
+<tr>
+	<td>clickAndWait</td>
+	<td>id=btnSave</td>
+	<td></td>
+</tr>
+<tr>
+	<td>clickAndWait</td>
+	<td>id=btnEditLogin</td>
+	<td></td>
+</tr>
+<!--Edit login - valid - new password(num=4,text=4,!@[10])-->
+<tr>
+	<td>type</td>
+	<td>id=txtCurrentPassword</td>
+	<td>${mixCharacter}</td>
+</tr>
+<tr>
+	<td>echo</td>
+	<td>${mixCharacter}</td>
+	<td></td>
+</tr>
+<tr>
+	<td>store</td>
+	<td>test1234!@</td>
+	<td>mixCharacterTwo</td>
+</tr>
+<tr>
+	<td>type</td>
+	<td>id=txtNewPassword</td>
+	<td>${mixCharacterTwo}</td>
+</tr>
+<tr>
+	<td>assertNotVisible</td>
+	<td>id=phContent_cphContent_RegularExpressionValidator2</td>
+	<td></td>
+</tr>
+<tr>
+	<td>assertVisible</td>
+	<td>id=phContent_cphContent_RequiredFieldValidator3</td>
+	<td></td>
+</tr>
+<tr>
+	<td>type</td>
+	<td>id=txtRetypePassword</td>
+	<td>${mixCharacterTwo}</td>
+</tr>
+<tr>
+	<td>assertNotVisible</td>
+	<td>id=phContent_cphContent_RequiredFieldValidator3</td>
+	<td></td>
+</tr>
+<tr>
+	<td>clickAndWait</td>
+	<td>id=btnSave</td>
+	<td></td>
+</tr>
+<tr>
+	<td>clickAndWait</td>
+	<td>id=btnEditLogin</td>
+	<td></td>
+</tr>
+<!--Edit login - invalid - mismatch password (new and re-type)-->
+<tr>
+	<td>type</td>
+	<td>id=txtCurrentPassword</td>
+	<td>${mixCharacterTwo}</td>
+</tr>
+<tr>
+	<td>echo</td>
+	<td>${mixCharacterTwo}</td>
+	<td></td>
+</tr>
+<tr>
+	<td>type</td>
+	<td>id=txtNewPassword</td>
+	<td>testtest@</td>
+</tr>
+<tr>
+	<td>assertVisible</td>
+	<td>id=phContent_cphContent_RegularExpressionValidator2</td>
+	<td></td>
+</tr>
+<tr>
+	<td>assertVisible</td>
+	<td>id=phContent_cphContent_RequiredFieldValidator3</td>
+	<td></td>
+</tr>
+<tr>
+	<td>type</td>
+	<td>id=txtRetypePassword</td>
+	<td>testtest@1</td>
+</tr>
+<tr>
+	<td>assertVisible</td>
+	<td>id=phContent_cphContent_RequiredFieldValidator3</td>
+	<td></td>
+</tr>
+<tr>
+	<td>click</td>
+	<td>id=btnSave</td>
+	<td></td>
+</tr>
+<!--Edit login - valid - back to old password (1981papajohn_jr)-->
+<tr>
+	<td>type</td>
+	<td>id=txtCurrentPassword</td>
+	<td>${mixCharacterTwo}</td>
+</tr>
+<tr>
+	<td>echo</td>
+	<td>${TextNum}</td>
+	<td></td>
+</tr>
+<tr>
+	<td>type</td>
+	<td>id=txtNewPassword</td>
+	<td>1981papajohn_jr</td>
+</tr>
+<tr>
+	<td>assertNotVisible</td>
+	<td>id=phContent_cphContent_RegularExpressionValidator2</td>
+	<td></td>
+</tr>
+<tr>
+	<td>assertVisible</td>
+	<td>id=phContent_cphContent_RequiredFieldValidator3</td>
+	<td></td>
+</tr>
+<tr>
+	<td>type</td>
+	<td>id=txtRetypePassword</td>
+	<td>1981papajohn_jr</td>
+</tr>
+<tr>
+	<td>assertNotVisible</td>
+	<td>id=phContent_cphContent_RequiredFieldValidator3</td>
+	<td></td>
+</tr>
+<tr>
+	<td>clickAndWait</td>
+	<td>id=btnSave</td>
+	<td></td>
+</tr>
+<tr>
+	<td>clickAndWait</td>
+	<td>id=btnEditLogin</td>
+	<td></td>
+</tr>
+<tr>
+	<td>assertTitle</td>
+	<td>Edit Login Settings</td>
+	<td></td>
+</tr>
+<tr>
+	<td>click</td>
+	<td>id=btn-menu</td>
+	<td></td>
+</tr>
+<tr>
+	<td>clickAndWait</td>
+	<td>id=lnkLogout</td>
+	<td></td>
+</tr>
+
+</tbody></table>
+</body>
+</html>
