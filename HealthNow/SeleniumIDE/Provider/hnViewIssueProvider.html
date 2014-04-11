@@ -1,0 +1,199 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en" lang="en">
+<head profile="http://selenium-ide.openqa.org/profiles/test-case">
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+<link rel="selenium.base" href="http://qa.healthnow.com/" />
+<title>hnViewIssueProvider</title>
+</head>
+<body>
+<table cellpadding="1" cellspacing="1" border="1">
+<thead>
+<tr><td rowspan="1" colspan="3">hnViewIssueProvider</td></tr>
+</thead><tbody>
+<tr>
+	<td>open</td>
+	<td>${hnDevSite}</td>
+	<td></td>
+</tr>
+<tr>
+	<td>type</td>
+	<td>id=txtUsername</td>
+	<td>drjill2014</td>
+</tr>
+<tr>
+	<td>type</td>
+	<td>id=txtPassword</td>
+	<td>1975drjill</td>
+</tr>
+<tr>
+	<td>clickAndWait</td>
+	<td>id=btnLogin</td>
+	<td></td>
+</tr>
+<!--Patient List page-->
+<tr>
+	<td>assertTitle</td>
+	<td>Patient List</td>
+	<td></td>
+</tr>
+<tr>
+	<td>clickAndWait</td>
+	<td>xpath=/html/body/form/div[2]/div[2]/div/div/div[2]/div/div/img</td>
+	<td></td>
+</tr>
+<tr>
+	<td>clickAndWait</td>
+	<td>css=div.pull-right a.btn-viewall</td>
+	<td></td>
+</tr>
+<!--Issue List page-->
+<tr>
+	<td>assertTitle</td>
+	<td>Issue List</td>
+	<td></td>
+</tr>
+<tr>
+	<td>assertVisible</td>
+	<td>id=top3IssuesPanel</td>
+	<td></td>
+</tr>
+<tr>
+	<td>assertVisible</td>
+	<td>id=secondaryActiveIssuePanel</td>
+	<td></td>
+</tr>
+<tr>
+	<td>assertVisible</td>
+	<td>id=pastIssuesPanel</td>
+	<td></td>
+</tr>
+<tr>
+	<td>assertVisible</td>
+	<td>id=familyHistoryPanel</td>
+	<td></td>
+</tr>
+<!--Issue List page -- Top 3 Issue-->
+<tr>
+	<td>select</td>
+	<td>id=ddlFilter</td>
+	<td>Top 3 Issues</td>
+</tr>
+<tr>
+	<td>assertVisible</td>
+	<td>id=top3IssuesPanel</td>
+	<td></td>
+</tr>
+<tr>
+	<td>assertNotVisible</td>
+	<td>id=secondaryActiveIssuePanel</td>
+	<td></td>
+</tr>
+<tr>
+	<td>assertNotVisible</td>
+	<td>id=pastIssuesPanel</td>
+	<td></td>
+</tr>
+<tr>
+	<td>assertNotVisible</td>
+	<td>id=familyHistoryPanel</td>
+	<td></td>
+</tr>
+<!--Issue List page -- Secondary Active Issues-->
+<tr>
+	<td>select</td>
+	<td>id=ddlFilter</td>
+	<td>Secondary Active Issues</td>
+</tr>
+<tr>
+	<td>assertNotVisible</td>
+	<td>id=top3IssuesPanel</td>
+	<td></td>
+</tr>
+<tr>
+	<td>assertVisible</td>
+	<td>id=secondaryActiveIssuePanel</td>
+	<td></td>
+</tr>
+<tr>
+	<td>assertNotVisible</td>
+	<td>id=pastIssuesPanel</td>
+	<td></td>
+</tr>
+<tr>
+	<td>assertNotVisible</td>
+	<td>id=familyHistoryPanel</td>
+	<td></td>
+</tr>
+<!--Issue List page -- Past Issues-->
+<tr>
+	<td>select</td>
+	<td>id=ddlFilter</td>
+	<td>Past Issues</td>
+</tr>
+<tr>
+	<td>assertNotVisible</td>
+	<td>id=top3IssuesPanel</td>
+	<td></td>
+</tr>
+<tr>
+	<td>assertNotVisible</td>
+	<td>id=secondaryActiveIssuePanel</td>
+	<td></td>
+</tr>
+<tr>
+	<td>assertVisible</td>
+	<td>id=pastIssuesPanel</td>
+	<td></td>
+</tr>
+<tr>
+	<td>assertNotVisible</td>
+	<td>id=familyHistoryPanel</td>
+	<td></td>
+</tr>
+<!--Issue List page -- Family History-->
+<tr>
+	<td>select</td>
+	<td>id=ddlFilter</td>
+	<td>Family History</td>
+</tr>
+<tr>
+	<td>assertNotVisible</td>
+	<td>id=top3IssuesPanel</td>
+	<td></td>
+</tr>
+<tr>
+	<td>assertNotVisible</td>
+	<td>id=secondaryActiveIssuePanel</td>
+	<td></td>
+</tr>
+<tr>
+	<td>assertNotVisible</td>
+	<td>id=pastIssuesPanel</td>
+	<td></td>
+</tr>
+<tr>
+	<td>assertVisible</td>
+	<td>id=familyHistoryPanel</td>
+	<td></td>
+</tr>
+<!--Patient profile-->
+<tr>
+	<td>clickAndWait</td>
+	<td>id=lnkHNLogo</td>
+	<td></td>
+</tr>
+<tr>
+	<td>click</td>
+	<td>css=button.navbar-toggle</td>
+	<td></td>
+</tr>
+<tr>
+	<td>clickAndWait</td>
+	<td>id=lnkLogout</td>
+	<td></td>
+</tr>
+
+</tbody></table>
+</body>
+</html>

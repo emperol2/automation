@@ -1,0 +1,90 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en" lang="en">
+<head profile="http://selenium-ide.openqa.org/profiles/test-case">
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+<link rel="selenium.base" href="http://qa.healthnow.com/" />
+<title>hnProfileSettingProvider</title>
+</head>
+<body>
+<table cellpadding="1" cellspacing="1" border="1">
+<thead>
+<tr><td rowspan="1" colspan="3">hnProfileSettingProvider</td></tr>
+</thead><tbody>
+<tr>
+	<td>open</td>
+	<td>${hnDevSite}</td>
+	<td></td>
+</tr>
+<tr>
+	<td>type</td>
+	<td>id=txtUsername</td>
+	<td>drjill2014</td>
+</tr>
+<tr>
+	<td>type</td>
+	<td>id=txtPassword</td>
+	<td>1975drjill</td>
+</tr>
+<tr>
+	<td>clickAndWait</td>
+	<td>id=btnLogin</td>
+	<td></td>
+</tr>
+<!--Patient List page-->
+<tr>
+	<td>assertTitle</td>
+	<td>Patient List</td>
+	<td></td>
+</tr>
+<tr>
+	<td>click</td>
+	<td>css=div#top_navigation_header button.navbar-toggle</td>
+	<td></td>
+</tr>
+<tr>
+	<td>waitForElementPresent</td>
+	<td>css=div.navbar-collapse ul.nav</td>
+	<td></td>
+</tr>
+<tr>
+	<td>clickAndWait</td>
+	<td>id=lnkAccountSetting</td>
+	<td></td>
+</tr>
+<!--Account Setting page-->
+<tr>
+	<td>assertNotVisible</td>
+	<td>css=div.navbar-collapse ul.nav</td>
+	<td></td>
+</tr>
+<tr>
+	<td>assertTitle</td>
+	<td>Account Settings</td>
+	<td></td>
+</tr>
+<tr>
+	<td>clickAndWait</td>
+	<td>id=btnEditProfile</td>
+	<td></td>
+</tr>
+<!--Edit profile page-->
+<tr>
+	<td>assertTitle</td>
+	<td>Patient Registration</td>
+	<td></td>
+</tr>
+<tr>
+	<td>click</td>
+	<td>css=button.navbar-toggle</td>
+	<td></td>
+</tr>
+<tr>
+	<td>clickAndWait</td>
+	<td>id=lnkLogout</td>
+	<td></td>
+</tr>
+
+</tbody></table>
+</body>
+</html>

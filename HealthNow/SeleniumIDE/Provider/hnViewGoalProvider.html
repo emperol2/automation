@@ -1,0 +1,255 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en" lang="en">
+<head profile="http://selenium-ide.openqa.org/profiles/test-case">
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+<link rel="selenium.base" href="http://qa.healthnow.com/" />
+<title>hnViewGoalProvider</title>
+</head>
+<body>
+<table cellpadding="1" cellspacing="1" border="1">
+<thead>
+<tr><td rowspan="1" colspan="3">hnViewGoalProvider</td></tr>
+</thead><tbody>
+<tr>
+	<td>open</td>
+	<td>${hnDevSite}</td>
+	<td></td>
+</tr>
+<tr>
+	<td>type</td>
+	<td>id=txtUsername</td>
+	<td>drjill2014</td>
+</tr>
+<tr>
+	<td>type</td>
+	<td>id=txtPassword</td>
+	<td>1975drjill</td>
+</tr>
+<tr>
+	<td>clickAndWait</td>
+	<td>id=btnLogin</td>
+	<td></td>
+</tr>
+<!--Patient List page-->
+<tr>
+	<td>assertTitle</td>
+	<td>Patient List</td>
+	<td></td>
+</tr>
+<tr>
+	<td>clickAndWait</td>
+	<td>xpath=/html/body/form/div[2]/div[2]/div/div/div[2]/div/div/img</td>
+	<td></td>
+</tr>
+<tr>
+	<td>clickAndWait</td>
+	<td>css=div#interventionsPanel div.pull-right a.btn-viewall</td>
+	<td></td>
+</tr>
+<!--Goal (Intervention) page-->
+<tr>
+	<td>assertTitle</td>
+	<td>InterventionList</td>
+	<td></td>
+</tr>
+<tr>
+	<td>assertVisible</td>
+	<td>id=goalsPanel</td>
+	<td></td>
+</tr>
+<tr>
+	<td>assertVisible</td>
+	<td>id=pastHospitalizationPanel</td>
+	<td></td>
+</tr>
+<tr>
+	<td>assertVisible</td>
+	<td>id=pastSurgeryPanel</td>
+	<td></td>
+</tr>
+<tr>
+	<td>assertVisible</td>
+	<td>id=medicationsPanel</td>
+	<td></td>
+</tr>
+<tr>
+	<td>assertVisible</td>
+	<td>id=treatmentPanel</td>
+	<td></td>
+</tr>
+<!--Goal (Intervention) page -- Goals-->
+<tr>
+	<td>select</td>
+	<td>id=ddlFilter</td>
+	<td>Goals</td>
+</tr>
+<tr>
+	<td>assertVisible</td>
+	<td>id=goalsPanel</td>
+	<td></td>
+</tr>
+<tr>
+	<td>assertNotVisible</td>
+	<td>id=pastHospitalizationPanel</td>
+	<td></td>
+</tr>
+<tr>
+	<td>assertNotVisible</td>
+	<td>id=pastSurgeryPanel</td>
+	<td></td>
+</tr>
+<tr>
+	<td>assertNotVisible</td>
+	<td>id=medicationsPanel</td>
+	<td></td>
+</tr>
+<tr>
+	<td>assertNotVisible</td>
+	<td>id=treatmentPanel</td>
+	<td></td>
+</tr>
+<!--Goal (Intervention) page -- Past Hospitalization-->
+<tr>
+	<td>select</td>
+	<td>id=ddlFilter</td>
+	<td>Past Hospitalization</td>
+</tr>
+<tr>
+	<td>assertNotVisible</td>
+	<td>id=goalsPanel</td>
+	<td></td>
+</tr>
+<tr>
+	<td>assertVisible</td>
+	<td>id=pastHospitalizationPanel</td>
+	<td></td>
+</tr>
+<tr>
+	<td>assertNotVisible</td>
+	<td>id=pastSurgeryPanel</td>
+	<td></td>
+</tr>
+<tr>
+	<td>assertNotVisible</td>
+	<td>id=medicationsPanel</td>
+	<td></td>
+</tr>
+<tr>
+	<td>assertNotVisible</td>
+	<td>id=treatmentPanel</td>
+	<td></td>
+</tr>
+<!--Goal (Intervention) page -- Past Surgery-->
+<tr>
+	<td>select</td>
+	<td>id=ddlFilter</td>
+	<td>Past Surgery</td>
+</tr>
+<tr>
+	<td>assertNotVisible</td>
+	<td>id=goalsPanel</td>
+	<td></td>
+</tr>
+<tr>
+	<td>assertNotVisible</td>
+	<td>id=pastHospitalizationPanel</td>
+	<td></td>
+</tr>
+<tr>
+	<td>assertVisible</td>
+	<td>id=pastSurgeryPanel</td>
+	<td></td>
+</tr>
+<tr>
+	<td>assertNotVisible</td>
+	<td>id=medicationsPanel</td>
+	<td></td>
+</tr>
+<tr>
+	<td>assertNotVisible</td>
+	<td>id=treatmentPanel</td>
+	<td></td>
+</tr>
+<!--Goal (Intervention) page -- Medications-->
+<tr>
+	<td>select</td>
+	<td>id=ddlFilter</td>
+	<td>Medications</td>
+</tr>
+<tr>
+	<td>assertNotVisible</td>
+	<td>id=goalsPanel</td>
+	<td></td>
+</tr>
+<tr>
+	<td>assertNotVisible</td>
+	<td>id=pastHospitalizationPanel</td>
+	<td></td>
+</tr>
+<tr>
+	<td>assertNotVisible</td>
+	<td>id=pastSurgeryPanel</td>
+	<td></td>
+</tr>
+<tr>
+	<td>assertVisible</td>
+	<td>id=medicationsPanel</td>
+	<td></td>
+</tr>
+<tr>
+	<td>assertNotVisible</td>
+	<td>id=treatmentPanel</td>
+	<td></td>
+</tr>
+<!--Goal (Intervention) page -- Treatment-->
+<tr>
+	<td>select</td>
+	<td>id=ddlFilter</td>
+	<td>Treatment</td>
+</tr>
+<tr>
+	<td>assertNotVisible</td>
+	<td>id=goalsPanel</td>
+	<td></td>
+</tr>
+<tr>
+	<td>assertNotVisible</td>
+	<td>id=pastHospitalizationPanel</td>
+	<td></td>
+</tr>
+<tr>
+	<td>assertNotVisible</td>
+	<td>id=pastSurgeryPanel</td>
+	<td></td>
+</tr>
+<tr>
+	<td>assertNotVisible</td>
+	<td>id=medicationsPanel</td>
+	<td></td>
+</tr>
+<tr>
+	<td>assertVisible</td>
+	<td>id=treatmentPanel</td>
+	<td></td>
+</tr>
+<!--Patient profile-->
+<tr>
+	<td>clickAndWait</td>
+	<td>id=lnkHNLogo</td>
+	<td></td>
+</tr>
+<tr>
+	<td>click</td>
+	<td>css=button.navbar-toggle</td>
+	<td></td>
+</tr>
+<tr>
+	<td>clickAndWait</td>
+	<td>id=lnkLogout</td>
+	<td></td>
+</tr>
+
+</tbody></table>
+</body>
+</html>
