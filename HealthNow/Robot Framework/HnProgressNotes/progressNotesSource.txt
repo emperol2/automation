@@ -1,0 +1,68 @@
+*** Settings ***
+Library       Selenium2Library
+
+*** Variables ***
+${URL}         				http://qa.healthnow.com
+${BROWSER}        			Firefox
+${DELAY}          			5
+${VALID USER}     			test12
+${VALID PASSWORD}			provider12
+${LOGIN URL}      			${URL}/Pages/Login.aspx
+${PATIENT LIST URL}			${URL}/Pages/List/PatientList.aspx
+
+*** Keywords ***
+Open Browser To Login Page
+    Open Browser    			${LOGIN URL}    ${BROWSER}
+    Set Window Size				${320}	${800}
+	${width}					${height} =	Get Window Size
+	Should Be Equal				${width}	${320}
+	Should Be Equal				${height}	${800}
+    Set Selenium Speed    		${DELAY}
+    Login Page Should Be Open
+
+Login Page Should Be Open
+    Title Should Be    			Login
+
+Go To Login Page
+    Go To    					${LOGIN URL}
+    Login Page Should Be Open
+	Set Selenium Speed    		${DELAY}
+
+Input Username
+    [Arguments]    				${username}
+    Input Text    				txtUsername    ${username}
+
+Input Password
+    [Arguments]    				${password}
+    Input Text    				txtPassword    ${password}
+
+Submit Credentials
+    Click Element    			btnLogin
+	Set Selenium Speed    		${DELAY}
+	
+Select Patient on Patient List page
+	Title Should Be				Patient List
+	Click Element				xpath=//div[@id='patientListPanel']/div[2]/div/img
+	Set Selenium Speed    		${DELAY}
+	
+Add Progress Notes
+	Title Should Be				Profile
+	Click Element				lnkAddProgressNote
+	Input Text					css=div#progressNoteEditor input#txtTitle		Test11 Patient by Test12
+	Click Element				css=a.select2-choice
+	Input Text					s2id_autogen1_search							Gastroenterologist
+	Click Element				css=li.select2-results-dept-0
+	Set Selenium Speed    		${DELAY}
+	Input Text					css=div#progressNoteEditor textarea#txtNote		Note: Test11 Patient by @ Test12#
+	Set Selenium Speed    		${DELAY}
+	Click Element				css=div#progressNoteEditor button#btnSave
+
+Add Notes on Issues
+	Click Element				css=div#issues-list a.btn-plus
+	Element Should Be Visible	progressNoteEditor
+	Click Element				css=div#progressNoteEditor button#btnCancel
+	Set Selenium Speed    		${DELAY}
+
+Go to Notes page for Issues
+	Click Element				css=a.btn-number
+	Set Selenium Speed			${DELAY}

@@ -1,0 +1,19 @@
+*** Settings ***
+Resource          progressNotesSource.txt
+
+*** Test Cases ***
+Login page
+    Open Browser To Login Page
+    Input Username    			test12
+    Input Password    			provider12
+    Submit Credentials
+
+Patient List page
+	Select Patient on Patient List page
+
+Progress Notes
+	Add Progress Notes
+	Add Notes on Issues
+	
+Note page on Issues
+	Go to Notes page for Issues
