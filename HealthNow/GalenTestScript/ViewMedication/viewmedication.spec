@@ -57,7 +57,10 @@ show-bar-filter
 
 current-medication
      below: show-bar-filter 0px top
-     contains: current-mdc-add, current-mdc-notes
+     contains: current-mdc-notes
+
+current-mdc-add
+     absent
 
 @ tablet
 ------------------------------------------------------------
@@ -106,4 +109,7 @@ show-bar-filter
 
 current-medication
      below: show-bar-filter 0px top
-     contains: current-mdc-add, current-mdc-notes
+     contains: current-mdc-notes
+
+current-mdc-add
+     absent

@@ -41,7 +41,7 @@ logo-hntext-icon
 @ tablet
 ------------------------------------------------------------
 navigation-top
-     width: 1186px
+     width: 1169px
      height: 52px
 
 navigation-greenbar

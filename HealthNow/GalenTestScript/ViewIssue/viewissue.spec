@@ -19,7 +19,7 @@ second-issues-notes   css       #secondaryActiveIssuePanel .pull-right .btn-note
 @ mobile
 ------------------------------------------------------------
 navigation-top
-     width: 306px
+     width: 289px
      height: 47px
 
 navigation-greenbar
@@ -67,7 +67,7 @@ second-issues-notes
 @ tablet
 ------------------------------------------------------------
 navigation-top
-     width: 1186px
+     width: 1169px
      height: 52px
 
 navigation-greenbar

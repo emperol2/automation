@@ -57,7 +57,7 @@ navbar-logout-tab
 @ tablet
 ------------------------------------------------------------
 navigation-top-toggle
-     width: 1186px
+     width: 1169px
      height: 176px
 
 navigation-greenbar

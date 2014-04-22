@@ -17,7 +17,7 @@ treatment-show-bar    css       #treatmentPanel .container .header
 @ mobile
 ------------------------------------------------------------
 navigation-top
-     width: 306px
+     width: 289px
      height: 47px
 
 navigation-greenbar
@@ -56,7 +56,7 @@ treatment-show-bar
 @ tablet
 ------------------------------------------------------------
 navigation-top
-     width: 1186px
+     width: 1169px
      height: 52px
 
 navigation-greenbar
