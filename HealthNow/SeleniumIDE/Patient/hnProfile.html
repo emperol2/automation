@@ -26,6 +26,7 @@
 	<td>id=txtPassword</td>
 	<td>1981papajohn_jr</td>
 </tr>
+<!---- Patient: do the exercises-->
 <tr>
 	<td>clickAndWait</td>
 	<td>id=btnLogin</td>
@@ -33,12 +34,12 @@
 </tr>
 <tr>
 	<td>waitForTitle</td>
-	<td>Profile</td>
+	<td>Health Now Exercises</td>
 	<td></td>
 </tr>
 <tr>
 	<td>assertTitle</td>
-	<td>Profile</td>
+	<td>Health Now Exercises</td>
 	<td></td>
 </tr>
 <tr>
@@ -53,17 +54,22 @@
 </tr>
 <tr>
 	<td>assertElementPresent</td>
-	<td>css=div#content-wrapper div.top-user-info div.container</td>
+	<td>id=lblTopHeader</td>
 	<td></td>
 </tr>
 <tr>
 	<td>storeText</td>
-	<td>css=div#content-wrapper div.top-user-info div.container div.info</td>
-	<td>patientInfo</td>
+	<td>id=lblTopHeader</td>
+	<td>header</td>
 </tr>
 <tr>
 	<td>echo</td>
-	<td>${patientInfo}</td>
+	<td>${header}</td>
+	<td></td>
+</tr>
+<tr>
+	<td>clickAndWait</td>
+	<td>id=lnkHNLogo</td>
 	<td></td>
 </tr>
 <!--Self Assessment-->
@@ -89,9 +95,9 @@
 	<td>Progress Notes Test Title</td>
 </tr>
 <tr>
-	<td>type</td>
-	<td>id=txtRegarding</td>
-	<td>Progress Notes Test Regarding</td>
+	<td>verifyElementPresent</td>
+	<td>id=s2id_selRegarding</td>
+	<td></td>
 </tr>
 <tr>
 	<td>type</td>
@@ -257,12 +263,12 @@
 <!--Verify link - Introduction page-->
 <tr>
 	<td>clickAndWait</td>
-	<td>link=26 Remaining</td>
+	<td>id=lnkQuiz</td>
 	<td></td>
 </tr>
 <tr>
 	<td>verifyLocation</td>
-	<td>${site}/Pages/Introduction/Introduction.aspx</td>
+	<td>${site}/Pages/Quiz/index.aspx</td>
 	<td></td>
 </tr>
 <tr>
