@@ -79,19 +79,24 @@
 	<td></td>
 </tr>
 <tr>
+	<td>pause</td>
+	<td>4000</td>
+	<td>4000</td>
+</tr>
+<tr>
 	<td>clickAndWait</td>
-	<td>link=ANGRY WHOPPER® Sandwich Meal</td>
+	<td>link=New Big King</td>
 	<td></td>
 </tr>
 <!--check if it is the right item (Sweet Potato Fries)-->
 <tr>
 	<td>assertTextPresent</td>
-	<td>ANGRY WHOPPER® Sandwich Meal</td>
+	<td>Big King™</td>
 	<td></td>
 </tr>
 <tr>
 	<td>assertTitle</td>
-	<td>ANGRY WHOPPER&lt;sup&gt;®&lt;/sup&gt; Sandwich Meal | Combo Meals | Lunch &amp; Dinner | Menu | BURGER KING®</td>
+	<td>Big King | Lunch &amp; Dinner | Menu | BURGER KING®</td>
 	<td></td>
 </tr>
 <tr>
@@ -110,21 +115,11 @@
 	<td>css=html body.skin-default div#PageWrapper.MenuAndNutrition div#LayoutWrapper.MenuNutrition div#ContentWrapper div.ordinaryWrapper div.contentArea div#menu-product-state div#menu-nutri-tabs div#tabs.ui-tabs div#tabs-1.ui-tabs-panel div.tabscontent div#nutritabs-customizable div#meal-main-content div.nutri-data</td>
 	<td></td>
 </tr>
-<tr>
-	<td>click</td>
-	<td>css=span.text</td>
-	<td></td>
-</tr>
 <!--small size has a small number of Calories-->
 <tr>
 	<td>pause</td>
 	<td>3000</td>
 	<td>3000</td>
-</tr>
-<tr>
-	<td>assertText</td>
-	<td>css=html body.skin-default div#PageWrapper.MenuAndNutrition div#LayoutWrapper.MenuNutrition div#ContentWrapper div.ordinaryWrapper div.contentArea div#menu-product-state div#menu-nutri-tabs div#tabs.ui-tabs div#tabs-1.ui-tabs-panel div.tabscontent div#nutritabs-customizable div#meal-main-content div.nutri-data div.static-nutri-item div.static-nutri-value</td>
-	<td>1360</td>
 </tr>
 <tr>
 	<td>clickAndWait</td>
