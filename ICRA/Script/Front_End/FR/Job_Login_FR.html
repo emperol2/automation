@@ -122,17 +122,17 @@
 </tr>
 <tr>
 	<td>click</td>
-	<td>id=cke_9</td>
+	<td>css=span.cke_toolgroup a.cke_button</td>
 	<td></td>
 </tr>
 <tr>
 	<td>type</td>
-	<td>css=tbody tr td#cke_contents_ctl00_ctl00_phContent_ctl13_ctlJobPostingInformation_rteDescription_CKEditor1.cke_contents textarea.cke_source</td>
+	<td>css=textarea.cke_source</td>
 	<td>Test description</td>
 </tr>
 <tr>
 	<td>click</td>
-	<td>id=cke_9</td>
+	<td>css=span.cke_toolgroup a.cke_button</td>
 	<td></td>
 </tr>
 <tr>
@@ -145,57 +145,7 @@
 	<td>6000</td>
 	<td>6000</td>
 </tr>
-<!--Edit requirement-->
-<tr>
-	<td>click</td>
-	<td>id=ctl00_ctl00_phContent_ctl13_ctlJobPostingInformation_rteRequirements_btnEdit</td>
-	<td></td>
-</tr>
-<tr>
-	<td>pause</td>
-	<td>4000</td>
-	<td>4000</td>
-</tr>
-<tr>
-	<td>assertText</td>
-	<td>css=div#ctl00_ctl00_phContent_ctl13_ctlJobPostingInformation_rteRequirements_htmlEditor h2</td>
-	<td>Exigences</td>
-</tr>
-<tr>
-	<td>click</td>
-	<td>id=cke_43</td>
-	<td></td>
-</tr>
-<tr>
-	<td>type</td>
-	<td>css=tbody tr td#cke_contents_ctl00_ctl00_phContent_ctl13_ctlJobPostingInformation_rteRequirements_CKEditor1.cke_contents textarea.cke_source</td>
-	<td>Test requirement</td>
-</tr>
-<tr>
-	<td>click</td>
-	<td>id=cke_43</td>
-	<td></td>
-</tr>
-<tr>
-	<td>click</td>
-	<td>xpath=/html/body/div[2]/div/div/div/div/div/div[2]/a</td>
-	<td></td>
-</tr>
-<tr>
-	<td>select</td>
-	<td>id=ddlSelectApplicationMethod</td>
-	<td>Postuler par courriel en utilisant le formulaire de l'ICRA</td>
-</tr>
-<tr>
-	<td>pause</td>
-	<td>5000</td>
-	<td>5000</td>
-</tr>
-<tr>
-	<td>assertElementPresent</td>
-	<td>id=pnlContactPerson</td>
-	<td></td>
-</tr>
+<!--Add details-->
 <tr>
 	<td>select</td>
 	<td>id=ctl00_ctl00_phContent_ctl13_ctlJobPostingInformation_ddlSalutation_ddlLookupData</td>
@@ -224,7 +174,43 @@
 <tr>
 	<td>type</td>
 	<td>id=txtEmail</td>
-	<td>test${random2}@contact.com</td>
+	<td>suchada@openface.ca</td>
+</tr>
+<!--Edit requirement-->
+<tr>
+	<td>click</td>
+	<td>id=ctl00_ctl00_phContent_ctl13_ctlJobPostingInformation_rteRequirements_btnEdit</td>
+	<td></td>
+</tr>
+<tr>
+	<td>pause</td>
+	<td>4000</td>
+	<td>4000</td>
+</tr>
+<tr>
+	<td>assertText</td>
+	<td>css=div#ctl00_ctl00_phContent_ctl13_ctlJobPostingInformation_rteRequirements_htmlEditor h2</td>
+	<td>Exigences</td>
+</tr>
+<tr>
+	<td>click</td>
+	<td>css=span.cke_toolgroup a.cke_button</td>
+	<td></td>
+</tr>
+<tr>
+	<td>type</td>
+	<td>css=textarea.cke_source</td>
+	<td>Test requirement</td>
+</tr>
+<tr>
+	<td>click</td>
+	<td>css=span.cke_toolgroup a.cke_button</td>
+	<td></td>
+</tr>
+<tr>
+	<td>click</td>
+	<td>xpath=/html/body/div[2]/div/div/div/div/div/div[2]/a</td>
+	<td></td>
 </tr>
 <tr>
 	<td>check</td>
@@ -376,7 +362,7 @@
 </tr>
 <tr>
 	<td>storeText</td>
-	<td>xpath=/html/body/form/div[2]/div/div[2]/div/div[2]/div/div/div/div[2]/div[2]/div</td>
+	<td>xpath=/html/body/form/div[3]/div/div[2]/div/div[2]/div/div/div/div[2]/div[2]/div/span[2]</td>
 	<td>position</td>
 </tr>
 <tr>
