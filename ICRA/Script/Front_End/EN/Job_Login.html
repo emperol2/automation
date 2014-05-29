@@ -54,6 +54,11 @@
 	<td></td>
 </tr>
 <tr>
+	<td>pause</td>
+	<td>3000</td>
+	<td>3000</td>
+</tr>
+<tr>
 	<td>assertTitle</td>
 	<td>Job Posting Rate and Info</td>
 	<td></td>
@@ -127,7 +132,7 @@
 <!--Edit description-->
 <tr>
 	<td>click</td>
-	<td>id=ctl00_ctl00_phContent_ctl13_ctlJobPostingInformation_rteDescription_btnEdit</td>
+	<td>id=${numberID}_ctlJobPostingInformation_rteDescription_btnEdit</td>
 	<td></td>
 </tr>
 <tr>
@@ -137,22 +142,22 @@
 </tr>
 <tr>
 	<td>assertText</td>
-	<td>css=div#ctl00_ctl00_phContent_ctl13_ctlJobPostingInformation_rteDescription_htmlEditor h2</td>
+	<td>css=div#${numberID}_ctlJobPostingInformation_rteDescription_htmlEditor h2</td>
 	<td>Description</td>
 </tr>
 <tr>
 	<td>click</td>
-	<td>id=cke_9</td>
+	<td>css=span.cke_toolgroup a.cke_button</td>
 	<td></td>
 </tr>
 <tr>
 	<td>type</td>
-	<td>css=tbody tr td#cke_contents_ctl00_ctl00_phContent_ctl13_ctlJobPostingInformation_rteDescription_CKEditor1.cke_contents textarea.cke_source</td>
+	<td>css=textarea.cke_source</td>
 	<td>Test description</td>
 </tr>
 <tr>
 	<td>click</td>
-	<td>id=cke_9</td>
+	<td>css=span.cke_toolgroup a.cke_button</td>
 	<td></td>
 </tr>
 <tr>
@@ -165,42 +170,7 @@
 	<td>6000</td>
 	<td>6000</td>
 </tr>
-<!--Edit requirement-->
-<tr>
-	<td>click</td>
-	<td>id=ctl00_ctl00_phContent_ctl13_ctlJobPostingInformation_rteRequirements_btnEdit</td>
-	<td></td>
-</tr>
-<tr>
-	<td>pause</td>
-	<td>4000</td>
-	<td>4000</td>
-</tr>
-<tr>
-	<td>assertText</td>
-	<td>css=div#ctl00_ctl00_phContent_ctl13_ctlJobPostingInformation_rteRequirements_htmlEditor h2</td>
-	<td>Requirements</td>
-</tr>
-<tr>
-	<td>click</td>
-	<td>id=cke_43</td>
-	<td></td>
-</tr>
-<tr>
-	<td>type</td>
-	<td>css=tbody tr td#cke_contents_ctl00_ctl00_phContent_ctl13_ctlJobPostingInformation_rteRequirements_CKEditor1.cke_contents textarea.cke_source</td>
-	<td>Test requirement</td>
-</tr>
-<tr>
-	<td>click</td>
-	<td>id=cke_43</td>
-	<td></td>
-</tr>
-<tr>
-	<td>click</td>
-	<td>xpath=(//a[contains(text(),'Save')])[2]</td>
-	<td></td>
-</tr>
+<!--Add detials-->
 <tr>
 	<td>select</td>
 	<td>id=ddlSelectApplicationMethod</td>
@@ -260,6 +230,47 @@
 	<td>type</td>
 	<td>id=txtEmail</td>
 	<td>test${random2}@contact.com</td>
+</tr>
+<!--Edit requirement-->
+<tr>
+	<td>click</td>
+	<td>id=${numberID}_ctlJobPostingInformation_rteRequirements_btnEdit</td>
+	<td></td>
+</tr>
+<tr>
+	<td>pause</td>
+	<td>4000</td>
+	<td>4000</td>
+</tr>
+<tr>
+	<td>assertText</td>
+	<td>css=div#${numberID}_ctlJobPostingInformation_rteRequirements_htmlEditor h2</td>
+	<td>Requirements</td>
+</tr>
+<tr>
+	<td>click</td>
+	<td>css=span.cke_toolgroup a.cke_button</td>
+	<td></td>
+</tr>
+<tr>
+	<td>type</td>
+	<td>css=textarea.cke_source</td>
+	<td>Test requirement</td>
+</tr>
+<tr>
+	<td>click</td>
+	<td>css=span.cke_toolgroup a.cke_button</td>
+	<td></td>
+</tr>
+<tr>
+	<td>click</td>
+	<td>xpath=(//a[contains(text(),'Save')])[2]</td>
+	<td></td>
+</tr>
+<tr>
+	<td>pause</td>
+	<td>5000</td>
+	<td>5000</td>
 </tr>
 <tr>
 	<td>check</td>
@@ -406,7 +417,7 @@
 </tr>
 <tr>
 	<td>storeText</td>
-	<td>xpath=/html/body/form/div[2]/div/div[2]/div/div[2]/div/div/div/div[2]/div[2]/div</td>
+	<td>xpath=/html/body/form/div[3]/div/div[2]/div/div[2]/div/div/div/div[2]/div[2]/div/span[2]</td>
 	<td>position</td>
 </tr>
 <tr>
