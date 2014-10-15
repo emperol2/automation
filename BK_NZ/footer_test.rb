@@ -25,7 +25,7 @@ class NzMenuTest < Test::Unit::TestCase
     assert @driver.find_element(:css, 'div.footerBg div.row').text.include?'BK INFO'
     assert @driver.find_element(:css, 'div.col-xs-12 p').text.include?'SHARE THIS WEBSITE'
     assert element_present?(:css, 'div.row div.col-xs-12 div.socialLinks')
-    assert @driver.find_element(:xpath, '//footer/div/div[3]/div/p').text.include?'TM & Copyright 2014 Burger King Corporation. All Rights Reserved.'
+    assert @driver.find_element(:css, 'footer div div:nth-child(3) div p').text.include?'TM & Copyright 2014 Burger King Corporation. All Rights Reserved.'
     @driver.find_element(:id, 'toTop').click  # Back To The Top button
   end
 
